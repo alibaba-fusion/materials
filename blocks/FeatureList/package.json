@@ -1,0 +1,52 @@
+{
+    "name": "@alifd/ice-feature-list-block",
+    "version": "0.1.8",
+    "description": "展示一些特性列表介绍",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/FeatureList"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "feature-list",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-feature-list-block/screenshot.png",
+        "title": "特性列表",
+        "categories": [
+            "信息展示"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-feature-list-block/demo/index.html"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-feature-list-block/demo/index.html"
+}

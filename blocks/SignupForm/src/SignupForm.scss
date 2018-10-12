@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  .next-input {
+    border-radius: 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  .next-input.next-error {
+    border-bottom: 1px solid #ff3000;
+  }
+  .next-checkbox-label {
+    color: #999;
+  }
+}

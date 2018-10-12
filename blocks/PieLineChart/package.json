@@ -1,0 +1,54 @@
+{
+    "name": "@alifd/ice-pie-line-chart-block",
+    "version": "0.1.8",
+    "description": "",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/PieLineChart"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "@alifd/next": "^1.x",
+        "echarts": "^4.0.4",
+        "echarts-for-react": "^2.0.8",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "pie-line-chart",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-pie-line-chart-block/screenshot.png",
+        "title": "饼图和环形图组合",
+        "categories": [
+            "图表"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-pie-line-chart-block/demo/index.html"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-pie-line-chart-block/demo/index.html"
+}

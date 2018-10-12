@@ -1,0 +1,53 @@
+{
+    "name": "@alifd/ice-basic-not-found-block",
+    "version": "0.1.8",
+    "description": "404 报错提示",
+    "main": "lib/index.js",
+    "files": [
+        "src/",
+        "build/",
+        "mock/",
+        "lib/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/BasicNotFound"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "blockConfig": {
+        "name": "basic-not-found",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-not-found-block/screenshot.png",
+        "title": "404 报错提示",
+        "categories": [
+            "异常"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-not-found-block/demo/index.html"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-not-found-block/demo/index.html"
+}

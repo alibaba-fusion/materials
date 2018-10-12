@@ -1,0 +1,54 @@
+{
+    "name": "@alifd/ice-composite-filter-block",
+    "version": "0.1.8",
+    "description": "标签、日期和搜索组合筛选",
+    "main": "lib/index.js",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/CompositeFilter"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "enquire-js": "^0.1.2",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "composite-filter",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-composite-filter-block/screenshot.png",
+        "title": "标签、日期和搜索组合筛选",
+        "categories": [
+            "信息展示"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-composite-filter-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-composite-filter-block/demo/index.html"
+}

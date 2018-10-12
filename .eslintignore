@@ -1,0 +1,20 @@
+# 忽略目录
+build/
+tests/
+demo/
+react-materials/layouts/**/lib/
+react-materials/blocks/**/lib/
+node_modules/
+scripts/
+
+# node 覆盖率文件
+coverage/
+
+# 忽略文件
+**/*-min.js
+**/*.min.js
+
+# templorarily ignore tools
+tools/
+
+**/templates/**

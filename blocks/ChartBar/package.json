@@ -1,0 +1,54 @@
+{
+    "name": "@alifd/ice-chart-bar-block",
+    "version": "0.1.8",
+    "description": "",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/ChartBar"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "@antv/data-set": "^0.8.0",
+        "bizcharts": "^3.0.5",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "chart-bar",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-chart-bar-block/screenshot.png",
+        "title": "柱状图",
+        "categories": [
+            "图表"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-chart-bar-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-chart-bar-block/demo/index.html"
+}

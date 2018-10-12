@@ -1,0 +1,57 @@
+{
+    "name": "@alifd/ice-content-editor-block",
+    "version": "0.1.8",
+    "description": "内容编辑器",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/ContentEditor"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "@alifd/next": "^1.x",
+        "immutable": "^3.8.2",
+        "is-hotkey": "^0.1.1",
+        "prop-types": "^15.5.8",
+        "slate": "^0.32.1",
+        "slate-plain-serializer": "^0.5.1",
+        "slate-react": "^0.11.1"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "content-editor",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-content-editor-block/screenshot.png",
+        "title": "内容编辑器",
+        "categories": [
+            "表单"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-content-editor-block/demo/index.html"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-content-editor-block/demo/index.html"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "@alifd/grouped-form-block",
+    "version": "0.1.8",
+    "description": "",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/GroupedForm"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "grouped-form",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/grouped-form-block/screenshot.png",
+        "title": "分组显示的表单",
+        "categories": [
+            "表单"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/grouped-form-block/demo/index.html"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/grouped-form-block/demo/index.html"
+}

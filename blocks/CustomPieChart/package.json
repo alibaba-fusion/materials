@@ -1,0 +1,53 @@
+{
+    "name": "@alifd/ice-custom-pie-chart-block",
+    "version": "0.1.8",
+    "description": "",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/CustomPieChart"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "echarts": "^4.0.4",
+        "echarts-for-react": "^2.0.8",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "custom-pie-chart",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-custom-pie-chart-block/screenshot.png",
+        "title": "自定义饼图组合",
+        "categories": [
+            "图表"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-custom-pie-chart-block/demo/index.html"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-custom-pie-chart-block/demo/index.html"
+}

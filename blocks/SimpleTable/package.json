@@ -1,0 +1,53 @@
+{
+    "name": "@alifd/ice-simple-table-block",
+    "version": "0.1.8",
+    "description": "基础的表格",
+    "main": "lib/index.js",
+    "files": [
+        "src/",
+        "build/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SimpleTable"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.1",
+        "@alifd/next": "^1.x",
+        "enquire-js": "^0.1.2",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "simple-table",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-table-block/screenshot.png",
+        "title": "基础表格",
+        "categories": [
+            "表格"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-table-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-table-block/demo/index.html"
+}

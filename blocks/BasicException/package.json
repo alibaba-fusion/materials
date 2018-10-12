@@ -1,0 +1,55 @@
+{
+    "name": "@alifd/ice-basic-exception-block",
+    "version": "0.1.8",
+    "description": "基础异常报错",
+    "main": "lib/index.js",
+    "files": [
+        "src/",
+        "build/",
+        "mock/",
+        "lib",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/BasicException"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "basic-exception",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-exception-block/screenshot.png",
+        "title": "基础异常报错",
+        "categories": [
+            "异常"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-exception-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "demo": "ice-devtools builddemo",
+        "screenshot": "ice-devtools screenshot",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-basic-exception-block/demo/index.html"
+}

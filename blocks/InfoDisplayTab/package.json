@@ -1,0 +1,54 @@
+{
+    "name": "@alifd/ice-info-display-tab-block",
+    "version": "0.1.8",
+    "description": "标签页信息展示",
+    "main": "lib/index.js",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/InfoDisplayTab"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/ice-ellipsis": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "info-display-tab",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-info-display-tab-block/screenshot.png",
+        "title": "标签页信息展示",
+        "categories": [
+            "信息展示"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-info-display-tab-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-info-display-tab-block/demo/index.html"
+}

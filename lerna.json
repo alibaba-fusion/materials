@@ -1,0 +1,16 @@
+{
+  "lerna": "2.5.1",
+  "packages": [
+    "react-materials/blocks/*",
+    "react-materials/layouts/*",
+    "react-materials/scaffolds/*"
+  ],
+  "commands": {
+    "publish": {
+      "message": "chore(release): publish"
+    }
+  },
+  "version": "independent",
+  "npmClient": "npm",
+  "registry": "http://registry.npmjs.org"
+}

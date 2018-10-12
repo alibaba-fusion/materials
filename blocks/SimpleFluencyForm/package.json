@@ -1,0 +1,53 @@
+{
+    "name": "@alifd/ice-simple-fluency-form-block",
+    "version": "0.1.8",
+    "description": "SimpleFluencyForm",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SimpleFluencyForm"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-copy-to-clipboard": "^4.2.3",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "simple-fluency-form",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-fluency-form-block/screenshot.png",
+        "title": "简单流畅型表单",
+        "categories": [
+            "表单"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-fluency-form-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-simple-fluency-form-block/demo/index.html"
+}

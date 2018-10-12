@@ -1,0 +1,54 @@
+{
+    "name": "@alifd/ice-footer-info-block",
+    "version": "0.1.8",
+    "description": "",
+    "files": [
+        "src/",
+        "build/",
+        "lib/",
+        "mock/",
+        "screenshot.png"
+    ],
+    "author": {
+        "name": "Fusion Team",
+        "email": "ice-admin@alibaba-inc.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/FooterInfo"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ice",
+        "ice-block"
+    ],
+    "dependencies": {
+        "@alifd/ice-container": "^0.1.0",
+        "@alifd/next": "^1.x",
+        "prop-types": "^15.5.8"
+    },
+    "devDependencies": {
+        "react": "*",
+        "react-copy-to-clipboard": "^4.2.3",
+        "react-dom": "*"
+    },
+    "blockConfig": {
+        "name": "footer-info",
+        "screenshot": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-footer-info-block/screenshot.png",
+        "title": "页脚信息展示",
+        "categories": [
+            "信息展示",
+            "欢迎页"
+        ],
+        "demopage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-footer-info-block/demo/index.html"
+    },
+    "scripts": {
+        "start": "ice-devtools dev",
+        "build": "ice-devtools build-block && ice-devtools screenshot"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
+    },
+    "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-footer-info-block/demo/index.html"
+}
