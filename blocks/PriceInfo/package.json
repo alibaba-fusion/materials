@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-price-info-block",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "description": "",
     "files": [
         "src/",

@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-success-detail-block",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "成功详情信息展示",
     "files": [
         "src/",

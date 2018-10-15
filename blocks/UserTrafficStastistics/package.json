@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-user-traffic-stastistics",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "信息展示类，使用可视化的方式展示用户浏览以及数据分析的结果",
     "files": [
         "src/",

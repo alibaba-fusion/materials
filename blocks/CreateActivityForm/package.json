@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-create-activity-form-block",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "创建活动的表单",
     "files": [
         "src/",

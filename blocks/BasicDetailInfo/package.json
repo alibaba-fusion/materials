@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-basic-detail-info-block",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "基础详情信息展示",
     "files": [
         "src/",

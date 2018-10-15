@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-article-list-block",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "homepage": "http://alifd.oss-cn-hangzhou.aliyuncs.com/ice-article-list-block/demo/index.html",
     "description": "文章列表",
     "main": "lib/index.js",

@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-info-display-tab-block",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "标签页信息展示",
     "main": "lib/index.js",
     "files": [
