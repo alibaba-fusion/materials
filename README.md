@@ -40,4 +40,4 @@
 
 扫码*钉钉群*加入即刻交流与反馈：
 
-<img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1ayWlbhYaK1RjSZFnXXa80pXa-750-990.png" width="300">
+<img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1iH9unxnaK1RjSZFtXXbC2VXa-1125-1485.jpg" width="300">
