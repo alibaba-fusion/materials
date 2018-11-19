@@ -61,7 +61,7 @@
   },
   "materials": [
     {
-      "directory": "",
+      "directory": "react-materials",
       "type": "react"
     }
   ]

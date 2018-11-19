@@ -1,8 +1,8 @@
 {
   "lerna": "2.5.1",
   "packages": [
-    "blocks/*",
-    "scaffolds/*"
+    "react-materials/blocks/*",
+    "react-materials/scaffolds/*"
   ],
   "commands": {
     "publish": {
