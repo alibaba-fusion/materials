@@ -2,12 +2,6 @@
   "name": "@alifd/template-next-single-page",
   "description": "next",
   "version": "0.1.1",
-  "files": [
-    "screenshot.png",
-    "build",
-    "src",
-    "mock"
-  ],
   "keywords": [
     "next",
     "fusion",
