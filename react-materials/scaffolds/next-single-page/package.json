@@ -19,7 +19,8 @@
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page"
   },
   "publishConfig": {
-    "registry": "http://registry.npm.alibaba-inc.com"
+    "registry": "http://registry.npmjs.org",
+    "access": "public"
   },
   "scripts": {
     "start": "DEV=1 LIVELOAD=1 webpack-dev-server --mode development --host 0.0.0.0 --port 9000",

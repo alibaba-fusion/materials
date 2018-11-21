@@ -1,6 +1,3 @@
-/**
- * 套件帮助文档 可查看: http://gitlab.alibaba-inc.com/fie/fie-toolkit-next
- */
 module.exports = {
   // 当前项目使用的fie套件
   toolkit: 'fie-toolkit-next',
