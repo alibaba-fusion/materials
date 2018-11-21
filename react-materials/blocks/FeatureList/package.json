@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-feature-list-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "展示一些特性列表介绍",
     "files": [
         "src/",

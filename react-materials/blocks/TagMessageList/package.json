@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-tag-message-list-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "标签消息列表",
     "files": [
         "src/",

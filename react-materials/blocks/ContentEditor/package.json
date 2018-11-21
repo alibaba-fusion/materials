@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-content-editor-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "内容编辑器",
     "files": [
         "src/",

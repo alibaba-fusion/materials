@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-basic-not-found-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "404 报错提示",
     "main": "lib/index.js",
     "files": [

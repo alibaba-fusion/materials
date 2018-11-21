@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-detail-table-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "展示详情信息的表格",
     "files": [
         "src/",

@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-down-load-card-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "下载型信息卡片",
     "main": "lib/index.js",
     "files": [

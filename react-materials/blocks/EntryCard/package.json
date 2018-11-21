@@ -1,6 +1,6 @@
 {
     "name": "@alifd/ice-entry-card-block",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "入口列表卡片",
     "main": "lib/index.js",
     "files": [
