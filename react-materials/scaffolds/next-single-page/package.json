@@ -2,6 +2,12 @@
   "name": "@alifd/template-next-single-page",
   "description": "next",
   "version": "0.1.0",
+  "files": [
+    "screenshot.png",
+    "build",
+    "src",
+    "mock"
+  ],
   "keywords": [
     "next",
     "fusion",
@@ -95,5 +101,11 @@
   },
   "buildConfig": {
     "theme": "@alifd/theme-2"
+  },
+  "scaffoldConfig": {
+    "name": "@alifd/template-next-single-page",
+    "title": "template-next-single-page",
+    "screenshot": "https://img.alicdn.com/tfs/TB1ntFrq5rpK1RjSZFhXXXSdXXa-2710-1638.png",
+    "demopage": "https://unpkg.com/@alifd/template-next-single-page/build/index.html"
   }
 }
