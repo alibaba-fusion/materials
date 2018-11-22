@@ -1,12 +1,13 @@
 {
   "name": "@alifd/template-next-single-page",
-  "description": "next",
-  "version": "0.1.2",
+  "description": "支持 fusion主题配置的默认模板",
+  "version": "0.1.3",
   "keywords": [
     "next",
     "fusion",
     "pc",
-    "next"
+    "next",
+    "ice-scaffold"
   ],
   "repository": {
     "type": "git",
