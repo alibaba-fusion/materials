@@ -26,7 +26,7 @@ try {
     const fieConfig = require('./fie.config.js');
     if (fieConfig && fieConfig.toolkitConfig && fieConfig.toolkitConfig.theme) {
       theme = fieConfig.toolkitConfig.theme;
-      console.warn(`fie中的主题包配置已迁移, 请在 package.json 中配置 
+      console.warn(`fie中的主题包配置已迁移, 请在 package.json 中配置
       buildConfig:{
         theme: '@alife/dpl-主题包名'
       }`);
@@ -34,7 +34,7 @@ try {
   }
 } catch (e) {
   console.error(e);
-  console.log(`请在 package.json 中配置 
+  console.log(`请在 package.json 中配置
   buildConfig:{
     theme: '@alife/dpl-主题包名'
   }`);
@@ -81,7 +81,7 @@ const config = {
   mode: DEV ? 'development' : 'production',
   context: cwd,
   entry: {
-    'index': ['./src/pages/index.jsx']
+    'index': ['./src/index.jsx']
   },
   output: {
     path: path.resolve(process.env.BUILD_DEST || 'build'),
