@@ -6,7 +6,7 @@
     "publish": "lerna publish --cd-version patch",
     "bootstrap": "lerna bootstrap",
     "setup": "lerna setup",
-    "generate": "ice-devtools generate",
+    "db": "ice-devtools generate",
     "lint": "npm run lint:nofix -- --fix",
     "sync": "ice-devtools-sync",
     "format": "prettier blocks/*/src/**/*.js blocks/*/src/**/*.jsx scaffolds/*/src/**/*.js scaffolds/*/src/**/*.jsx tools/**/*.js --write"
