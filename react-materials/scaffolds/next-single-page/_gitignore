@@ -2,6 +2,7 @@ node_modules/
 .travis.yml
 *.swp
 .sass-cache/
+build/
 mods/.sass-cache/
 .DS_Store
 .idea
