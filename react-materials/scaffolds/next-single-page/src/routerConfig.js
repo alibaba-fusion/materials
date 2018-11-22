@@ -3,10 +3,10 @@
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 
 import Layout from 'layouts/HeaderAsideFooterLayout';
-import Home from './pages/home/index';
-import Page1 from './pages/page1/index';
-import Page2 from './pages/page2/index';
-import Help from './pages/help/index';
+import Home from 'pages/home/index';
+import Page1 from 'pages/page1/index';
+import Page2 from 'pages/page2/index';
+import Help from 'pages/help/index';
 
 const routerConfig = [
   {
