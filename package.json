@@ -1,6 +1,7 @@
 {
   "name": "fusion-workspace",
   "version": "0.0.4",
+  "private": true,
   "scripts": {
     "start": "ice-devtools start",
     "publish": "lerna publish --cd-version patch",
