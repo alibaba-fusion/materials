@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "keywords": [
     "next",
     "fusion",
