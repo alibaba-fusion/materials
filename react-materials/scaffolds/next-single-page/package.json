@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "keywords": [
     "next",
     "fusion",
@@ -107,5 +107,5 @@
     "screenshot": "https://img.alicdn.com/tfs/TB1ntFrq5rpK1RjSZFhXXXSdXXa-2710-1638.png",
     "demopage": "https://unpkg.com/@alifd/template-next-single-page/build/index.html"
   },
-  "templateType": "react"
+  "templateType": "custom"
 }
