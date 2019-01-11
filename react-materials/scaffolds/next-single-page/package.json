@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "keywords": [
     "next",
     "fusion",
@@ -60,6 +60,7 @@
   },
   "devDependencies": {
     "@alifd/next-theme-loader": "^1.1.2",
+    "@alifd/next-theme-webpack-plugin": "^1.0.1",
     "@commitlint/cli": "^7.2.1",
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.24.0",

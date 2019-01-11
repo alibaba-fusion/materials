@@ -4,6 +4,7 @@ const globby = require('globby');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SimpleProgressPlugin = require('webpack-simple-progress-plugin');
+const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 const os = require('os');
 const HappyPack = require('happypack');
 const colors = require('colors');
@@ -144,6 +145,8 @@ const config = {
       threadPool: happyThreadPool,
       loaders: scssLoader,
     }),
+    
+    new ThemePlugin({ theme }),
 
     new MiniCssExtractPlugin({
       filename: '[name].bundle.css',
