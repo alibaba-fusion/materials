@@ -23,15 +23,6 @@ try {
   const pkg = require('./package.json');
   if (pkg && pkg.buildConfig && pkg.buildConfig.theme) {
     theme = pkg.buildConfig.theme;
-  } else {
-    const fieConfig = require('./fie.config.js');
-    if (fieConfig && fieConfig.toolkitConfig && fieConfig.toolkitConfig.theme) {
-      theme = fieConfig.toolkitConfig.theme;
-      console.warn(`fie中的主题包配置已迁移, 请在 package.json 中配置
-      buildConfig:{
-        theme: '@alife/dpl-主题包名'
-      }`);
-    }
   }
 } catch (e) {
   console.error(e);
