@@ -1,0 +1,13 @@
+.header-layout {
+  width: 100%;
+  .body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 44px);
+  }
+  .main {
+    width: 100%;
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "extends": "eslint-config-ali/react",
+  "parser": "babel-eslint",
+  "globals": {
+    "it": true,
+    "describe": true,
+    "require": true,
+    "process": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "strict": "off",
+    "no-console": "off",
+    "require-yield": "off",
+    "import/no-dynamic-require": "off",
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off"
+  }
+}
