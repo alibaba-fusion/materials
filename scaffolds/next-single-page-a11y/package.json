@@ -1,0 +1,115 @@
+{
+  "name": "@alifd/template-next-single-page-rtl",
+  "description": "支持 fusion主题配置的默认模板",
+  "version": "0.1.17",
+  "keywords": [
+    "next",
+    "fusion",
+    "pc",
+    "next",
+    "ice-scaffold"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org",
+    "access": "public"
+  },
+  "scripts": {
+    "start": "DEV=1 LIVELOAD=1 webpack-dev-server --mode development --host 0.0.0.0 --port 9000",
+    "build": "node build; webpack --mode production",
+    "lint": "eslint . --ext '.js,.jsx' --fix",
+    "prettier": "prettier src/**/*.scss --write"
+  },
+  "lint-staged": {
+    "src/**/*.@(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && lint-staged"
+    }
+  },
+  "author": {
+    "name": "bindoon",
+    "email": "bindoon@sina.com"
+  },
+  "maintainers": [
+    {
+      "name": "bindoon",
+      "email": "bindoon@sina.com"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "tnpm": {
+    "mode": "npminstall"
+  },
+  "dependencies": {
+    "@alifd/next": "^1.x",
+    "@alifd/theme-2": "*",
+    "babel-polyfill": "^6.8.0",
+    "classnames": "^2.2.5",
+    "moment": "^2.24.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@alifd/next-theme-loader": "^1.1.2",
+    "@alifd/next-theme-webpack-plugin": "^1.0.1",
+    "@commitlint/cli": "^7.2.1",
+    "autoprefixer": "^6.3.6",
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "*",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.19.1",
+    "eslint-config-ali": "^2.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-react": "^7.1.0",
+    "fs-extra": "^5.0.0",
+    "globby": "^4.1.0",
+    "happypack": "^5.0.0",
+    "husky": "^1.1.3",
+    "lint-staged": "^8.0.4",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^2.0.0",
+    "postcss-loader": "^2.0.0",
+    "postcss-rtl": "^1.3.3",
+    "precss": "^3.1.0",
+    "prettier": "^1.14.2",
+    "raw-loader": "^0.5.1",
+    "react-hot-loader": "^3.1.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "~0.13.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-simple-progress-plugin": "^0.0.4"
+  },
+  "buildConfig": {
+    "theme": "@alifd/theme-2"
+  },
+  "scaffoldConfig": {
+    "type": "react",
+    "name": "@alifd/template-next-single-page",
+    "title": "template-next-single-page",
+    "screenshot": "https://img.alicdn.com/tfs/TB1ntFrq5rpK1RjSZFhXXXSdXXa-2710-1638.png",
+    "demopage": "https://unpkg.com/@alifd/template-next-single-page/build/index.html"
+  },
+  "templateType": "custom"
+}
