@@ -1,0 +1,75 @@
+/**
+ * designtoken 设计标注见 https://fusion.design/design/tokens
+ */
+
+.header {
+  background: $nav-primary-bg-color;
+  z-index: 1;
+
+  .header-nav {
+    width: 100%;
+    padding: 0 40px;
+    .next-menu-footer {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-logo {
+    display: inline-block;
+    height: 100%;
+    img {
+      height: 100%;
+      margin: auto;
+    }
+    &-showtips {
+      border: 1px dashed rgba($color-line1-1, 0.5);
+    }
+  }
+
+  &-limit {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    .header-inner {
+      padding: 0;
+    }
+  }
+
+  &-simple {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    .my {
+      color: white;
+      margin-left: 70px;
+    }
+    .simple-logo {
+      flex-grow: 1;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 10px;
+  }
+
+  .name {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 8px;
+    font-size: $font-size-caption;
+  }
+
+  .about {
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}

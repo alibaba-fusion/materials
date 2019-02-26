@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": ["plugin:prettier/recommended"],
+  "parser": "babel-eslint",
+  "globals": {
+    "it": true,
+    "describe": true,
+    "require": true,
+    "process": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true
+  },
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "strict": "off",
+    "no-console": "off",
+    "require-yield": "off",
+    "import/no-dynamic-require": "off",
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off"
+  }
+}
