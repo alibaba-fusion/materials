@@ -32,7 +32,7 @@ class Header extends Component {
   header() {
     return (
       <div className="header-logo">
-        <a href="/">
+        <a href="#/">
           <img src="//img.alicdn.com/tfs/TB1pKookmzqK1RjSZFHXXb3CpXa-240-70.png" />
         </a>
       </div>
@@ -77,7 +77,7 @@ class Header extends Component {
     const content = (
       <Nav
         direction="hoz"
-        type="primary"
+        type="secondary"
         activeDirection={null}
         hozAlign="right"
         defaultSelectedKeys={defaultSelectedKeys}

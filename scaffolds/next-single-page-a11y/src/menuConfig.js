@@ -31,15 +31,14 @@ const asideMenuConfig = [
     icon: 'home',
   },
   {
-    name: '数据概览',
-    path: '/subpage',
+    name: '税费申报',
+    path: '/subpage/page2',
     icon: 'home',
-    children: [
-      {
-        name: '更改配置',
-        path: '/subpage/page1',
-      },
-    ],
+  },
+  {
+    name: '更改配置',
+    path: '/subpage/page1',
+    icon: 'home',
   },
   {
     name: '帮助中心',

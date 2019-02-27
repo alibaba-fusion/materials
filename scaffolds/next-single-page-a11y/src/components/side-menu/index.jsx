@@ -63,7 +63,7 @@ class SideMenu extends React.Component {
       <Nav
         className={cls}
         selectedKeys={[match.path]}
-        type="primary"
+        type="secondary"
         activeDirection={null}
         defaultOpenAll
       >

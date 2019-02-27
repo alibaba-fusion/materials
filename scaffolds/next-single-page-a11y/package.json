@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@alifd/next": "^1.x",
-    "@alifd/theme-2": "*",
+    "@alifd/theme-4": "*",
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
     "moment": "^2.24.0",
@@ -103,7 +103,7 @@
     "webpack-simple-progress-plugin": "^0.0.4"
   },
   "buildConfig": {
-    "theme": "@alifd/theme-2"
+    "theme": "@alifd/theme-4"
   },
   "scaffoldConfig": {
     "type": "react",

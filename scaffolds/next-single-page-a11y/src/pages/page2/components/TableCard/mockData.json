@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "step1": "todo",
+    "step2": "done",
+    "step3": "done",
+    "step4": "todo",
+    "step5": "doing",
+    "step6": "todo",
+    "step7": "todo",
+    "step8": "todo"
+  },
+  {
+    "id": 2,
+    "step1": "todo",
+    "step2": "todo",
+    "step3": "failed",
+    "step4": "todo",
+    "step5": "todo",
+    "step6": "failed",
+    "step7": "doing",
+    "step8": "todo"
+  },
+  {
+    "id": 3,
+    "step1": "todo",
+    "step2": "done",
+    "step3": "todo",
+    "step4": "todo",
+    "step5": "doing",
+    "step6": "failed",
+    "step7": "todo",
+    "step8": "todo"
+  },
+  {
+    "id": 4,
+    "step1": "done",
+    "step2": "done",
+    "step3": "done",
+    "step4": "todo",
+    "step5": "doing",
+    "step6": "done",
+    "step7": "todo",
+    "step8": "failed"
+  },
+  {
+    "id": 5,
+    "step1": "failed",
+    "step2": "done",
+    "step3": "done",
+    "step4": "todo",
+    "step5": "doing",
+    "step6": "failed",
+    "step7": "todo",
+    "step8": "todo"
+  },
+  {
+    "id": 6,
+    "step1": "todo",
+    "step2": "done",
+    "step3": "done",
+    "step4": "done",
+    "step5": "todo",
+    "step6": "doing",
+    "step7": "todo",
+    "step8": "todo"
+  }
+]

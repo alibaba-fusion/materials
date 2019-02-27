@@ -3,12 +3,18 @@
  */
 
 .header {
-  background: $nav-primary-bg-color;
+  background: $nav-secondary-bg-color;
   z-index: 1;
 
   .header-nav {
     width: 100%;
     padding: 0 40px;
+    a {
+      color: #fff;
+      &:active {
+        text-decoration: none;
+      }
+    }
     .next-menu-footer {
       display: flex;
       align-items: center;

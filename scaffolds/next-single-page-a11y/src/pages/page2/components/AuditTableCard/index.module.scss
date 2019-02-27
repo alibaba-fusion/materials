@@ -1,0 +1,24 @@
+.tableWrapper {
+  padding: 20px;
+  margin: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: -1px 0px 4px 0px rgba(75, 89, 128, 0.1);
+  margin-bottom: 20px;
+}
+.oprations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  & button {
+    margin-right: 20px;
+  }
+}
+.leftOp {
+}
+
+.rightOp {
+}

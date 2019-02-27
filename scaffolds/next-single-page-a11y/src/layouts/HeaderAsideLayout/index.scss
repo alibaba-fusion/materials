@@ -1,4 +1,4 @@
-.header-aside-footer-layout {
+.header-aside-layout {
   width: 100%;
 
   .body {
@@ -17,14 +17,11 @@
         }
       }
     }
-
     .main {
       transition: padding-left 0.5s;
       width: 100%;
+      background-color: $color-fill1-2;
       overflow-y: scroll;
-      &.right-content-full {
-        padding-left: 185px;
-      }
     }
   }
 }

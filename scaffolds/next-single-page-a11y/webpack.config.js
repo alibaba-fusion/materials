@@ -31,7 +31,7 @@ try {
   console.error(e);
   console.log(`请在 package.json 中配置
   buildConfig:{
-    theme: '@alife/dpl-主题包名'
+    theme: '@alifd/theme-4'
   }`);
 }
 

@@ -1,0 +1,13 @@
+.next-icon {
+  &.todo {
+  }
+  &.doing {
+    color: $color-other-2;
+  }
+  &.done {
+    color: $color-success-3;
+  }
+  &.failed {
+    color: $color-error-4;
+  }
+}

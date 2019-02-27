@@ -7,7 +7,7 @@ import './index.scss';
 class Page1 extends React.Component {
   render() {
     return (
-      <div className="redux-demo-home">
+      <div className="form-demo-home">
         <FormCard />
       </div>
     );
