@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page-rtl",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.17",
+  "version": "0.1.0",
   "keywords": [
     "next",
     "fusion",
@@ -35,13 +35,13 @@
     }
   },
   "author": {
-    "name": "bindoon",
-    "email": "bindoon@sina.com"
+    "name": "youluna",
+    "email": "njuzhaoguoyan@foxmail.com"
   },
   "maintainers": [
     {
-      "name": "bindoon",
-      "email": "bindoon@sina.com"
+      "name": "youluna",
+      "email": "njuzhaoguoyan@foxmail.com"
     }
   ],
   "readmeFilename": "README.md",
