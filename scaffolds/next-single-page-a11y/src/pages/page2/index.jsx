@@ -36,6 +36,7 @@ class Page2 extends React.Component {
                   title={item[0]}
                   content={item[1]}
                   onClick={this.stepItemClick}
+                  role="button"
                 />
               ))}
             </Step>
