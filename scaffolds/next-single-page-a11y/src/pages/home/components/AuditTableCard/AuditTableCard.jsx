@@ -65,7 +65,7 @@ const oprations = () => {
 const actions = (value, index, recored) => {
   return (
     <div>
-      <a href="javascript:void(0)">下载</a>
+      <a href="https://github.com/alibaba-fusion/next">下载</a>
     </div>
   );
 };
