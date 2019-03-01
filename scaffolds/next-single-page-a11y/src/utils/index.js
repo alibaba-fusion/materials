@@ -1,5 +1,8 @@
 'use strict';
 
+import _KEYCODE from './keycode';
+
+export const KEYCODE = _KEYCODE;
 /**
  * abc-xyz => AbcXyz
  * @param {String} str

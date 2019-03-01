@@ -1,7 +1,7 @@
 {
-  "name": "@alifd/template-next-single-page-rtl",
-  "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.17",
+  "name": "@alifd/template-next-single-page-a11y",
+  "description": "支持 fusion主题配置的无障碍模板",
+  "version": "0.1.3",
   "keywords": [
     "next",
     "fusion",
@@ -50,7 +50,7 @@
     "mode": "npminstall"
   },
   "dependencies": {
-    "@alifd/next": "^1.x",
+    "@alifd/next": "^1.13.3",
     "@alifd/theme-4": "*",
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
@@ -109,10 +109,10 @@
   },
   "scaffoldConfig": {
     "type": "react",
-    "name": "@alifd/template-next-single-page",
-    "title": "template-next-single-page",
-    "screenshot": "https://img.alicdn.com/tfs/TB1ntFrq5rpK1RjSZFhXXXSdXXa-2710-1638.png",
-    "demopage": "https://unpkg.com/@alifd/template-next-single-page/build/index.html"
+    "name": "@alifd/template-next-single-page-a11y",
+    "title": "template-next-single-page-a11y",
+    "screenshot": "https://img.alicdn.com/tfs/TB1WMoYI4TpK1RjSZFMXXbG_VXa-1536-753.png",
+    "demopage": "https://unpkg.com/@alifd/template-next-single-page-a11y/build/index.html"
   },
   "templateType": "custom"
 }
