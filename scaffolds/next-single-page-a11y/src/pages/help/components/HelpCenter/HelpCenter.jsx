@@ -53,16 +53,16 @@ export default class FormCard extends Component {
           onSelect={this.handleSelect}
           onItemClick={this.onItemClick}
         >
-          <Group label="新手指南">
+          <Group label="新手指南" style={{ color: '#0b6d65' }}>
             <Item key="new-1">快速上手</Item>
           </Group>
           <Divider />
-          <Group label="设计师指南">
+          <Group label="设计师指南" style={{ color: '#0b6d65' }}>
             <Item key="group-1-1">配置组件主题样式</Item>
             <Item key="group-1-2">配置ICON</Item>
           </Group>
           <Divider />
-          <Group label="开发者指南">
+          <Group label="开发者指南" style={{ color: '#0b6d65' }}>
             <Item key="group-2-1">使用主题包</Item>
             <Item key="group-2-2">使用模块模板</Item>
           </Group>
