@@ -47,18 +47,27 @@ export default class TableCard extends Component {
     const { readOnly } = this.props;
     return readOnly ? (
       <div>
-        <a href="javascript:void(0)">下载数据</a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+        <a href="https://github.com/alibaba-fusion/next">下载数据</a>
+        <a
+          href="https://github.com/alibaba-fusion/next"
+          style={{ marginLeft: '10px' }}
+        >
           退回
         </a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+        <a
+          href="https://github.com/alibaba-fusion/next"
+          style={{ marginLeft: '10px' }}
+        >
           提交审核
         </a>
       </div>
     ) : (
       <div>
-        <a href="javascript:void(0)">下载数据</a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+        <a href="https://github.com/alibaba-fusion/next">下载数据</a>
+        <a
+          href="https://github.com/alibaba-fusion/next"
+          style={{ marginLeft: '10px' }}
+        >
           开始计算
         </a>
       </div>
