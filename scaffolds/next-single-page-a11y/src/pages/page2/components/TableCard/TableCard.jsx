@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import FooterCard from '../FooterCard';
 import TableBanner from '../TableBanner';
 
-import { Table, Pagination } from '@alifd/next';
+import { Table, Pagination, Button } from '@alifd/next';
 
 import { renderIcon } from '../../utils';
 
@@ -47,20 +47,24 @@ export default class TableCard extends Component {
     const { readOnly } = this.props;
     return readOnly ? (
       <div>
-        <a href="javascript:void(0)">下载数据</a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+        <Button type="primary" size="small">
+          下载数据
+        </Button>
+        <Button type="primary" size="small" style={{ margin: '0px 3px' }}>
           退回
-        </a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+        </Button>
+        <Button type="primary" size="small">
           提交审核
-        </a>
+        </Button>
       </div>
     ) : (
-      <div>
-        <a href="javascript:void(0)">下载数据</a>
-        <a href="javascript:void(0)" style={{ marginLeft: '10px' }}>
+      <div style={{ 'text-align': 'center' }}>
+        <Button type="primary" size="small">
+          下载数据
+        </Button>
+        <Button type="primary" size="small" style={{ marginLeft: '5px' }}>
           开始计算
-        </a>
+        </Button>
       </div>
     );
   };

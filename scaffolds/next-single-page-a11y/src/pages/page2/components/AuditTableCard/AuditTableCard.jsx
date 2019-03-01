@@ -64,8 +64,10 @@ const oprations = () => {
 
 const actions = (value, index, recored) => {
   return (
-    <div>
-      <a href="javascript:void(0)">下载</a>
+    <div style={{ 'text-align': 'center' }}>
+      <Button type="primary" size="small">
+        下载
+      </Button>
     </div>
   );
 };
