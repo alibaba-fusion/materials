@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page-rtl",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "next",
     "fusion",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page"
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page-rtl"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org",
