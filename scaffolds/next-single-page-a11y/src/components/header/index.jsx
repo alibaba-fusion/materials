@@ -33,7 +33,10 @@ class Header extends Component {
     return (
       <div className="header-logo">
         <a href="#/">
-          <img src="//img.alicdn.com/tfs/TB1pKookmzqK1RjSZFHXXb3CpXa-240-70.png" />
+          <img
+            src="//img.alicdn.com/tfs/TB1pKookmzqK1RjSZFHXXb3CpXa-240-70.png"
+            alt="商标"
+          />
         </a>
       </div>
     );
@@ -46,7 +49,7 @@ class Header extends Component {
 
     const trigger = (
       <a href="/my" style={{ textDecoration: 'none' }}>
-        <img src={userinfo.avatarUrl} className="avatar" />
+        <img src={userinfo.avatarUrl} className="avatar" alt="头像" />
         <span className="name">{userinfo.displayName}</span>
       </a>
     );

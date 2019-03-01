@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page-rtl",
   "description": "支持 fusion主题配置的默认模板",
-  "version": "0.1.17",
+  "version": "0.1.1",
   "keywords": [
     "next",
     "fusion",
@@ -35,13 +35,13 @@
     }
   },
   "author": {
-    "name": "bindoon",
-    "email": "bindoon@sina.com"
+    "name": "youluna",
+    "email": "njuzhaoguoyan@foxmail.com"
   },
   "maintainers": [
     {
-      "name": "bindoon",
-      "email": "bindoon@sina.com"
+      "name": "youluna",
+      "email": "njuzhaoguoyan@foxmail.com"
     }
   ],
   "readmeFilename": "README.md",
@@ -105,10 +105,10 @@
   },
   "scaffoldConfig": {
     "type": "react",
-    "name": "@alifd/template-next-single-page",
-    "title": "template-next-single-page",
-    "screenshot": "https://img.alicdn.com/tfs/TB1ntFrq5rpK1RjSZFhXXXSdXXa-2710-1638.png",
-    "demopage": "https://unpkg.com/@alifd/template-next-single-page/build/index.html"
+    "name": "@alifd/template-next-single-page-rtl",
+    "title": "template-next-single-page-rtl",
+    "screenshot": "https://img.alicdn.com/tfs/TB1GCzyJkPoK1RjSZKbXXX1IXXa-1536-621.jpg",
+    "demopage": "https://unpkg.com/@alifd/template-next-single-page-rtl/build/index.html"
   },
   "templateType": "custom"
 }

@@ -12,10 +12,8 @@
     }
 
     .main {
-      // padding-left: 65px;
       transition: padding-left 0.5s;
       width: 100%;
-      // margin-top: 80px;
       overflow-y: scroll;
       &.right-content-full {
         padding-left: 185px;

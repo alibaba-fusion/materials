@@ -2,7 +2,7 @@
 
 Fusion next 单页面路由
 
-![](https://img.alicdn.com/tfs/TB1kwtjq3HqK1RjSZFkXXX.WFXa-1057-551.png)
+![](https://img.alicdn.com/tfs/TB1GCzyJkPoK1RjSZKbXXX1IXXa-1536-621.jpg)
 
 ### 开发调试
 
