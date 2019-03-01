@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { Form, Input, Radio, Field, Message } from '@alifd/next';
 
-import styles from './index.module.scss';
+import './index.module.scss';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -171,7 +171,10 @@ export default class FormCard extends Component {
             validate
             htmlType="submit"
             type="primary"
-            style={{ margin: '0 10px' }}
+            style={{
+              margin: '0 10px',
+              'background-color': '#006159',
+            }}
           >
             Submit
           </Form.Submit>
