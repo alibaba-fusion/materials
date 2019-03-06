@@ -1,7 +1,7 @@
 {
   "name": "@alifd/template-next-single-page-a11y",
   "description": "支持 fusion主题配置的无障碍模板",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "keywords": [
     "next",
     "fusion",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page"
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/next-single-page-a11y"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org",
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@alifd/next": "^1.13.3",
-    "@alifd/theme-4": "*",
+    "@alifd/theme-a11y": "^0.1.0",
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
     "moment": "^2.24.0",
@@ -105,7 +105,7 @@
     "webpack-simple-progress-plugin": "^0.0.4"
   },
   "buildConfig": {
-    "theme": "@alifd/theme-4"
+    "theme": "@alifd/theme-a11y"
   },
   "scaffoldConfig": {
     "type": "react",
