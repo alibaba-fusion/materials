@@ -62,7 +62,7 @@ const oprations = () => {
   };
   return Object.keys(map).map(key => {
     return (
-      <Button text>
+      <Button text tabIndex="-1">
         {renderIcon(key)}
         {map[key]}
       </Button>
@@ -103,7 +103,9 @@ export default class FooterCard extends Component {
             下载模版
           </Button>
         </div>
-        <div className={styles.rightOp}>{oprations()}</div>
+        <div className={styles.rightOp} aria-hidden aria-label="示例说明">
+          {oprations()}
+        </div>
       </div>
     );
   }

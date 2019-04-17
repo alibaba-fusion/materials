@@ -2,33 +2,25 @@
 // 你可以调整 routerConfig 里的内容
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 
-import HeaderAsideFooterLayout from 'layouts/HeaderAsideFooterLayout';
 import HeaderAsideLayout from 'layouts/HeaderAsideLayout';
 import HeaderLayout from 'layouts/HeaderLayout';
 
 import Home from 'pages/home/index';
 import Page1 from 'pages/page1/index';
-import Page2 from 'pages/page2/index';
 import Help from 'pages/help/index';
 
 const routerConfig = [
   {
     path: '/',
     exact: true,
-    layout: HeaderAsideFooterLayout,
+    layout: HeaderAsideLayout,
     component: Home,
   },
   {
     path: '/subpage/page1',
     exact: true,
-    layout: HeaderAsideFooterLayout,
-    component: Page1,
-  },
-  {
-    path: '/subpage/page2',
-    exact: true,
     layout: HeaderAsideLayout,
-    component: Page2,
+    component: Page1,
   },
   {
     path: '/help',

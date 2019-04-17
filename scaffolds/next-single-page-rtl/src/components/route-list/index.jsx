@@ -13,7 +13,7 @@ class RouteList extends React.Component {
   };
 
   state = {
-    rtl: false,
+    rtl: true,
     locale: 'en-us',
   }
   changeDir = (checked) => {

@@ -40,6 +40,9 @@ export default class FormCard extends Component {
       selectedKeys,
     });
   };
+  onItemClick = key => {
+    document.getElementById('answers').focus();
+  };
   render() {
     return (
       <div className={styles.helpeCenter}>
@@ -48,6 +51,7 @@ export default class FormCard extends Component {
           selectMode="single"
           selectedKeys={this.state.selectedKeys}
           onSelect={this.handleSelect}
+          onItemClick={this.onItemClick}
         >
           <Group label="新手指南">
             <Item key="new-1">快速上手</Item>
@@ -64,6 +68,7 @@ export default class FormCard extends Component {
           </Group>
         </Menu>
         <Card
+          id="answers"
           className={styles.card}
           title={mockData[this.state.selectedKeys].question}
           contentHeight="auto"

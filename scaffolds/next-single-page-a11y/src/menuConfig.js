@@ -31,11 +31,6 @@ const asideMenuConfig = [
     icon: 'home',
   },
   {
-    name: '税费申报',
-    path: '/subpage/page2',
-    icon: 'home',
-  },
-  {
     name: '更改配置',
     path: '/subpage/page1',
     icon: 'home',
