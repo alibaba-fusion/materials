@@ -23,7 +23,6 @@ class RouteList extends React.Component {
             path={route.path}
             render={props => {
               const component = React.createElement(route.component, props);
-
               if (route.layout) {
                 return React.createElement(route.layout, props, component);
               }

@@ -26,7 +26,7 @@ class Home extends React.Component {
     const { current } = this.state;
     return (
       <div className="whale-page">
-        <h2 id="content-title" class="whale-page-title">
+        <h2 id="content-title" class="whale-page-title" tabIndex="0">
           {steps[current][1]}
         </h2>
         <div class="whale-page-content">

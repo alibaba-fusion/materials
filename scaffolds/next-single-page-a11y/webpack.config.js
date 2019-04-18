@@ -120,7 +120,7 @@ const config = {
       {
         test: /\.module\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'happypack/loader?id=modulescss'],
-      },
+      }
     ],
   },
   externals: {

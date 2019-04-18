@@ -9,8 +9,8 @@ class SkipTo extends Component {
   render() {
     const { dist } = this.props;
     return (
-      <a
-        tabIndex="1"
+      <button
+        tabIndex="0"
         className="skip-to-main"
         onKeyDown={e => {
           if ([KEYCODE.ENTER, KEYCODE.SPACE].indexOf(e.keyCode) > -1) {
@@ -23,7 +23,7 @@ class SkipTo extends Component {
         }}
       >
         skip to main content
-      </a>
+      </button>
     );
   }
 }
