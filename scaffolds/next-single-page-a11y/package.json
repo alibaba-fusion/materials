@@ -18,7 +18,7 @@
     "access": "public"
   },
   "scripts": {
-    "start": "DEV=1 LIVELOAD=1 webpack-dev-server --mode development --host 0.0.0.0 --port 9000",
+    "start": "DEV=1 LIVELOAD=1 webpack-dev-server --mode development --host 0.0.0.0 --port 9001",
     "build": "node build; webpack --mode production",
     "lint": "eslint . --ext '.js,.jsx' --fix",
     "prettier": "prettier src/**/*.scss --write",
@@ -50,10 +50,11 @@
     "mode": "npminstall"
   },
   "dependencies": {
-    "@alifd/next": "^1.13.3",
-    "@alifd/theme-a11y": "^0.1.0",
+    "@alifd/next": "^1.14.3",
+    "@alifd/theme-a11y": "^0.1.9", 
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
+    "focus-visible": "^4.1.5",
     "moment": "^2.24.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

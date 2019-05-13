@@ -20,7 +20,7 @@ class Layout extends React.Component {
         <Header {...this.props} />
         <div className="body">
           <SideMenu dataSource={asideMenuConfig} className="aside" />
-          <div id="main" className="main">
+          <div id="main" className="main" role="main">
             {this.props.children}
           </div>
         </div>

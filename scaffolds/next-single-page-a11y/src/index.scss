@@ -2,3 +2,9 @@
   margin: 0;
   padding: 0;
 }
+
+.js-focus-visible .focus-visible:focus {
+  // border: 2px solid #87cefa;
+  outline: orange solid 2px;
+  box-shadow: orange 0px 0px 5px;
+}

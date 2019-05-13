@@ -72,6 +72,7 @@ export default class FormCard extends Component {
           className={styles.card}
           title={mockData[this.state.selectedKeys].question}
           contentHeight="auto"
+          role="main"
         >
           {mockData[this.state.selectedKeys].answer}
         </Card>

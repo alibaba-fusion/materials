@@ -25,20 +25,64 @@ const headerMenuConfig = [
 ];
 
 const asideMenuConfig = [
+  // {
+  //   name: '更改配置',
+  //   path: '/subpage/page1',
+  //   icon: 'home',
+  // },
+  // {
+  //   name: '帮助中心',
+  //   path: '/help',
+  //   icon: 'help',
+  // },
   {
-    name: '首页',
-    path: '/',
-    icon: 'home',
+    name: '列表页',
+    path: '/list',
+    icon: 'list',
+    children: [
+      {
+        name: '基础表格',
+        path: '/list/baseTable',
+      },
+      {
+        name: '高级表格',
+        path: '/list/highLevelTable',
+        icon: 'home',
+      },
+    ],
   },
   {
-    name: '更改配置',
-    path: '/subpage/page1',
-    icon: 'home',
+    name: '表单页',
+    path: '/form',
+    icon: 'form',
+    children: [
+      {
+        name: '基础表单',
+        path: '/form/register',
+      },
+    ],
   },
   {
-    name: '帮助中心',
-    path: '/help',
-    icon: 'help',
+    name: '详情页',
+    path: '/detail',
+    icon: 'detail',
+    children: [
+      {
+        name: '基础详情',
+        path: '/detail/baseDetail',
+      },
+    ],
+  },
+  {
+    name: '个人页',
+    path: '/individual',
+    icon: 'individual',
+    children: [
+      {
+        name: '帮助中心',
+        path: '/individual/help',
+      },
+    ],
   },
 ];
 

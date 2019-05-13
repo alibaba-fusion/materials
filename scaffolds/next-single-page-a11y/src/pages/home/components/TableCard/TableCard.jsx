@@ -83,15 +83,6 @@ export default class TableCard extends Component {
             loading={this.state.loading}
             align="center"
             dataSource={mockData}
-            rowSelection={
-              readOnly
-                ? undefined
-                : {
-                    mode: 'multiple',
-                    selectedRowKeys: this.state.selectedRowKeys,
-                    onChange: this.onChange,
-                  }
-            }
           >
             <Table.Column title="Id" dataIndex="id" lock width={100} />
             {stepState.map(key => (

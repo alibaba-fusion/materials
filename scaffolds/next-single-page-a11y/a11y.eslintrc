@@ -4,6 +4,15 @@
     "plugins": [
       "jsx-a11y"
     ],
+    "rules": {
+      "jsx-a11y/no-autofocus": "warn", 
+      "jsx-a11y/no-noninteractive-tabindex": [
+        "warn",
+        {
+            "tags": [],
+            "roles": ["tabpanel"]
+        }
+    ]},
     "env": {
       "browser": true,
       "node": true

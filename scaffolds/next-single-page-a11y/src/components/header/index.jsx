@@ -31,13 +31,11 @@ class Header extends Component {
 
   header() {
     return (
-      <div className="header-logo">
-        <a href="#/">
-          <img
-            src="//img.alicdn.com/tfs/TB1pKookmzqK1RjSZFHXXb3CpXa-240-70.png"
-            alt="Alibaba Fusion logo"
-          />
-        </a>
+      <div className="header-logo" role="img" aria-label="logo">
+        <img
+          src="//img.alicdn.com/tfs/TB1pKookmzqK1RjSZFHXXb3CpXa-240-70.png"
+          alt="Alibaba Fusion logo"
+        />
       </div>
     );
   }
@@ -48,27 +46,23 @@ class Header extends Component {
     };
 
     const trigger = (
-      <div style={{ textDecoration: 'none' }}>
+      <a href="/my" style={{ textDecoration: 'none' }}>
         <img src={userinfo.avatarUrl} className="avatar" alt="头像" />
         <span className="name">{userinfo.displayName}</span>
-      </div>
+      </a>
     );
 
     return (
       <div>
         <Balloon
-          id="personal-data"
           autoFocus
-          triggerType="click"
           trigger={trigger}
+          triggerType={['hover', 'click']}
           closable={false}
           offset={[0, 10]}
           style={{ padding: 4 }}
         >
           <Menu style={{ border: 'none' }}>
-            <Menu.Item>
-              <a href="/my">个人中心</a>
-            </Menu.Item>
             <Menu.Item>
               <a href="/personal/register">个人设置</a>
             </Menu.Item>
