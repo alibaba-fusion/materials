@@ -84,6 +84,44 @@ const asideMenuConfig = [
       },
     ],
   },
+  {
+    name: '结果页',
+    path: '/result',
+    icon: 'result',
+    children: [
+      {
+        name: '成功',
+        path: '/result/success',
+      },
+      {
+        name: '失败',
+        path: 'result/fail',
+      },
+    ],
+  },
+  {
+    name: '异常页',
+    path: '/exception',
+    icon: 'exception',
+    children: [
+      {
+        name: '204',
+        path: '/exception/204',
+      },
+      {
+        name: '403',
+        path: '/exception/403',
+      },
+      {
+        name: '404',
+        path: '/exception/404',
+      },
+      {
+        name: '500',
+        path: '/exception/500',
+      },
+    ],
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

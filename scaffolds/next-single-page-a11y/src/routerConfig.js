@@ -12,6 +12,12 @@ import Register from 'pages/Form/index';
 import BasicTable from 'pages/BasicTable/index';
 
 import Detail from './pages/Detail/index';
+import ServerError from './pages/Exception/ServerError';
+import Empty from './pages/Exception/Empty';
+import Forbidden from './pages/Exception/Forbidden';
+import NotFound from './pages/Exception/NotFound';
+import Success from './pages/Success/index';
+import Fail from './pages/Fail/index';
 
 const routerConfig = [
   {
@@ -61,6 +67,36 @@ const routerConfig = [
     exact: true,
     layout: HeaderAsideLayout,
     component: Detail,
+  },
+  {
+    path: '/exception/500',
+    layout: HeaderLayout,
+    component: ServerError,
+  },
+  {
+    path: '/exception/403',
+    layout: HeaderLayout,
+    component: Forbidden,
+  },
+  {
+    path: '/exception/204',
+    layout: HeaderLayout,
+    component: Empty,
+  },
+  {
+    path: '/exception/404',
+    layout: HeaderLayout,
+    component: NotFound,
+  },
+  {
+    path: '/result/success',
+    layout: HeaderLayout,
+    component: Success,
+  },
+  {
+    path: '/result/fail',
+    layout: HeaderLayout,
+    component: Fail,
   },
 ];
 
