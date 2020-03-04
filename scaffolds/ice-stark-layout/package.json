@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/stark-layout-scaffold",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "微前端方案 icestark 的框架应用模板，用于快速初始化框架应用",
   "homepage": "https://ice-lab.zeroling.com/",
   "files": [
@@ -69,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ice-lab/react-materials/tree/master/scaffolds/ice-stark-layout"
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-layout"
   },
   "iceworks": {
     "type": "react",
