@@ -1,0 +1,48 @@
+{
+  "name": "@icedesign/title",
+  "version": "1.0.5",
+  "description": "标题组件",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib/",
+    "demo/",
+    "build/",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "ice",
+    "ice-component"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/react-materials/tree/master/components/title"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "../../node_modules/.bin/ice-scripts dev --config ../../ice.component.config.js",
+    "build": "../../node_modules/.bin/ice-scripts build --config ../../ice.component.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
+    "@alifd/next": "^1.x"
+  },
+  "devDependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "peerDependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "componentConfig": {
+    "name": "title",
+    "title": "标题组件"
+  },
+  "homepage": "https://unpkg.com/@icedesign/title@1.0.5/build/index.html"
+}

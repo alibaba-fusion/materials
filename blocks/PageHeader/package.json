@@ -1,0 +1,45 @@
+{
+  "name": "@alifd/fusion-page-header",
+  "version": "0.1.5",
+  "description": "页头位于页容器中，页容器顶部，起到了内容概览和引导页级操作的作用。",
+  "files": [
+    "build/",
+    "screenshot.png",
+    "src/!(style.d.ts)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build && npm run screenshot"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.19.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "blockConfig": {
+    "name": "PageHeader",
+    "title": "页头",
+    "category": "Information",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
+  }
+}

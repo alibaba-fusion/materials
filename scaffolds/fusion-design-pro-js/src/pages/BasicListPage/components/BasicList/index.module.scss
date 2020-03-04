@@ -1,0 +1,110 @@
+@import "~@alifd/next/variables.scss";
+
+.BasicList {
+  margin-top: -$shell-dark-content-paddingTop;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-bottom: $shell-dark-content-paddingTop;
+  margin-left: -$shell-dark-content-paddingLeft;
+}
+
+.total {
+  color: #4A5B6D;
+  font-size: 12px;
+  span {
+    padding:0 3px;
+    color: #5584FF;
+  }
+}
+
+.TagBox {
+  padding: 0 $shell-dark-content-paddingLeft $s-8;
+}
+
+.TagBoxItem {
+  display: flex;
+  align-items: center;
+}
+
+.TagTitleName {
+  width: 56px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+.MainList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #F5F5F5;
+}
+
+.MainContent {
+  padding: 40px 24px;
+  background: #FFF;
+}
+
+.ListItem {
+  box-sizing: border-box;
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+  }
+  .right {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    button {
+      margin-right: 5px;
+    }
+  }
+  img {
+    width: 160px;
+    margin-right: 20px;
+  }
+  .title{
+    color: #000;
+    font-size: 16px;
+  }
+  .content{
+    margin: 12px 0;
+    color: #999;
+    font-size: 12px;
+  }
+  .subContent{
+    color: #999;
+    font-size: 12px;
+  }
+  .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px dashed #eee;
+    border-radius: 5px;
+    .icon {
+      color: #999;
+    }
+  }
+  .addText {
+    margin-left: 5px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+  }
+}

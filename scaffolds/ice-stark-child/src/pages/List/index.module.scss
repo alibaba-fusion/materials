@@ -1,0 +1,43 @@
+.customTable {
+  min-height: 500px;
+  :global {
+    .next-table-header {
+      table th {
+        background: #f4f4f4;
+      }
+    }
+  }
+}
+
+.stateText {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #52c41a;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+}
+.link {
+  margin: 0 5px;
+  color: rgba(49, 128, 253, 0.65);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:link,
+  &:visited {
+    color: rgba(49, 128, 253, 0.65);
+  }
+}
+.separator {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 8px;
+  vertical-align: middle;
+  background: #e8e8e8;
+}
+
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}

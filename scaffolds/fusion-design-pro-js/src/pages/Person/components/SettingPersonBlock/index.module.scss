@@ -1,0 +1,27 @@
+@import '~@alifd/next/variables.scss';
+
+.SettingPersonBlock {
+    width: 568px;
+    margin: $s-19 auto;
+}
+
+.uploadButton {
+    width: 88px;
+    font-size: 14px;
+}
+
+.changeLogo p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.validateCodeInput {
+    width: 100%;
+}
+
+.valideCodeButton {
+    width: 100%;
+}

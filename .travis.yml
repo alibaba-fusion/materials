@@ -1,0 +1,13 @@
+sudo: required
+language: node_js
+node_js:
+  - '8'
+script:
+  - npm run lint
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run deploy-oss
+  on:
+    all_branches: true

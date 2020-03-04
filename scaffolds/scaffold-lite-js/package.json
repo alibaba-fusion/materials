@@ -1,0 +1,66 @@
+{
+  "name": "@alifd/scaffold-lite-js",
+  "version": "0.1.3",
+  "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
+  "files": [
+    "src/",
+    "build/",
+    "public/",
+    "tests/",
+    "_gitignore",
+    "_editorconfig",
+    "_eslintignore",
+    "_eslintrc.js",
+    "_prettierignore",
+    "_prettierrc.js",
+    "_stylelintignore",
+    "_stylelintrc.js",
+    "build.json",
+    "screenshot.png",
+    "tsconfig.json",
+    "jsconfig.json"
+  ],
+  "dependencies": {
+    "@alifd/next": "^1.19.4",
+    "moment": "^2.24.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "@alifd/theme-design-pro": "^0.x"
+  },
+  "devDependencies": {
+    "@ice/spec": "^1.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^6.0.1",
+    "ice.js": "^1.0.0",
+    "stylelint": "^13.2.0"
+  },
+  "scripts": {
+    "start": "icejs start",
+    "build": "icejs build",
+    "screenshot": "../../node_modules/.bin/screenshot -l",
+    "prepublishOnly": "npm run build && npm run screenshot",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "stylelint": "stylelint ./**/*.scss"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scaffoldConfig": {
+    "name": "Scaffold Lite",
+    "title": "Scaffold Lite",
+    "category": "Basic",
+    "screenshot": "https://img.alicdn.com/tfs/TB12CtTsEY1gK0jSZFMXXaWcVXa-2480-1200.png"
+  },
+  "ideMode": {
+    "name": "ice-react"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-react-v3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

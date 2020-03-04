@@ -1,0 +1,41 @@
+{
+  "name": "@icedesign/dynamic-icon",
+  "version": "0.1.8",
+  "description": "动态 Icon 组件",
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "demo/",
+    "build/"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/ice-scripts dev --config ../../ice.component.config.js",
+    "build": "../../node_modules/.bin/ice-scripts build --config ../../ice.component.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/react-materials/tree/master/components/dynamic-icon"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "ice-component"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "@alifd/next": "^1.x",
+    "copy-to-clipboard": "^3.0.8",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "componentConfig": {
+    "name": "dynamic-icon",
+    "title": "动态 Icon 组件"
+  },
+  "homepage": "https://unpkg.com/@icedesign/data-binder@latest/build/index.html"
+}

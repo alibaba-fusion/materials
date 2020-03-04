@@ -1,0 +1,43 @@
+{
+  "name": "@icedesign/container",
+  "version": "1.0.5",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib/",
+    "demo/",
+    "build/",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/ice-scripts dev --config ../../ice.component.config.js",
+    "build": "../../node_modules/.bin/ice-scripts build --config ../../ice.component.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/react-materials/tree/master/components/container"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "ice-component"
+  ],
+  "peerDependencies": {
+    "react": "^16.5.0"
+  },
+  "dependencies": {
+    "@alifd/next": "^1.x",
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "componentConfig": {
+    "name": "container",
+    "title": "基础容器"
+  },
+  "homepage": "https://unpkg.com/@icedesign/container@1.0.5/build/index.html"
+}

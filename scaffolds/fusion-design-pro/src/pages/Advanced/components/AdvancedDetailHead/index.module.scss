@@ -1,0 +1,88 @@
+@import "~@alifd/next/variables.scss";
+
+.AdvancedDetailHead {
+  margin-top: -$shell-dark-content-paddingTop;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-bottom: $shell-dark-content-paddingTop;
+  margin-left: -$shell-dark-content-paddingLeft;
+  padding: $shell-dark-content-paddingTop $shell-dark-content-paddingLeft 0;
+}
+
+.TabItemTitle {
+  padding: $s-6/4 $s-zero;
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.TabItem {
+  margin-right: 40px;
+}
+
+.TabBar {
+  border: none !important;
+}
+
+.Content {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  margin-left: 8px;
+  padding-top: 12px;
+}
+
+.TableCardHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Step {
+  margin-left: -40px;
+}
+
+.a {
+  color: $color-brand1-6;
+}
+
+.button {
+  width: 80px;
+}
+
+.TitleName {
+  color: #333;
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.TitleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.Table {
+  table {
+    border: 1px solid #E6E6E6;
+  }
+}
+
+.SubTitle {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  color: #333;
+  font-size: 16px;
+  &::before {
+    position: absolute;
+    top: calc(50% - 16px / 2);
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 16px;
+    line-height: 16px;
+    background-color: #298DFF;
+    content: '';
+  }
+}

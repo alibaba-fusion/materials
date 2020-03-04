@@ -1,0 +1,56 @@
+@import "~@alifd/next/variables.scss";
+
+.FlowForm {
+  padding-bottom: 86px;
+}
+
+.FlowFormFooter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 66px;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-left: -$shell-dark-content-paddingLeft;
+  background: #fff;
+  box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.Divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -22px;
+  height: auto;
+  margin: 0;
+}
+
+.TitleName {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.TitleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.SubTitle {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  color: #333;
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: #298DFF;
+    content: '';
+  }
+}

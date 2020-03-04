@@ -1,0 +1,150 @@
+@import '~@alifd/next/variables.scss';
+
+.WorkTable {
+  .workerContainor {
+    margin-top: -$shell-dark-content-paddingTop;
+    margin-right: -$shell-dark-content-paddingLeft;
+    margin-bottom: $shell-dark-content-paddingTop;
+    margin-left: -$shell-dark-content-paddingLeft;
+    padding: $shell-dark-content-paddingTop $shell-dark-content-paddingLeft;
+    padding-bottom: 0;
+    background: $color-white;
+
+    .workerImage {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  .tab {
+    margin-top: 20px;
+  }
+  .dailyWorkContainor {
+    .dailyTitle {
+      margin-top: 16px;
+      margin-bottom: 12px;
+      color: #666;
+      font-size: 12px;
+      font-family: PingFang-SC-Medium;
+      line-height: 17px;
+      letter-spacing: 0;
+
+      .num {
+        color: #2699f2;
+      }
+    }
+
+    .planTime {
+      color: #999;
+      font-size: 16px;
+      font-family: Roboto-Bold;
+      line-height: 19px;
+    }
+
+    .planDuaring {
+      color: #999;
+      font-size: 12px;
+      font-family: PingFang-SC-Regular;
+      line-height: 17px;
+    }
+
+    :global(.next-timeline-item-body) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .myProjectContainor {
+    margin-top: 20px;
+
+    .myProjectRow {
+      display: flex;
+      align-items: center;
+    }
+
+    .myProjectInfo {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+
+      .myProjectName {
+        color: #333;
+        font-size: 14px;
+        font-family: PingFang-SC-Bold;
+        line-height: 16px;
+      }
+
+      .myProjectDesc {
+        margin-top: 8px;
+        color: #666;
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        line-height: 16px;
+      }
+    }
+
+    .auth {
+      display: inline-block;
+      padding: 0 12px;
+      color: #999;
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      line-height: 24px;
+      letter-spacing: 0;
+      border: 1px solid #ccc;
+    }
+
+
+  }
+}
+
+.TitleName {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.TitleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.TableTitleName {
+  color: #333;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.TableTitleInfo {
+  color: #666;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.strong {
+  color: $color-brand1-6;
+}
+
+.planNumber {
+  color: #999;
+  font-size: 14px;
+}
+
+.extra {
+  width: 300px;
+  height: 100%;
+}
+
+.extraTime {
+  width: 50%;
+}
+
+.extraUpdate {
+  width: 50%;
+}
+
+.avatar {
+  background: #C2DAE1;
+}

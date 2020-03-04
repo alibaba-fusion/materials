@@ -1,0 +1,32 @@
+@import "~@alifd/next/variables.scss";
+.GroupForm {
+  padding-bottom: 84px;
+}
+
+.Card:not(:first-child){
+  margin-top: 20px;
+  border: none;
+}
+
+.Button {
+  min-width: 84px;
+}
+
+.fixedButtons {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 66px;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-left: -$shell-dark-content-paddingLeft;
+  background: #fff;
+  box-shadow: $shadow-3-up;
+}
+
+.Table {
+  table {
+    border: 1px solid #E6E6E6;
+  }
+}

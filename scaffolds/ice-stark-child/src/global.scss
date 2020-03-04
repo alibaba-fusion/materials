@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+.icestark-child-app {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-left: 0;
+  }
+
+  hr {
+    border: 0 $line-solid $color-line1-2;
+    border-top-width: $line-1;
+  }
+
+  a {
+    text-decoration: none;
+    &:link {
+      color: $color-link-1;
+    }
+    &:visited {
+      color: $color-link-2;
+    }
+    &:hover {
+      color: $color-link-3;
+    }
+    &:active {
+      color: $color-link-3;
+      text-decoration: underline;
+    }
+  }
+}

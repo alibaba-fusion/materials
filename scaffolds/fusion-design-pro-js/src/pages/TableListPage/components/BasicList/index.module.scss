@@ -1,0 +1,50 @@
+@import "~@alifd/next/variables.scss";
+
+.icon {
+  color: #999
+}
+
+.searchIcon {
+  margin-right: 5px;
+  color: #999;
+}
+
+.Operation {
+  padding: 10px 10px 5px;
+  border-bottom: 1px dashed #eee;
+
+  .btns {
+    margin-top: 14px;
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.Main {
+  padding: 15px 10px;
+  .add {
+    padding-bottom: 15px;
+    button {
+      margin-right: 10px;
+    }
+  }
+
+  .Table {
+    .opt {
+      button {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .total {
+    color: #4A5B6D;
+    font-size: 12px;
+    span {
+      padding:0 3px;
+      color: #5584FF;
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+# 忽略目录
+build/
+node_modules/
+**/*-min.js
+**/*.min.js
+coverage/
+_eslintrc.js
+_stylelintrc.js
+.ice/
+__tests__
+tmp

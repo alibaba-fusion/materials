@@ -1,0 +1,85 @@
+{
+  "pkgData": {
+    "name": "@alifd/scaffold-lite-js",
+    "version": "0.1.3",
+    "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
+    "scaffoldConfig": {
+      "name": "Scaffold Lite",
+      "title": "Scaffold Lite",
+      "category": "Basic",
+      "screenshot": "https://img.alicdn.com/tfs/TB12CtTsEY1gK0jSZFMXXaWcVXa-2480-1200.png"
+    }
+  },
+  "build": {
+    "theme": {
+      "package": "@alifd/theme-design-pro",
+      "version": "^0.x"
+    }
+  },
+  "layouts": [
+    {
+      "type": "builtIn",
+      "name": "BasicLayout",
+      "menuConfig": true,
+      "layoutConfig": {
+        "shell": {
+          "nav": {
+            "name": "PageNav",
+            "type": "builtIn"
+          },
+          "navHoz": [],
+          "branding": {
+            "name": "Logo",
+            "props": {
+              "image": "https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png",
+              "text": "Logo"
+            },
+            "type": "builtIn"
+          },
+          "footer": {
+            "name": "Footer",
+            "type": "builtIn"
+          }
+        }
+      }
+    }
+  ],
+  "menu": {
+    "asideMenu": [
+      {
+        "name": "Dashboard",
+        "path": "/",
+        "icon": "smile"
+      }
+    ],
+    "headerMenu": []
+  },
+  "routers": [
+    {
+      "path": "/",
+      "component": "BasicLayout",
+      "children": [
+        {
+          "path": "/",
+          "page": {
+            "name": "Dashboard",
+            "blocks": {
+              "packages": [
+                {
+                  "name": "Guide",
+                  "type": "builtIn",
+                  "source": "./src/components/Guide"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "i18n": false,
+  "typescript": false,
+  "auth": false,
+  "store": false,
+  "mock": false
+}

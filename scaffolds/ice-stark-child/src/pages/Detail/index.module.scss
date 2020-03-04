@@ -1,0 +1,42 @@
+.basicDetailTitle {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+.infoColumn {
+  margin-left: 16px;
+}
+.infoColumnTitle {
+  height: 22px;
+  margin: 20px 0;
+  padding-left: 10px;
+  line-height: 22px;
+  border-left: 4px solid #2077ff;
+}
+.infoItems {
+  margin-left: 25px !important;
+  padding: 0 !important;
+}
+.infoItem {
+  margin-bottom: 18px !important;
+  font-size: 14px !important;
+  list-style: none !important;
+}
+.infoItemLabel {
+  min-width: 70px;
+  color: #999;
+}
+.infoItemValue {
+  color: #333;
+}
+.attachLabel {
+  float: left;
+  min-width: 70px;
+  color: #999;
+}
+.attachPics {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border: 1px solid #eee;
+}

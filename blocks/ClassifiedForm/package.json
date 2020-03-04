@@ -1,0 +1,45 @@
+{
+  "name": "@alifd/fusion-classified-form",
+  "version": "0.1.5",
+  "description": "Classified form",
+  "files": [
+    "build/",
+    "screenshot.png",
+    "src/!(style.d.ts)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build && npm run screenshot"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "blockConfig": {
+    "name": "ClassifiedForm",
+    "title": "ClassifiedForm",
+    "category": "Form",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.19.1"
+  }
+}

@@ -1,0 +1,36 @@
+@import "~@alifd/next/variables.scss";
+
+.subTitle {
+  color: $color-text1-2;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.des {
+  margin-top: 6px;
+  color: $color-text1-2;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0;
+  & > span {
+    margin-left: 2px;
+    color: #36CFC9;
+    font-weight: bold;
+  }
+}
+
+.value{
+  margin-top: 10px;
+  color: #333;
+  font-weight: $font-weight-3;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.cardFoot {
+  padding: 13px 16px;
+  color: #666;
+  font-size: 12px;
+}

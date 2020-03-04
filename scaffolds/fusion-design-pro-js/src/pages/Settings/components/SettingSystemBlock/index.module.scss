@@ -1,0 +1,89 @@
+@import '~@alifd/next/variables.scss';
+
+.customTab {
+    .customTabHead {
+        margin-top: -$shell-dark-content-paddingTop;
+        margin-right: -$shell-dark-content-paddingLeft;
+        margin-bottom: 20px;
+        margin-left: -$shell-dark-content-paddingLeft;
+        padding: $shell-dark-content-paddingTop $shell-dark-content-paddingLeft;
+        padding-bottom: 0;
+        background: $color-white;
+    }
+}
+
+.baseSettingContainer {
+    background: white;
+}
+
+.baseSetting {
+    width: 568px;
+    margin: $s-4 auto;
+}
+
+.uploadButton {
+    width: 88px;
+    font-size: 14px;
+}
+
+.changeLogo p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.validateCodeInput {
+    width: 100%;
+}
+
+.valideCodeButton {
+    width: 100%;
+}
+
+.moreContent {
+    padding: 24px;
+    background: $color-white;
+}
+
+.h3 {
+    color: #333;
+    font-size: 14px;
+}
+
+.p {
+    margin: 12px 0 24px 0;
+    color: #999;
+    font-size: 14px;
+}
+
+
+.privilegeContentRow {
+    width: 100%;
+    height: 64px;
+    padding: 24px;
+    background: $color-white;
+    border-top: 1px solid #e8e8e8;
+}
+
+.userName {
+    color: #333;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+}
+
+.privilegeName {
+    color: #999;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+}
+
+.logoContent {
+    width: 60%;
+    min-width: 300px;
+    max-width: 568px;
+    margin-bottom: 33px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #ddd;
+}
