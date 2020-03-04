@@ -14,7 +14,7 @@ export interface IMenuItem {
   children?: IMenuItem[];
 }
 
-function getNavMenuItems(menusData: any[], isCollapse: boolean) {
+function getNavMenuItems(menusData: any[]) {
   if (!menusData) {
     return [];
   }
@@ -22,11 +22,11 @@ function getNavMenuItems(menusData: any[], isCollapse: boolean) {
   return menusData
     .filter(item => item.name && !item.hideInMenu)
     .map((item, index) => {
-      return getSubMenuOrItem(item, index, isCollapse);
+      return getSubMenuOrItem(item, index);
     });
 }
 
-function getSubMenuOrItem(item: IMenuItem, index: number, isCollapse: boolean) {
+function getSubMenuOrItem(item: IMenuItem, index: number) {
   if (item.children && item.children.some(child => child.name)) {
     const childrenItems = getNavMenuItems(item.children);
     if (childrenItems && childrenItems.length > 0) {
@@ -35,7 +35,6 @@ function getSubMenuOrItem(item: IMenuItem, index: number, isCollapse: boolean) {
           key={index}
           icon={item.icon}
           label={item.name}
-          mode={isCollapse ? 'popup' : 'inline'}
         >
           {childrenItems}
         </SubNav>
@@ -70,8 +69,9 @@ const Navigation = (props, context) => {
       openMode="single"
       iconOnly={isCollapse}
       hasArrow={false}
+      mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig, isCollapse)}
+      {getNavMenuItems(asideMenuConfig)}
     </Nav>
   );
 };

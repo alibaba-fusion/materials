@@ -5,7 +5,7 @@ import { useInterval } from './utils';
 import styles from './index.module.scss';
 
 interface DetailProcessFunc {
-  (): any;
+  (): {};
 }
 
 export interface SuccessDetailProps {

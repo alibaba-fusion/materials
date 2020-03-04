@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs-extra');
 const path = require('path');
-// const { execSync } = require('child_process');
+const { execSync } = require('child_process');
 
 const cwd = process.cwd();
 const blocksPath = path.join(cwd, 'blocks');
@@ -67,48 +67,52 @@ blocksList.forEach(block => {
   //   console.log(blockPkgjson, 'not exist');
   //   return false;
   // }
-  // const {version, name} = packageInfo;
+  // // const {version, name} = packageInfo;
   // if (!name.match('@alifd/fusion-')) {
   //   console.log(name, 'not match @alifd/fusion-');
   //   return false;
   // }
-  // if (!('publishConfig' in packageInfo)) {
-  //   packageInfo.publishConfig = {
-  //     "access": "public",
-  //   };
-  // }
+  // // if (!('publishConfig' in packageInfo)) {
+  // packageInfo.publishConfig = {
+  //   'access': 'public',
+  // };
+  // packageInfo.repository ={
+  //   'type': 'git',
+  //   'url': `https://github.com/alibaba-fusion/materials/tree/master/blocks/${block}`,
+  // };
+  // // }
   // if (!('views' in packageInfo.blockConfig)) {
   //   packageInfo.blockConfig.views = [{
-  //     "title": "",
-  //     "props": {},
-  //     "screenshot": "",
-  //     "html": "",
+  //     'title': '',
+  //     'props': {},
+  //     'screenshot': '',
+  //     'html': '',
   //   }];
   // }
   // fs.writeJSONSync(blockPkgjson, packageInfo, {
   //   spaces: 2
   // });
-  // return;
+  
 
 
   // 批量发布区块
-  // let stdout = '';
-  // try {
-  //   stdout = execSync(`npm view ${name} version`).toString();
-  // } catch (err) {
-  //   console.log(`==========${name} 区块从未发布过，将直接发布====================`);
-  // }
+  let stdout = '';
+  try {
+    stdout = execSync(`npm view ${name} version`).toString();
+  } catch (err) {
+    console.log(`==========${name} 区块从未发布过，将直接发布====================`);
+  }
 
-  // if (stdout.match(version)) {
-  //   console.error(`${name} ${version} 已存在！！！！`);
-  //   arr.push(`${name}@${version}`);
-  //   return false;
-  // }
+  if (stdout.match(version)) {
+    console.error(`${name} ${version} 已存在！！！！`);
+    arr.push(`${name}@${version}`);
+    return false;
+  }
 
-  // try {
-  //   // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
-  //   execSync(`cd blocks/${block}; tnpm install;npm publish;`);
-  // } catch (err) {
-  //   console.log(err);
-  // }
+  try {
+    // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
+    execSync(`cd blocks/${block}; tnpm install;npm publish;`);
+  } catch (err) {
+    console.log(err);
+  }
 });

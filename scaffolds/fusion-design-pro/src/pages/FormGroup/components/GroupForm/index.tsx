@@ -15,8 +15,6 @@ import {
 } from '@alifd/next';
 import styles from './index.module.scss';
 
-const FormTypeFix: any = Form;
-
 export interface Company {
   id?: string;
   name?: string;
@@ -131,9 +129,9 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
     setRight(document.documentElement.offsetWidth - rect.left - rect.width);
   }, []);
 
-  const changeRowData = (index: number, key: keyof Company, value: any) => {
+  const changeRowData = (index: number, key: keyof Company, value: string | number | boolean | []) => {
     const company: Company[] = [...dataSource.company];
-    (company[index][key] as any) = value;
+    (company[index][key] as string | number | boolean | []) = value;
 
     setDataSouce({
       ...dataSource,
@@ -178,7 +176,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
     });
   };
   
-  const renderEditCell = (v: any, i: number, row: { edited: any }, key: keyof Company) => {
+  const renderEditCell = (v: string, i: number, row: { edited: boolean }, key: keyof Company) => {
     if (row.edited) {
       return <Input style={{ width: '100%' }} onChange={(value) => changeRowData(i, key, value)} value={v || ''} />;
     }
@@ -191,7 +189,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
         <Card.Header title="项目成员信息" />
         <Card.Divider />
         <Card.Content>
-          <FormTypeFix field={basicField} responsive fullWidth labelAlign="top">
+          <Form field={basicField} responsive fullWidth labelAlign="top">
             <Form.Item colSpan={4} label="公司简称" required>
               <Input name="companyName" placeholder="请输入公司简称" />
             </Form.Item>
@@ -211,14 +209,14 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
                 <Select.Option value={3}>项目三</Select.Option>
               </Select>
             </Form.Item>
-          </FormTypeFix>
+          </Form>
         </Card.Content>
       </Card>
       <Card free className={styles.Card}>
         <Card.Header title="基础信息" />
         <Card.Divider />
         <Card.Content>
-          <FormTypeFix field={memberField} responsive fullWidth labelAlign="top">
+          <Form field={memberField} responsive fullWidth labelAlign="top">
             <Form.Item colSpan={4} label="合同类型" required>
               <Select name="contractType" placeholder="请选择合同类型">
                 <Select.Option value={1}>合同一</Select.Option>
@@ -254,7 +252,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
                 <Select.Option value={3}>项目三</Select.Option>
               </Select>
             </Form.Item>
-          </FormTypeFix>
+          </Form>
         </Card.Content>
       </Card>
       <Card free className={styles.Card}>
@@ -265,11 +263,11 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
             <Button onClick={addRow} className={styles.Button} type="primary"> 新增</Button>
           </Box>
           <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
-            <Table.Column title="目标公司" cell={(v: any, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')} dataIndex="name" />
-            <Table.Column title="主营业务" cell={(v: any, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'business')} dataIndex="business" />
-            <Table.Column title="注册地" cell={(v: any, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'address')} dataIndex="address" />
-            <Table.Column title="创始人" cell={(v: any, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'creatorName')} dataIndex="creatorName" />
-            <Table.Column title="操作" cell={(v: any, i: number, row: { edited: boolean }) => {
+            <Table.Column title="目标公司" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')} dataIndex="name" />
+            <Table.Column title="主营业务" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'business')} dataIndex="business" />
+            <Table.Column title="注册地" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'address')} dataIndex="address" />
+            <Table.Column title="创始人" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'creatorName')} dataIndex="creatorName" />
+            <Table.Column title="操作" cell={(v: string, i: number, row: { edited: boolean }) => {
               if (row.edited) {
                 return (
                   <div>

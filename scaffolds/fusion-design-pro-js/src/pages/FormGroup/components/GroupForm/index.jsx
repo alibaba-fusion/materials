@@ -15,8 +15,6 @@ import {
 } from '@alifd/next';
 import styles from './index.module.scss';
 
-const FormTypeFix = Form;
-
 const DEFAULT_DATA = {
   basic: {},
   member: {},
@@ -170,7 +168,7 @@ const GroupForm = props => {
         <Card.Header title="项目成员信息" />
         <Card.Divider />
         <Card.Content>
-          <FormTypeFix field={basicField} responsive fullWidth labelAlign="top">
+          <Form field={basicField} responsive fullWidth labelAlign="top">
             <Form.Item colSpan={4} label="公司简称" required>
               <Input name="companyName" placeholder="请输入公司简称" />
             </Form.Item>
@@ -190,14 +188,14 @@ const GroupForm = props => {
                 <Select.Option value={3}>项目三</Select.Option>
               </Select>
             </Form.Item>
-          </FormTypeFix>
+          </Form>
         </Card.Content>
       </Card>
       <Card free className={styles.Card}>
         <Card.Header title="基础信息" />
         <Card.Divider />
         <Card.Content>
-          <FormTypeFix field={memberField} responsive fullWidth labelAlign="top">
+          <Form field={memberField} responsive fullWidth labelAlign="top">
             <Form.Item colSpan={4} label="合同类型" required>
               <Select name="contractType" placeholder="请选择合同类型">
                 <Select.Option value={1}>合同一</Select.Option>
@@ -233,7 +231,7 @@ const GroupForm = props => {
                 <Select.Option value={3}>项目三</Select.Option>
               </Select>
             </Form.Item>
-          </FormTypeFix>
+          </Form>
         </Card.Content>
       </Card>
       <Card free className={styles.Card}>

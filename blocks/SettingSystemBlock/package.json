@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-settings-system",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "基础的系统设置Block",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "@alifd/next": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SettingSystemBlock"
   }
 }

@@ -6,7 +6,7 @@
   "mock": true,
   "pkgData": {
     "name": "@alifd/fusion-design-pro",
-    "version": "0.1.22",
+    "version": "0.1.24",
     "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
     "dependencies": {
       "@antv/data-set": "^0.10.2",
@@ -14,6 +14,10 @@
     },
     "devDependencies": {
       "build-plugin-fusion-material": "^0.1.5"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro"
     },
     "scaffoldConfig": {
       "name": "Fusion Design Pro",

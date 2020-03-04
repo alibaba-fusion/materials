@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Radio, Card, Box } from '@alifd/next';
-import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
+import React from 'react';
+import { Card } from '@alifd/next';
+import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
 
 import styles from './index.module.scss';
 

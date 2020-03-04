@@ -31,7 +31,7 @@ const DEFAULT_DATA: DataSource = {
   type: 'private',
 };
 
-const DEFAULT_ON_SUBMIT = (values: TwoColumnFormProps, errors: any[]): void => {
+const DEFAULT_ON_SUBMIT = (values: TwoColumnFormProps, errors: []): void => {
   if (errors) {
     console.log('errors', errors);
     return;

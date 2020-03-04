@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-group-bar-chart",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "分组柱形图卡片",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/FusionCardGroupBarChart"
   }
 }

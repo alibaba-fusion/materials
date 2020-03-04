@@ -47,7 +47,7 @@ export default function RegisterBlock() {
     checkRunning(true);
   };
 
-  const checkPass = (rule: {}, values: string, callback: (errors?: any) => void) => {
+  const checkPass = (rule: {}, values: string, callback: (errors?: string) => void) => {
     if (values && values !== postData.password) {
       return callback('密码不一致');
     } else {
@@ -55,7 +55,7 @@ export default function RegisterBlock() {
     }
   };
 
-  const handleSubmit = (values: RegisterProps, errors: any[]) => {
+  const handleSubmit = (values: RegisterProps, errors: []) => {
     if (errors) {
       console.log('errors', errors);
       return;

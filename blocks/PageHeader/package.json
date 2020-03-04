@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-page-header",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "页头位于页容器中，页容器顶部，起到了内容概览和引导页级操作的作用。",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
         "html": "build/views/block_view1.html"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/PageHeader"
   }
 }

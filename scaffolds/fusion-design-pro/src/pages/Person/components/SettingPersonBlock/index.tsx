@@ -23,7 +23,7 @@ const DEFAULT_DATA: DataSource = {
   name: '阿里-Amy',
 };
 
-const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: any[]): void => {
+const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: []): void => {
   if (errors) {
     console.log('errors', errors);
     return;

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-forbidden",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "forbidden  exception",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/Forbidden"
   }
 }

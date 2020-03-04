@@ -69,7 +69,7 @@ const DEFAULT_DATA: DataSource = {
   description: 'Fusion是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
 };
 
-const DEFAULT_ON_SUBMIT = (values: SettingSystemProps, errors: any[]): void => {
+const DEFAULT_ON_SUBMIT = (values: SettingSystemProps, errors: []): void => {
   if (errors) {
     console.log('errors', errors);
     return;

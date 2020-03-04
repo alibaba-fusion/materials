@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-dialog-form",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "弹出式表单",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
         "html": "build/views/block_view1.html"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/DialogForm"
   }
 }

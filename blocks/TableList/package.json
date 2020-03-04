@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-table-list",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "intro block",
   "main": "./src/index.tsx",
   "files": [
@@ -42,5 +42,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/TableList"
   }
 }

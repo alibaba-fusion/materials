@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-server-error",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "server error",
   "files": [
     "build/",
@@ -41,5 +41,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/ServerError"
   }
 }

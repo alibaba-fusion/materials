@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, ResponsiveGrid, Box, Divider } from '@alifd/next';
-import { Chart, Geom, Axis } from 'bizcharts';
-import FusionCardWorldmapChart from '../FusionCardWorldmapChart';
 
 import styles from './index.module.scss';
 

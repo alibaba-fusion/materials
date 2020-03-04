@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
 
 const { Item } = Form;
-export default function LoginBlock(props) {
-  const [postData, setValue] = useState({
-    name: '',
-    password: '',
-    autoLogin: true,
-    phone: '',
-    code: '',
-  });
+const DEFAULT_DATA = {
+  name: '',
+  password: '',
+  autoLogin: true,
+  phone: '',
+  code: '',
+};
+
+const LoginBlock = props => {
+  const { dataSource = DEFAULT_DATA } = props;
+  const [postData, setValue] = useState(dataSource);
   const [isRunning, checkRunning] = useState(false);
   const [isPhone, checkPhone] = useState(false);
   const [second, setSecond] = useState(59);
@@ -190,11 +192,6 @@ export default function LoginBlock(props) {
       </div>
     </div>
   );
-}
-LoginBlock.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
-  postData: PropTypes.object,
 };
-LoginBlock.defaultProps = {
-  postData: {},
-};
+
+export default LoginBlock;

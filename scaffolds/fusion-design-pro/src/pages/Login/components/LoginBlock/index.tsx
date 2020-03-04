@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 
 import { useInterval } from './utils';
@@ -7,7 +6,7 @@ import styles from './index.module.scss';
 
 const { Item } = Form;
 
-export interface LoginProps {
+export interface IDataSource {
   name: string;
   password: string;
   autoLogin: boolean;
@@ -15,14 +14,25 @@ export interface LoginProps {
   code: string;
 }
 
-export default function LoginBlock(props: LoginProps) {
-  const [postData, setValue] = useState({
-    name: '',
-    password: '',
-    autoLogin: true,
-    phone: '',
-    code: '',
-  });
+const DEFAULT_DATA: IDataSource = {
+  name: '',
+  password: '',
+  autoLogin: true,
+  phone: '',
+  code: '',
+};
+
+interface LoginProps {
+  dataSource: IDataSource;
+}
+
+
+const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX.Element => {
+  const {
+    dataSource = DEFAULT_DATA,
+  } = props;
+
+  const [postData, setValue] = useState(dataSource);
 
   const [isRunning, checkRunning] = useState(false);
   const [isPhone, checkPhone] = useState(false);
@@ -36,11 +46,11 @@ export default function LoginBlock(props: LoginProps) {
     }
   }, isRunning ? 1000 : null);
 
-  const formChange = (values: LoginProps) => {
+  const formChange = (values: IDataSource) => {
     setValue(values);
   };
 
-  const sendCode = (values: LoginProps, errors: any[]) => {
+  const sendCode = (values: IDataSource, errors: []) => {
     if (errors) {
       return;
     }
@@ -48,7 +58,7 @@ export default function LoginBlock(props: LoginProps) {
     checkRunning(true);
   };
 
-  const handleSubmit = (values: LoginProps, errors: any[]) => {
+  const handleSubmit = (values: IDataSource, errors: []) => {
     if (errors) {
       console.log('errors', errors);
       return;
@@ -166,11 +176,4 @@ export default function LoginBlock(props: LoginProps) {
   );
 }
 
-LoginBlock.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
-  postData: PropTypes.object,
-};
-
-LoginBlock.defaultProps = {
-  postData: {},
-};
+export default LoginBlock;

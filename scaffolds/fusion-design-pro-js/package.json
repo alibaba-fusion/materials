@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -36,7 +36,6 @@
   "devDependencies": {
     "@ice/spec": "^1.0.0",
     "build-plugin-fusion": "^0.1.0",
-    "build-plugin-fusion-material": "^0.1.5",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^6.0.1",
     "ice.js": "^1.0.0",
@@ -227,5 +226,9 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro-js"
   }
 }
