@@ -35,7 +35,8 @@
         "screenshot": "build/views/block_view1.png",
         "html": "build/views/block_view1.html"
       }
-    ]
+    ],
+    "screenshot": "https://unpkg.com/@alifd/fusion-card-bar-chart/screenshot.png"
   },
   "peerDependencies": {
     "react": "^16.8.0",
