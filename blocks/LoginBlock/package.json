@@ -33,7 +33,8 @@
         "screenshot": "build/views/block_view1.png",
         "html": "build/views/block_view1.html"
       }
-    ]
+    ],
+    "screenshot": "https://unpkg.com/@alifd/fusion-login/screenshot.png"
   },
   "publishConfig": {
     "access": "public"
