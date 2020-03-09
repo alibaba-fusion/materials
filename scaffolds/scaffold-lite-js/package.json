@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-lite-js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
   "files": [
     "src/",
@@ -48,8 +48,8 @@
     "access": "public"
   },
   "scaffoldConfig": {
-    "name": "Scaffold Lite",
-    "title": "Scaffold Lite",
+    "name": "Scaffold Lite - JS",
+    "title": "Scaffold Lite - JS",
     "category": "Basic",
     "screenshot": "https://img.alicdn.com/tfs/TB12CtTsEY1gK0jSZFMXXaWcVXa-2480-1200.png"
   },

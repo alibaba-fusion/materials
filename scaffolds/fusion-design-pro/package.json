@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -55,10 +55,10 @@
     "access": "public"
   },
   "scaffoldConfig": {
-    "name": "Fusion Design Pro",
-    "title": "Fusion Design Pro",
+    "name": "Fusion Design Pro - TS",
+    "title": "Fusion Design Pro - TS",
     "category": "Basic",
-    "screenshot": "https://img.alicdn.com/tfs/TB109f.p7P2gK0jSZPxXXacQpXa-2880-1800.png",
+    "screenshot": "https://img.alicdn.com/tfs/TB16ftixUY1gK0jSZFMXXaWcVXa-2880-1800.png",
     "views": [
       {
         "title": "分析页面",

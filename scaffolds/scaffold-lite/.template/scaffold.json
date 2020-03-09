@@ -1,15 +1,15 @@
 {
   "pkgData": {
     "name": "@alifd/scaffold-lite",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
     "repository": {
       "type": "git",
       "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-lite"
     },
     "scaffoldConfig": {
-      "name": "Scaffold Lite",
-      "title": "Scaffold Lite",
+      "name": "Scaffold Lite - TS",
+      "title": "Scaffold Lite - TS",
       "category": "Basic",
       "screenshot": "https://img.alicdn.com/tfs/TB12CtTsEY1gK0jSZFMXXaWcVXa-2480-1200.png"
     }
