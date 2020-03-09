@@ -1,5 +1,5 @@
 
-## Fusion Design Pro
+## Fusion Design Pro - TS
 
 > 使用 TypeScript，包含大量 UI 区块，比如图表、表单等。
 

@@ -1,5 +1,5 @@
 
-## Scaffold Lite
+## Scaffold Lite - JS
 
 > 轻量级模板，使用 JavaScript，仅包含基础的 Layout。
 

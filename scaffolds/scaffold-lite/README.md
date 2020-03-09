@@ -1,5 +1,5 @@
 
-## Scaffold Lite
+## Scaffold Lite - TS
 
 > 轻量级模板，使用 TypeScript，仅包含基础的 Layout。
 
