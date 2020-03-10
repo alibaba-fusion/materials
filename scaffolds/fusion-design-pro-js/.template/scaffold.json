@@ -7,6 +7,9 @@
       "@antv/data-set": "^0.10.2",
       "bizcharts": "^3.5.6"
     },
+    "devDependencies": {
+      "build-plugin-fusion-material": "^0.1.5"
+    },
     "repository": {
       "type": "git",
       "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro-js"

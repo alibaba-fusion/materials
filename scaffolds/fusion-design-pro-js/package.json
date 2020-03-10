@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -39,7 +39,8 @@
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^6.0.1",
     "ice.js": "^1.0.0",
-    "stylelint": "^13.2.0"
+    "stylelint": "^13.2.0",
+    "build-plugin-fusion-material": "^0.1.5"
   },
   "scripts": {
     "start": "icejs start",
