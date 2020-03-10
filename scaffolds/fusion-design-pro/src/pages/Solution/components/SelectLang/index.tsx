@@ -2,7 +2,6 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Select, Card } from '@alifd/next';
 import { getLocale, setLocale } from '@/utils/locale';
-import styles from './index.module.scss';
 
 const Option = Select.Option;
 const LANG_CONFIG = {
@@ -23,7 +22,7 @@ function changeLang(key) {
 export default function SelectLang() {
   const selectedLang = getLocale();
   return (
-    <Card free className={styles.card}>
+    <Card free>
       <Card.Header
         title={<FormattedMessage id="app.i18n.demo" />}
         extra={(

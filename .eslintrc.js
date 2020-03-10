@@ -5,6 +5,7 @@ const commonRules = {
   'import/no-dynamic-require': 0,
   'react/jsx-filename-extension': 0,
   'react/no-find-dom-node': 0,
+  'react/self-closing-comp': 0,
   'no-restricted-syntax': ['error', "BinaryExpression[operator='of']"],
 };
 

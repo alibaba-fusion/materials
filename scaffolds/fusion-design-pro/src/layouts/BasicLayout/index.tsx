@@ -3,6 +3,7 @@ import { Shell, ConfigProvider } from '@alifd/next';
 import PageNav from './components/PageNav';
 import GlobalSearch from './components/GlobalSearch';
 import Notice from './components/Notice';
+import SolutionLink from './components/SolutionLink';
 import HeaderAvatar from './components/HeaderAvatar';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
@@ -77,6 +78,7 @@ export default function BasicLayout({
         </Shell.Navigation>
         <Shell.Action>
           <Notice />
+          <SolutionLink />
           <HeaderAvatar />
         </Shell.Action>
         <Shell.Navigation>
