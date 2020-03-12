@@ -23,7 +23,7 @@ const FusionCardAreaChart = props => {
     <Card free className={styles.areaChart}>
       {title ? (
         <>
-          <Card.Header title={title}></Card.Header>
+          <Card.Header title={title} />
           <Card.Divider />
         </>
       ) : null}

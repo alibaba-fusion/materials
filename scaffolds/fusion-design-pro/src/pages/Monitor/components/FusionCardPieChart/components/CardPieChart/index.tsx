@@ -62,7 +62,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
   const { title, chartData, chartHeight } = cardConfig;
   return (
     <Card free>
-      <Card.Header title={<span className={styles.title}>{title}</span>}></Card.Header>
+      <Card.Header title={<span className={styles.title}>{title}</span>} />
       <Card.Divider />
       <Card.Content>
       

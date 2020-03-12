@@ -88,8 +88,8 @@ const JSErrorChart: React.FunctionComponent<JSErrorChartProps> = (props: JSError
   return (
     <Card free>
       <React.Fragment>
-        <Card.Header title={<span className={styles.title}>{title}</span>} ></Card.Header>
-        <Card.Divider></Card.Divider>
+        <Card.Header title={<span className={styles.title}>{title}</span>}  />
+        <Card.Divider />
       </React.Fragment>
       <Card.Content>
         <Chart data={chartData} scale={scale} height={chartHeight} width={10} forceFit padding={[30, 55, 30, 65]}>

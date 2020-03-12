@@ -69,7 +69,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
 
   return (
     <Card free>
-      <Card.Header title={title}></Card.Header>
+      <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
         <Box align="center">

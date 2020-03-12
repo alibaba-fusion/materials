@@ -39,7 +39,7 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
       {
         title ? (
           <>
-            <Card.Header title={title}></Card.Header>
+            <Card.Header title={title} />
             <Card.Divider />
           </>
         ) : null

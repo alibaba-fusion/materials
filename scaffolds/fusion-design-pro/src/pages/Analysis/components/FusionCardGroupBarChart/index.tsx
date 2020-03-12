@@ -51,7 +51,7 @@ const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartPr
 
   return (
     <Card free className={styles.FusionCardGroupBarChart}>
-      <Card.Header title={title}></Card.Header>
+      <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
         <Chart renderer='canvas' forceFit width={10} height={chartHeight} data={chartData} padding={['80', 'auto']}>

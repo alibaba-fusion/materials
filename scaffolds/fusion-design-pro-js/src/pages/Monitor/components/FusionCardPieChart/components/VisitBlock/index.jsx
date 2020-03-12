@@ -136,7 +136,7 @@ const VisitBlock = props => {
               <InfoBlock {...titleItem[1]} />
             </Box>
           }
-        ></Card.Header>
+        />
       </React.Fragment>
       <Card.Content>
         <RenderPvChart chartData={chartData} chartHeight={chartHeight} />
