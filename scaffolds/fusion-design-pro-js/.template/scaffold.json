@@ -185,10 +185,6 @@
       "version": "^0.x"
     },
     "buildConfig": {
-      "outputAssetsPath": {
-        "js": "",
-        "css": ""
-      },
       "plugins": [
         "build-plugin-fusion-material"
       ]
