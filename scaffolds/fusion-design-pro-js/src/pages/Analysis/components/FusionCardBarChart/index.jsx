@@ -20,7 +20,7 @@ const FusionCardBarChart = props => {
     <Card free>
       {title ? (
         <>
-          <Card.Header title={title}></Card.Header>
+          <Card.Header title={title} />
           <Card.Divider />
         </>
       ) : null}
