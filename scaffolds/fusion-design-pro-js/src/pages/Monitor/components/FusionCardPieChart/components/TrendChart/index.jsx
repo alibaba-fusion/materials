@@ -232,8 +232,8 @@ const JSErrorChart = props => {
   return (
     <Card free>
       <React.Fragment>
-        <Card.Header title={<span className={styles.title}>{title}</span>}></Card.Header>
-        <Card.Divider></Card.Divider>
+        <Card.Header title={<span className={styles.title}>{title}</span>} />
+        <Card.Divider />
       </React.Fragment>
       <Card.Content>
         <Chart

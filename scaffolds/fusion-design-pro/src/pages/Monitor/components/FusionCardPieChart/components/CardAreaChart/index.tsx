@@ -37,7 +37,7 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
       {
         title ? (
           <React.Fragment>
-            <Card.Header title={<span className={styles.title}>{title}</span>}></Card.Header>
+            <Card.Header title={<span className={styles.title}>{title}</span>} />
             <Card.Divider />
           </React.Fragment>
         ) : null

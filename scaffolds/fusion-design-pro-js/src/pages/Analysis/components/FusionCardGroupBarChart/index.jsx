@@ -90,7 +90,7 @@ const FusionCardGroupBarChart = props => {
   const { title, chartData, chartHeight } = cardConfig;
   return (
     <Card free className={styles.FusionCardGroupBarChart}>
-      <Card.Header title={title}></Card.Header>
+      <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
         <Chart

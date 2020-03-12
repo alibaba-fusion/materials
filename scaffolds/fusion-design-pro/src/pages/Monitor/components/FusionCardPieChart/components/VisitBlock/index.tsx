@@ -122,9 +122,7 @@ const VisitBlock: React.FunctionComponent<CardConfigProps> = (props: CardConfigP
           <Box direction="row" spacing={50}>
             <InfoBlock {...titleItem[0]}/>
             <InfoBlock {...titleItem[1]}/>
-          </Box>}>
-          
-        </Card.Header>
+          </Box>} />
       </React.Fragment>
       <Card.Content>
         <RenderPvChart chartData={chartData} chartHeight={chartHeight}/>

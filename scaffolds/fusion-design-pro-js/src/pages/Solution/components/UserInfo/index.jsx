@@ -1,40 +1,24 @@
 import React, { useEffect } from 'react';
 import { Avatar, Card } from '@alifd/next';
-import { useRequest } from 'ice';
+import { store as appStore } from 'ice';
 
 const UserInfo = () => {
-  const { data: response, request } = useRequest({
-    url: '/api/profile',
-    method: 'GET',
-  });
-  let avatar = '';
-  let name = '';
-
-  if (response && response.status === 'SUCCESS') {
-    avatar = response.data.avatar;
-    name = response.data.name;
-  }
-
+  const [userInfo, userActions] = appStore.useModel('user');
   useEffect(() => {
-    request();
+    userActions.fetchUserProfile();
   }, []);
   return (
-    <Card
-      free
-      style={{
-        margin: 20,
-      }}
-    >
-      <Card.Header title="请求 Mock 数据示例" />
+    <Card free>
+      <Card.Header title="状态管理 - 全局状态" />
       <Card.Divider />
       <Card.Content>
-        <Avatar size="small" src={avatar} />
+        <Avatar size="small" src={userInfo.avatar} />
         <span
           style={{
             marginLeft: 10,
           }}
         >
-          {name}
+          {userInfo.name}
         </span>
       </Card.Content>
     </Card>

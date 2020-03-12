@@ -1,9 +1,5 @@
 {
   "publicPath": "./",
-  "outputAssetsPath": {
-    "js": "",
-    "css": ""
-  },
   "plugins": [
     [
       "build-plugin-fusion",

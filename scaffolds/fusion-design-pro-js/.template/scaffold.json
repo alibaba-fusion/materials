@@ -1,7 +1,7 @@
 {
   "pkgData": {
     "name": "@alifd/fusion-design-pro-js",
-    "version": "0.1.12",
+    "version": "0.1.14",
     "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
     "dependencies": {
       "@antv/data-set": "^0.10.2",
@@ -185,10 +185,6 @@
       "version": "^0.x"
     },
     "buildConfig": {
-      "outputAssetsPath": {
-        "js": "",
-        "css": ""
-      },
       "plugins": [
         "build-plugin-fusion-material"
       ]
@@ -214,6 +210,10 @@
           "action": [
             {
               "name": "Notice",
+              "type": "builtIn"
+            },
+            {
+              "name": "SolutionLink",
               "type": "builtIn"
             },
             {
@@ -1124,6 +1124,6 @@
   "i18n": true,
   "typescript": false,
   "auth": false,
-  "store": false,
+  "store": true,
   "mock": true
 }

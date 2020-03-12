@@ -82,7 +82,7 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
 
   return (
     <Card free>
-      <Card.Header title={title}></Card.Header>
+      <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
         <div className={styles.dataRow}>

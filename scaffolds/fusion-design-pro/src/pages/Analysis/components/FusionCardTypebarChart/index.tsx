@@ -45,7 +45,7 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
       {
         title ? (
           <>
-            <Card.Header title={title}></Card.Header>
+            <Card.Header title={title} />
             <Card.Divider />
           </>
         ) : null

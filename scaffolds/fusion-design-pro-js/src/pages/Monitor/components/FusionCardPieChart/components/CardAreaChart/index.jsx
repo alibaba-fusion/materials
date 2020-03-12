@@ -19,7 +19,7 @@ const FusionCardAreaChart = props => {
     <Card free className={styles.areaChart}>
       {title ? (
         <React.Fragment>
-          <Card.Header title={<span className={styles.title}>{title}</span>}></Card.Header>
+          <Card.Header title={<span className={styles.title}>{title}</span>} />
           <Card.Divider />
         </React.Fragment>
       ) : null}
