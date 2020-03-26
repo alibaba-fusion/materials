@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { createApp } from 'ice'
 import { ConfigProvider } from '@alifd/next';
-import NotFound from '@/components/NotFound';
 import PageLoading from '@/components/PageLoading';
-import BasicLayout from '@/layouts/BasicLayout';
+import FrameworkLayout from '@/layouts/FrameworkLayout';
 
 const appConfig = {
   app: {
@@ -17,7 +16,7 @@ const appConfig = {
   },
   icestark: {
     type: 'framework',
-    Layout: BasicLayout,
+    Layout: FrameworkLayout,
     getApps: async () => {
       const apps = [{
         path: '/seller',
