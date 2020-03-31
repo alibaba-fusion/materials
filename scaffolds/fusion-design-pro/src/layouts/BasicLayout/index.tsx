@@ -30,12 +30,15 @@ import Footer from './components/Footer';
   throttle('resize', 'optimizedResize');
 })();
 
+interface IGetDevice {
+  (width: number): 'phone' | 'tablet' | 'desktop';
+}
 export default function BasicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const getDevice = (width: number) => {
+  const getDevice: IGetDevice = width => {
     const isPhone =
       typeof navigator !== 'undefined' &&
       navigator &&
@@ -57,7 +60,7 @@ export default function BasicLayout({
   return (
     <ConfigProvider device={device}>
       <Shell
-        type="dark"
+        type="brand"
         style={{
           minHeight: '100vh',
         }}

@@ -1,13 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export default class Link extends React.Component {
-  static displayName = 'Link';
-
-  static defaultProps = {
-    onItemClick: () => {}
-  }
-
+class Link extends React.Component {
   handleClick = (e) => {
     this.props.onItemClick(e);
   }
@@ -30,3 +24,11 @@ export default class Link extends React.Component {
     );
   }
 }
+
+Link.displayName = 'Link';
+
+Link.defaultProps = {
+  onItemClick: () => {}
+};
+
+export default Link;
