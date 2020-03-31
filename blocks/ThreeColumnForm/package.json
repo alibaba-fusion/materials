@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-three-column-form",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Form of three columns",
   "files": [
     "build/",
@@ -17,7 +17,8 @@
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
     "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
     "prop-types": "^15.5.8"

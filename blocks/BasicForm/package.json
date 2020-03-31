@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-basic-form",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "description": "single column form",
   "files": [
     "build/",
@@ -16,8 +16,9 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json",
     "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "prepublishOnly": "npm run build -- --design && npm run screenshot"
   },
   "dependencies": {
     "prop-types": "^15.5.8"
