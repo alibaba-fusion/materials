@@ -1,7 +1,7 @@
 {
   "pkgData": {
     "name": "@alifd/fusion-design-pro-js",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
     "dependencies": {
       "@antv/data-set": "^0.10.2",
@@ -9,6 +9,10 @@
     },
     "devDependencies": {
       "build-plugin-fusion-material": "^0.1.5"
+    },
+    "scripts": {
+      "design": "icejs build --design",
+      "prepublishOnly": "npm run build -- --design && npm run screenshot"
     },
     "repository": {
       "type": "git",
@@ -182,7 +186,7 @@
   "build": {
     "theme": {
       "package": "@alifd/theme-design-pro",
-      "version": "^0.x"
+      "version": "^0.6.2"
     },
     "buildConfig": {
       "plugins": [

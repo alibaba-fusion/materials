@@ -72,7 +72,11 @@ blocksList.forEach(block => {
   //   console.log(name, 'not match @alifd/fusion-');
   //   return false;
   // }
-  // // if (!('publishConfig' in packageInfo)) {
+  // packageInfo.scripts.design = '../../node_modules/.bin/build-scripts build --design --config ../../build.block.json';
+
+  // packageInfo.scripts.prepublishOnly = 'npm run build -- --design && npm run screenshot';
+
+  // if (!('publishConfig' in packageInfo)) {
   // packageInfo.publishConfig = {
   //   'access': 'public',
   // };
@@ -80,7 +84,7 @@ blocksList.forEach(block => {
   //   'type': 'git',
   //   'url': `https://github.com/alibaba-fusion/materials/tree/master/blocks/${block}`,
   // };
-  // // }
+  // }
   // if (!('views' in packageInfo.blockConfig)) {
   //   packageInfo.blockConfig.views = [{
   //     'title': '',
@@ -111,7 +115,7 @@ blocksList.forEach(block => {
 
   try {
     // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
-    execSync(`cd blocks/${block}; tnpm install;npm publish;`);
+    execSync(`cd blocks/${block};tnpm install bizcharts;npm publish;`);
   } catch (err) {
     console.log(err);
   }

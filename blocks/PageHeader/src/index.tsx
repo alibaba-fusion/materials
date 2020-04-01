@@ -9,9 +9,9 @@ export interface PageHeaderProps {
 }
 
 const PageHeader: SFC<PageHeaderProps> = (props) => {
-  const { breadcrumbs, title, description } = props;
+  const { breadcrumbs, title, description, ...others } = props;
   return (
-    <Box spacing={8} className={styles.PageHeader}>
+    <Box spacing={8} className={styles.PageHeader} {...others}>
       {
         breadcrumbs && breadcrumbs.length > 0 ? (
           <Breadcrumb className={styles.Breadcrumbs} separator=" / ">

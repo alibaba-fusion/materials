@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-settings-person",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "基础的个人设置Block",
   "files": [
     "build/",
@@ -17,7 +17,8 @@
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
     "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
     "prop-types": "^15.5.8"

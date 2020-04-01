@@ -42,9 +42,9 @@
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.12.17",
     "ali-oss": "^6.5.1",
-    "build-plugin-block": "^0.1.0",
+    "build-plugin-block": "^1.0.0",
     "build-plugin-fusion": "^0.1.0",
-    "build-plugin-fusion-material": "^0.1.0",
+    "build-plugin-fusion-material": "^0.1.10",
     "build-plugin-ice-app": "^0.1.5",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^6.0.1",
@@ -65,7 +65,7 @@
     "fusion-site": {
       "id": 1,
       "name": "Fusion Design",
-      "url": "https://fusion.alibaba-inc.com/api/v1/sites/1/materials"
+      "url": "https://fusion.design/api/v1/sites/1/materials"
     }
   }
 }

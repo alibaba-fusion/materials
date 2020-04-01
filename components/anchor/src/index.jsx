@@ -1,22 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Affix } from '@alifd/next';
-import Link_ from './link';
+import ALink from './link';
 
 const ActiveContext = React.createContext('active');
 
-export default class BizAnchor extends React.Component {
-  static displayName = 'BizAnchor';
-
-  static defaultProps = {
-    content: () => null,
-    noHash: false,
-  }
-
-  state = {
-    content: null,
-    childrenList: null,
-    activeKey: null,
+class BizAnchor extends React.Component {
+  
+  constructor (props) {
+    super(props);
+    this.state = {
+      activeKey: null,
+    }
   }
 
   componentDidMount() {
@@ -25,38 +20,14 @@ export default class BizAnchor extends React.Component {
     }
   }
 
-  computeChildren(originContent) {
-    const nodeList = [];
-    let maxLevel = 4;
-
-    let content = originContent.children;
-
-    if (content.length === 1 && !content[0].id && content[0].nodeName !== 'H') {
-      content = content[0].children;
+  onItemClick = (key, e) => {
+    if(this.props.noHash) {
+      e.preventDefault();
+      document.getElementById(key).scrollIntoView();
     }
-
-    for (let index = 0; index < content.length; index++) {
-      const ele = content[index];
-      if (ele.id) {
-        if (ele.nodeName === 'H2' || ele.nodeName === 'H3' || ele.nodeName === 'H4') {
-          const level = Number(ele.nodeName.replace('H',''));
-          maxLevel = level < maxLevel ? level : maxLevel;
-
-          nodeList.push({
-            id: ele.id,
-            level: level,
-            title: ele.innerText
-          });
-        }
-      }
-    }
-
-    return nodeList.map((n, i) => {
-      return <Link_ href={`#${n.id}`} level={n.level - maxLevel + 1} key={i} title={n.title} 
-        onItemClick={this.onItemClick.bind(this, n.id)}
-        active={this.state.activeKey === n.id}
-      ></Link_>
-    })
+    this.setState({
+      activeKey: key,
+    });
   }
 
   getChildren(childNode, level=1) {
@@ -84,14 +55,41 @@ export default class BizAnchor extends React.Component {
     })
   }
 
-  onItemClick(key, e){
-    if(this.props.noHash) {
-      e.preventDefault();
-      document.getElementById(key).scrollIntoView();
+  computeChildren(originContent) {
+    const nodeList = [];
+    let maxLevel = 4;
+
+    let content = originContent.children;
+
+    if (content.length === 1 && !content[0].id && content[0].nodeName !== 'H') {
+      content = content[0].children;
     }
-    this.setState({
-      activeKey: key,
-    });
+
+    for (let index = 0; index < content.length; index++) {
+      const ele = content[index];
+      if (ele.id) {
+        if (ele.nodeName === 'H2' || ele.nodeName === 'H3' || ele.nodeName === 'H4') {
+          const level = Number(ele.nodeName.replace('H',''));
+          maxLevel = level < maxLevel ? level : maxLevel;
+
+          nodeList.push({
+            id: ele.id,
+            level,
+            title: ele.innerText
+          });
+        }
+      }
+    }
+
+    return nodeList.map((n, i) => {
+      const onClick = (...args) => {
+        this.onItemClick(n.id, ...args);
+      };
+      return <ALink href={`#${n.id}`} level={n.level - maxLevel + 1} key={i} title={n.title} 
+        onItemClick={onClick}
+        active={this.state.activeKey === n.id}
+      />
+    })
   }
 
   render() {
@@ -101,7 +99,7 @@ export default class BizAnchor extends React.Component {
       'biz-anchor': true
     });
 
-    const Tag = component ? component : Affix;
+    const Tag = component || Affix;
 
     let childrenList = null;
 
@@ -119,4 +117,10 @@ export default class BizAnchor extends React.Component {
   }
 }
 
-export const Link = Link_;
+BizAnchor.displayName = 'BizAnchor';
+BizAnchor.defaultProps = {
+  content: () => null,
+  noHash: false,
+};
+export default BizAnchor;
+export const Link = ALink;

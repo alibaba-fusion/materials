@@ -1,6 +1,6 @@
 {
   "name": "@alifd/biz-anchor",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "anchor",
   "files": [
     "demo/",
@@ -47,7 +47,7 @@
     "title": "锚点",
     "category": "DataDisplay"
   },
-  "homepage": "https://unpkg.com/@alifd/biz-anchor@1.1.4/build/index.html",
+  "homepage": "https://unpkg.com/@alifd/biz-anchor@1.1.5/build/index.html",
   "publishConfig": {
     "access": "public",
     "registry": "http://registry.npmjs.org"
