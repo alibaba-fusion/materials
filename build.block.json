@@ -1,8 +1,7 @@
 {
   "plugins": [
-    "build-plugin-ice-app",
-    "build-plugin-fusion",
     "build-plugin-block",
+    "build-plugin-fusion",
     "build-plugin-fusion-material",
     [
       "build-plugin-moment-locales",
