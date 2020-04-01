@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-page-header",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "页头位于页容器中，页容器顶部，起到了内容概览和引导页级操作的作用。",
   "files": [
     "build/",
@@ -16,8 +16,9 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json",
     "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "prepublishOnly": "npm run build -- --design && npm run screenshot"
   },
   "dependencies": {
     "prop-types": "^15.5.8"

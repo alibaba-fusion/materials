@@ -3,9 +3,9 @@ import { Breadcrumb, Box, Typography } from '@alifd/next';
 import styles from './index.module.scss';
 
 const PageHeader = props => {
-  const { breadcrumbs, title, description } = props;
+  const { breadcrumbs, title, description, ...others } = props;
   return (
-    <Box spacing={8} className={styles.PageHeader}>
+    <Box spacing={8} className={styles.PageHeader} {...others}>
       {breadcrumbs && breadcrumbs.length > 0 ? (
         <Breadcrumb className={styles.Breadcrumbs} separator=" / ">
           {breadcrumbs.map(item => (

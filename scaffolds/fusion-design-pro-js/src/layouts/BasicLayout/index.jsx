@@ -51,7 +51,7 @@ export default function BasicLayout({ children }) {
   return (
     <ConfigProvider device={device}>
       <Shell
-        type="dark"
+        type="brand"
         style={{
           minHeight: '100vh',
         }}

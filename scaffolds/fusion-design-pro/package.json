@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.1.26",
+  "version": "0.1.28",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -28,7 +28,7 @@
     "react-intl": "^2.8.0",
     "@antv/data-set": "^0.10.2",
     "bizcharts": "^3.5.6",
-    "@alifd/theme-design-pro": "^0.x",
+    "@alifd/theme-design-pro": "^0.6.2",
     "prop-types": "^15.5.8",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4"
@@ -46,10 +46,11 @@
     "start": "icejs start",
     "build": "icejs build",
     "screenshot": "../../node_modules/.bin/screenshot -l",
-    "prepublishOnly": "npm run build && npm run screenshot",
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "stylelint": "stylelint ./**/*.scss",
+    "design": "icejs build --design"
   },
   "publishConfig": {
     "access": "public"
