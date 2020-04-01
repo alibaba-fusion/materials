@@ -12,6 +12,11 @@ const asideMenuConfig = [
     icon: 'chart-pie',
   },
   {
+    name: 'Login',
+    path: '/login',
+    icon: 'account',
+  },
+  {
     name: 'Angular',
     icon: 'set',
     children: [

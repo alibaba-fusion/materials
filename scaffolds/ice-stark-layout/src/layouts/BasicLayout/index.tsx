@@ -9,20 +9,11 @@ declare global {
   }
 }
 
-const { useEffect } = React;
 export default function BasicLayout(props: {
   children: React.ReactNode;
   pathname: string;
-  appLeave: { path: string };
 }) {
-  const { children, pathname, appLeave } = props;
-  const leavePath = appLeave && appLeave.path;
-  useEffect(() => {
-    if (leavePath === '/angular' && window.webpackJsonp) {
-      // remove webpackJsonp added by Angular app
-      delete window.webpackJsonp;
-    }
-  }, [leavePath]);
+  const { children, pathname } = props;
 
   return (
     <Shell
