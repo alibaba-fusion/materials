@@ -33,9 +33,14 @@ export default {
       }
     });
 
+    const style = {
+      ...others.style,
+      width,
+    }
+
     return (
       // eslint-disable-next-line react/react-in-jsx-scope
-      <MainComponent component="div" {...others} style={{width}}>{children}</MainComponent>
+      <MainComponent {...others} component="div" style={style}>{children}</MainComponent>
     );
   },
 };
