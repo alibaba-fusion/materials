@@ -11,20 +11,20 @@ export default {
   state: [
     { title: '示例任务', description: '初始示例任务说明...' },
   ],
-  effects: {
-    async addTask(prevState: IState, task: ITask, actions): Promise<void> {
+  effects: (dispatch) => ({
+    async addTask(task: ITask): Promise<void> {
       // fetch API to add task
       await delay(100);
       // update store
-      actions.add([task]);
+      dispatch.tasks.add([task]);
     },
-    async removeTask(prevState: IState, taskIndex: number, actions): Promise<void> {
+    async removeTask(taskIndex: number): Promise<void> {
       // fetch API to remove task
       await delay(100);
       // update store
-      actions.remove(taskIndex);
+      dispatch.tasks.remove(taskIndex);
     },
-  },
+  }),
   reducers: {
     add(prevState: IState, task: ITask[]): IState {
       return [...prevState, ...task];

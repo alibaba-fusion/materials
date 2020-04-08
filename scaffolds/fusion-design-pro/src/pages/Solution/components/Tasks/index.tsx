@@ -18,16 +18,16 @@ const formItemLayout = {
 
 const FormItem = Form.Item;
 const Tasks = () => {
-  const [taskList, taskAction] = pageStore.useModel('tasks');
+  const [taskList, taskDispatchers] = pageStore.useModel('tasks');
 
-  console.log(taskList, taskAction);
+  console.log(taskList, taskDispatchers);
   const handleSubmit = (values: IFromValue): void => {
-    taskAction.addTask(values);
+    taskDispatchers.addTask(values);
     Message.success('提交成功');
   };
 
   const handleRemoveTask = (index: number) => {
-    taskAction.removeTask(index);
+    taskDispatchers.removeTask(index);
   };
 
   return (

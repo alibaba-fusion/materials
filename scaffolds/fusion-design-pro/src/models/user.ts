@@ -14,14 +14,16 @@ export default {
     avatar: '',
     userid: null,
   },
-  effects: {
-    async fetchUserProfile(state: IState, payload, actions) {
+
+  effects: (dispatch) => ({
+    async fetchUserProfile() {
       const res = await request('/api/profile');
       if (res.status === 'SUCCESS') {
-        actions.update(res.data);
+        dispatch.user.update(res.data);
       }
     },
-  },
+  }),
+
   reducers: {
     update(prevState: IState, payload: IState) {
       return { ...prevState, ...payload };
