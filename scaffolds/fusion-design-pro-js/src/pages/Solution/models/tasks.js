@@ -6,21 +6,21 @@ export default {
       description: '初始示例任务说明...',
     },
   ],
-  effects: {
-    async addTask(prevState, task, actions) {
+  effects: dispatch => ({
+    async addTask(task) {
       // fetch API to add task
       await delay(100); // update store
 
-      actions.add([task]);
+      dispatch.tasks.add([task]);
     },
 
-    async removeTask(prevState, taskIndex, actions) {
+    async removeTask(taskIndex) {
       // fetch API to remove task
       await delay(100); // update store
 
-      actions.remove(taskIndex);
+      dispatch.tasks.remove(taskIndex);
     },
-  },
+  }),
   reducers: {
     add(prevState, task) {
       return [...prevState, ...task];

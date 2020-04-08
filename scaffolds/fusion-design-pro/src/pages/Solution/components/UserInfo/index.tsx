@@ -3,9 +3,9 @@ import { Avatar, Card } from '@alifd/next';
 import { store as appStore } from 'ice';
 
 const UserInfo = () => {
-  const [userInfo, userActions] = appStore.useModel('user');
+  const [userInfo, userDispatchers] = appStore.useModel('user');
   useEffect(() => {
-    userActions.fetchUserProfile();
+    userDispatchers.fetchUserProfile();
   }, []);
   
   return (
