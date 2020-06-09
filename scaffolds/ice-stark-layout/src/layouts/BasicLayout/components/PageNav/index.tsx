@@ -62,7 +62,7 @@ const Navigation = (props, context) => {
 
   return (
     <Nav
-      type="primary"
+      type="normal"
       selectedKeys={[pathname]}
       defaultSelectedKeys={[pathname]}
       embeddable
