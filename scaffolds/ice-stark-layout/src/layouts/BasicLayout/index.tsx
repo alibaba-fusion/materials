@@ -17,7 +17,7 @@ export default function BasicLayout(props: {
 
   return (
     <Shell
-      type="dark"
+      type="brand"
       style={{
         minHeight: '100vh',
       }}
