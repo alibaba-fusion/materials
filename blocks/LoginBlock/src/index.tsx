@@ -23,7 +23,7 @@ const DEFAULT_DATA: IDataSource = {
 };
 
 interface LoginProps {
-  dataSource: IDataSource;
+  dataSource?: IDataSource;
 }
 
 
@@ -134,11 +134,11 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
             alt="logo"
           />
         </a>
-        <p className={styles.desc}>
-          <span onClick={byAccount} className={ isPhone || styles.active }>账户密码登录</span>
+        <div className={styles.desc}>
+          <span onClick={byAccount} className={ isPhone ? undefined : styles.active }>账户密码登录</span>
           <Divider direction="ver" />
-          <span onClick={byForm} className={ isPhone && styles.active }>手机号登录</span>
-        </p>
+          <span onClick={byForm} className={ isPhone ? styles.active : undefined }>手机号登录</span>
+        </div>
 
         <Form
           value={postData}
@@ -147,14 +147,14 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
         >
           { isPhone ? phoneForm : accountForm }
 
-          <p className={styles.infoLine}>
+          <div className={styles.infoLine}>
             <Item style={{marginBottom: 0}}>
               <Checkbox name="autoLogin" className={styles.infoLeft} >自动登录</Checkbox>
             </Item>
             <div>
               <a href="/" className={styles.link}>忘记密码</a>
             </div>
-          </p>
+          </div>
 
           <Item style={{marginBottom: 10}}>
             <Form.Submit
@@ -166,10 +166,10 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
               登录
             </Form.Submit>
           </Item>
-          <p className={styles.infoLine}>
-            <div className={styles.infoLeft}>其他登录方式 <Icon type="atm" size="s"/> <Icon type="atm" size="s" /> <Icon type="atm" size="s" /></div>
+          <div className={styles.infoLine}>
+            <div className={styles.infoLeft}>其他登录方式 <Icon type="atm" size="small" /> <Icon type="atm" size="small" /> <Icon type="atm" size="small" /></div>
             <a href="/" className={styles.link}>注册账号</a>
-          </p>
+          </div>
         </Form>
       </div>
     </div>

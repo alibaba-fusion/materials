@@ -135,20 +135,20 @@ const LoginBlock = props => {
             alt="logo"
           />
         </a>
-        <p className={styles.desc}>
-          <span onClick={byAccount} className={isPhone || styles.active}>
+        <div className={styles.desc}>
+          <span onClick={byAccount} className={isPhone ? undefined : styles.active}>
             账户密码登录
           </span>
           <Divider direction="ver" />
-          <span onClick={byForm} className={isPhone && styles.active}>
+          <span onClick={byForm} className={isPhone ? styles.active : undefined}>
             手机号登录
           </span>
-        </p>
+        </div>
 
         <Form value={postData} onChange={formChange} size="large">
           {isPhone ? phoneForm : accountForm}
 
-          <p className={styles.infoLine}>
+          <div className={styles.infoLine}>
             <Item
               style={{
                 marginBottom: 0,
@@ -163,7 +163,7 @@ const LoginBlock = props => {
                 忘记密码
               </a>
             </div>
-          </p>
+          </div>
 
           <Item
             style={{
@@ -179,15 +179,15 @@ const LoginBlock = props => {
               登录
             </Form.Submit>
           </Item>
-          <p className={styles.infoLine}>
+          <div className={styles.infoLine}>
             <div className={styles.infoLeft}>
-              其他登录方式 <Icon type="atm" size="s" /> <Icon type="atm" size="s" />{' '}
-              <Icon type="atm" size="s" />
+              其他登录方式 <Icon type="atm" size="small" /> <Icon type="atm" size="small" />{' '}
+              <Icon type="atm" size="small" />
             </div>
             <a href="/" className={styles.link}>
               注册账号
             </a>
-          </p>
+          </div>
         </Form>
       </div>
     </div>

@@ -143,7 +143,12 @@ const TableList = props => {
           </Box>
           <Divider dashed />
           <div className={styles.Main}>
-            <Loading visible={loading}>
+            <Loading
+              visible={loading}
+              style={{
+                display: 'block',
+              }}
+            >
               <div className={styles.add}>
                 <Button type="primary">新增</Button>
                 <Button type="normal">下载</Button>
