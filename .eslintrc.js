@@ -17,6 +17,7 @@ const jsRules = deepmerge(eslint, {
 const tsRules = deepmerge(tslint, {
   rules: {
     ...commonRules,
+    '@typescript-eslint/array-type': ['error'],
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
   },
