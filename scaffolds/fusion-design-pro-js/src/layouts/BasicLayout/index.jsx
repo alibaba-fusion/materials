@@ -27,7 +27,9 @@ import Footer from './components/Footer';
     obj.addEventListener(type, func);
   };
 
-  throttle('resize', 'optimizedResize');
+  if (typeof window !== 'undefined') {
+    throttle('resize', 'optimizedResize');
+  }
 })();
 
 export default function BasicLayout({ children }) {
@@ -45,9 +47,14 @@ export default function BasicLayout({ children }) {
   };
 
   const [device, setDevice] = useState(getDevice(NaN));
-  window.addEventListener('optimizedResize', e => {
-    setDevice(getDevice(e && e.target && e.target.innerWidth));
-  });
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('optimizedResize', e => {
+      const deviceWidth = (e && e.target && e.target.innerWidth) || NaN;
+      setDevice(getDevice(deviceWidth));
+    });
+  }
+
   return (
     <ConfigProvider device={device}>
       <Shell

@@ -28,6 +28,6 @@
       "ice/*": [".ice/pages/*"]
     }
   },
-  "include": ["src/*", ".ice"],
+  "include": ["src", ".ice"],
   "exclude": ["node_modules", "build", "public"]
 }

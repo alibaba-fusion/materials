@@ -21,6 +21,7 @@ const appConfig = {
       const apps = [{
         path: '/seller',
         title: '商家平台',
+        sandbox: true,
         // React app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-seller-react-16
         url: [
           '//ice.alicdn.com/icestark/child-seller-react/index.js',
@@ -29,6 +30,7 @@ const appConfig = {
       }, {
         path: '/waiter',
         title: '小二平台',
+        sandbox: true,
         url: [
           // Vue app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-waiter-vue-2
           '//ice.alicdn.com/icestark/child-waiter-vue/app.js',
@@ -37,6 +39,7 @@ const appConfig = {
       }, {
         path: '/angular',
         title: 'Angular',
+        sandbox: true,
         // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9 
         entry: '//ice.alicdn.com/icestark/child-common-angular/index.html',
       }];

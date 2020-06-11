@@ -131,7 +131,12 @@ const CardList = props => {
           </div>
         </Box>
       </Card>
-      <Loading visible={loading}>
+      <Loading
+        visible={loading}
+        style={{
+          display: 'block',
+        }}
+      >
         <ResponsiveGrid gap={20}>
           <Cell colSpan={3} className={styles.ListItem}>
             <Box className={styles.add} justify="center" align="center">
