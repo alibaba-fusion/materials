@@ -67,71 +67,76 @@ export default function FilterTable() {
 
   return (
     <div className="filter-table">
-      <Card className="page-card">
-        <Form
-          className="filter-form"
-          responsive
-          fullWidth
-          labelAlign="top"
-          inline
-          field={field}
-        >
-          <FormItem
-            colSpan={3}
-            label="数据状态"
-            required
-            requiredMessage="必填"
+      <Card free>
+        <Card.Content>
+          <Form
+            className="filter-form"
+            responsive
+            fullWidth
+            labelAlign="top"
+            inline
+            field={field}
           >
-            <Select
-              name="status"
-              dataSource={[
-                {
-                  label: '正常状态',
-                  value: 'normal',
-                },
-                {
-                  label: '空数据状态',
-                  value: 'empty',
-                },
-                {
-                  label: '数据异常状态',
-                  value: 'exception',
-                }
-              ]}
-            />
-          </FormItem>
-          <FormItem colSpan={8} />
-          <FormItem
-            colSpan={1}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <Form.Submit
-              type="primary"
-              onClick={submit}
-              validate
+            <FormItem
+              colSpan={3}
+              label="数据状态"
+              required
+              requiredMessage="必填"
             >
-              提交
-            </Form.Submit>
-            <Form.Reset onClick={reset}>重置</Form.Reset>
-          </FormItem>
-        </Form>
+              <Select
+                name="status"
+                dataSource={[
+                  {
+                    label: '正常状态',
+                    value: 'normal',
+                  },
+                  {
+                    label: '空数据状态',
+                    value: 'empty',
+                  },
+                  {
+                    label: '数据异常状态',
+                    value: 'exception',
+                  }
+                ]}
+              />
+            </FormItem>
+            <FormItem colSpan={7} />
+            <FormItem
+              colSpan={2}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Form.Submit
+                type="primary"
+                onClick={submit}
+                validate
+                style={{ marginRight: '20px' }}
+              >
+                提交
+              </Form.Submit>
+              <Form.Reset onClick={reset}>重置</Form.Reset>
+            </FormItem>
+          </Form>
+        </Card.Content>
       </Card>
-      <Card>
-        <Table
-          {...tableProps}
-          onResizeChange={onResizeChange}
-          emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
-          primaryKey="email"
-        >
-          <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
-          <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
-          <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
-          <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
-        </Table>
-        <Pagination style={{ marginTop: 16 }} {...paginationProps} />
+      <Card free>
+        <Card.Content>
+          <Table
+            {...tableProps}
+            onResizeChange={onResizeChange}
+            emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
+            primaryKey="email"
+          >
+            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
+            <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
+            <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
+            <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
+          </Table>
+          <Pagination style={{ marginTop: 16 }} {...paginationProps} />
+        </Card.Content>
       </Card>
     </div>
   );
