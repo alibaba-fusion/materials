@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EmptyBlock() {
+const EmptyBlock: React.FunctionComponent = (): JSX.Element => {
   return (
     <div className="table-empty-block">
       <div className="result-image">
@@ -12,3 +12,5 @@ export default function EmptyBlock() {
     </div>
   )
 }
+
+export default EmptyBlock;

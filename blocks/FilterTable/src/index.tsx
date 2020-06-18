@@ -5,7 +5,7 @@ import { useFusionTable } from 'ahooks';
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
 
-import './index.scss';
+import styles from './index.module.scss';
 
 const FormItem = Form.Item;
 
@@ -49,7 +49,7 @@ const defaultColumnWidth = {
   gender: 140,
 };
 
-export default function FilterTable() {
+const FilterTable: React.FunctionComponent = (): JSX.Element => {
   const [columnWidth, onColumnWidthChange] = useState(defaultColumnWidth);
   const field = Field.useField([]);
   const { paginationProps, tableProps, search, error, refresh } = useFusionTable(getTableData, {
@@ -65,8 +65,9 @@ export default function FilterTable() {
     onColumnWidthChange(newWidth);
   };
 
+  console.log(styles);
   return (
-    <div className="filter-table">
+    <div className={styles.FilterTable}>
       <Card free>
         <Card.Content>
           <Form
@@ -142,6 +143,4 @@ export default function FilterTable() {
   );
 }
 
-FilterTable.defaultProps = {
-  value: 'block',
-};
+export default FilterTable;
