@@ -65,7 +65,6 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
     onColumnWidthChange(newWidth);
   };
 
-  console.log(styles);
   return (
     <div className={styles.FilterTable}>
       <Card free>
@@ -75,7 +74,6 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
             responsive
             fullWidth
             labelAlign="top"
-            inline
             field={field}
           >
             <FormItem
