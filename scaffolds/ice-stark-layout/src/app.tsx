@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { createApp } from 'ice'
+import { createApp, IAppConfig } from 'ice'
 import { ConfigProvider } from '@alifd/next';
 import PageLoading from '@/components/PageLoading';
 import FrameworkLayout from '@/layouts/FrameworkLayout';
 
-const appConfig = {
+const appConfig: IAppConfig = {
   app: {
     rootId: 'icestark-container',
     addProvider: ({ children }) => (

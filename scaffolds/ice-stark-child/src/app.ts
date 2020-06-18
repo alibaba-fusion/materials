@@ -1,6 +1,6 @@
-import { createApp } from 'ice';
+import { createApp, IAppConfig } from 'ice';
 
-const appConfig = {
+const appConfig: IAppConfig = {
   router: {
     type: 'browser',
   },
