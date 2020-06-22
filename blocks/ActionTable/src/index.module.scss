@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 20px;
 }
 
@@ -28,15 +27,12 @@
 
 .columnSortPanel {
   :global {
-    background: #FFFFFF;
+    background: #FFF;
     padding: 20px;
-
     border-radius: $corner-1;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
-
     max-height: 500px;
     overflow-y: scroll;
-
     width: 180px;
 
     .sort-item-container {
@@ -47,7 +43,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       margin-bottom: 11px;
 
       .next-checkbox-wrapper.sort-checkbox {
@@ -64,14 +59,12 @@
       .column-handle {
         display: block;
         visibility: hidden;
-
         margin-left: 20px;
       }
 
       &:hover {
         .column-handle {
           visibility: initial;
-
           cursor: move;
         }
       }
