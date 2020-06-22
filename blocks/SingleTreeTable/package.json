@@ -34,9 +34,21 @@
   "blockConfig": {
     "name": "SingleTreeTable",
     "title": "basic",
-    "category": "Table"
+    "category": "Table",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "",
+        "html": ""
+      }
+    ]
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SingleTreeTable"
   }
 }
