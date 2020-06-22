@@ -20,6 +20,8 @@
     "prepublishOnly": "npm run build && npm run screenshot"
   },
   "dependencies": {
+    "@alifd/next": "^1.20.14",
+    "ahooks": "^2.0.1",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
