@@ -146,11 +146,3 @@ export default function SingleColFilterTable() {
     </div>
   );
 }
-
-SingleColFilterTable.propTypes = {
-  value: PropTypes.string,
-};
-
-SingleColFilterTable.defaultProps = {
-  value: "block",
-};
