@@ -1,7 +1,16 @@
 .wrap {
+  margin: $s-5;
 }
 .formWrap {
+  padding: $s-5;
+  margin-bottom: $s-5;
+  border: 1px solid #ccc;
 }
 
 .tableWrap {
+}
+
+.pagination {
+  text-align: right;
+  margin-top: $s-5;
 }

@@ -10,7 +10,12 @@ import {
   Table,
   Grid,
   Button,
+  Icon,
+  Pagination,
 } from "@alifd/next";
+
+import { useFusionTable } from "ahooks";
+
 import styles from "./index.module.scss";
 
 const RadioGroup = Radio.Group;
@@ -60,12 +65,32 @@ const LOCATIONS = [
   { label: "杭州", value: "hz" },
 ];
 
+const getTableData = async ({ current, pageSize }, formData: Object) => {
+  const query = Object.entries(formData)
+    .map(([key, value]) => (value ? `&${key}=${value}` : ""))
+    .reduce((prev, curr) => prev + curr, `page=${current}&size=${pageSize}`);
+
+  return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
+    .then((res) => res.json())
+    .then((res) => ({
+      total: 55,
+      list: res.results.slice(0, 10),
+    }));
+};
+
 export default function SingleColFilterTable() {
   const field = Field.useField();
+  const { paginationProps, tableProps, search, loading } = useFusionTable(
+    getTableData,
+    {
+      field,
+    }
+  );
+  const { type, changeType, submit, reset } = search;
   return (
     <div className={styles.wrap}>
       <div className={styles.formWrap}>
-        <Form {...formItemLayout} field={field}>
+        <Form {...formItemLayout} field={field} labelTextAlign="left">
           <FormItem label="语言能力:">
             <CheckboxGroup name="languages" dataSource={LANGUAGES} />
           </FormItem>
@@ -75,25 +100,48 @@ export default function SingleColFilterTable() {
           <FormItem label="公司已上市:">
             <RadioGroup name="ipo" dataSource={YES_NO} />
           </FormItem>
-          <FormItem label="公司所在地:">
-            <Select name="location" dataSource={LOCATIONS} />
-          </FormItem>
-          <FormItem label="境外办公室设立:">
-            <Select name="overseaOffice" dataSource={YES_NO} />
-          </FormItem>
-          <FormItem label="服务商名称(中文或英文):">
-            <Input name="isvName" style={{ width: 260 }} />
-          </FormItem>
+          {type === "simple" ? null : (
+            <>
+              <FormItem label="公司所在地:">
+                <Select name="location" dataSource={LOCATIONS} />
+              </FormItem>
+              <FormItem label="境外办公室设立:">
+                <Select name="overseaOffice" dataSource={YES_NO} />
+              </FormItem>
+              <FormItem label="服务商名称(中文或英文):">
+                <Input name="isvName" style={{ width: 260 }} />
+              </FormItem>
+            </>
+          )}
+
           <Row>
-            <Col>
-              <Button></Button>
+            <Col span={14}>
+              <Button type="primary" onClick={submit}>
+                搜索
+              </Button>
             </Col>
-            <Col></Col>
+            <Col span={10} style={{ textAlign: "right" }}>
+              {type === "simple" ? (
+                <Button text={true} onClick={changeType}>
+                  展开 <Icon type="arrow-down" />
+                </Button>
+              ) : (
+                <Button text={true} onClick={changeType}>
+                  收起 <Icon type="arrow-up" />
+                </Button>
+              )}
+            </Col>
           </Row>
         </Form>
       </div>
       <div className={styles.tableWrap}>
-        <Table />
+        <Table {...tableProps} primaryKey="email">
+          <Table.Column title="name" dataIndex="name.last" width={140} />
+          <Table.Column title="email" dataIndex="email" width={500} />
+          <Table.Column title="phone" dataIndex="phone" width={500} />
+          <Table.Column title="gender" dataIndex="gender" width={500} />
+        </Table>
+        <Pagination {...paginationProps} className={styles.pagination} />
       </div>
     </div>
   );
