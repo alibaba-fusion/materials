@@ -1,5 +1,5 @@
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import {
   Form,
   Input,
@@ -12,11 +12,11 @@ import {
   Button,
   Icon,
   Pagination,
-} from "@alifd/next";
+} from '@alifd/next';
 
-import { useFusionTable } from "ahooks";
+import { useFusionTable } from 'ahooks';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 const RadioGroup = Radio.Group;
 const CheckboxGroup = Checkbox.Group;
@@ -33,41 +33,41 @@ const formItemLayout = {
 const { Row, Col } = Grid;
 
 const LANGUAGES = [
-  { label: "汉语", value: "cn" },
-  { label: "粤语", value: "gd" },
-  { label: "朝鲜语", value: "kr" },
-  { label: "法语", value: "fr" },
-  { label: "英语", value: "en" },
-  { label: "西班牙语", value: "sp" },
-  { label: "意大利语", value: "it" },
-  { label: "德文", value: "gm" },
-  { label: "其他", value: "other" },
+  { label: '汉语', value: 'cn' },
+  { label: '粤语', value: 'gd' },
+  { label: '朝鲜语', value: 'kr' },
+  { label: '法语', value: 'fr' },
+  { label: '英语', value: 'en' },
+  { label: '西班牙语', value: 'sp' },
+  { label: '意大利语', value: 'it' },
+  { label: '德文', value: 'gm' },
+  { label: '其他', value: 'other' },
 ];
 
 const STAFF_COUNTS = [
-  { label: "0-50", value: "0" },
-  { label: "50-100", value: "1" },
-  { label: "100-200", value: "2" },
-  { label: "200-500", value: "3" },
-  { label: "500以上", value: "4" },
+  { label: '0-50', value: '0' },
+  { label: '50-100', value: '1' },
+  { label: '100-200', value: '2' },
+  { label: '200-500', value: '3' },
+  { label: '500以上', value: '4' },
 ];
 
 const YES_NO = [
-  { label: "是", value: "0" },
-  { label: "否", value: "1" },
+  { label: '是', value: '0' },
+  { label: '否', value: '1' },
 ];
 
 const LOCATIONS = [
-  { label: "北京", value: "bj" },
-  { label: "上海", value: "sh" },
-  { label: "深圳", value: "sz" },
-  { label: "广州", value: "gz" },
-  { label: "杭州", value: "hz" },
+  { label: '北京', value: 'bj' },
+  { label: '上海', value: 'sh' },
+  { label: '深圳', value: 'sz' },
+  { label: '广州', value: 'gz' },
+  { label: '杭州', value: 'hz' },
 ];
 
-const getTableData = async ({ current, pageSize }, formData: Object) => {
+const getTableData = async ({ current, pageSize }, formData: Record<string, any>) => {
   const query = Object.entries(formData)
-    .map(([key, value]) => (value ? `&${key}=${value}` : ""))
+    .map(([key, value]) => (value ? `&${key}=${value}` : ''))
     .reduce((prev, curr) => prev + curr, `page=${current}&size=${pageSize}`);
 
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
@@ -100,7 +100,7 @@ export default function SingleColFilterTable() {
           <FormItem label="公司已上市:">
             <RadioGroup name="ipo" dataSource={YES_NO} />
           </FormItem>
-          {type === "simple" ? null : (
+          {type === 'simple' ? null : (
             <>
               <FormItem label="公司所在地:">
                 <Select name="location" dataSource={LOCATIONS} />
@@ -120,13 +120,13 @@ export default function SingleColFilterTable() {
                 搜索
               </Button>
             </Col>
-            <Col span={10} style={{ textAlign: "right" }}>
-              {type === "simple" ? (
-                <Button text={true} onClick={changeType}>
+            <Col span={10} style={{ textAlign: 'right' }}>
+              {type === 'simple' ? (
+                <Button text onClick={changeType}>
                   展开 <Icon type="arrow-down" />
                 </Button>
               ) : (
-                <Button text={true} onClick={changeType}>
+                <Button text onClick={changeType}>
                   收起 <Icon type="arrow-up" />
                 </Button>
               )}
