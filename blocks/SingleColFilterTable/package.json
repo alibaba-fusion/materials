@@ -1,7 +1,7 @@
 {
-  "name": "single-col-filter-table",
-  "version": "1.0.0",
-  "description": "单列Filter的Table",
+  "name": "@alifd/fusion-single-col-filter-table",
+  "version": "0.1.0",
+  "description": "table with single filter column",
   "files": [
     "src/!(style.d.ts)",
     "build/",
@@ -14,35 +14,41 @@
     "block"
   ],
   "scripts": {
-    "start": "build-scripts start",
-    "build": "build-scripts build",
-    "screenshot": "screenshot -l -s mountNode",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
-    "@alifd/next": "^1.20.14",
-    "ahooks": "^2.0.1",
+    "ahooks": "^2.0.0",
     "prop-types": "^15.5.8"
   },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.x"
+  },
   "devDependencies": {
-    "@alib/build-scripts": "^0.1.3",
-    "@ice/screenshot": "^0.1.1",
-    "build-plugin-block": "^0.1.0",
-    "build-plugin-fusion": "^0.1.0",
-    "build-plugin-ice-app": "^0.1.0",
-    "build-plugin-moment-locales": "^0.1.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "moment": "^2.24.0",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4"
+    "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {
     "name": "SingleColFilterTable",
-    "title": "单列 Filter Table",
-    "category": "Table"
+    "title": "单列筛选区域的表格",
+    "category": "Table",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "",
+        "html": ""
+      }
+    ]
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SingleColFilterTable"
   }
 }
