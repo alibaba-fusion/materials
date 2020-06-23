@@ -8,7 +8,6 @@ import { getColumnKey } from './util';
 
 import styles from './index.module.scss';
 
-
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
@@ -138,7 +137,7 @@ const AppList = () => {
       >
         {filterColumns(columns)}
       </Table>
-      <Pagination style={{ marginTop: 16 }} {...paginationProps} />
+      <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
     </div>
   )
 };

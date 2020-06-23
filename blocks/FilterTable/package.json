@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-filter-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "基础的过滤区加表格的组合",
   "files": [
     "src/!(style.d.ts)",
@@ -28,15 +28,27 @@
     "react": "^16.8.0",
     "@alifd/next": "^1.x"
   },
+  "devDependencies": {
+    "@alifd/theme-design-pro": "^0.6.2"
+  },
   "blockConfig": {
     "name": "FilterTable",
     "title": "基础过滤表格",
-    "category": "Table"
+    "category": "Table",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
   },
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "@alifd/theme-design-pro": "^0.6.2"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/FilterTable"
   }
 }

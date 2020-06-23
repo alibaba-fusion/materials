@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-single-tree-table",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "single tree table",
   "files": [
     "src/!(style.d.ts)",
@@ -33,14 +33,14 @@
   },
   "blockConfig": {
     "name": "SingleTreeTable",
-    "title": "basic",
+    "title": "单层可展开的树表格",
     "category": "Table",
     "views": [
       {
         "title": "",
         "props": {},
-        "screenshot": "",
-        "html": ""
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
       }
     ]
   },

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select, Form, Field, Table, Card, Pagination } from '@alifd/next';
+import { Button, Select, Form, Field, Table, Card, Pagination } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
 
 import EmptyBlock from './EmptyBlock';
@@ -134,7 +134,7 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
           </Table>
-          <Pagination style={{ marginTop: 16 }} {...paginationProps} />
+          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>}  {...paginationProps} />
         </Card.Content>
       </Card>
     </div>

@@ -162,20 +162,24 @@ export default function SingleTreeTable() {
     Message.success('请求成功');
   };
 
-  const tableOperation = () => {
+  const tableOperation = (value, index, record) => {
     return (
       <div className={styles.buttonGroup}>
         <Button type="primary" text onClick={fetchRemote}>删除</Button>
-        <Button type="primary" text onClick={() => setVisible(true)}>编辑</Button>
-        <MenuButton
-          type="primary"
-          text
-          popupProps={{ autoFit: true }}
-          label="更多"
-        >
-          <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
-          <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
-        </MenuButton>
+        {record && record.children &&
+        <>
+          <Button type="primary" text onClick={() => setVisible(true)}>编辑</Button>
+          <MenuButton
+            type="primary"
+            text
+            popupProps={{ autoFit: true }}
+            label="更多"
+          >
+            <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
+            <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
+          </MenuButton>
+        </>
+        }
       </div>
     )
   };
@@ -185,6 +189,7 @@ export default function SingleTreeTable() {
     <div className={styles.container}>
       <Table
         dataSource={data}
+        hasBorder={false}
         primaryKey="id"
         isTree
         cellProps={(rowIndex, colIndex, dataIndex, record) => {
@@ -195,7 +200,7 @@ export default function SingleTreeTable() {
           }
         }}
       >
-        <Table.Column title="法律条文编号" dataIndex="rowNo"/>
+        <Table.Column title="法律条文编号" dataIndex="rowNo" width={140}/>
         <Table.Column title="法律条文内容" dataIndex="rowContent"/>
         <Table.Column title="操作" dataIndex="operation" width={180} cell={tableOperation} />
       </Table>

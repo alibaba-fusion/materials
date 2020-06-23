@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-action-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "action bar table",
   "files": [
     "src/!(style.d.ts)",
@@ -35,14 +35,14 @@
   },
   "blockConfig": {
     "name": "ActionTable",
-    "title": "basic",
+    "title": "带操作区域的表格",
     "category": "Table",
     "views": [
       {
         "title": "",
         "props": {},
-        "screenshot": "",
-        "html": ""
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
       }
     ]
   },
