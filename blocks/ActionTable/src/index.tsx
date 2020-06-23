@@ -96,10 +96,10 @@ const AppList = () => {
   const [zebraStatus, changeZebra] = useState(false);
 
   // 切换全屏
-  const [isFullscreen, { toggleFull }] = useFullscreen(document.getElementById('table-container'), {
+  const [, { toggleFull }] = useFullscreen(document.getElementById('table-container'), {
     onFull: () => {
       const ele = document.getElementById('table-container');
-      ele.style = 'padding: 20px;background: #ffffff';
+      ele.setAttribute('style', 'padding: 20px;background: #ffffff');
     }
   });
 
@@ -134,6 +134,7 @@ const AppList = () => {
       </div>
       <Table
         {...tableProps}
+        size={sizeStatus}
         isZebra={zebraStatus}
         primaryKey="id.value"
       >
