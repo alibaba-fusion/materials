@@ -109,8 +109,6 @@ const AppList = () => {
   // 切换当前 columns
   const [columns, onColumnChange] = useState(defaultColumns);
 
-
-  console.log(columns);
   return (
     <div className={styles.container} id="table-container">
       <div className={styles.actionBar}>
@@ -134,7 +132,7 @@ const AppList = () => {
       </div>
       <Table
         {...tableProps}
-        size={sizeStatus}
+        size={sizeStatus as any}
         isZebra={zebraStatus}
         primaryKey="id.value"
       >
