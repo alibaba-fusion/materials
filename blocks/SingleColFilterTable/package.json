@@ -1,0 +1,54 @@
+{
+  "name": "@alifd/fusion-single-col-filter-table",
+  "version": "0.1.0",
+  "description": "table with single filter column",
+  "files": [
+    "src/!(style.d.ts)",
+    "build/",
+    "screenshot.png"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
+  },
+  "dependencies": {
+    "ahooks": "^2.0.0",
+    "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.x"
+  },
+  "devDependencies": {
+    "@alifd/theme-design-pro": "^0.6.2"
+  },
+  "blockConfig": {
+    "name": "SingleColFilterTable",
+    "title": "单列筛选区域的表格",
+    "category": "Table",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "",
+        "html": ""
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/SingleColFilterTable"
+  }
+}
