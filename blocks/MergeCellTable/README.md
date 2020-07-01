@@ -4,7 +4,7 @@
 
 合并单元格的 Table
 
-原始数据常见的两种
+表格中需要合并单元格的数据，原始形态大多数为以下两种：
 
 ```javascript
 const dataSource = [
@@ -13,7 +13,6 @@ const dataSource = [
   { id: "3", name: "xx", group: "a" },
   { id: "4", name: "xx", group: "b" },
   { id: "5", name: "xx", group: "b" },
-  { id: "6", name: "xx", group: "b" },
 ];
 ```
 
@@ -30,24 +29,25 @@ const dataSource = [
   {
     group: "b",
     children: [
-      { id: "1", name: "xx" },
-      { id: "2", name: "xx" },
-      { id: "3", name: "xx" },
+      { id: "4", name: "xx" },
+      { id: "5", name: "xx" },
     ],
   },
 ];
 ```
 
-为了实现合并单元格, 需要对数据源做转换, 手动统计出 groupCount 数量以及 分组内的排序, 并且保证同一分组排在相邻的位置。
-上面两例 dataSource 是等价的, 转换后的结构是一致的
+为了实现合并单元格, 需要对上述数据源做转换, 拉平数据并添加`groupCount` `groupIndex`，并且保证同一分组排在相邻的位置上。
+- `groupCount`为当数据所在分组的数据总数
+- `groupIndex`为当前数据在分组内的排序
+
+转换后的数据格式为：
 
 ```json
 [
   { "id": "1", "name": "xx", "group": "a", "groupCount": 3, "groupIndex": 0 },
   { "id": "2", "name": "xx", "group": "a", "groupCount": 3, "groupIndex": 1 },
   { "id": "3", "name": "xx", "group": "a", "groupCount": 3, "groupIndex": 2 },
-  { "id": "4", "name": "xx", "group": "b", "groupCount": 3, "groupIndex": 0 },
-  { "id": "5", "name": "xx", "group": "b", "groupCount": 3, "groupIndex": 1 },
-  { "id": "6", "name": "xx", "group": "b", "groupCount": 3, "groupIndex": 2 }
+  { "id": "4", "name": "xx", "group": "b", "groupCount": 2, "groupIndex": 0 },
+  { "id": "5", "name": "xx", "group": "b", "groupCount": 2, "groupIndex": 1 },
 ]
 ```
