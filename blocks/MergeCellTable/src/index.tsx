@@ -61,7 +61,7 @@ const MockData = [
 
 const getTableData = () =>
   Promise.resolve({
-    total: 55,
+    total: MockData.length,
     list: MockData,
   });
 
@@ -76,7 +76,7 @@ const cellProps = (rowIndex, colIndex, dataIndex, record) => {
 };
 
 export default function MergeCellTable() {
-  const { paginationProps, tableProps, loading } = useFusionTable(
+  const { paginationProps, tableProps } = useFusionTable(
     getTableData,
     {}
   );
