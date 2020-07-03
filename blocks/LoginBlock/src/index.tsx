@@ -27,7 +27,7 @@ interface LoginProps {
 }
 
 
-const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX.Element => {
+const LoginBlock: React.FunctionComponent<LoginProps> = (props = { dataSource: DEFAULT_DATA  }): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
   } = props;
