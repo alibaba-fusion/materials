@@ -1,0 +1,13 @@
+.container {
+    :global {
+        .next-table-expanded-row .next-table {
+            padding: 20px;
+        }
+    }
+}
+
+.tableActions {
+    button {
+        margin-right: 8px;
+    }
+}
