@@ -50,8 +50,8 @@
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-simple"
   },
   "scaffoldConfig": {
-    "name": "Scaffold Simple",
-    "title": "Scaffold Simple",
+    "name": "Simple",
+    "title": "Simple",
     "category": "Basic",
     "screenshot": "https://img.alicdn.com/tfs/TB1qdRsv.Y1gK0jSZFCXXcwqXXa-2878-1590.png"
   },

@@ -1,5 +1,5 @@
 
-## Scaffold Simple
+## Simple
 
 > A TypeScript simple template
 
