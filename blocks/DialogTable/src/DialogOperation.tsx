@@ -19,7 +19,7 @@ const getDialogProps = (actionType: ActionType): string => {
 };
 
 const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
-  const { actionType, dataSource, onOk, ...lastProps } = props;
+  const { actionType, dataSource, onOk = () => {}, ...lastProps } = props;
   const optionRef = useRef<OperationRef>(null);
   
   const handleOk = (event: Event) => {
@@ -27,7 +27,6 @@ const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
       return onOk(event);
     }
     optionRef.current.getValues((values) => {
-      console.log(values);
       onOk(event);
     });
   }
