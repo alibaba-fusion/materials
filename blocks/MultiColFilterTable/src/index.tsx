@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { Button, Select, Input, Form, Field, Table, Card, Pagination, Icon } from '@alifd/next';
-import { useFusionTable } from 'ahooks';
+import { useFusionTable, useSetState } from 'ahooks';
 
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
@@ -43,36 +43,61 @@ const getTableData = (
 };
 
 interface ColumnWidth {
-  'name.last': number;
+  name: number;
   email: number;
   phone: number;
   gender: number;
 }
 
+interface MultiColState {
+  columnWidth: ColumnWidth;
+  expandStatus: boolean;
+  actionListSpan: number;
+}
+
 const defaultColumnWidth: ColumnWidth = {
-  'name.last': 140,
+  name: 140,
   email: 500,
   phone: 500,
   gender: 140,
 };
 
+const getNextActionListSpan = (totalFieldLength: number): number => {
+  if (totalFieldLength < 3) {
+    return 3;
+  }
+  return (4 - (totalFieldLength % 4)) * 3;
+};
+
 const MultiColFilterTable: React.FC = () => {
-  const [expandStatus, setExpand] = useState<boolean>(true);
-  const [columnWidth, onColumnWidthChange] = useState<ColumnWidth>(defaultColumnWidth);
+  const [state, setState] = useSetState<MultiColState>({
+    columnWidth: defaultColumnWidth,
+    expandStatus: true,
+    actionListSpan: getNextActionListSpan(5),
+  });
   const field = Field.useField([]);
   const { paginationProps, tableProps, search, error, refresh } = useFusionTable(getTableData, {
     field,
   });
   const { submit, reset } = search;
+  const { columnWidth } = state;
 
-  const onResizeChange = useCallback((dataIndex: keyof typeof defaultColumnWidth, width: number) => {
+  const handleResizeChange = useCallback((dataIndex: keyof typeof defaultColumnWidth, width: number) => {
     const newWidth = {
       ...columnWidth,
     };
     newWidth[dataIndex] += width;
-    onColumnWidthChange(newWidth);
-  }, [columnWidth]);
+    setState({ columnWidth: newWidth });
+  }, [columnWidth, setState]);
 
+  const handleSetExpand = useCallback(() => {
+    const nextExpand = !state.expandStatus;
+    setState({
+      expandStatus: nextExpand,
+      actionListSpan: getNextActionListSpan(nextExpand ? 5 : 3),
+    });
+  }, [state, setState]);
+  console.log(state.actionListSpan);
   return (
     <div className={styles.container}>
       <Card free>
@@ -125,7 +150,7 @@ const MultiColFilterTable: React.FC = () => {
                 name="email"
               />
             </FormItem>
-            {!expandStatus ? null : (
+            {!state.expandStatus ? null : (
               <>
                 <FormItem
                   colSpan={3}
@@ -150,7 +175,7 @@ const MultiColFilterTable: React.FC = () => {
               </>
             )}
             <FormItem
-              colSpan={expandStatus ? 12 : 3}
+              colSpan={state.actionListSpan}
               className={styles['form-actions']}
             >
               <Form.Submit
@@ -168,9 +193,9 @@ const MultiColFilterTable: React.FC = () => {
                 重置
               </Form.Reset>
               <Button
-                onClick={() => setExpand(!expandStatus)}
+                onClick={handleSetExpand}
               >
-                {expandStatus ? (
+                {state.expandStatus ? (
                   <>收起<Icon type="arrow-up" /></>
                 ) : (
                   <>展开<Icon type="arrow-down" /></>
@@ -184,11 +209,11 @@ const MultiColFilterTable: React.FC = () => {
         <Card.Content>
           <Table
             {...tableProps}
-            onResizeChange={onResizeChange}
+            onResizeChange={handleResizeChange}
             emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
             primaryKey="email"
           >
-            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
+            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth.name} />
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
