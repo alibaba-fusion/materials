@@ -3,6 +3,7 @@ import { Shell, ConfigProvider } from '@alifd/next';
 import PageNav from './components/PageNav';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
+
 (function() {
   const throttle = function(type: string, name: string, obj: Window = window) {
     let running = false;
@@ -79,8 +80,8 @@ export default function BasicLayout({
           style={{
             marginRight: 10,
           }}
-        ></Shell.Navigation>
-        <Shell.Action></Shell.Action>
+        />
+        <Shell.Action />
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

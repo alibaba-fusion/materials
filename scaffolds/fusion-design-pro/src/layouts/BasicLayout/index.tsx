@@ -7,6 +7,7 @@ import SolutionLink from './components/SolutionLink';
 import HeaderAvatar from './components/HeaderAvatar';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
+
 (function() {
   const throttle = function(type: string, name: string, obj: Window = window) {
     let running = false;
