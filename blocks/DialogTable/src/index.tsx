@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Button, Field, Table, Card, Pagination, Message } from '@alifd/next';
+import { Button, Field, Table, Card, Pagination, Message, Dialog } from '@alifd/next';
 import { useFusionTable, useSetState } from 'ahooks';
 
 import EmptyBlock from './EmptyBlock';
@@ -42,7 +42,7 @@ const getTableData = (
 };
 
 interface ColumnWidth {
-  'name.last': number;
+  name: number;
   email: number;
   phone: number;
   gender: number;
@@ -57,7 +57,7 @@ interface DialogState {
 }
 
 const defaultColumnWidth: ColumnWidth = {
-  'name.last': 140,
+  name: 140,
   email: 500,
   phone: 500,
   gender: 140,
@@ -94,11 +94,11 @@ const DialogTable: React.FC = () => {
     });
   }, [setState]);
 
-  const handleCancel = (): void => {
+  const handleCancel = useCallback((): void => {
     setState({ actionVisible: false });
-  }
+  }, [setState]);
 
-  const handleOk = (): void => {
+  const handleOk = useCallback((): void => {
     const { actionType } = state;
     if (actionType === 'preview') {
       handleCancel();
@@ -107,18 +107,24 @@ const DialogTable: React.FC = () => {
     Message.success(actionType === 'add' ? '添加成功!' : '编辑成功!');
     reset();
     handleCancel();
-  }
+  }, [handleCancel, reset, state]);
 
-  const handleDelete = (data: any) => {
+  const handleDelete = useCallback((data: any) => {
     if (!data) {
       return;
     }
-    Message.success(`${data.id.name} 删除成功!`);
-    reset();
-  }
+    Dialog.confirm({
+      title: '删除提醒',
+      content: `确定删除 ${data.name.last} 吗`,
+      onOk() {
+        Message.success(`${data.name.last} 删除成功!`);
+        reset();
+      }
+    });
+  }, [reset]);
 
   const cellOperation = (...args: any[]): React.ReactNode => {
-    const record = args[2]
+    const record = args[2];
     return (
       <div>
         <Button
@@ -158,7 +164,7 @@ const DialogTable: React.FC = () => {
             emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
             primaryKey="email"
           >
-            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
+            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth.name} />
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />

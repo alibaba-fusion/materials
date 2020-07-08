@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Dialog } from '@alifd/next';
 import { DialogProps } from '@alifd/next/types/dialog';
 
 import Operation, { ActionType, OperaitionProps, OperationRef } from './Operation';
 
-const getDialogProps = (actionType: ActionType): string => {
+const getDialogTitle = (actionType: ActionType): string => {
   switch (actionType) {
     case 'add':
     default:
@@ -20,28 +20,28 @@ const getDialogProps = (actionType: ActionType): string => {
 
 const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
   const { actionType, dataSource, onOk = () => {}, ...lastProps } = props;
-  const optionRef = useRef<OperationRef>(null);
+  const operationRef = useRef<OperationRef>(null);
   
-  const handleOk = (event: Event) => {
+  const handleOk = useCallback(() => {
     if (actionType === 'preview') {
-      return onOk(event);
+      return onOk(null);
     }
-    optionRef.current.getValues((values) => {
-      onOk(event);
+    operationRef.current.getValues((values) => {
+      onOk(values);
     });
-  }
+  }, [actionType, onOk])
 
   return (
     <Dialog
       shouldUpdatePosition
       isFullScreen
-      title={getDialogProps(actionType)}
+      title={getDialogTitle(actionType)}
       style={{ width: 600 }}
       footerAlign="center"
       {...lastProps}
       onOk={handleOk}
     >
-      <Operation ref={optionRef} actionType={actionType} dataSource={dataSource} />
+      <Operation ref={operationRef} actionType={actionType} dataSource={dataSource} />
     </Dialog>
   );
 }
