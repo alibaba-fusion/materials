@@ -1,0 +1,55 @@
+{
+  "name": "@alifd/fusion-expand-table",
+  "version": "0.1.1",
+  "description": "可展开的表格",
+  "files": [
+    "src/!(style.d.ts)",
+    "build/",
+    "screenshot.png"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "fusion",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 500",
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
+  },
+  "dependencies": {
+    "ahooks": "^2.0.0",
+    "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.21.0-beta.4"
+  },
+  "devDependencies": {
+    "@alifd/theme-design-pro": "^0.6.2"
+  },
+  "blockConfig": {
+    "name": "ExpandTable",
+    "title": "可展开的表格",
+    "category": "Table",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/ExpandTable"
+  }
+}
