@@ -1,0 +1,33 @@
+.container {
+
+  :global {
+    .table-empty-block {
+      width: 100%;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+  
+      .result-image {
+        height: 120px;
+  
+        img {
+          height: 100%;
+        }
+      }
+  
+      .result-title {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #bcc4cc;
+      }
+    }
+  }
+
+  .form-actions {
+    text-align: right;
+    align-self: end;
+  }
+}

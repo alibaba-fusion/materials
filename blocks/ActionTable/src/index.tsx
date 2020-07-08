@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Table, Button, Icon, Pagination, Message } from '@alifd/next';
+import { TableProps } from '@alifd/next/lib/table';
 import { useFusionTable, useFullscreen } from 'ahooks';
-import { ColumnProps } from '@alifd/next/types/table';
 
-import CustomList from './CustomList';
+import CustomList, { Column } from './CustomList';
 import { getColumnKey } from './util';
 
 import styles from './index.module.scss';
@@ -23,7 +23,7 @@ const getTableData = ({ current, pageSize }: { current: number; pageSize: number
 };
 
 // 根据 hidden 切换当前 column 是否显示
-const filterColumns = (columnList: ColumnProps[]) => {
+const filterColumns = (columnList: Column[]) => {
   const newColumnList = [...columnList];
   return newColumnList
     .filter((columnItem) => {
@@ -48,33 +48,40 @@ const filterColumns = (columnList: ColumnProps[]) => {
     });
 }
 
-const defaultColumns = [
+const defaultColumns: Column[] = [
   {
+    id: '1',
     title: '名称',
     children: [
       {
+        id: '1-1',
         title: '前缀',
         dataIndex: 'name.title',
       },
       {
+        id: '1-2',
         title: '名',
         dataIndex: 'name.first',
       },
       {
+        id: '1-3',
         title: '姓',
         dataIndex: 'name.last',
       }
     ]
   },
   {
+    id: '2',
     title: 'Email',
     dataIndex: 'email',
   },
   {
+    id: '3',
     title: '电话号码',
     dataIndex: 'phone',
   },
   {
+    id: '4',
     title: '性别',
     dataIndex: 'gender',
   }
@@ -82,7 +89,7 @@ const defaultColumns = [
 
 const AppList = () => {
   // 切换紧凑模式
-  const [sizeStatus, changeSize] = useState('medium');
+  const [sizeStatus, changeSize] = useState<TableProps['size']>('medium');
   const autoChangeSize = () => {
     if (sizeStatus === 'medium') {
       changeSize('small');
@@ -106,7 +113,7 @@ const AppList = () => {
   const { paginationProps, tableProps } = useFusionTable(getTableData, {});
 
   // 切换当前 columns
-  const [columns, onColumnChange] = useState(defaultColumns);
+  const [columns, onColumnChange] = useState<Column[]>(defaultColumns);
 
   return (
     <div className={styles.container} id="table-container">
@@ -131,7 +138,7 @@ const AppList = () => {
       </div>
       <Table
         {...tableProps}
-        size={sizeStatus as any}
+        size={sizeStatus}
         isZebra={zebraStatus}
         primaryKey="id.value"
       >

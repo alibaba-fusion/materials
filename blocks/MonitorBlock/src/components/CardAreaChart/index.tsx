@@ -6,7 +6,7 @@ import mock from './mock.js';
 import styles from './index.module.scss';
 
 interface ChartItem {
-  date?: string;
+  date?: string | number;
   value?: number;
 };
 
@@ -28,7 +28,7 @@ const DEFAULT_DATA: FusionCardAreaChartProps = {
   chartHeight: 300,
 };
 
-const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (props: FusionCardAreaChartProps): JSX.Element => {
+const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (props = DEFAULT_DATA): JSX.Element => {
 
   const { title, subTitle, value, chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
 

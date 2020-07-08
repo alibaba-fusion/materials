@@ -1,31 +1,36 @@
 import React, { useState, useRef } from 'react';
 import { Button, Icon, Checkbox, Overlay } from '@alifd/next';
-import { ReactSortable } from 'react-sortablejs';
+import { ReactSortable, ItemInterface } from 'react-sortablejs';
 import { ColumnProps } from '@alifd/next/types/table/index';
 
 import { getColumnKey } from './util';
 
 import styles from './index.module.scss';
 
+export type Column = ColumnProps & ItemInterface & {
+  id?: string | number;
+  children?: Column[];
+}
+
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
 
-function CustomList({ columns, onChange }: { columns: ColumnProps[]; onChange: (columns: ColumnProps[]) => void }) {
+function CustomList({ columns, onChange }: { columns: Column[]; onChange: (columns: Column[]) => void }) {
   const buttonRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
-  const onColumnChildrenChange = (idx, newColumns) => {
-    const newColumnList = [...columns];
+  const onColumnChildrenChange = (idx: number, newColumns: Column[]): void => {
+    const newColumnList: Column[] = [...columns];
     newColumnList[idx].children = newColumns;
     onChange(newColumnList);
   };
 
-  const onHiddenChange = (key, status) => {
-    const columnsHiddenChange = (items) => {
-      const newItems = [];
+  const onHiddenChange = (key: string, status: boolean): void => {
+    const columnsHiddenChange = (items: Column[]) => {
+      const newItems: Column[] = [];
       items.forEach((item) => {
-        const columnItem = { ...item };
+        const columnItem: Column = { ...item };
         const columnKey = getColumnKey(columnItem);
         if (columnItem.children) {
           columnItem.children = columnsHiddenChange(columnItem.children);
