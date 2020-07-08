@@ -61,60 +61,58 @@ const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> =
   const isPreview = actionType === 'preview';
 
   return (
-    <Card free>
-      <Card.Content>
-        <Form
-          isPreview={isPreview}
-          fullWidth
-          labelAlign={isPreview ? 'left' : 'top'}
-          field={field}
-          {...formItemLayout}
+    <>
+      <Form
+        isPreview={isPreview}
+        fullWidth
+        labelAlign={isPreview ? 'left' : 'top'}
+        field={field}
+        {...formItemLayout}
+      >
+        <FormItem
+          label="姓名:"
+          required={!isPreview}
+          requiredMessage="必填"
         >
-          <FormItem
-            label="姓名:"
-            required={!isPreview}
-            requiredMessage="必填"
-          >
-            <Input
-              {...field.init('name')}
-            />
-          </FormItem>
-          <FormItem
-            label="邮箱:"
-            format="email"
-            required={!isPreview}
-            requiredMessage="必填"
-          >
-            <Input
-              name="email"
-            />
-          </FormItem>
-          <FormItem
-            label="手机号:"
-            format="tel"
-            required={!isPreview}
-            requiredMessage="必填"
-          >
-            <Input
-              name="phone"
-            />
-          </FormItem>
-          <FormItem
-            label="性别:"
-            required={!isPreview}
-            requiredMessage="必填"
-          >
-            <Select
-              name="gender"
-              dataSource={[
-                { value: 'male', label: '男' },
-                { value: 'female', label: '女' },
-              ]}
-            />
-          </FormItem>
-        </Form>
-      </Card.Content>
-    </Card>
+          <Input
+            {...field.init('name')}
+          />
+        </FormItem>
+        <FormItem
+          label="邮箱:"
+          format="email"
+          required={!isPreview}
+          requiredMessage="必填"
+        >
+          <Input
+            name="email"
+          />
+        </FormItem>
+        <FormItem
+          label="手机号:"
+          format="tel"
+          required={!isPreview}
+          requiredMessage="必填"
+        >
+          <Input
+            name="phone"
+          />
+        </FormItem>
+        <FormItem
+          label="性别:"
+          required={!isPreview}
+          requiredMessage="必填"
+        >
+          <Select
+            name="gender"
+            dataSource={[
+              { value: 'male', label: '男' },
+              { value: 'female', label: '女' },
+            ]}
+          />
+        </FormItem>
+      </Form>
+    </>
   );
 }
 
