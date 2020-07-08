@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Button, Select, Input, Form, Field, Table, Card, Pagination, Icon } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
 
@@ -65,13 +65,13 @@ const MultiColFilterTable: React.FC = () => {
   });
   const { submit, reset } = search;
 
-  const onResizeChange = (dataIndex: keyof typeof defaultColumnWidth, width: number) => {
+  const onResizeChange = useCallback((dataIndex: keyof typeof defaultColumnWidth, width: number) => {
     const newWidth = {
       ...columnWidth,
     };
     newWidth[dataIndex] += width;
     onColumnWidthChange(newWidth);
-  };
+  }, [columnWidth]);
 
   return (
     <div className={styles.container}>
@@ -125,16 +125,16 @@ const MultiColFilterTable: React.FC = () => {
                 name="email"
               />
             </FormItem>
-            <FormItem
-              colSpan={3}
-              label="手机号:"
-            >
-              <Input
-                name="phone"
-              />
-            </FormItem>
             {!expandStatus ? null : (
               <>
+                <FormItem
+                  colSpan={3}
+                  label="手机号:"
+                >
+                  <Input
+                    name="phone"
+                  />
+                </FormItem>
                 <FormItem
                   colSpan={3}
                   label="国家:"
@@ -149,7 +149,10 @@ const MultiColFilterTable: React.FC = () => {
                 </FormItem>
               </>
             )}
-            <FormItem colSpan={12} className={styles['form-actions']}>
+            <FormItem
+              colSpan={expandStatus ? 12 : 3}
+              className={styles['form-actions']}
+            >
               <Form.Submit
                 type="primary"
                 onClick={submit}
