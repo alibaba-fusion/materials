@@ -37,11 +37,11 @@ function subTableActions(val: string, index: number, record: any) {
 
 function SubTable(props: any) {
   return <Table dataSource={props.dataSource} size="small"  hasBorder={false} primaryKey="postcode">
-    <Table.Column title="country" dataIndex="country" width={140} />
-    <Table.Column title="state" dataIndex="state" width={500} />
-    <Table.Column title="city" dataIndex="city" width={500} />
-    <Table.Column title="street" dataIndex="street.name" width={500} />
-    <Table.Column  width={500} cell={subTableActions} />
+    <Table.Column title="country" dataIndex="country" />
+    <Table.Column title="state" dataIndex="state" />
+    <Table.Column title="city" dataIndex="city" />
+    <Table.Column title="street" dataIndex="street.name" />
+    <Table.Column  cell={subTableActions} />
   </Table>;
 }
 
