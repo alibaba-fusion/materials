@@ -70,8 +70,8 @@ export default function BasicLayout({ children }) {
           style={{
             marginRight: 10,
           }}
-        />
-        <Shell.Action/>
+        ></Shell.Navigation>
+        <Shell.Action></Shell.Action>
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

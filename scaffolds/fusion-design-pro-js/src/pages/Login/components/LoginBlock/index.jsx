@@ -12,7 +12,11 @@ const DEFAULT_DATA = {
   code: '',
 };
 
-const LoginBlock = props => {
+const LoginBlock = (
+  props = {
+    dataSource: DEFAULT_DATA,
+  },
+) => {
   const { dataSource = DEFAULT_DATA } = props;
   const [postData, setValue] = useState(dataSource);
   const [isRunning, checkRunning] = useState(false);

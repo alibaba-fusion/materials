@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-single-col-filter-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "table with single filter column",
   "files": [
     "src/!(style.d.ts)",
@@ -39,8 +39,8 @@
       {
         "title": "",
         "props": {},
-        "screenshot": "",
-        "html": ""
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
       }
     ]
   },

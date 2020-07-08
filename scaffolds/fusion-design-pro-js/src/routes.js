@@ -19,6 +19,14 @@ import BasicDetailPage from '@/pages/BasicDetailPage';
 import Advanced from '@/pages/Advanced';
 import BasicListPage from '@/pages/BasicListPage';
 import CardListPage from '@/pages/CardListPage';
+import FusionFilterTable from '@/pages/FusionFilterTable';
+import FusionMutilcolTable from '@/pages/FusionMutilcolTable';
+import FusionSinglecolTable from '@/pages/FusionSinglecolTable';
+import FusionExpandTable from '@/pages/FusionExpandTable';
+import FusionActionTable from '@/pages/FusionActionTable';
+import FusionMergecellTable from '@/pages/FusionMergecellTable';
+import FusionSingletreeTable from '@/pages/FusionSingletreeTable';
+import FusionDialogTable from '@/pages/FusionDialogTable';
 import TableListPage from '@/pages/TableListPage';
 import FeedbackFail from '@/pages/FeedbackFail';
 import FeedbackSuccess from '@/pages/FeedbackSuccess';
@@ -118,6 +126,38 @@ const routerConfig = [
       {
         path: '/list/card',
         component: CardListPage,
+      },
+      {
+        path: '/list/table/filter',
+        component: FusionFilterTable,
+      },
+      {
+        path: '/list/table/mutilcol',
+        component: FusionMutilcolTable,
+      },
+      {
+        path: '/list/table/singlecol',
+        component: FusionSinglecolTable,
+      },
+      {
+        path: '/list/table/expand',
+        component: FusionExpandTable,
+      },
+      {
+        path: '/list/table/action',
+        component: FusionActionTable,
+      },
+      {
+        path: '/list/table/mergecell',
+        component: FusionMergecellTable,
+      },
+      {
+        path: '/list/table/singletree',
+        component: FusionSingletreeTable,
+      },
+      {
+        path: '/list/table/dialog',
+        component: FusionDialogTable,
       },
       {
         path: '/list/table',

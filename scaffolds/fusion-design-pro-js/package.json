@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -21,17 +21,20 @@
     "jsconfig.json"
   ],
   "dependencies": {
-    "@alifd/next": "^1.19.4",
+    "@alifd/next": "^1.21.0-beta.4",
     "moment": "^2.24.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "ahooks": "^2.0.0",
     "@antv/data-set": "^0.10.2",
     "bizcharts": "^3.5.6",
     "@alifd/theme-design-pro": "^0.6.2",
     "react-intl": "^2.8.0",
     "prop-types": "^15.5.8",
     "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4"
+    "@types/react-dom": "^16.9.4",
+    "lodash.debounce": "^4.0.8",
+    "react-sortablejs": "^2.0.11"
   },
   "devDependencies": {
     "@ice/spec": "^1.0.0",
@@ -152,70 +155,118 @@
         "html": "build/views/page14.html"
       },
       {
-        "title": "基础详情",
-        "path": "#/detail/basic",
+        "title": "基础过滤",
+        "path": "/list/table/filter",
         "screenshot": "build/views/page15.png",
         "html": "build/views/page15.html"
       },
       {
-        "title": "高级详情",
-        "path": "#/detail/advanced",
+        "title": "单列过滤",
+        "path": "/list/table/singlecol",
         "screenshot": "build/views/page16.png",
         "html": "build/views/page16.html"
       },
       {
-        "title": "成功页面",
-        "path": "#/feedback/success",
+        "title": "多列过滤",
+        "path": "/list/table/mutilcol",
         "screenshot": "build/views/page17.png",
         "html": "build/views/page17.html"
       },
       {
-        "title": "失败页面",
-        "path": "#/feedback/fail",
+        "title": "带操作列",
+        "path": "/list/table/action",
         "screenshot": "build/views/page18.png",
         "html": "build/views/page18.html"
       },
       {
-        "title": "403",
-        "path": "#/feedback/403",
+        "title": "可展开表",
+        "path": "/list/table/expand",
         "screenshot": "build/views/page19.png",
         "html": "build/views/page19.html"
       },
       {
-        "title": "404",
-        "path": "#/feedback/404",
+        "title": "单层树表",
+        "path": "/list/table/singletree",
         "screenshot": "build/views/page20.png",
         "html": "build/views/page20.html"
       },
       {
-        "title": "500",
-        "path": "#/feedback/500",
+        "title": "弹窗表格",
+        "path": "/list/table/dialog",
         "screenshot": "build/views/page21.png",
         "html": "build/views/page21.html"
       },
       {
-        "title": "系统设置",
-        "path": "#/settings",
+        "title": "合并单元格",
+        "path": "/list/table/mergecell",
         "screenshot": "build/views/page22.png",
         "html": "build/views/page22.html"
       },
       {
-        "title": "个人设置",
-        "path": "#/person",
+        "title": "基础详情",
+        "path": "#/detail/basic",
         "screenshot": "build/views/page23.png",
         "html": "build/views/page23.html"
       },
       {
-        "title": "登录",
-        "path": "#/login",
+        "title": "高级详情",
+        "path": "#/detail/advanced",
         "screenshot": "build/views/page24.png",
         "html": "build/views/page24.html"
       },
       {
-        "title": "注册",
-        "path": "#/register",
+        "title": "成功页面",
+        "path": "#/feedback/success",
         "screenshot": "build/views/page25.png",
         "html": "build/views/page25.html"
+      },
+      {
+        "title": "失败页面",
+        "path": "#/feedback/fail",
+        "screenshot": "build/views/page26.png",
+        "html": "build/views/page26.html"
+      },
+      {
+        "title": "403",
+        "path": "#/feedback/403",
+        "screenshot": "build/views/page27.png",
+        "html": "build/views/page27.html"
+      },
+      {
+        "title": "404",
+        "path": "#/feedback/404",
+        "screenshot": "build/views/page28.png",
+        "html": "build/views/page28.html"
+      },
+      {
+        "title": "500",
+        "path": "#/feedback/500",
+        "screenshot": "build/views/page29.png",
+        "html": "build/views/page29.html"
+      },
+      {
+        "title": "系统设置",
+        "path": "#/settings",
+        "screenshot": "build/views/page30.png",
+        "html": "build/views/page30.html"
+      },
+      {
+        "title": "个人设置",
+        "path": "#/person",
+        "screenshot": "build/views/page31.png",
+        "html": "build/views/page31.html"
+      },
+      {
+        "title": "登录",
+        "path": "#/login",
+        "screenshot": "build/views/page32.png",
+        "html": "build/views/page32.html"
+      },
+      {
+        "title": "注册",
+        "path": "#/register",
+        "screenshot": "build/views/page33.png",
+        "html": "build/views/page33.html"
       }
     ]
   },

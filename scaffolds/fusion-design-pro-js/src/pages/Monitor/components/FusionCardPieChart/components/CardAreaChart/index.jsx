@@ -13,7 +13,7 @@ const DEFAULT_DATA = {
   chartHeight: 300,
 };
 
-const FusionCardAreaChart = props => {
+const FusionCardAreaChart = (props = DEFAULT_DATA) => {
   const { title, subTitle, value, chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
   return (
     <Card free className={styles.areaChart}>
