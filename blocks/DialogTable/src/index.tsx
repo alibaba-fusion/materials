@@ -149,7 +149,7 @@ const DialogTable: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.DialogTable}>
       <Card free>
         <Card.Content>
           <Table
