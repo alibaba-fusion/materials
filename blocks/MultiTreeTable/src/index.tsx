@@ -237,6 +237,8 @@ const MultiTreeTable: React.FC = () => {
             <Button type="primary" onClick={handleSubmitAuditList}>批量提交</Button>
             &nbsp;&nbsp;
             <Button onClick={handleBackToList}>批量删除</Button>
+            &nbsp;&nbsp;
+            已选中 <span className={styles.selectedData}>{selectedRowKeys.length}</span> 条数据
           </div>
           <Table
             {...tableProps}
