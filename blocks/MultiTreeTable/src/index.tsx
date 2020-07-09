@@ -1,13 +1,15 @@
 import React, { useCallback } from 'react';
-import { Button, Table, Card, Pagination, Icon, Dropdown, Menu } from '@alifd/next';
+import { Button, Table, Card, Pagination, Icon, Dropdown, Menu, Message, Dialog } from '@alifd/next';
 import { useFusionTable, useSetState } from 'ahooks';
 
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
+import DialogEdit from './DialogEdit';
+import { DataItem } from './types';
 
 import styles from './index.module.scss';
 
-import data, { DataItem } from './data';
+import data from './data';
 
 interface Result {
   total: number;
@@ -24,15 +26,19 @@ interface ColumnWidth {
 
 interface DialogState {
   columnWidth: ColumnWidth;
-  // optCol: any;
-  // actionType: ActionType;
-  // actionVisible: boolean;
+  optCol: DataItem | null;
+  actionVisible: boolean;
   selectedRowKeys: string[];
 }
 
-type SelectedRowKeysRecord = DataItem & {
+
+type MoreAction = 'submitAudit' | 'backTo';
+
+type RowRecord = DataItem & {
   [key: string]: any;
 }
+
+type CellOperation = (value: any, rowIndex: number, record: RowRecord) => React.ReactNode;
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
@@ -92,14 +98,13 @@ const defaultColumnWidth: ColumnWidth = {
 const MultiTreeTable: React.FC = () => {
   const [state, setState] = useSetState<DialogState>({
     columnWidth: defaultColumnWidth,
-    // optCol: any;
-    // actionType: ActionType;
-    // actionVisible: boolean;
+    optCol: null,
+    actionVisible: false,
     selectedRowKeys: [],
   });
   const { paginationProps, tableProps, search, error, refresh } = useFusionTable<Result>(getTableData, {});
   const { reset } = search;
-  const { columnWidth} = state;
+  const { columnWidth, actionVisible, optCol } = state;
 
   const handleResizeChange = useCallback((dataIndex: keyof ColumnWidth, width: number) => {
     const newWidth = {
@@ -109,57 +114,104 @@ const MultiTreeTable: React.FC = () => {
     setState({ columnWidth: newWidth });
   }, [columnWidth, setState]);
 
-  const handleChange = useCallback((nextSelectedRowKeys: string[], records: SelectedRowKeysRecord[]): void => {
-    console.log(nextSelectedRowKeys, records);
+  const handleEdit = useCallback((dataSource: DataItem): void => {
+    setState({
+      optCol: dataSource,
+      actionVisible: true,
+    });
+  }, [setState]);
+
+  const handleCancel = useCallback((): void => {
+    setState({ actionVisible: false });
+  }, [setState]);
+
+  const handleOk = useCallback((): void => {
+    Message.success('编辑成功!');
+    reset();
+    handleCancel();
+  }, [handleCancel, reset]);
+
+  const handleDelete = useCallback((dataSource: DataItem) => {
+    if (!data) {
+      return;
+    }
+    Dialog.confirm({
+      title: '删除提醒',
+      content: `确定删除 ${dataSource.name} 吗`,
+      onOk() {
+        Message.success(`${dataSource.name} 删除成功!`);
+        reset();
+      }
+    });
+  }, [reset]);
+
+  const handleChangeSRowKeys = useCallback((nextSelectedRowKeys: string[]): void => {
     setState({
       selectedRowKeys: nextSelectedRowKeys,
     });
   }, [setState]);
 
-  const moreCallback = useCallback((record: DataItem) => (key: string) => {
-    console.log(record, key);
-  }, []);
+  const handleSubmitAudit = useCallback((dataSource: DataItem) => {
+    Message.success(`${dataSource.name} 提交审核成功!`);
+    reset();
+  }, [reset]);
 
-  const cellOperation = useCallback((...args: any[]): React.ReactNode => {
-    const record = args[2];
-    console.log(args)
+  const handleBackTo = useCallback((dataSource: DataItem) => {
+    Message.success(`${dataSource.name} 打回成功!`);
+    reset();
+  }, [reset]);
+
+  const moreCallback = useCallback((dataSource: DataItem) => (key: MoreAction) => {
+    console.log(dataSource, key);
+    if (key === 'submitAudit') {
+      return handleSubmitAudit(dataSource);
+    }
+    return handleBackTo(dataSource);
+  }, [handleSubmitAudit, handleBackTo]);
+
+  const cellOperation: CellOperation = useCallback((value, rowIndex, record) => {
+    if (!record) {
+      return null
+    }
+    // eslint-disable-next-line no-underscore-dangle
+    const isHead = record.__level === 0;
     return (
       <div>
         <Button
           text
           type="primary"
-          // onClick={() => operationCallback({ actionType: 'edit', dataSource: record })}
+          onClick={() => handleEdit(record)}
         >
           编辑
         </Button>
         &nbsp;&nbsp;
-        <Button
-          text
-          type="primary"
-          // onClick={() => handleDelete(record)}
-        >
-          删除
-        </Button>
-        &nbsp;&nbsp;
-        <Dropdown
-          trigger={
+        {!isHead ? null : (
+          <>
             <Button
               text
               type="primary"
-              // onClick={() => operationCallback({ actionType: 'preview', dataSource: record })}
+              onClick={() => handleDelete(record)}
             >
-              更多<Icon type="arrow-down" />
+              删除
             </Button>
-          }
-        >
-          <Menu onItemClick={moreCallback(record)}>
-            <Menu.Item key="submitAudit">提交审核</Menu.Item>
-            <Menu.Item key="backTo">打回</Menu.Item>
-          </Menu>
-        </Dropdown>
+            &nbsp;&nbsp;
+            <Dropdown
+              trigger={
+                <Button text type="primary">
+                  更多<Icon type="arrow-down" />
+                </Button>
+              }
+            >
+              <Menu onItemClick={moreCallback(record)}>
+                <Menu.Item key="submitAudit">提交审核</Menu.Item>
+                <Menu.Item key="backTo">打回</Menu.Item>
+              </Menu>
+            </Dropdown>
+          </>
+        )}
       </div>
     );
-  }, [moreCallback]);
+  }, [handleEdit, handleDelete, moreCallback]);
 
   return (
     <div className={styles.MultiTreeTable}>
@@ -170,7 +222,7 @@ const MultiTreeTable: React.FC = () => {
             isTree
             rowSelection={{
               selectedRowKeys: state.selectedRowKeys,
-              onChange: handleChange,
+              onChange: handleChangeSRowKeys,
             }}
             onResizeChange={handleResizeChange}
             emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
@@ -188,6 +240,13 @@ const MultiTreeTable: React.FC = () => {
           />
         </Card.Content>
       </Card>
+      <DialogEdit
+        visible={actionVisible}
+        dataSource={optCol}
+        onOk={handleOk}
+        onClose={handleCancel}
+        onCancel={handleCancel}
+      />
     </div>
   );
 }
