@@ -104,7 +104,7 @@ const MultiTreeTable: React.FC = () => {
   });
   const { paginationProps, tableProps, search, error, refresh } = useFusionTable<Result>(getTableData, {});
   const { reset } = search;
-  const { columnWidth, actionVisible, optCol } = state;
+  const { columnWidth, actionVisible, optCol, selectedRowKeys } = state;
 
   const handleResizeChange = useCallback((dataIndex: keyof ColumnWidth, width: number) => {
     const newWidth = {
@@ -160,6 +160,22 @@ const MultiTreeTable: React.FC = () => {
     Message.success(`${dataSource.name} 打回成功!`);
     reset();
   }, [reset]);
+
+  const handleSubmitAuditList = useCallback(() => {
+    if (!selectedRowKeys.length) {
+      return Message.warning('请先选择条目');
+    }
+    Message.success(`${selectedRowKeys.join(', ')} 批量提交审核成功!`);
+    reset();
+  }, [selectedRowKeys, reset]);
+
+  const handleBackToList = useCallback(() => {
+    if (!selectedRowKeys.length) {
+      return Message.warning('请先选择条目');
+    }
+    Message.success(`${selectedRowKeys.join(', ')} 批量打回成功!`);
+    reset();
+  }, [selectedRowKeys, reset]);
 
   const moreCallback = useCallback((dataSource: DataItem) => (key: MoreAction) => {
     console.log(dataSource, key);
@@ -217,11 +233,16 @@ const MultiTreeTable: React.FC = () => {
     <div className={styles.MultiTreeTable}>
       <Card free>
         <Card.Content>
+          <div className={styles.actionBar}>
+            <Button type="primary" onClick={handleSubmitAuditList}>批量提交</Button>
+            &nbsp;&nbsp;
+            <Button onClick={handleBackToList}>批量删除</Button>
+          </div>
           <Table
             {...tableProps}
             isTree
             rowSelection={{
-              selectedRowKeys: state.selectedRowKeys,
+              selectedRowKeys,
               onChange: handleChangeSRowKeys,
             }}
             onResizeChange={handleResizeChange}
