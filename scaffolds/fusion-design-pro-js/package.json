@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     "src/",
@@ -156,49 +156,49 @@
       },
       {
         "title": "基础过滤",
-        "path": "/list/table/filter",
+        "path": "#/list/table/filter",
         "screenshot": "build/views/page15.png",
         "html": "build/views/page15.html"
       },
       {
         "title": "单列过滤",
-        "path": "/list/table/singlecol",
+        "path": "#/list/table/singlecol",
         "screenshot": "build/views/page16.png",
         "html": "build/views/page16.html"
       },
       {
         "title": "多列过滤",
-        "path": "/list/table/mutilcol",
+        "path": "#/list/table/mutilcol",
         "screenshot": "build/views/page17.png",
         "html": "build/views/page17.html"
       },
       {
         "title": "带操作列",
-        "path": "/list/table/action",
+        "path": "#/list/table/action",
         "screenshot": "build/views/page18.png",
         "html": "build/views/page18.html"
       },
       {
         "title": "可展开表",
-        "path": "/list/table/expand",
+        "path": "#/list/table/expand",
         "screenshot": "build/views/page19.png",
         "html": "build/views/page19.html"
       },
       {
         "title": "单层树表",
-        "path": "/list/table/singletree",
+        "path": "#/list/table/singletree",
         "screenshot": "build/views/page20.png",
         "html": "build/views/page20.html"
       },
       {
         "title": "弹窗表格",
-        "path": "/list/table/dialog",
+        "path": "#/list/table/dialog",
         "screenshot": "build/views/page21.png",
         "html": "build/views/page21.html"
       },
       {
         "title": "合并单元格",
-        "path": "/list/table/mergecell",
+        "path": "#/list/table/mergecell",
         "screenshot": "build/views/page22.png",
         "html": "build/views/page22.html"
       },

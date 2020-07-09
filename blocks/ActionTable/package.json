@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-action-table",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "action bar table",
   "files": [
     "src/!(style.d.ts)",
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
-    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 500",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 800",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
@@ -37,6 +37,7 @@
     "name": "ActionTable",
     "title": "带操作区域的表格",
     "category": "Table",
+    "screenshot": "https://unpkg.com/@alifd/fusion-action-table/screenshot.png",
     "views": [
       {
         "title": "",

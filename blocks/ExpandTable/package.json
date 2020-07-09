@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-expand-table",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "可展开的表格",
   "files": [
     "src/!(style.d.ts)",
@@ -33,6 +33,7 @@
     "name": "ExpandTable",
     "title": "可展开的表格",
     "category": "Table",
+    "screenshot": "https://img.alicdn.com/tfs/TB1teWsNkT2gK0jSZFkXXcIQFXa-1520-914.png",
     "views": [
       {
         "title": "",

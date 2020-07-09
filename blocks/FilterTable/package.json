@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-filter-table",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "基础的过滤区加表格的组合",
   "files": [
     "src/!(style.d.ts)",
@@ -35,6 +35,7 @@
     "name": "FilterTable",
     "title": "基础过滤表格",
     "category": "Table",
+    "screenshot": "https://unpkg.com/@alifd/fusion-filter-table/screenshot.png",
     "views": [
       {
         "title": "",

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-dialog-table",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "dialog table",
   "files": [
     "src/!(style.d.ts)",
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
-    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 800",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
@@ -31,8 +31,17 @@
   },
   "blockConfig": {
     "name": "DialogTable",
-    "title": "Dialog的表单Table",
-    "category": "Table"
+    "title": "带弹窗提交的表格",
+    "category": "Table",
+    "screenshot": "https://img.alicdn.com/tfs/TB1nh9lNeH2gK0jSZJnXXaT1FXa-1288-603.png",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
   },
   "publishConfig": {
     "access": "public"

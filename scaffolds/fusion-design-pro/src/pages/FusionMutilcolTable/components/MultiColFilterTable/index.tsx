@@ -62,7 +62,15 @@ const defaultColumnWidth: ColumnWidth = {
   gender: 140,
 };
 
-const getNextActionListSpan = (totalFieldLength: number): number => {
+// Filter区域 默认为收起状态
+const defaultExpandStatus = false;
+// 展开状态下一共有多少个项
+const expandFieldLenth = 5;
+// 收起状态下一共有多少项目
+const collapseFieldLenth = 3;
+
+const getNextActionListSpan = (expandStatus: boolean): number => {
+  const totalFieldLength = expandStatus ? expandFieldLenth : collapseFieldLenth;
   if (totalFieldLength < 3) {
     return 3;
   }
@@ -72,8 +80,8 @@ const getNextActionListSpan = (totalFieldLength: number): number => {
 const MultiColFilterTable: React.FC = () => {
   const [state, setState] = useSetState<MultiColState>({
     columnWidth: defaultColumnWidth,
-    expandStatus: false,
-    actionListSpan: getNextActionListSpan(5),
+    expandStatus: defaultExpandStatus,
+    actionListSpan: getNextActionListSpan(defaultExpandStatus),
   });
   const field = Field.useField([]);
   const { paginationProps, tableProps, search, error, refresh } = useFusionTable(getTableData, {
@@ -94,10 +102,10 @@ const MultiColFilterTable: React.FC = () => {
     const nextExpand = !state.expandStatus;
     setState({
       expandStatus: nextExpand,
-      actionListSpan: getNextActionListSpan(nextExpand ? 5 : 3),
+      actionListSpan: getNextActionListSpan(nextExpand),
     });
   }, [state, setState]);
-  console.log(state.actionListSpan);
+  console.log('actionListSpan', state.actionListSpan);
   return (
     <div className={styles.container}>
       <Card free>
