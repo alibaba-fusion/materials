@@ -7,19 +7,19 @@ import { asideMenuConfig } from '../../menuConfig';
 const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
-function getNavMenuItems(menusData) {
+function getNavMenuItems(menusData, initIndex) {
   if (!menusData) {
     return [];
   }
 
   return menusData
     .filter(item => item.name && !item.hideInMenu)
-    .map((item, index) => getSubMenuOrItem(item, index));
+    .map((item, index) => getSubMenuOrItem(item, `${initIndex}-${index}`));
 }
 
 function getSubMenuOrItem(item, index) {
   if (item.children && item.children.some(child => child.name)) {
-    const childrenItems = getNavMenuItems(item.children);
+    const childrenItems = getNavMenuItems(item.children, index);
 
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
@@ -57,7 +57,7 @@ const Navigation = (props, context) => {
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig)}
+      {getNavMenuItems(asideMenuConfig, 0)}
     </Nav>
   );
 };

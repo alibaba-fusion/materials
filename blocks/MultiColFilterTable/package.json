@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-multi-col-filter-table",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "多列可切换过滤表格",
   "files": [
     "src/!(style.d.ts)",
@@ -16,31 +16,30 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
-    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 800",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
-  "dependencies": {
-    "ahooks": "^2.0.0",
-    "prop-types": "^15.5.8"
-  },
   "peerDependencies": {
+    "ahooks": "^2.0.0",
     "react": "^16.8.0",
     "@alifd/next": "^1.x"
   },
   "devDependencies": {
+    "ahooks": "^2.0.0",
     "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {
     "name": "MultiColFilterTable",
     "title": "多列FilterTable",
     "category": "Table",
+    "screenshot": "https://img.alicdn.com/tfs/TB1W5KhNXY7gK0jSZKzXXaikpXa-1269-703.png",
     "views": [
       {
         "title": "",
         "props": {},
-        "screenshot": "",
-        "html": ""
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
       }
     ]
   },

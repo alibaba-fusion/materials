@@ -71,7 +71,7 @@ export default function BasicLayout({ children }) {
             marginRight: 10,
           }}
         />
-        <Shell.Action/>
+        <Shell.Action />
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

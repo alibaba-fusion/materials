@@ -14,7 +14,7 @@ export interface IMenuItem {
   children?: IMenuItem[];
 }
 
-function getNavMenuItems(menusData: any[]) {
+function getNavMenuItems(menusData: any[], initIndex?: number | string) {
   if (!menusData) {
     return [];
   }
@@ -22,13 +22,13 @@ function getNavMenuItems(menusData: any[]) {
   return menusData
     .filter(item => item.name && !item.hideInMenu)
     .map((item, index) => {
-      return getSubMenuOrItem(item, index);
+      return getSubMenuOrItem(item, `${initIndex}-${index}`);
     });
 }
 
-function getSubMenuOrItem(item: IMenuItem, index: number) {
+function getSubMenuOrItem(item: IMenuItem, index?: number | string) {
   if (item.children && item.children.some(child => child.name)) {
-    const childrenItems = getNavMenuItems(item.children);
+    const childrenItems = getNavMenuItems(item.children, index);
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
         <SubNav
@@ -72,7 +72,7 @@ const Navigation = (props, context) => {
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig)}
+      {getNavMenuItems(asideMenuConfig, 0)}
     </Nav>
   );
 };
