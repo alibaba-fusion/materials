@@ -9,7 +9,7 @@ import { DataItem } from './types';
 
 import styles from './index.module.scss';
 
-import data from './data';
+import { getData } from './mock';
 
 interface Result {
   total: number;
@@ -60,10 +60,7 @@ const getTableData = (
     //   }));
     return new Promise<Result>(resolve => {
       setTimeout(() => {
-        resolve({
-          total: 55,
-          list: data,
-        });
+        resolve(getData(current, pageSize));
       }, 1000);
     });
   }
@@ -132,7 +129,7 @@ const MultiTreeTable: React.FC = () => {
   }, [handleCancel, reset]);
 
   const handleDelete = useCallback((dataSource: DataItem) => {
-    if (!data) {
+    if (!dataSource) {
       return;
     }
     Dialog.confirm({
@@ -175,6 +172,20 @@ const MultiTreeTable: React.FC = () => {
     }
     Message.success(`${selectedRowKeys.join(', ')} 批量打回成功!`);
     reset();
+  }, [selectedRowKeys, reset]);
+
+  const handleDeleteList = useCallback(() => {
+    if (!selectedRowKeys.length) {
+      return Message.warning('请先选择条目');
+    }
+    Dialog.confirm({
+      title: '删除提醒',
+      content: `确定删除 ${selectedRowKeys.join(', ')} 吗`,
+      onOk() {
+        Message.success(`${selectedRowKeys.join(', ')} 批量删除成功!`);
+        reset();
+      }
+    });
   }, [selectedRowKeys, reset]);
 
   const moreCallback = useCallback((dataSource: DataItem) => (key: MoreAction) => {
@@ -236,7 +247,9 @@ const MultiTreeTable: React.FC = () => {
           <div className={styles.actionBar}>
             <Button type="primary" onClick={handleSubmitAuditList}>批量提交</Button>
             &nbsp;&nbsp;
-            <Button onClick={handleBackToList}>批量删除</Button>
+            <Button onClick={handleBackToList}>批量打回</Button>
+            &nbsp;&nbsp;
+            <Button type="primary" warning onClick={handleDeleteList}>批量删除</Button>
             &nbsp;&nbsp;
             已选中 <span className={styles.selectedData}>{selectedRowKeys.length}</span> 条数据
           </div>
