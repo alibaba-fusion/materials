@@ -1,0 +1,52 @@
+{
+  "name": "@alifd/fusion-multi-tree-table",
+  "version": "0.1.0",
+  "description": "多层树",
+  "files": [
+    "src/!(style.d.ts)",
+    "build/",
+    "screenshot.png"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
+    "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 500",
+    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@alifd/next": "^1.x"
+  },
+  "devDependencies": {
+    "ahooks": "^2.0.0",
+    "@alifd/theme-design-pro": "^0.6.2"
+  },
+  "blockConfig": {
+    "name": "MultiTreeTable",
+    "title": "多层树",
+    "category": "Table",
+    "screenshot": "https://img.alicdn.com/tfs/TB1dj3KaipE_u4jSZKbXXbCUVXa-1158-635.png",
+    "views": [
+      {
+        "title": "",
+        "props": {},
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/MultiTreeTable"
+  }
+}
