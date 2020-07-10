@@ -16,7 +16,7 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
-    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 500",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
@@ -32,7 +32,7 @@
     "name": "MultiTreeTable",
     "title": "多层树",
     "category": "Table",
-    "screenshot": "https://unpkg.com/@alifd/fusion-multi-tree-table/screenshot.png",
+    "screenshot": "https://img.alicdn.com/tfs/TB1dj3KaipE_u4jSZKbXXbCUVXa-1158-635.png",
     "views": [
       {
         "title": "",
