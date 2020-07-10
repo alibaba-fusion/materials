@@ -61,7 +61,7 @@ const getTableData = (
     return new Promise<Result>(resolve => {
       setTimeout(() => {
         resolve(getData(current, pageSize));
-      }, 1000);
+      }, 300);
     });
   }
   if (formData.status === 'empty') {
@@ -256,6 +256,7 @@ const MultiTreeTable: React.FC = () => {
           <Table
             {...tableProps}
             isTree
+            hasBorder={false}
             rowSelection={{
               selectedRowKeys,
               onChange: handleChangeSRowKeys,
