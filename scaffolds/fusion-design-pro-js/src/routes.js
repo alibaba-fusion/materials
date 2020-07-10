@@ -26,6 +26,7 @@ import FusionExpandTable from '@/pages/FusionExpandTable';
 import FusionActionTable from '@/pages/FusionActionTable';
 import FusionMergecellTable from '@/pages/FusionMergecellTable';
 import FusionSingletreeTable from '@/pages/FusionSingletreeTable';
+import FusionMultitreeTable from '@/pages/FusionMultitreeTable';
 import FusionDialogTable from '@/pages/FusionDialogTable';
 import TableListPage from '@/pages/TableListPage';
 import FeedbackFail from '@/pages/FeedbackFail';
@@ -154,6 +155,10 @@ const routerConfig = [
       {
         path: '/list/table/singletree',
         component: FusionSingletreeTable,
+      },
+      {
+        path: '/list/table/multitree',
+        component: FusionMultitreeTable,
       },
       {
         path: '/list/table/dialog',

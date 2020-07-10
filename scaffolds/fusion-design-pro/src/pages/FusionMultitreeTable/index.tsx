@@ -1,30 +1,30 @@
 import React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import PageHeader from '@/components/PageHeader';
-import SingleTreeTable from './components/SingleTreeTable';
+import MultiTreeTable from './components/MultiTreeTable';
 
 const { Cell } = ResponsiveGrid;
 
-const FusionSingletreeTable = () => {
+const FusionMultitreeTable = () => {
   return (
     <ResponsiveGrid gap={20}>
       <Cell colSpan={12}>
         <PageHeader
-          title="单层树表"
+          title="多层树表"
           breadcrumbs={[
             { name: '列表页面' },
             { name: '表格列表' },
-            { name: '单层树表' },
+            { name: '多层树表' },
           ]}
-          description="单层树表单层树表单层树表单层树表单层树表单层树表单层树表单层树表单层树表"
+          description="多层树表多层树表多层树表多层树表多层树表多层树表多层树表多层树表多层树表"
         />
       </Cell>
 
       <Cell colSpan={12}>
-        <SingleTreeTable />
+        <MultiTreeTable />
       </Cell>
     </ResponsiveGrid>
   );
 };
 
-export default FusionSingletreeTable;
+export default FusionMultitreeTable;

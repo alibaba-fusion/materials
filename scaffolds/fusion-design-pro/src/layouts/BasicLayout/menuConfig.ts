@@ -105,6 +105,10 @@ const asideMenuConfig = [
             path: '/list/table/singletree',
           },
           {
+            name: '多层树表',
+            path: '/list/table/multitree',
+          },
+          {
             name: '弹窗表格',
             path: '/list/table/dialog',
           },

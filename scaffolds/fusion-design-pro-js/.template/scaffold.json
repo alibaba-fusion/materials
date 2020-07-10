@@ -1,7 +1,7 @@
 {
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro-js",
-		"version": "0.1.20",
+		"version": "0.1.21",
 		"description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
@@ -149,6 +149,12 @@
 				{
 					"title": "单层树表",
 					"path": "#/list/table/singletree",
+					"screenshot": "",
+					"html": ""
+				},
+				{
+					"title": "多层树表",
+					"path": "#/list/table/multitree",
 					"screenshot": "",
 					"html": ""
 				},
@@ -399,6 +405,10 @@
 							{
 								"name": "单层树表",
 								"path": "/list/table/singletree"
+							},
+							{
+								"name": "多层树表",
+								"path": "/list/table/multitree"
 							},
 							{
 								"name": "弹窗表格",
@@ -1181,6 +1191,36 @@
 									}
 								},
 								"@alifd/fusion-single-tree-table"
+							]
+						}
+					}
+				},
+				{
+					"path": "/list/table/multitree",
+					"page": {
+						"name": "FusionMultitreeTable",
+						"blocks": {
+							"packages": [
+								{
+									"name": "@alifd/fusion-page-header",
+									"type": "common",
+									"props": {
+										"title": "多层树表",
+										"breadcrumbs": [
+											{
+												"name": "列表页面"
+											},
+											{
+												"name": "表格列表"
+											},
+											{
+												"name": "多层树表"
+											}
+										],
+										"description": "多层树表多层树表多层树表多层树表多层树表多层树表多层树表多层树表多层树表"
+									}
+								},
+								"@alifd/fusion-multi-tree-table"
 							]
 						}
 					}
