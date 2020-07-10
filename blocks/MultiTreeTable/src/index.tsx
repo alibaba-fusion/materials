@@ -200,8 +200,7 @@ const MultiTreeTable: React.FC = () => {
     if (!record) {
       return null
     }
-    // eslint-disable-next-line no-underscore-dangle
-    const isHead = record.__level === 0;
+    const isHead = record.level === 0;
     return (
       <div>
         <Button

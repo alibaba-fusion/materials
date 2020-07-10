@@ -3,8 +3,7 @@ export interface DataItem {
   email: string;
   gender: string;
   name: string;
-  address: string;
   phone: string;
-  picture: string;
+  level: number;
   children?: DataItem[];
 }
