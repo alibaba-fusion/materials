@@ -118,12 +118,7 @@ const RenderPvChart = (props = DEFAULT_DATA) => {
   );
 };
 
-const VisitBlock = (
-  props = {
-    cardConfig: DEFAULT_DATA,
-  },
-) => {
-  const { cardConfig } = props;
+const VisitBlock = ({ cardConfig = DEFAULT_DATA, ...props }) => {
   const { titleItem, chartData, chartHeight } = cardConfig;
   return (
     <Card
