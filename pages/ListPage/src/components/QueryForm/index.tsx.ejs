@@ -1,0 +1,22 @@
+import React from 'react';
+import {Form, Button, Input, Select, NumberPicker, Radio, Checkbox, CascaderSelect, DatePicker, Range, Rating, Switch, TimePicker, Transfer, TreeSelect, Upload} from '@alifd/next';
+
+const {Item: FormItem} = Form;
+const {Group: RadioGroup} = Radio;
+const {Group: CheckboxGroup} = Checkbox;
+
+export default function QueryForm(props) {
+  const {field, onQuery} = props;
+  return (
+    <Form inline field={field} onSubmit={onQuery}>
+      <% querySchema.forEach(function(item){%>
+        <FormItem label='<%=item.title%>'>
+          <<%=item.component ? item.component : 'Input'%> name='<%=item.field%>' <%- item.componentProps ? `{...${ JSON.stringify(item.componentProps)}}` : '' -%>/>
+        </FormItem>;
+      <%})-%>
+    <FormItem>
+      <Form.Submit type='secondary' onClick={onQuery}>查询</Form.Submit>
+      <Form.Reset htmlType='reset' style={{marginLeft: '10px'}}>重置</Form.Reset>
+    </FormItem>
+  </Form>)
+}

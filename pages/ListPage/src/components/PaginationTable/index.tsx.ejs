@@ -1,0 +1,23 @@
+import React from 'react';
+import {Table, Pagination} from '@alifd/next';
+
+const {Column: TableColumn} = Table;
+
+export default function PaginationTable(props) {
+  const {loading, dataSource, pageSize, currentPage, totalCount, onChange, onPageSizeChange} = props;
+  return (
+    <div>
+      <Table
+        loading={loading}
+        dataSource={dataSource}>
+
+      <% dataSchema.forEach(function(data){-%>
+      <TableColumn title='<%=data.title%>' dataIndex='<%=data.field%>' cell={<%=data.cell%>} align='center' />;
+      <%})-%>
+
+      </Table>
+      <div style={{width:'100%', marginTop: 20, textAlign: 'center'}}>
+        <Pagination onChange={onChange} total={totalCount} pageSize={pageSize} current={currentPage} onPageSizeChange={onPageSizeChange}/>
+      </div>
+    </div>)
+}

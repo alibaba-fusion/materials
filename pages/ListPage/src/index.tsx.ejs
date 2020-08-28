@@ -1,0 +1,99 @@
+
+import React, {useState, useEffect} from 'react';
+import {Field, Message} from '@alifd/next';
+import QueryForm from './components/QueryForm';
+import Actions from './components/Actions';
+import PaginationTable from './components/PaginationTable';
+import {IResponse, IPaginationParams, IQueryParams} from './types';
+
+const uri = '<%=uri%>';
+const formatter = <%-formatter%>;
+const defaultPaginationParams : IPaginationParams = {
+  pageSize: <%=paginationParams.pageSize%>,
+  currentPage: <%=paginationParams.currentPage%>,
+  totalCount: <%=paginationParams.totalCount%>
+}
+
+export default () => {
+  const field = Field.useField();
+  const [refresh, setRefresh] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [dataSource, setDataSource] = useState();
+  const [queryParams, setQueryParams] = useState({});
+  const [pageSize, setPageSize] = useState(defaultPaginationParams.pageSize);
+  const [totalCount, setTotalCount] = useState(defaultPaginationParams.totalCount);
+  const [currentPage, setCurrentPage] = useState(defaultPaginationParams.currentPage);
+
+  useEffect(() => {
+    fetchData({currentPage, pageSize, queryParams});
+  }, [currentPage, pageSize, queryParams, refresh]);
+
+  /**
+   * 异步数据获取函数
+   * @param params 异步参数
+   */
+  const fetchData = async (params: IQueryParams) => {
+    try {
+      setLoading(true);
+      let result:IResponse = await fetch(uri, params).then(res => res.json());
+      if(formatter) result = formatter(result);
+      if(result.success) {
+        setDataSource(result.data?.data);
+        setPageSize(result.data?.pageSize);
+        setTotalCount(result.data?.totalCount);
+        setCurrentPage(result.data?.currentPage);
+      } else {
+        Message.error(result.errorMessage || result.errorMsg || result.message || result.msg || '请求失败，请重试！');
+      }
+    } catch (error) {
+      console.error(error);
+      Message.error('请求异常，请检查后再试~')
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  /**
+   * 条件查询处理函数，分页数据重置
+   * @param params 查询参数
+   */
+  const onQuery = (params:IQueryParams) => {
+    setQueryParams({
+      ...params,
+      ...defaultPaginationParams
+    })
+  }
+
+  /**
+   * 页码发生变化时处理函数
+   * @param num 当前页码
+   */
+  const onPageNumberChange = (num) => {
+    setCurrentPage(num);
+  }
+
+  /**
+   * 每页数量变化时处理函数
+   * @param pageSize 每页数量
+   */
+  const onPageSizeChange = (pageSize) => {
+    setPageSize(pageSize);
+  }
+
+  return (
+    <div className='list-page-container'>
+      <QueryForm
+        field={field}
+        onQuery={onQuery}/>
+      <Actions />
+      <PaginationTable
+        loading={loading}
+        dataSource={dataSource}
+        pageSize={pageSize}
+        totalCount={totalCount}
+        currentPage={currentPage}
+        onChange={onPageNumberChange}
+        onPageSizeChange={onPageSizeChange} />
+    </div>
+  )
+}

@@ -1,0 +1,47 @@
+{
+  "name": "list-page",
+  "version": "1.0.0",
+  "description": "a list page with query form",
+  "files": [
+    "src/!(style.d.ts)",
+    "src/",
+    "screenshot.png",
+    "config/"
+  ],
+  "keywords": [
+    "ice",
+    "react",
+    "page"
+  ],
+  "scripts": {
+    "start": "build-scripts start",
+    "build": "build-scripts build",
+    "screenshot": "screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build && npm run screenshot"
+  },
+  "dependencies": {
+    "@alifd/next": "^1.20.28",
+    "moment": "^2.27.0",
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "@alib/build-scripts": "^0.1.8",
+    "@ice/screenshot": "^0.1.1",
+    "build-plugin-block": "^1.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4"
+  },
+  "pageConfig": {
+    "name": "ListPage",
+    "title": "list page",
+    "category": "Basic"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

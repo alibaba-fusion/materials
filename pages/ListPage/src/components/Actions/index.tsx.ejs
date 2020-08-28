@@ -1,0 +1,18 @@
+import React from 'react';
+import {Button} from '@alifd/next';
+
+export default function Actions(props) {
+  return (
+    <div className='list-page-actions'>
+    <% actionSchema.forEach(function(action){-%>
+      <Button 
+        style={{marginRight: 10}} 
+        key='<%=action.buttonText%>' 
+        onClick={<%-action.onClick%>}
+        <%- action.buttonProps ? `{...${JSON.stringify(action.buttonProps)}}` : '' -%>>
+        <%=action.buttonText%>
+      </Button>
+    <%}) -%>
+    </div>
+  )
+}
