@@ -12,7 +12,7 @@ export default function PaginationTable(props) {
         dataSource={dataSource}>
 
       <% dataSchema.forEach(function(data){-%>
-      <TableColumn title='<%=data.title%>' dataIndex='<%=data.field%>' cell={<%=data.cell%>} align='center' />;
+      <TableColumn title='<%=data.title%>' dataIndex='<%=data.field%>' align='center' />
       <%})-%>
 
       </Table>

@@ -12,7 +12,7 @@ export default function QueryForm(props) {
       <% querySchema.forEach(function(item){%>
         <FormItem label='<%=item.title%>'>
           <<%=item.component ? item.component : 'Input'%> name='<%=item.field%>' <%- item.componentProps ? `{...${ JSON.stringify(item.componentProps)}}` : '' -%>/>
-        </FormItem>;
+        </FormItem>
       <%})-%>
     <FormItem>
       <Form.Submit type='secondary' onClick={onQuery}>查询</Form.Submit>
