@@ -91,6 +91,26 @@
                 {
                   "label": "输入框",
                   "value": "Input"
+                },
+                {
+                  "label": "下拉选择",
+                  "value": "Select"
+                },
+                {
+                  "label": "日期选择",
+                  "value": "DatePicker"
+                },
+                {
+                  "label": "时间选择",
+                  "value": "TimePicker"
+                },
+                {
+                  "label": "数字输入框",
+                  "value": "NumberPicker"
+                },
+                {
+                  "label": "切换开关",
+                  "value": "Switch"
                 }
               ],
               "hasClear": true,
@@ -252,7 +272,6 @@
             "type": "string",
             "title": "按钮文本",
             "key": "buttonText",
-    
             "x-component-props": {
               "placeholder": "",
               "addonTextBefore": "",
@@ -352,7 +371,6 @@
               "type": "string",
               "key": "title",
               "title": "列标题",
-      
               "x-component-props": {
                 "placeholder": "",
                 "addonTextBefore": "",
