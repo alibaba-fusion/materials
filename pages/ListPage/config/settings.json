@@ -1,24 +1,528 @@
 {
-  "schema": {
-    "title": "用户任务列表",
-    "description": "显示用户信息和用户持有的任务",
-    "type": "object",
-    "required": [
-      "isShowUser"
-    ],
-    "properties": {
-      "isShowUser": {
-        "type": "boolean",
-        "title": "是否显示用户信息",
-        "default": "Chuck"
+  "type": "object",
+  "x-component-props": {
+    "size": "medium",
+    "labelAlign": "left",
+    "labelTextAlign": "right",
+    "labelCol": 7,
+    "wrapperCol": 12
+  },
+  "properties": {
+    "uri": {
+      "key": "uri",
+      "x-component": "input",
+      "type": "string",
+      "title": "资源请求地址",
+      "x-component-props": {
+        "placeholder": "请输入请求地址",
+        "addonTextBefore": "",
+        "addonTextAfter": "",
+        "trim": true,
+        "hasClear": true
       },
-      "title": {
-        "type": "string",
-        "title": "标题"
+      "children": []
+    },
+    "formatter": {
+      "key": "formatter",
+      "x-component": "input",
+      "type": "string",
+      "title": "请求格式化函数",
+      "x-component-props": {
+        "placeholder": "",
+        "addonTextBefore": "",
+        "addonTextAfter": "",
+        "trim": true,
+        "hasClear": true
       },
-      "userTitle":{
-        "type":"string",
-        "title":"用户页面标题"
+      "children": []
+    },
+    "querySchema": {
+      "key": "querySchema",
+      "x-component": "arraytable",
+      "type": "array",
+      "title": "查询条件",
+      "x-component-props": {
+        "renderAddition": "添加",
+        "renderRemove": "删除",
+        "renderEmpty": "暂无数据",
+        "size": "medium",
+        "labelAlign": "left"
+      },
+      "x-rules": [],
+      "items": {
+        "type": "object",
+        "children": [
+          {
+            "key": "title",
+            "x-component": "input",
+            "type": "string",
+            "title": "标题",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          {
+            "key": "field",
+            "x-component": "input",
+            "type": "string",
+            "title": "字段",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          {
+            "x-component": "select",
+            "type": "string",
+            "key": "component",
+            "title": "输入控件",
+            "x-component-props": {
+              "placeholder": "",
+              "dataSource": [
+                {
+                  "label": "输入框",
+                  "value": "Input"
+                }
+              ],
+              "hasClear": true,
+              "useVirtual": false,
+              "filterLocal": false,
+              "showSearch": true
+            },
+            "x-rules": []
+          },
+          {
+            "type": "object",
+            "key": "componentProps",
+            "title": "输入组件属性",
+            "x-component-props": {
+              "size": "medium",
+              "labelAlign": "left",
+              "labelTextAlign": "right",
+              "labelCol": 7,
+              "wrapperCol": 12
+            },
+            "x-rules": []
+          }
+        ],
+        "properties": {
+          "title": {
+            "key": "title",
+            "x-component": "input",
+            "type": "string",
+            "title": "标题",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": [],
+            "children": []
+          },
+          "field": {
+            "key": "field",
+            "x-component": "input",
+            "type": "string",
+            "title": "字段",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "children": [],
+            "x-rules": []
+          },
+          "component": {
+            "key": "component",
+            "x-component": "select",
+            "type": "string",
+            "title": "输入控件",
+            "children": [],
+            "x-component-props": {
+              "placeholder": "",
+              "dataSource": [
+                {
+                  "label": "输入框",
+                  "value": "Input"
+                }
+              ],
+              "hasClear": true,
+              "useVirtual": false,
+              "filterLocal": false,
+              "showSearch": true
+            },
+            "x-rules": []
+          },
+          "componentProps": {
+            "key": "componentProps",
+            "type": "object",
+            "title": "输入组件属性",
+            "children": [],
+            "x-component-props": {
+              "size": "medium",
+              "labelAlign": "left",
+              "labelTextAlign": "right",
+              "labelCol": 7,
+              "wrapperCol": 12
+            },
+            "x-rules": []
+          }
+        }
+      }
+    },
+    "actionSchema": {
+      "key": "actionSchema",
+      "x-component": "arraytable",
+      "type": "array",
+      "title": "行动点",
+      "children": [
+        {
+          "type": "object",
+          "properties": {
+            "buttonText": {
+              "x-component": "input",
+              "type": "string",
+              "title": "按钮文本",
+              "key": "buttonText",
+              "x-component-props": {
+                "placeholder": "",
+                "addonTextBefore": "",
+                "addonTextAfter": "",
+                "trim": true,
+                "hasClear": true
+              },
+              "x-rules": []
+            },
+            "buttonProps": {
+              "type": "object",
+              "key": "buttonProps",
+              "title": "按钮属性",
+              "x-component-props": {
+                "size": "medium",
+                "labelAlign": "left",
+                "labelTextAlign": "right",
+                "labelCol": 7,
+                "wrapperCol": 12
+              },
+              "x-rules": []
+            },
+            "onClick": {
+              "x-component": "input",
+              "type": "string",
+              "key": "onClick",
+              "title": "点击动作",
+              "x-index": 2,
+              "x-component-props": {
+                "placeholder": "",
+                "addonTextBefore": "",
+                "addonTextAfter": "",
+                "trim": true,
+                "hasClear": true
+              },
+              "x-rules": []
+            }
+          }
+        }
+      ],
+      "x-index": 3,
+      "x-component-props": {
+        "renderAddition": "添加",
+        "renderRemove": "删除",
+        "renderEmpty": "暂无数据"
+      },
+      "x-rules": [],
+      "items": {
+        "type": "object",
+        "children": [
+          {
+            "x-component": "input",
+            "type": "string",
+            "title": "按钮文本",
+            "key": "buttonText",
+    
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          {
+            "type": "object",
+            "key": "buttonProps",
+            "title": "按钮属性",
+            "x-component-props": {
+              "size": "medium",
+              "labelAlign": "left",
+              "labelTextAlign": "right",
+              "labelCol": 7,
+              "wrapperCol": 12
+            },
+            "x-rules": []
+          },
+          {
+            "x-component": "input",
+            "type": "string",
+            "key": "onClick",
+            "title": "点击动作",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          }
+        ],
+        "properties": {
+          "buttonText": {
+            "key": "buttonText",
+            "x-component": "input",
+            "type": "string",
+            "title": "按钮文本",
+            "children": [],
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          "buttonProps": {
+            "key": "buttonProps",
+            "type": "object",
+            "title": "按钮属性",
+            "children": [],
+            "x-component-props": {
+              "size": "medium",
+              "labelAlign": "left",
+              "labelTextAlign": "right",
+              "labelCol": 7,
+              "wrapperCol": 12
+            },
+            "x-rules": []
+          },
+          "onClick": {
+            "key": "onClick",
+            "x-component": "input",
+            "type": "string",
+            "title": "点击动作",
+            "children": [],
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          }
+        }
+      }
+    },
+    "dataSchema": {
+      "key": "dataSchema",
+      "x-component": "arraytable",
+      "type": "array",
+      "title": "数据列",
+      "children": [
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "x-component": "input",
+              "type": "string",
+              "key": "title",
+              "title": "列标题",
+      
+              "x-component-props": {
+                "placeholder": "",
+                "addonTextBefore": "",
+                "addonTextAfter": "",
+                "trim": true,
+                "hasClear": true
+              },
+              "x-rules": []
+            },
+            "field": {
+              "x-component": "input",
+              "type": "string",
+              "key": "field",
+              "title": "列字段",
+              "x-component-props": {
+                "placeholder": "",
+                "addonTextBefore": "",
+                "addonTextAfter": "",
+                "trim": true,
+                "hasClear": true
+              }
+            }
+          }
+        }
+      ],
+      "x-component-props": {
+        "renderAddition": "添加",
+        "renderRemove": "删除",
+        "renderEmpty": "暂无数据"
+      },
+      "x-rules": [],
+      "items": {
+        "type": "object",
+        "children": [
+          {
+            "x-component": "input",
+            "type": "string",
+            "key": "title",
+            "title": "列标题",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          {
+            "x-component": "input",
+            "type": "string",
+            "key": "field",
+            "title": "列字段",
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            }
+          }
+        ],
+        "properties": {
+          "title": {
+            "key": "title",
+            "x-component": "input",
+            "type": "string",
+            "title": "列标题",
+            "children": [],
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            },
+            "x-rules": []
+          },
+          "field": {
+            "key": "field",
+            "x-component": "input",
+            "type": "string",
+            "title": "列字段",
+            "children": [],
+            "x-component-props": {
+              "placeholder": "",
+              "addonTextBefore": "",
+              "addonTextAfter": "",
+              "trim": true,
+              "hasClear": true
+            }
+          }
+        }
+      }
+    },
+    "paginationParams": {
+      "key": "paginationParams",
+      "type": "object",
+      "title": "分页参数",
+      "children": [
+        {
+          "x-component": "numberpicker",
+          "type": "number",
+          "key": "pageSize",
+          "title": "每页数据",
+          "x-component-props": {
+            "step": 1,
+            "precision": 0,
+            "innerAfter": "",
+            "size": "medium",
+            "labelAlign": "left",
+            "renderAddition": "添加",
+            "renderRemove": "删除",
+            "renderEmpty": "暂无数据"
+          },
+          "x-rules": []
+        },
+        {
+          "x-component": "numberpicker",
+          "type": "number",
+          "key": "currentPage",
+          "title": "当前页数",
+          "x-component-props": {
+            "step": 1,
+            "precision": 0,
+            "innerAfter": ""
+          },
+          "x-rules": []
+        }
+      ],
+      "x-component-props": {
+        "size": "medium",
+        "labelAlign": "left",
+        "labelTextAlign": "right",
+        "labelCol": 7,
+        "wrapperCol": 12
+      },
+      "x-rules": [],
+      "properties": {
+        "pageSize": {
+          "key": "pageSize",
+          "x-component": "numberpicker",
+          "type": "number",
+          "title": "每页数据",
+          "children": [],
+          "x-component-props": {
+            "step": 1,
+            "precision": 0,
+            "innerAfter": "",
+            "size": "medium",
+            "labelAlign": "left",
+            "renderAddition": "添加",
+            "renderRemove": "删除",
+            "renderEmpty": "暂无数据"
+          },
+          "x-rules": []
+        },
+        "currentPage": {
+          "key": "currentPage",
+          "x-component": "numberpicker",
+          "type": "number",
+          "title": "当前页数",
+          "children": [],
+          "x-component-props": {
+            "step": 1,
+            "precision": 0,
+            "innerAfter": ""
+          },
+          "x-rules": []
+        }
       }
     }
   }
