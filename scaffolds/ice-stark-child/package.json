@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/stark-child-scaffold",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "微前端方案 icestark 的子应用模板，用于快速初始化微应用",
   "homepage": "https://unpkg.com/@icedesign/stark-child-scaffold@latest/build/index.html",
   "files": [

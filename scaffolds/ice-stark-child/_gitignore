@@ -12,6 +12,7 @@
 .happypack
 .DS_Store
 .ice
+.vscode
 
 npm-debug.log*
 yarn-debug.log*
