@@ -14,7 +14,7 @@ const DEFAULT_DATA = {
   chartHeight: 100,
 };
 
-const FusionCardAreaChart = props => {
+const FusionCardAreaChart = (props = DEFAULT_DATA) => {
   const { title, subTitle, value, chartData, des, rate, chartHeight } = {
     ...DEFAULT_DATA,
     ...props,

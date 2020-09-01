@@ -52,7 +52,7 @@ export interface CardConfigProps {
   cardConfig?: CardConfig;
 }
 
-const InfoBlock: React.FunctionComponent<CardConfig> = (props: TitleItem): JSX.Element => {
+const InfoBlock: React.FC<CardConfig> = (props = DEFAULT_DATA.titleItem[0]): JSX.Element => {
   const { name, value, des, rate } = props;
   return (
     <Box className={styles.header} direction="column">
@@ -75,8 +75,8 @@ const InfoBlock: React.FunctionComponent<CardConfig> = (props: TitleItem): JSX.E
 };
 
 // 两条线pv/uv
-const RenderPvChart: React.FunctionComponent<CardConfig> = (props: CardConfig) => {
-  const { chartData, chartHeight } = props;
+const RenderPvChart: React.FunctionComponent<CardConfig> = (props = DEFAULT_DATA) => {
+  const { chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
   const cols = {
     date: {
       type: 'timeCat',
@@ -109,10 +109,7 @@ const RenderPvChart: React.FunctionComponent<CardConfig> = (props: CardConfig) =
   </Chart>;
 };
 
-const VisitBlock: React.FunctionComponent<CardConfigProps> = (props: CardConfigProps): JSX.Element => {
-  const {
-    cardConfig = DEFAULT_DATA,
-  } = props; 
+const VisitBlock: React.FunctionComponent<CardConfigProps> = ({cardConfig = DEFAULT_DATA, ...props}): JSX.Element => {
   const { titleItem, chartData, chartHeight } = cardConfig;
 
   return (

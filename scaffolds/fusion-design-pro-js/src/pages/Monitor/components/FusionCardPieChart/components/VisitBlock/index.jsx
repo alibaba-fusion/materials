@@ -54,7 +54,7 @@ const DEFAULT_DATA = {
   chartHeight: 300,
 };
 
-const InfoBlock = props => {
+const InfoBlock = (props = DEFAULT_DATA.titleItem[0]) => {
   const { name, value, des, rate } = props;
   return (
     <Box className={styles.header} direction="column">
@@ -81,8 +81,8 @@ const InfoBlock = props => {
   );
 }; // 两条线pv/uv
 
-const RenderPvChart = props => {
-  const { chartData, chartHeight } = props;
+const RenderPvChart = (props = DEFAULT_DATA) => {
+  const { chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
   const cols = {
     date: {
       type: 'timeCat',
@@ -118,8 +118,7 @@ const RenderPvChart = props => {
   );
 };
 
-const VisitBlock = props => {
-  const { cardConfig = DEFAULT_DATA } = props;
+const VisitBlock = ({ cardConfig = DEFAULT_DATA, ...props }) => {
   const { titleItem, chartData, chartHeight } = cardConfig;
   return (
     <Card

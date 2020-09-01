@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-action-table",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "action bar table",
   "files": [
     "src/!(style.d.ts)",
@@ -16,27 +16,28 @@
   "scripts": {
     "start": "../../node_modules/.bin/build-scripts start --config ../../build.block.json",
     "build": "../../node_modules/.bin/build-scripts build --config ../../build.block.json",
-    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode",
+    "screenshot": "../../node_modules/.bin/screenshot -l -s mountNode -t 800",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
-    "ahooks": "^2.0.0",
     "lodash.debounce": "^4.0.8",
-    "prop-types": "^15.5.8",
     "react-sortablejs": "^2.0.11"
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "@alifd/next": "^1.21.0"
+    "ahooks": "^2.0.0",
+    "@alifd/next": "^1.21.0-beta.4"
   },
   "devDependencies": {
+    "ahooks": "^2.0.0",
     "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {
     "name": "ActionTable",
     "title": "带操作区域的表格",
     "category": "Table",
+    "screenshot": "https://unpkg.com/@alifd/fusion-action-table/screenshot.png",
     "views": [
       {
         "title": "",

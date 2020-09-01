@@ -24,6 +24,7 @@ const DEFAULT_DATA: IDataSource = {
 };
 
 interface LoginProps {
+  // eslint-disable-next-line react/require-default-props
   dataSource?: IDataSource;
 }
 

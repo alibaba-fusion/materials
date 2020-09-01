@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-merge-cell-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "table with cell merge",
   "files": [
     "src/!(style.d.ts)",
@@ -37,12 +37,13 @@
     "name": "MergeCellTable",
     "title": "带合并单元格的表格",
     "category": "Table",
+    "screenshot": "https://unpkg.com/@alifd/fusion-merge-cell-table/screenshot.png",
     "views": [
       {
         "title": "",
         "props": {},
-        "screenshot": "",
-        "html": ""
+        "screenshot": "build/views/block_view1.png",
+        "html": "build/views/block_view1.html"
       }
     ]
   },
