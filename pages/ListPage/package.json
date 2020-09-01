@@ -1,5 +1,5 @@
 {
-  "name": "list-page",
+  "name": "@alifd/list-page-template",
   "version": "1.0.0",
   "description": "a list page with query form",
   "files": [
