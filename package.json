@@ -61,7 +61,7 @@
     "typescript": "^3.7.2"
   },
   "materialConfig": {
-    "template": "@icedesign/react-ts-material-template",
+    "template": "@icedesign/ice-react-ts-material-template",
     "type": "react",
     "fusion-site": {
       "id": 1,
