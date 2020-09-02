@@ -1,6 +1,6 @@
 {
   "name": "@alifd/list-page-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a list page with query form",
   "files": [
     "src/!(style.d.ts)",

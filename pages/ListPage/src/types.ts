@@ -1,12 +1,9 @@
-
-import * as React from 'react';
-
 export interface IListConfig {
   uri? : string;
-  formatter? : (res) => IResponse;
-  querySchema?: Array<IQueryItem>;
-  actionSchema?: Array<IActionItem>;
-  dataSchema? : Array<IDataItem>;
+  formatter? : (res: any) => IResponse;
+  querySchema?: IQueryItem[];
+  actionSchema?: IActionItem[];
+  dataSchema? : IDataItem[];
   paginationParams? : IPaginationParams;
 }
 
@@ -21,7 +18,7 @@ export interface IQueryItem {
 export interface IActionItem {
   buttonText: string;
   buttonProps?: object;
-  onClick: (e)=>void;
+  onClick: (e) => void;
 }
 
 export interface IDataItem {
@@ -37,7 +34,7 @@ export interface IPaginationParams {
 }
 
 export interface IQueryParams extends IPaginationParams {
-  [key: string]: any
+  [key: string]: any;
 }
 
 export interface IResponse {
@@ -52,8 +49,8 @@ export interface IResponse {
 }
 
 export interface IDataModel {
-  result?: Array<object>;
-  data?: Array<object>;
+  result?: object[];
+  data?: object[];
   currentPage: number;
   pageSize: number;
   totalCount: number;
