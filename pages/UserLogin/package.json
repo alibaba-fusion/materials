@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-user-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "User Login Form",
   "files": [
     "src/!(style.d.ts)",
