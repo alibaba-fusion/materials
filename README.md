@@ -58,7 +58,9 @@ $ ACCESS_KEY_ID=xxx ACCESS_KEY_SECRET=yyy node scripts/oss/upload.js
 
 ## Use materials in Iceworks
 
-1. Install [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks)
+1. Install [Iceworks for VS Code](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks)
   ![](https://img.alicdn.com/tfs/TB1EdEDfODsXe8jSZR0XXXK6FXa-1446-906.gif)
-2. Add the materials data url to Iceworks
+2. Add the materials data URL to Iceworks
   ![](https://img.alicdn.com/tfs/TB1g9iMjTM11u4jSZPxXXahcXXa-1446-906.gif)
+
+See [《自定义物料》](https://ice.work/docs/iceworks/guide/material) to learn how to use materials in Iceworks.
