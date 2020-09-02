@@ -22,7 +22,7 @@
       "loginBtnStr":{
         "type":"string",
         "title":"表单提交按钮的文案",
-        "default": "true"
+        "default": "登录"
       }
     }
   }
