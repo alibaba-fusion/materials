@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "title": "用户登录",
+    "description": "定制生成用户登录页",
+    "type": "object",
+    "required": [
+      "loginBtnStr"
+    ],
+    "properties": {
+      "isShowOther": {
+        "type": "boolean",
+        "title": "显示其他登录方式"
+      },
+      "isShowRegister": {
+        "type": "boolean",
+        "title": "显示注册入口"
+      },
+      "isShowAutoLogin": {
+        "type": "boolean",
+        "title": "显示自动登录选项"
+      },
+      "loginBtnStr":{
+        "type":"string",
+        "title":"表单提交按钮的文案",
+        "default": "true"
+      }
+    }
+  }
+}
