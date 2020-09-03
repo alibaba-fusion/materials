@@ -3,6 +3,7 @@
   "version": "0.1.8",
   "description": "使用 TypeScript，未使用任何 UI 库。",
   "files": [
+    ".vscode/",
     "src/",
     "build/",
     "public/",

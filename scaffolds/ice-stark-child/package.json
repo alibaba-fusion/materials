@@ -4,6 +4,7 @@
   "description": "微前端方案 icestark 的子应用模板，用于快速初始化微应用",
   "homepage": "https://unpkg.com/@icedesign/stark-child-scaffold@latest/build/index.html",
   "files": [
+    ".vscode/",
     "src/",
     "build/",
     "public/",

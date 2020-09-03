@@ -3,6 +3,7 @@
   "version": "0.1.8",
   "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
   "files": [
+    ".vscode/",
     "src/",
     "build/",
     "public/",
