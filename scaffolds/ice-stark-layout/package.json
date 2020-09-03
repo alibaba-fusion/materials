@@ -1,9 +1,10 @@
 {
   "name": "@icedesign/stark-layout-scaffold",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "description": "微前端方案 icestark 的框架应用模板，用于快速初始化框架应用",
   "homepage": "https://ice-lab.zeroling.com/",
   "files": [
+    ".vscode/",
     "src/",
     "build/",
     "public/",

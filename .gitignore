@@ -8,7 +8,6 @@ yarn.lock
 yarn-error.log
 coverage/
 .eslintcache
-.vscode/
 .tmp/
 .ice/
 .iceworks-tmp/

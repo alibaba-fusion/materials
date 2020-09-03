@@ -1,8 +1,9 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
+    ".vscode/",
     "src/",
     "build/",
     "public/",

@@ -16,6 +16,7 @@ lib/
 *.swp
 *.dia~
 .ice
+.vscode
 
 npm-debug.log*
 yarn-debug.log*
