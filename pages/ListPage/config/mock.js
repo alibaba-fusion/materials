@@ -1,6 +1,5 @@
 
 module.exports = {
-  uri: 'xxxx',
   formatter: (data) => {
     return data;
   },
