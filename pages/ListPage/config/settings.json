@@ -238,7 +238,13 @@
                   "labelCol": 7,
                   "wrapperCol": 12
                 },
-                "x-rules": []
+                "x-rules": [],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "title": "类型"
+                  }
+                }
               },
               "onClick": {
                 "x-component": "input",
