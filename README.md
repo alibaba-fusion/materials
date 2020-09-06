@@ -30,7 +30,7 @@ $ cd materials/
 $ node scripts/generate.js fusion-design-pro
 ```
 
-### Batch Publishing Blocks
+### Batch Publish Blocks
 
 ```bash
 $ cd materials/
