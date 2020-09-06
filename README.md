@@ -2,8 +2,6 @@
 
 Based on [Fusion Components](https://github.com/alibaba-fusion/next) and [ice.js Framework](https://github.com/alibaba/ice). 
 
-> See [Material Development Guide](https://ice.work/docs/materials/about) to learn more.
-
 ## Setup
 
 ```bash
@@ -11,6 +9,8 @@ $ npm run setup
 ```
 
 ## Develop
+
+> See [Material Development Guide](https://ice.work/docs/materials/about) to learn more.
 
 ```bash
 # block
