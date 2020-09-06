@@ -40,16 +40,18 @@ $ node scripts/publish-blocks.js
 ### Add New Material
 
 ```bash
-$ iceworks add  # select block|component|scaffold
+$ iceworks add  # select block|component|scaffold|page
 ```
 
-## Generate Materials Data
+## Publish
+
+### Generate Materials Data
 
 ```bash
 $ iceworks generate
 ```
 
-## Publish Materials Data
+### Publish Materials Data
 
 ```bash
 # sync to fusion material center
@@ -59,11 +61,11 @@ $ iceworks sync
 $ ACCESS_KEY_ID=xxx ACCESS_KEY_SECRET=yyy node scripts/oss/upload.js
 ```
 
-## Use Materials in Iceworks
+## Usage
 
 1. Install [Iceworks for VS Code](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks)
   ![install iceworks](https://img.alicdn.com/tfs/TB1EdEDfODsXe8jSZR0XXXK6FXa-1446-906.gif)
 2. Add the materials data URL to Iceworks
   ![add custom material](https://img.alicdn.com/tfs/TB1g9iMjTM11u4jSZPxXXahcXXa-1446-906.gif)
 
-See [Custom Material in Iceworks](https://ice.work/docs/iceworks/guide/material) to learn how to use materials in Iceworks.
+See [Custom Material](https://ice.work/docs/iceworks/guide/material) to learn more about how to use materials in Iceworks.
