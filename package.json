@@ -2,7 +2,7 @@
   "private": true,
   "name": "materials",
   "version": "0.1.0",
-  "description": "基于 Fusion 基础组件和 ice 脚手架的官方物料",
+  "description": "基于 Fusion 基础组件和 ICE 脚手架的官方物料",
   "author": "",
   "scripts": {
     "generate-scaffold": "node scripts/generate.js",
