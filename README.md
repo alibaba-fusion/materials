@@ -66,4 +66,4 @@ $ ACCESS_KEY_ID=xxx ACCESS_KEY_SECRET=yyy node scripts/oss/upload.js
 2. Add the materials data URL to Iceworks
   ![add custom material](https://img.alicdn.com/tfs/TB1g9iMjTM11u4jSZPxXXahcXXa-1446-906.gif)
 
-See [《自定义物料》](https://ice.work/docs/iceworks/guide/material) to learn how to use materials in Iceworks.
+See [Custom Material in Iceworks](https://ice.work/docs/iceworks/guide/material) to learn how to use materials in Iceworks.
