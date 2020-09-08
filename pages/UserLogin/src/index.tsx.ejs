@@ -50,7 +50,6 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps) => {
       checkRunning(false);
       setSecond(59);
     }
-  // @ts-ignore
   }, isRunning ? 1000 : null);
 
   const formChange = (values: IDataSource) => {
