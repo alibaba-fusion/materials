@@ -4,8 +4,13 @@ import QueryForm from './components/QueryForm';
 import Actions from './components/Actions';
 import PaginationTable from './components/PaginationTable';
 import {IResponse, IPaginationParams, IQueryParams} from './types';
+<% if (typeof uri !=='string') { %>
+import presetResponse from './response';
+<% } %>
 
+<% if (typeof uri ==='string') { %>
 const uri = '<%=uri%>';
+<% } %>
 const formatter = <%-formatter%>;
 const defaultPaginationParams : IPaginationParams = {
   pageSize: <%=paginationParams.pageSize%>,
@@ -34,7 +39,7 @@ export default () => {
   const fetchData = async (params: IQueryParams) => {
     try {
       setLoading(true);
-      let result:IResponse = await fetch(uri, params).then(res => res.json());
+      let result:IResponse = <% if (typeof uri ==='string') { %>await fetch(uri, params).then(res => res.json());<% } %><% if (typeof uri !=='string') { %>presetResponse<% } %>
       if(formatter) result = formatter(result);
       if(result.success) {
         setDataSource(result.data?.data);
@@ -42,7 +47,7 @@ export default () => {
         setTotalCount(result.data?.totalCount);
         setCurrentPage(result.data?.currentPage);
       } else {
-        Message.error(result.errorMessage || result.errorMsg || result.message || result.msg || '请求失败，请重试！');
+        Message.error(result.errorMessage || '请求失败，请重试！');
       }
     } catch (error) {
       console.error(error);

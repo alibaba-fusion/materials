@@ -1,7 +1,7 @@
 {
-  "name": "@alifd/list-page-template",
-  "version": "1.0.1",
-  "description": "a list page with query form",
+  "name": "@alifd/fusion-query-table",
+  "version": "1.0.0",
+  "description": "a table with query form",
   "files": [
     "src/!(style.d.ts)",
     "src/",

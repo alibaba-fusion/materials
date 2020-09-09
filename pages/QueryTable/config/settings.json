@@ -52,89 +52,6 @@
         "x-rules": [],
         "items": {
           "type": "object",
-          "children": [
-            {
-              "key": "title",
-              "x-component": "input",
-              "type": "string",
-              "title": "标题",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              },
-              "x-rules": []
-            },
-            {
-              "key": "field",
-              "x-component": "input",
-              "type": "string",
-              "title": "字段",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              },
-              "x-rules": []
-            },
-            {
-              "x-component": "select",
-              "type": "string",
-              "key": "component",
-              "title": "输入控件",
-              "x-component-props": {
-                "placeholder": "",
-                "dataSource": [
-                  {
-                    "label": "输入框",
-                    "value": "Input"
-                  },
-                  {
-                    "label": "下拉选择",
-                    "value": "Select"
-                  },
-                  {
-                    "label": "日期选择",
-                    "value": "DatePicker"
-                  },
-                  {
-                    "label": "时间选择",
-                    "value": "TimePicker"
-                  },
-                  {
-                    "label": "数字输入框",
-                    "value": "NumberPicker"
-                  },
-                  {
-                    "label": "切换开关",
-                    "value": "Switch"
-                  }
-                ],
-                "hasClear": true,
-                "useVirtual": false,
-                "filterLocal": false,
-                "showSearch": true
-              },
-              "x-rules": []
-            },
-            {
-              "type": "object",
-              "key": "componentProps",
-              "title": "输入组件属性",
-              "x-component-props": {
-                "size": "medium",
-                "labelAlign": "left",
-                "labelTextAlign": "right",
-                "labelCol": 7,
-                "wrapperCol": 12
-              },
-              "x-rules": []
-            }
-          ],
           "properties": {
             "title": {
               "key": "title",
@@ -209,55 +126,6 @@
         "x-component": "arraytable",
         "type": "array",
         "title": "行动点",
-        "children": [
-          {
-            "type": "object",
-            "properties": {
-              "buttonText": {
-                "x-component": "input",
-                "type": "string",
-                "title": "按钮文本",
-                "key": "buttonText",
-                "x-component-props": {
-                  "placeholder": "",
-                  "addonTextBefore": "",
-                  "addonTextAfter": "",
-                  "trim": true,
-                  "hasClear": true
-                },
-                "x-rules": []
-              },
-              "buttonProps": {
-                "type": "object",
-                "key": "buttonProps",
-                "title": "按钮属性",
-                "x-component-props": {
-                  "size": "medium",
-                  "labelAlign": "left",
-                  "labelTextAlign": "right",
-                  "labelCol": 7,
-                  "wrapperCol": 12
-                },
-                "x-rules": []
-              },
-              "onClick": {
-                "x-component": "input",
-                "type": "string",
-                "key": "onClick",
-                "title": "点击动作",
-                "x-index": 2,
-                "x-component-props": {
-                  "placeholder": "",
-                  "addonTextBefore": "",
-                  "addonTextAfter": "",
-                  "trim": true,
-                  "hasClear": true
-                },
-                "x-rules": []
-              }
-            }
-          }
-        ],
         "x-index": 3,
         "x-component-props": {
           "renderAddition": "添加",
@@ -267,49 +135,6 @@
         "x-rules": [],
         "items": {
           "type": "object",
-          "children": [
-            {
-              "x-component": "input",
-              "type": "string",
-              "title": "按钮文本",
-              "key": "buttonText",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              },
-              "x-rules": []
-            },
-            {
-              "type": "object",
-              "key": "buttonProps",
-              "title": "按钮属性",
-              "x-component-props": {
-                "size": "medium",
-                "labelAlign": "left",
-                "labelTextAlign": "right",
-                "labelCol": 7,
-                "wrapperCol": 12
-              },
-              "x-rules": []
-            },
-            {
-              "x-component": "input",
-              "type": "string",
-              "key": "onClick",
-              "title": "点击动作",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              },
-              "x-rules": []
-            }
-          ],
           "properties": {
             "buttonText": {
               "key": "buttonText",
@@ -338,6 +163,12 @@
                 "labelCol": 7,
                 "wrapperCol": 12
               },
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "title": "类型"
+                }
+              },
               "x-rules": []
             },
             "onClick": {
@@ -363,40 +194,6 @@
         "x-component": "arraytable",
         "type": "array",
         "title": "数据列",
-        "children": [
-          {
-            "type": "object",
-            "properties": {
-              "title": {
-                "x-component": "input",
-                "type": "string",
-                "key": "title",
-                "title": "列标题",
-                "x-component-props": {
-                  "placeholder": "",
-                  "addonTextBefore": "",
-                  "addonTextAfter": "",
-                  "trim": true,
-                  "hasClear": true
-                },
-                "x-rules": []
-              },
-              "field": {
-                "x-component": "input",
-                "type": "string",
-                "key": "field",
-                "title": "列字段",
-                "x-component-props": {
-                  "placeholder": "",
-                  "addonTextBefore": "",
-                  "addonTextAfter": "",
-                  "trim": true,
-                  "hasClear": true
-                }
-              }
-            }
-          }
-        ],
         "x-component-props": {
           "renderAddition": "添加",
           "renderRemove": "删除",
@@ -405,35 +202,6 @@
         "x-rules": [],
         "items": {
           "type": "object",
-          "children": [
-            {
-              "x-component": "input",
-              "type": "string",
-              "key": "title",
-              "title": "列标题",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              },
-              "x-rules": []
-            },
-            {
-              "x-component": "input",
-              "type": "string",
-              "key": "field",
-              "title": "列字段",
-              "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
-              }
-            }
-          ],
           "properties": {
             "title": {
               "key": "title",

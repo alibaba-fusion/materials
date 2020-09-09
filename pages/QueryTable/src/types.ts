@@ -38,13 +38,8 @@ export interface IQueryParams extends IPaginationParams {
 }
 
 export interface IResponse {
-  code?: any;
   data?: IDataModel;
-  msg?: string;
   success?: boolean;
-  message?: string;
-  errorMsg?: string;
-  errorCode?: string;
   errorMessage?: string;
 }
 
