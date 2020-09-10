@@ -12,8 +12,8 @@
 
 .noticeContainer {
   width: 270px;
-  background: $color-white;
-  box-shadow: $menu-shadow;
+  background: #fff;
+  box-shadow: none;
 
   :global {
     .next-list-header {

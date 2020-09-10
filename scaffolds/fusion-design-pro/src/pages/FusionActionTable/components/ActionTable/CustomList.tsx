@@ -12,9 +12,11 @@ export type Column = ColumnProps & ItemInterface & {
   children?: Column[];
 }
 
-const TableActionIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
-});
+// const TableActionIcon = Icon.createFromIconfontCN({
+//   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
+// });
+
+const TableActionIcon = Icon;
 
 function CustomList({ columns, onChange }: { columns: Column[]; onChange: (columns: Column[]) => void }) {
   const buttonRef = useRef(null);

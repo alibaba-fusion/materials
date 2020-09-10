@@ -47,7 +47,7 @@
     "build-plugin-fusion-material": "^0.1.5"
   },
   "scripts": {
-    "start": "icejs start",
+    "start": "icejs start --config build-h5.config.js",
     "build": "icejs build",
     "screenshot": "../../node_modules/.bin/screenshot -l",
     "prepublishOnly": "npm run build -- --design && npm run screenshot",

@@ -72,7 +72,12 @@ const Navigation = (props, context) => {
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig, 0)}
+      <Nav.Item icon="account">Navigation One</Nav.Item>
+      <Nav.Item icon="account">Navigation Two</Nav.Item>
+      <Nav.Item icon="account">Navigation Three</Nav.Item>
+      <Nav.Item icon="account">Navigation Four</Nav.Item>
+      <Nav.Item icon="account">Navigation Five</Nav.Item>
+      {/* {getNavMenuItems(asideMenuConfig, 0)} */}
     </Nav>
   );
 };
