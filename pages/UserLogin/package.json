@@ -1,12 +1,13 @@
 {
   "name": "@alifd/fusion-user-login",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "User Login Form",
   "files": [
     "src/!(style.d.ts)",
     "src/",
     "screenshot.png",
-    "config/"
+    "config/",
+    "build/"
   ],
   "keywords": [
     "ice",
