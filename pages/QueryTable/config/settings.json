@@ -5,8 +5,8 @@
       "size": "medium",
       "labelAlign": "left",
       "labelTextAlign": "right",
-      "labelCol": 7,
-      "wrapperCol": 12
+      "labelCol": 4,
+      "wrapperCol": 20
     },
     "properties": {
       "uri": {

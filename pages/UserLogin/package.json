@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-user-login",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "User Login Form",
   "files": [
     "src/!(style.d.ts)",
@@ -37,7 +37,8 @@
   "pageConfig": {
     "name": "UserLogin",
     "title": "User Login",
-    "category": "Basic"
+    "category": "Basic",
+    "screenshot": "https://unpkg.com/@alifd/fusion-user-login/screenshot.png"
   },
   "publishConfig": {
     "access": "public"

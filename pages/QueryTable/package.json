@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-query-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a table with query form",
   "files": [
     "src/!(style.d.ts)",
@@ -36,9 +36,10 @@
     "@types/react-dom": "^16.9.4"
   },
   "pageConfig": {
-    "name": "ListPage",
-    "title": "list page",
-    "category": "Basic"
+    "name": "QueryTable",
+    "title": "Query Table",
+    "category": "Basic",
+    "screenshot": "https://unpkg.com/@alifd/fusion-query-table/screenshot.png"
   },
   "publishConfig": {
     "access": "public"
