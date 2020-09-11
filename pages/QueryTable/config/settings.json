@@ -35,7 +35,8 @@
           "trim": true,
           "hasClear": true
         },
-        "children": []
+        "children": [],
+        "required": true
       },
       "querySchema": {
         "key": "querySchema",
@@ -268,6 +269,18 @@
               "innerAfter": ""
             },
             "x-rules": []
+          },
+          {
+            "x-component": "numberpicker",
+            "type": "number",
+            "key": "totalCount",
+            "title": "页面总数",
+            "x-component-props": {
+              "step": 1,
+              "precision": 0,
+              "innerAfter": ""
+            },
+            "x-rules": []
           }
         ],
         "x-component-props": {
@@ -295,7 +308,8 @@
               "renderRemove": "删除",
               "renderEmpty": "暂无数据"
             },
-            "x-rules": []
+            "x-rules": [],
+            "required": true
           },
           "currentPage": {
             "key": "currentPage",
@@ -308,7 +322,21 @@
               "precision": 0,
               "innerAfter": ""
             },
-            "x-rules": []
+            "x-rules": [],
+            "required": true
+          },
+          "totalCount": {
+            "x-component": "numberpicker",
+            "type": "number",
+            "key": "totalCount",
+            "title": "页面总数",
+            "x-component-props": {
+              "step": 1,
+              "precision": 0,
+              "innerAfter": ""
+            },
+            "x-rules": [],
+            "required": true
           }
         }
       }
