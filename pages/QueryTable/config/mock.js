@@ -1,8 +1,5 @@
 
 module.exports = {
-  formatter: (data) => {
-    return data;
-  },
   querySchema: [{
     title: '行业',
     field: 'bizCode',
@@ -24,15 +21,9 @@ module.exports = {
     buttonText: '新建',
     buttonProps: {
       type: 'primary'
-    },
-    onClick: () => {
-      console.log('新建')
     }
   }, {
-    buttonText: '批量选择',
-    onClick: () => {
-      console.log('批量选择')
-    }
+    buttonText: '批量选择'
   }],
   dataSchema: [{
     title: '序号',
