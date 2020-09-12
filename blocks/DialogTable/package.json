@@ -20,13 +20,14 @@
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
+  "dependencies": {
+    "ahooks": "^2.0.0"
+  },
   "peerDependencies": {
-    "ahooks": "^2.0.0",
     "react": "^16.8.0",
     "@alifd/next": "^1.x"
   },
   "devDependencies": {
-    "ahooks": "^2.0.0",
     "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {
