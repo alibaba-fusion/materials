@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-multi-tree-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "多层树",
   "files": [
     "src/!(style.d.ts)",
