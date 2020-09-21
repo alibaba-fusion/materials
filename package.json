@@ -21,7 +21,9 @@
   },
   "husky": {
     "hooks": {
-
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run eslint-blocks",
+      "pre-push": "npm run lint"
     }
   },
   "dependencies": {
