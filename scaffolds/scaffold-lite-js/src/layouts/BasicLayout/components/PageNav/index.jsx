@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
-
-const { SubNav } = Nav;
+const SubNav = Nav.SubNav;
 const NavItem = Nav.Item;
 
 function getNavMenuItems(menusData, initIndex) {
@@ -13,12 +12,14 @@ function getNavMenuItems(menusData, initIndex) {
   }
 
   return menusData
-    .filter(item => item.name && !item.hideInMenu)
-    .map((item, index) => getSubMenuOrItem(item, `${initIndex}-${index}`));
+    .filter((item) => item.name && !item.hideInMenu)
+    .map((item, index) => {
+      return getSubMenuOrItem(item, `${initIndex}-${index}`);
+    });
 }
 
 function getSubMenuOrItem(item, index) {
-  if (item.children && item.children.some(child => child.name)) {
+  if (item.children && item.children.some((child) => child.name)) {
     const childrenItems = getNavMenuItems(item.children, index);
 
     if (childrenItems && childrenItems.length > 0) {
