@@ -1,7 +1,7 @@
 // node scripts/generate.js fusion-design-pro
 const path = require('path');
 const rimraf = require('rimraf');
-const Generator = require('/Users/guoda/work/ice/ice-inside/tools/ice-scaffold-generator');
+const Generator = require('ice-scaffold-generator');
 
 const rootPath = path.join(__dirname, '../scaffolds/', process.argv[2]);
 
