@@ -6,6 +6,8 @@ const commonRules = {
   'react/jsx-filename-extension': 0,
   'react/no-find-dom-node': 0,
   'no-restricted-syntax': ['error', "BinaryExpression[operator='of']"],
+  "react/self-closing-comp": 0,
+  "import/newline-after-import": 0
 };
 
 const jsRules = deepmerge(eslint, {
@@ -20,6 +22,8 @@ const tsRules = deepmerge(tslint, {
     '@typescript-eslint/array-type': ['error'],
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
+    '@typescript-eslint/no-extra-semi': 0,
+    "@typescript-eslint/ban-types": 0
   },
 });
 
