@@ -1,0 +1,83 @@
+{
+  "name": "ice-scaffold-midway-faas",
+  "version": "0.1.0",
+  "description": "icejs & midway faas",
+  "files": [
+    ".vscode/",
+    "src/",
+    "build/",
+    "public/",
+    "tests/",
+    "_gitignore",
+    "_editorconfig",
+    "_eslintignore",
+    "_eslintrc.js",
+    "_prettierignore",
+    "_prettierrc.js",
+    "_stylelintignore",
+    "_stylelintrc.js",
+    "build.json",
+    "f.yml",
+    "screenshot.png",
+    "tsconfig.json"
+  ],
+  "dependencies": {
+    "@midwayjs/faas": "^1.0.0",
+    "@midwayjs/faas-middleware-static-file": "^1.0.0",
+    "@midwayjs/hooks": "0.x.x",
+    "@alifd/next": "^1.19.4",
+    "@alifd/theme-design-pro": "^0.x",
+    "moment": "^2.24.0",
+    "prop-types": "^15.5.8",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "@ice/spec": "^1.0.1",
+    "@midwayjs/build-plugin-hooks": "^0.0.48",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "build-plugin-ice-faas": "^0.1.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^6.0.1",
+    "ice.js": "^1.0.0",
+    "stylelint": "^13.1.0"
+  },
+  "midway-integration": {
+    "tsCodeRoot": "src/apis",
+    "lifecycle": {
+      "before:package:cleanup": "npm run build"
+    }
+  },
+  "scripts": {
+    "start": "icejs start",
+    "build": "icejs build",
+    "screenshot": "../../node_modules/.bin/screenshot -l",
+    "prepublishOnly": "npm run build && npm run screenshot",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "stylelint": "stylelint ./**/*.scss"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scaffoldConfig": {
+    "name": "ice-midway-faas",
+    "title": "icejs+midway severless 一体化应用"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/midway-faas"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-react-v3"
+  },
+  "ideMode": {
+    "name": "ice-react"
+  }
+}
