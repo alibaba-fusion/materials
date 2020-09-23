@@ -1,3 +1,4 @@
+/** eslint-disable  @typescript-eslint/explicit-member-accessibility, class-methods-use-this */
 // import { join } from 'path';
 import { Provide, Func, Inject } from '@midwayjs/decorator';
 import { FunctionHandler, FaaSContext } from '@midwayjs/faas';
