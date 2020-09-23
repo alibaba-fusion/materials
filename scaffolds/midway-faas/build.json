@@ -1,4 +1,5 @@
 {
+  "publicPath": "./",
   "devServer": {
     "writeToDisk": true
   },
