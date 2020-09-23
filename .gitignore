@@ -18,3 +18,5 @@ components/**/lib/
 screenshot.png
 index.module.scss.d.ts
 tmp/
+.faas_debug_tmp
+.severless

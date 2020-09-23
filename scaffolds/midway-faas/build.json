@@ -1,0 +1,24 @@
+{
+  "publicPath": "./",
+  "devServer": {
+    "writeToDisk": true
+  },
+  "plugins": [
+    "@midwayjs/build-plugin-hooks",
+    "build-plugin-ice-faas",
+    [
+      "build-plugin-fusion",
+      {
+        "themePackage": "@alifd/theme-design-pro"
+      }
+    ],
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ]
+  ]
+}

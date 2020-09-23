@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.title {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
