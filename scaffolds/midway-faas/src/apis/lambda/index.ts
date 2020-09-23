@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useMethod } from '../hook/useMethod';
 
 export async function hello() {
