@@ -28,8 +28,7 @@
         "x-component": "editor",
         "type": "string",
         "title": "请求格式化函数",
-        "children": [],
-        "required": true
+        "children": []
       },
       "querySchema": {
         "key": "querySchema",
