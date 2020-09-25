@@ -8,7 +8,7 @@ export default function Actions(props) {
       <Button 
         style={{marginRight: 10}} 
         key='<%=action.buttonText%>' 
-        onClick={<%-action.onClick%>}
+        <% if (typeof action.onClick ==='string') { %>onClick={<%-action.onClick%>}<% } %>
         <%- action.buttonProps ? `{...${JSON.stringify(action.buttonProps)}}` : '' -%>>
         <%=action.buttonText%>
       </Button>
