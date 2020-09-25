@@ -11,7 +11,9 @@ import presetResponse from './response';
 <% if (typeof uri ==='string') { %>
 const uri = '<%=uri%>';
 <% } %>
-const formatter = <%-formatter%>;
+<% if (typeof formatter ==='string') { %>
+const formatter = '<%=formatter%>';
+<% } %>
 const defaultPaginationParams : IPaginationParams = {
   pageSize: <%=paginationParams.pageSize%>,
   currentPage: <%=paginationParams.currentPage%>,
@@ -39,8 +41,8 @@ export default () => {
   const fetchData = async (params: IQueryParams) => {
     try {
       setLoading(true);
-      let result:IResponse = <% if (typeof uri ==='string') { %>await fetch(uri, params).then(res => res.json());<% } %><% if (typeof uri !=='string') { %>presetResponse<% } %>
-      if(formatter) result = formatter(result);
+      <% if (typeof formatter ==='string') { %>let<% } %><% if (typeof formatter !=='string') { %>const<% } %>result:IResponse = <% if (typeof uri ==='string') { %>await fetch(uri, params).then(res => res.json());<% } %><% if (typeof uri !=='string') { %>presetResponse<% } %>
+      <% if (typeof formatter ==='string') { %>if(formatter) result = formatter(result);<% } %>
       if(result.success) {
         setDataSource(result.data?.data);
         setPageSize(result.data?.pageSize);
