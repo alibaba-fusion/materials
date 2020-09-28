@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 
 const { useState } = React;
 
-const getTableData = ({ current, pageSize }, formData: any): Promise<Result> => {
+const getTableData = ({ current, pageSize }, formData: any): Promise<any> => {
   let query = `page=${current}&size=${pageSize}`;
   Object.entries(formData).forEach(([key, value]) => {
     if (value) {
@@ -36,12 +36,12 @@ function subTableActions(val: string, index: number, record: any) {
 
 
 function SubTable(props: any) {
-  return <Table dataSource={props.dataSource} size="small"  hasBorder={false} primaryKey="postcode">
+  return <Table dataSource={props.dataSource} size="small" hasBorder={false} primaryKey="postcode">
     <Table.Column title="country" dataIndex="country" />
     <Table.Column title="state" dataIndex="state" />
     <Table.Column title="city" dataIndex="city" />
     <Table.Column title="street" dataIndex="street.name" />
-    <Table.Column  cell={subTableActions} />
+    <Table.Column cell={subTableActions} />
   </Table>;
 }
 
@@ -54,11 +54,11 @@ export default function ExpandTable() {
   return (
     <Card free className={styles.container}>
       <Card.Content>
-        <Table.StickyLock {...tableProps} 
-          tableWidth={1000} 
-          hasBorder={false} 
-          primaryKey="email" 
-          expandedRowRender={record => <SubTable dataSource={[record.location]} /> }
+        <Table {...tableProps}
+          tableWidth={1000}
+          hasBorder={false}
+          primaryKey="email"
+          expandedRowRender={record => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
           onRowOpen={keys => setOpenrows(keys)}
           expandedRowIndent={[0, 0]}>
@@ -68,8 +68,8 @@ export default function ExpandTable() {
           <Table.Column title="username" dataIndex="login.username" width={300} />
           <Table.Column title="uuid" dataIndex="login.uuid" width={300} />
           <Table.Column title="gender" dataIndex="gender" width={200} />
-          <Table.Column width={500} cell={tableActions}/>
-        </Table.StickyLock>
+          <Table.Column width={500} cell={tableActions} />
+        </Table>
         <Pagination style={{ marginTop: 16, textAlign: 'right' }} {...paginationProps} />
       </Card.Content>
     </Card>

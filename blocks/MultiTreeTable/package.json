@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-multi-tree-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "多层树",
   "files": [
     "src/!(style.d.ts)",
@@ -20,12 +20,14 @@
     "prepublishOnly": "npm run build -- --design && npm run screenshot",
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
+  "dependencies": {
+    "ahooks": "^2.0.0"
+  },
   "peerDependencies": {
     "react": "^16.8.0",
     "@alifd/next": "^1.x"
   },
   "devDependencies": {
-    "ahooks": "^2.0.0",
     "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {
