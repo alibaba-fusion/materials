@@ -6,7 +6,7 @@ const {Column: TableColumn} = Table;
 export default function PaginationTable(props) {
   const {loading, dataSource, pageSize, currentPage, totalCount, onChange, onPageSizeChange} = props;
   return (
-    <div>
+    <div style={{marginTop: 12}}>
       <Table
         loading={loading}
         dataSource={dataSource}>

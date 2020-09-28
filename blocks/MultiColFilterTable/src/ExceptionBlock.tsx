@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@alifd/next';
 
 interface Iprops {
-  onRefresh?: () => {};
+  onRefresh?: () => any;
 }
 
 const ExceptionBlock: React.FC<Iprops> = ({ onRefresh = () => {} }) => {

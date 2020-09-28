@@ -25,18 +25,10 @@
       },
       "formatter": {
         "key": "formatter",
-        "x-component": "input",
+        "x-component": "editor",
         "type": "string",
         "title": "请求格式化函数",
-        "x-component-props": {
-          "placeholder": "",
-          "addonTextBefore": "",
-          "addonTextAfter": "",
-          "trim": true,
-          "hasClear": true
-        },
-        "children": [],
-        "required": true
+        "children": []
       },
       "querySchema": {
         "key": "querySchema",
@@ -127,7 +119,6 @@
         "x-component": "arraytable",
         "type": "array",
         "title": "行动点",
-        "x-index": 3,
         "x-component-props": {
           "renderAddition": "添加",
           "renderRemove": "删除",
@@ -174,16 +165,12 @@
             },
             "onClick": {
               "key": "onClick",
-              "x-component": "input",
+              "x-component": "editor",
               "type": "string",
               "title": "点击动作",
               "children": [],
               "x-component-props": {
-                "placeholder": "",
-                "addonTextBefore": "",
-                "addonTextAfter": "",
-                "trim": true,
-                "hasClear": true
+                "height": "200"
               },
               "x-rules": []
             }

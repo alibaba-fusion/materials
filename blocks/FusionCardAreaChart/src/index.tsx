@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 interface ChartItem {
   date?: string | number;
   value?: number;
-};
+}
 
 interface FusionCardAreaChartProps {
   title?: string | React.ReactDOM;
@@ -18,7 +18,7 @@ interface FusionCardAreaChartProps {
   des?: string;
   rate?: string;
   chartHeight?: number;
-};
+}
 
 const DEFAULT_DATA: FusionCardAreaChartProps = {
   title: '',

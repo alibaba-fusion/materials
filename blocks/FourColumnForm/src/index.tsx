@@ -20,13 +20,13 @@ export interface DataSource {
   state?: string;
   relative?: string;
   relaventProject?: string;
-};
+}
 
 export interface FourColumnFormProps {
   dataSource?: DataSource;
   onSubmit?: () => void;
   onCancel?: () => void;
-};
+}
 
 const DEFAULT_DATA: DataSource = {
   type: 'private',

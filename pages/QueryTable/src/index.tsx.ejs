@@ -4,14 +4,10 @@ import QueryForm from './components/QueryForm';
 import Actions from './components/Actions';
 import PaginationTable from './components/PaginationTable';
 import {IResponse, IPaginationParams, IQueryParams} from './types';
-<% if (typeof uri !=='string') { %>
-import presetResponse from './response';
-<% } %>
+<% if (typeof uri !== 'string') { %>import presetResponse from './response';<% } %>
 
-<% if (typeof uri ==='string') { %>
-const uri = '<%=uri%>';
-<% } %>
-const formatter = <%-formatter%>;
+<% if (typeof uri === 'string') { %>const uri = '<%=uri%>';<% } %>
+<% if (typeof formatter !== 'undefined') { %>const formatter = <%-formatter%>;<% } %>
 const defaultPaginationParams : IPaginationParams = {
   pageSize: <%=paginationParams.pageSize%>,
   currentPage: <%=paginationParams.currentPage%>,
@@ -39,8 +35,8 @@ export default () => {
   const fetchData = async (params: IQueryParams) => {
     try {
       setLoading(true);
-      let result:IResponse = <% if (typeof uri ==='string') { %>await fetch(uri, params).then(res => res.json());<% } %><% if (typeof uri !=='string') { %>presetResponse<% } %>
-      if(formatter) result = formatter(result);
+      <% if (typeof formatter !== 'undefined') { %>let<% } %><% if (typeof formatter === 'undefined') { %>const<% } %> result:IResponse = <% if (typeof uri ==='string') { %>await fetch(uri, params).then(res => res.json());<% } %><% if (typeof uri !== 'string') { %>presetResponse<% } %>
+      <% if (typeof formatter !== 'undefined') { %>if(formatter) result = formatter(result);<% } %>
       if(result.success) {
         setDataSource(result.data?.data);
         setPageSize(result.data?.pageSize);

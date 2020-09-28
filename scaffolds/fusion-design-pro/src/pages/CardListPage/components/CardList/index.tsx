@@ -9,7 +9,7 @@ export interface ICardItem {
   title?: string;
   content?: string;
   link?: string[];
-};
+}
 
 export interface DataSource {
   cards: ICardItem[];
@@ -17,7 +17,7 @@ export interface DataSource {
   tagA: string;
   tagsB: string[];
   tagB: string;
-};
+}
 
 const DEFAULT_DATA: DataSource = {
   tagsA: ['类目一', '类目二', '类目三', '类目四', '类目五', '类目六', '类目七', '类目八', '类目九', '类目十'],

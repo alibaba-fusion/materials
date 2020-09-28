@@ -8,7 +8,7 @@ export interface LogItem {
   operator?: string;
   opResult?: string;
   opTime?: string;
-};
+}
 
 export interface DataSource {
   logs?: LogItem[];
@@ -39,7 +39,7 @@ export interface DataSource {
     bonus?: string;
     rsu?: string;
   };
-};
+}
 
 const DEFAULT_DATA: DataSource = {
   logs: [

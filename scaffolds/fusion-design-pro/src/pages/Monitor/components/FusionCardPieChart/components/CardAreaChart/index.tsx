@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 interface ChartItem {
   date?: string | number;
   value?: number;
-};
+}
 
 interface FusionCardAreaChartProps {
   title?: string | React.ReactDOM;
@@ -17,7 +17,7 @@ interface FusionCardAreaChartProps {
   chartData?: ChartItem[];
   cardFoot?: string | React.ReactDOM;
   chartHeight?: number;
-};
+}
 
 const DEFAULT_DATA: FusionCardAreaChartProps = {
   title: '渲染时间',

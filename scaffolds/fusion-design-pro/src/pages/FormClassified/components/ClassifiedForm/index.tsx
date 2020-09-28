@@ -31,7 +31,7 @@ export interface DataSource {
     rsu?: boolean;
     rsuDesc?: string;
   };
-};
+}
 
 export interface ClassifiedFormProps {
   dataSource?: DataSource;
