@@ -11,13 +11,13 @@ export interface IQueryItem {
   title: string;
   field: string;
   component?: string;
-  componentProps?: object;
+  componentProps?: Record<string, unknown>;
 }
 
 
 export interface IActionItem {
   buttonText: string;
-  buttonProps?: object;
+  buttonProps?: Record<string, unknown>;
   onClick: (e) => void;
 }
 
@@ -44,8 +44,8 @@ export interface IResponse {
 }
 
 export interface IDataModel {
-  result?: object[];
-  data?: object[];
+  result?: Record<string, unknown>[];
+  data?: Record<string, unknown>[];
   currentPage: number;
   pageSize: number;
   totalCount: number;

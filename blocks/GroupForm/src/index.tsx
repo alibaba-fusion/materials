@@ -40,7 +40,7 @@ export interface DataSource {
     projectId?: number;
   };
   company: Company[];
-};
+}
 
 export interface GroupFormProps {
   dataSource?: DataSource;

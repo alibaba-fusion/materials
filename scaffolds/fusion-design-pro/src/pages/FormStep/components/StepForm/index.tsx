@@ -21,7 +21,7 @@ export interface DataSource {
   category?: string;
   authority?: string;
   desc?: string;
-};
+}
 
 export interface StepFormProps {
   dataSource?: DataSource;

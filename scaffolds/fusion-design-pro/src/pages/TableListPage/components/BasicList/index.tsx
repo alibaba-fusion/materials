@@ -8,10 +8,10 @@ const { Option } = Select;
 const FormItem = Form.Item;
 
 export interface IDataSource {
-  tableData: object[];
-  tableColumn: {};
-};
-const mockTableData: object[] = [];
+  tableData: Record<string, unknown>[];
+  tableColumn: any;
+}
+const mockTableData: Record<string, unknown>[] = [];
 for (let i = 0; i <= 10; i += 1) {
   mockTableData.push({
     name: `品牌营销服务设计 ${String.fromCharCode(97 + i).toUpperCase()}`,

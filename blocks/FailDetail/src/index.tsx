@@ -10,7 +10,7 @@ export interface FailDetailProps {
   buttonBackDesc: string;
   buttonContinueDesc: string;
   countDownSecnods: number;
-  onButtonBack: () => {};
+  onButtonBack: () => any;
 }
 
 export default function FailDetail(props: FailDetailProps ) {

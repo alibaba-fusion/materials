@@ -23,7 +23,7 @@ export interface OperaitionProps {
 }
 
 export interface OperationRef {
-  getValues(callback: (vals: object) => void): void;
+  getValues(callback: (vals: Record<string, unknown>) => void): void;
 }
 
 const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> = (props, ref) => {
@@ -46,7 +46,7 @@ const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> =
     ref,
     () => {
       return {
-        getValues(callback: (vals: object) => void) {
+        getValues(callback: (vals: Record<string, unknown>) => void) {
           field.validate((errors, values): void => {
             if (errors) {
               return;

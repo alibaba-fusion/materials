@@ -11,7 +11,7 @@ interface OrderItem {
   name?: string;
   state?: string;
   level?: string;
-};
+}
 
 interface ProjectItem {
   projectId?: number;
@@ -20,14 +20,14 @@ interface ProjectItem {
   createTime?: string;
   img?: string;
   update?: string;
-};
+}
 
 interface TimeLineItem {
   planName?: string;
   planAddress?: string;
   planTime?: string;
   planDuaring?: string;
-};
+}
 
 interface UpdateItem {
   projectItem?: string;
@@ -36,12 +36,12 @@ interface UpdateItem {
   name?: string;
   action?: string;
   avatar?: string;
-};
+}
 
 interface EntranceItem {
   name?: string;
   link?: string;
-};
+}
 
 export interface DataSource {
   orderList?: OrderItem[];
@@ -55,7 +55,7 @@ export interface DataSource {
     name?: string;
     email?: string;
   };
-};
+}
 
 const DEFAULT_DATA: DataSource = {
   person: {
@@ -126,7 +126,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                   dataSource={orderList}
                   hasBorder={false}
                   rowSelection={{
-                    getProps: (record: OrderItem, index: number): {} => ({
+                    getProps: (record: OrderItem, index: number): any => ({
                       children: <span key={index} className="next-table-cell-wrapper">{record.name}</span>,
                     }),
                     columnProps: () => ({ width: 330 }),
