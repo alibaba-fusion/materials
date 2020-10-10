@@ -9,6 +9,7 @@ const scaffolds = [
   '@alifd/scaffold-lite-js',
   '@icedesign/stark-child-scaffold',
   '@icedesign/stark-layout-scaffold',
+  '@icedesign/scaffold-midway-faas',
 ];
 
 module.exports = scaffolds;
