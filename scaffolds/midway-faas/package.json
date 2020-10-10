@@ -65,7 +65,8 @@
   },
   "scaffoldConfig": {
     "name": "ice-midway-faas",
-    "title": "icejs+midway severless 一体化应用"
+    "title": "icejs+midway severless 一体化应用",
+    "screenshot": "https://img.alicdn.com/tfs/TB1V0xQkAcx_u4jSZFlXXXnUFXa-1261-825.png"
   },
   "engines": {
     "node": ">=8.0.0"

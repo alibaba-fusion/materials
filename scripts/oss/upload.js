@@ -23,6 +23,9 @@ const toPath = path.join(assetsPath, dirPath, 'react-materials.json');
 
 console.log('start upload oss', materialPath, toPath);
 
+const materialData = fs.readFileSync(materialPath, 'utf-8');
+console.log('materialData', materialData);
+
 ossClient
   .put(toPath, materialPath)
   .then(result => {
