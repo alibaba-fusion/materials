@@ -1,8 +1,5 @@
 {
   "publicPath": "./",
-  "devServer": {
-    "writeToDisk": true
-  },
   "plugins": [
     "@midwayjs/build-plugin-hooks",
     "build-plugin-ice-faas",
