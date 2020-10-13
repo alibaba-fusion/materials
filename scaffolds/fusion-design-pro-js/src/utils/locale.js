@@ -15,7 +15,7 @@ function getLocale() {
       window.localStorage.setItem('lang', navigator.language);
     }
 
-    return localStorage.getItem('lang');
+    return localStorage.getItem('lang') || '';
   }
 
   return '';

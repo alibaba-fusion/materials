@@ -18,7 +18,6 @@ import styles from './index.module.scss';
 
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
-
 const DEFAULT_DATA = {
   person: {
     avatar: 'https://img.alicdn.com/tfs/TB1XdnvvUY1gK0jSZFCXXcwqXXa-500-500.png',

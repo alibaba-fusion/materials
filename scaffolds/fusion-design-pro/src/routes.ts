@@ -35,7 +35,6 @@ import FeedbackNotFound from '@/pages/FeedbackNotFound';
 import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
-
 const routerConfig = [
   {
     path: '/user',
