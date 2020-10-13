@@ -18,7 +18,6 @@ import styles from './index.module.scss';
 const { Cell } = ResponsiveGrid;
 const { Option } = Select;
 const FormItem = Form.Item;
-
 const mockTableData = [];
 
 for (let i = 0; i <= 10; i += 1) {

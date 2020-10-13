@@ -6,7 +6,6 @@ const FormItem = Form.Item;
 const formItemLayout = {
   colSpan: 3,
 };
-
 const DEFAULT_DATA = {
   type: 'private',
 };

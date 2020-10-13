@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createApp } from 'ice';
+import { runApp } from 'ice';
 import LocaleProvider from '@/components/LocaleProvider';
 import { getLocale } from '@/utils/locale';
 
@@ -10,4 +10,4 @@ const appConfig = {
     addProvider: ({ children }) => <LocaleProvider locale={locale}>{children}</LocaleProvider>,
   },
 };
-createApp(appConfig);
+runApp(appConfig);
