@@ -494,6 +494,11 @@
 						"path": "/user/register"
 					}
 				]
+			},
+			{
+				"name": "菜单权限页面",
+				"path": "/menu/auth",
+				"auth": ["guest"]
 			}
 		],
 		"headerMenu": [
@@ -1455,6 +1460,27 @@
 									}
 								},
 								"@alifd/fusion-settings-person"
+							]
+						}
+					}
+				},
+				{
+					"path": "/menu/auth",
+					"page": {
+						"name": "MenuAuth",
+						"props": {
+
+						},
+						"blocks": {
+							"packages": [
+								{
+									"name": "@alifd/fusion-page-header",
+									"type": "common",
+									"props": {
+										"title": "菜单权限页面",
+										"description": "菜单权限页面"
+									}
+								}
 							]
 						}
 					}
