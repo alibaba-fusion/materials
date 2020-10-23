@@ -14,7 +14,6 @@ import {
 import styles from './index.module.scss';
 
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
-
 const DEFAULT_DATA = {
   tagsA: [
     '类目一',

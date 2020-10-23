@@ -187,5 +187,10 @@ const asideMenuConfig = [
       },
     ],
   },
+  {
+    name: '菜单权限页面',
+    path: '/menu/auth',
+    auth: ['guest'],
+  },
 ];
 export { headerMenuConfig, asideMenuConfig };

@@ -5,21 +5,37 @@ import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
 const { SubNav } = Nav;
-const NavItem = Nav.Item;
+const NavItem = Nav.Item; // mock the auth object
+// Ref: https://ice.work/docs/guide/advance/auth#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9D%83%E9%99%90%E6%95%B0%E6%8D%AE
 
-function getNavMenuItems(menusData, initIndex) {
+const auth = {
+  admin: true,
+  guest: false,
+};
+
+function getNavMenuItems(menusData, initIndex, auth) {
   if (!menusData) {
     return [];
   }
 
   return menusData
-    .filter(item => item.name && !item.hideInMenu)
-    .map((item, index) => getSubMenuOrItem(item, `${initIndex}-${index}`));
+    .filter(item => {
+      let roleAuth = true; // if item.roles is [] or undefined, roleAuth is true
+
+      if (auth && item.auth && item.auth instanceof Array) {
+        if (item.auth.length) {
+          roleAuth = item.auth.some(key => auth[key]);
+        }
+      }
+
+      return item.name && !item.hideInMenu && roleAuth;
+    })
+    .map((item, index) => getSubMenuOrItem(item, `${initIndex}-${index}`, auth));
 }
 
-function getSubMenuOrItem(item, index) {
+function getSubMenuOrItem(item, index, auth) {
   if (item.children && item.children.some(child => child.name)) {
-    const childrenItems = getNavMenuItems(item.children, index);
+    const childrenItems = getNavMenuItems(item.children, index, auth);
 
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
@@ -57,7 +73,7 @@ const Navigation = (props, context) => {
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig, 0)}
+      {getNavMenuItems(asideMenuConfig, 0, auth)}
     </Nav>
   );
 };

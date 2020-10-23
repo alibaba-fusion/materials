@@ -1,7 +1,7 @@
 {
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro-js",
-		"version": "0.1.23",
+		"version": "0.1.24",
 		"description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
@@ -483,6 +483,11 @@
 						"path": "/user/register"
 					}
 				]
+			},
+			{
+				"name": "菜单权限页面",
+				"path": "/menu/auth",
+				"auth": ["guest"]
 			}
 		],
 		"headerMenu": [
@@ -1444,6 +1449,27 @@
 									}
 								},
 								"@alifd/fusion-settings-person"
+							]
+						}
+					}
+				},
+				{
+					"path": "/menu/auth",
+					"page": {
+						"name": "MenuAuth",
+						"props": {
+
+						},
+						"blocks": {
+							"packages": [
+								{
+									"name": "@alifd/fusion-page-header",
+									"type": "common",
+									"props": {
+										"title": "菜单权限页面",
+										"description": "菜单权限页面"
+									}
+								}
 							]
 						}
 					}
