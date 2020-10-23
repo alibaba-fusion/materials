@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createApp, IAppConfig } from 'ice'
+import { runApp, IAppConfig } from 'ice'
 import { ConfigProvider } from '@alifd/next';
 import PageLoading from '@/components/PageLoading';
 import FrameworkLayout from '@/layouts/FrameworkLayout';
@@ -51,4 +51,4 @@ const appConfig: IAppConfig = {
   },
 };
 
-createApp(appConfig)
+runApp(appConfig)

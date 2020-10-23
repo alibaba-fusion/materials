@@ -36,6 +36,7 @@ import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
 import MenuAuth from '@/pages/MenuAuth';
+
 const routerConfig = [
   {
     path: '/user',
