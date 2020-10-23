@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-query-table",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a table with query form",
   "files": [
     "src/!(style.d.ts)",
