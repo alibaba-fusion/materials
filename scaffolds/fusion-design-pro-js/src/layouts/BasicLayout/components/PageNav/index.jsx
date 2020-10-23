@@ -20,8 +20,8 @@ function getNavMenuItems(menusData, initIndex, auth) {
 
   return menusData
     .filter(item => {
-      let roleAuth = true; // if item.roles is [] or undefined, roleAuth is true
-
+      let roleAuth = true;
+      // if item.roles is [] or undefined, roleAuth is true
       if (auth && item.auth && item.auth instanceof Array) {
         if (item.auth.length) {
           roleAuth = item.auth.some(key => auth[key]);
