@@ -9,9 +9,9 @@ import {IResponse, IPaginationParams, IQueryParams} from './types';
 <% if (typeof uri === 'string') { %>const uri = '<%=uri%>';<% } %>
 <% if (typeof formatter !== 'undefined') { %>const formatter = '<%=formatter%>';<% } %>
 const defaultPaginationParams : IPaginationParams = {
-  pageSize: <%=paginationParams.pageSize%>,
-  currentPage: <%=paginationParams.currentPage%>,
-  totalCount: <%=paginationParams.totalCount%>
+  pageSize: <%=paginationParams.pageSize||1%>,
+  currentPage: <%=paginationParams.currentPage||1%>,
+  totalCount: <%=paginationParams.totalCount||1%>
 }
 
 export default () => {
