@@ -12,7 +12,7 @@
 	],
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro",
-		"version": "0.1.36",
+		"version": "0.1.38",
 		"description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
