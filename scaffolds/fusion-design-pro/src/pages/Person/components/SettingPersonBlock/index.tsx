@@ -69,7 +69,7 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
 
   return (
     <Card free>
-      <Card.Content 
+      <Card.Content
         className={styles.SettingPersonBlock}
       >
         <Form
@@ -78,13 +78,13 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
           onChange={formChange}
           responsive
         >
-          <FormItem label='' colSpan={12}>
+          <FormItem label="" colSpan={12}>
             <ResponsiveGrid gap={10}>
               <Cell colSpan={2}><Avatar shape="circle" size={64} icon="account" /></Cell>
               <Cell colSpan={10} className={styles.changeLogo}>
                 <Box spacing={12}>
                   <FormItem>
-                    <Upload name='pic'>
+                    <Upload name="pic">
                       <Button className={styles.uploadButton} type="normal">更新头像</Button>
                     </Upload>
                   </FormItem>
@@ -120,7 +120,8 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
                 type="primary"
                 onClick={onSubmit}
                 validate
-              >更新信息</Form.Submit>
+              >更新信息
+              </Form.Submit>
             </Box>
           </FormItem>
         </Form>

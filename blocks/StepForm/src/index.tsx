@@ -44,9 +44,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
   const projectField = Field.useField({ values: dataSource });
   const [currentStep, setStep] = useState<number>(0);
 
-  const steps = ['填写信息', '确认信息', '完成'].map((item, index): Item =>
-    <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />,
-  );
+  const steps = ['填写信息', '确认信息', '完成'].map((item, index): Item => <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />);
 
   const submit = (): void => {
     const values = projectField.getValues();
@@ -81,17 +79,18 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
       actions = <Button type="primary" onClick={goNext} >下一步</Button>;
       break;
     case 1:
-      actions = <>
+      actions = (<>
         <Button onClick={goPrev} style={{ marginRight: '5px' }}>上一步</Button>
         <Form.Submit
           type="primary"
           onClick={submit}
           validate
-        >下一步</Form.Submit>
-      </>;
+        >下一步
+        </Form.Submit>
+      </>);
       break;
     case 2:
-      mainbody = <>
+      mainbody = (<>
         <Box align="center">
           <Icon type="success-filling" size={72} className={styles.succesIcon} />
           <Typography.H1>提交成功</Typography.H1>
@@ -101,14 +100,14 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
             <Button onClick={goInitial}>继续创建</Button>
           </Box>
         </Box>
-      </>;
+      </>);
       break;
     default:
       break;
   }
 
   if (!mainbody) {
-    mainbody = <>
+    mainbody = (<>
       <Form field={projectField} isPreview={currentStep === 1} className={styles.form} responsive fullWidth labelAlign="top">
         <Form.Item colSpan={12} label="项目名称" required requiredMessage="必填">
           <Input placeholder="给项目起个名字" name="name" />
@@ -134,7 +133,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
           {actions}
         </Form.Item>
       </Form>
-    </>;
+    </>);
   }
 
   return (

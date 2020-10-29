@@ -68,7 +68,7 @@ const DialogForm: SFC<DialogFormProps> = (props) => {
             <Select.Option value={3}>项目三</Select.Option>
           </Select>
         </Form.Item>
-      </Form>      
+      </Form>
     </Dialog>
   );
 };

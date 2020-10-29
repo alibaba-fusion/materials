@@ -21,7 +21,7 @@ interface CardConfig {
 }
 
 const DEFAULT_DATA: CardConfig = {
-  subTitle:  '门店活动效果',
+  subTitle: '门店活动效果',
   value: mock.value,
   chartData: mock.saleList,
   des: '周同比:',
@@ -38,7 +38,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
     cardConfig = DEFAULT_DATA,
   } = props;
 
-  const {title, subTitle, value, chartData, des, rate, chartHeight} = cardConfig;
+  const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
 
   return (
     <Card free>
@@ -67,9 +67,9 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
           padding={['auto', '0']}
         >
           <Geom type="line" position="date*value" shape="smooth" color="#2B7FFB" />
-          <Geom type="area" position="date*value" shape="smooth" color="#2B7FFB" opacity={0.1}/>
-          <Geom type="line" position="date*num" shape="smooth" color="#00D6CB" opacity={1}/>
-          <Geom type="area" position="date*num" shape="smooth" color="#00D6CB" opacity={0.1}/>
+          <Geom type="area" position="date*value" shape="smooth" color="#2B7FFB" opacity={0.1} />
+          <Geom type="line" position="date*num" shape="smooth" color="#00D6CB" opacity={1} />
+          <Geom type="area" position="date*num" shape="smooth" color="#00D6CB" opacity={0.1} />
         </Chart>
       </Card.Content>
     </Card>

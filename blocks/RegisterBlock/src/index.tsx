@@ -70,7 +70,7 @@ export default function RegisterBlock() {
         <a href="#" >
           <img
             className={styles.logo}
-            src='https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png'
+            src="https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png"
             alt="logo"
           />
         </a>

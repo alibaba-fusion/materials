@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { Select, Card } from '@alifd/next';
 import { getLocale, setLocale } from '@/utils/locale';
 
-const Option = Select.Option;
+const { Option } = Select;
 const LANG_CONFIG = {
   'zh-CN': {
     text: '简体中文',

@@ -68,19 +68,25 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   const renderTagListA = () => {
     return dataSource.tagsA.map((name: string) => (
-      <SelectableTag key={name}
+      <SelectableTag
+        key={name}
         checked={tagAValue === name}
         onChange={() => onTagAValueChange(name)}
-        {...props}>{name}</SelectableTag>
+        {...props}
+      >{name}
+      </SelectableTag>
     ));
   };
 
   const renderTagListB = () => {
     return dataSource.tagsB.map((name: string) => (
-      <SelectableTag key={name}
+      <SelectableTag
+        key={name}
         checked={tagBValue === name}
         onChange={() => onTagBValueChange(name)}
-        {...props}>{name}</SelectableTag>
+        {...props}
+      >{name}
+      </SelectableTag>
     ));
   };
 

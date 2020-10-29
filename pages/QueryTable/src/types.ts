@@ -44,8 +44,8 @@ export interface IResponse {
 }
 
 export interface IDataModel {
-  result?: Record<string, unknown>[];
-  data?: Record<string, unknown>[];
+  result?: Array<Record<string, unknown>>;
+  data?: Array<Record<string, unknown>>;
   currentPage: number;
   pageSize: number;
   totalCount: number;

@@ -63,49 +63,46 @@ const CardList = props => {
     onSearch();
   };
 
-  const renderTagListA = () =>
-    dataSource.tagsA.map(name => (
-      <SelectableTag
-        key={name}
-        checked={tagAValue === name}
-        onChange={() => onTagAValueChange(name)}
-        {...props}
-      >
-        {name}
-      </SelectableTag>
-    ));
+  const renderTagListA = () => dataSource.tagsA.map(name => (
+    <SelectableTag
+      key={name}
+      checked={tagAValue === name}
+      onChange={() => onTagAValueChange(name)}
+      {...props}
+    >
+      {name}
+    </SelectableTag>
+  ));
 
-  const renderTagListB = () =>
-    dataSource.tagsB.map(name => (
-      <SelectableTag
-        key={name}
-        checked={tagBValue === name}
-        onChange={() => onTagBValueChange(name)}
-        {...props}
-      >
-        {name}
-      </SelectableTag>
-    ));
+  const renderTagListB = () => dataSource.tagsB.map(name => (
+    <SelectableTag
+      key={name}
+      checked={tagBValue === name}
+      onChange={() => onTagBValueChange(name)}
+      {...props}
+    >
+      {name}
+    </SelectableTag>
+  ));
 
-  const renderCards = () =>
-    dataSource.cards.map((c, i) => (
-      <Cell colSpan={3} className={styles.ListItem} key={i}>
-        <div className={styles.main}>
-          <img
-            src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png"
-            alt="img"
-          />
-          <div className={styles.content}>
-            <div className={styles.title}>{c.title}</div>
-            <div className={styles.info}>{c.content}</div>
-            <div className={styles.link}>
-              <a href="#">{c.link[0]}</a>
-              <a href="#">{c.link[1]}</a>
-            </div>
+  const renderCards = () => dataSource.cards.map((c, i) => (
+    <Cell colSpan={3} className={styles.ListItem} key={i}>
+      <div className={styles.main}>
+        <img
+          src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png"
+          alt="img"
+        />
+        <div className={styles.content}>
+          <div className={styles.title}>{c.title}</div>
+          <div className={styles.info}>{c.content}</div>
+          <div className={styles.link}>
+            <a href="#">{c.link[0]}</a>
+            <a href="#">{c.link[1]}</a>
           </div>
         </div>
-      </Cell>
-    ));
+      </div>
+    </Cell>
+  ));
 
   return (
     <>

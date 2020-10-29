@@ -156,10 +156,13 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
     <Box spacing={20}>
       <Card contentHeight="auto">
         <Step shape="dot" current={1} className={styles.Step}>
-          <Step.Item title="申请" content={<div>
-            <span>{dataSource.person.surname}{dataSource.person.name}</span>
-            <span>{dataSource.person.email}</span>
-          </div>} />
+          <Step.Item
+            title="申请"
+            content={<div>
+              <span>{dataSource.person.surname}{dataSource.person.name}</span>
+              <span>{dataSource.person.email}</span>
+            </div>}
+          />
           <Step.Item title="审批" content={<a className={styles.a}>张三</a>} />
           <Step.Item title="接受" />
           <Step.Item title="合同发送" />
@@ -217,7 +220,7 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
               </Form.Item>
             </Form>
           </Box>
-          <Divider dashed/>
+          <Divider dashed />
           <Typography.Text className={styles.SubTitle}>分类标题</Typography.Text>
           <Box>
             <Form labelAlign="top" responsive>

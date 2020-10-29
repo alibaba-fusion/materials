@@ -51,7 +51,8 @@ const Tasks = () => {
               type="primary"
               onClick={handleSubmit}
               validate
-            >添加任务</Form.Submit>
+            >添加任务
+            </Form.Submit>
           </FormItem>
         </Form>
         <Divider />

@@ -57,23 +57,23 @@ const FourColumnForm: React.SFC<FourColumnFormProps> = (props): JSX.Element => {
   return (
     <Card free className={styles.FourColumnForm}>
       <Card.Content>
-        <Form 
+        <Form
           responsive
           fullWidth
-          value={postData} 
-          labelAlign="top" 
+          value={postData}
+          labelAlign="top"
           onChange={formChange}
         >
           <FormItem {...formItemLayout} label="项目名称：" required >
-            <Input placeholder="请输入项目名称" name="name"/>
+            <Input placeholder="请输入项目名称" name="name" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目所属分类：" required >
-            <Input placeholder="请输入你的分类" name="category"/>
+            <Input placeholder="请输入你的分类" name="category" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="申请人：" required >
-            <Input placeholder="申请人" name="person"/>
+            <Input placeholder="申请人" name="person" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目权限：" >
@@ -93,11 +93,11 @@ const FourColumnForm: React.SFC<FourColumnFormProps> = (props): JSX.Element => {
           </FormItem>
 
           <FormItem {...formItemLayout} label="联系人：" required >
-            <Input placeholder="请输入联系人" name="relative"/>
+            <Input placeholder="请输入联系人" name="relative" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="关联项目：" required >
-            <Input placeholder="请输入关联项目" name="relaventProject"/>
+            <Input placeholder="请输入关联项目" name="relaventProject" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="申请日期：" required >
@@ -105,44 +105,45 @@ const FourColumnForm: React.SFC<FourColumnFormProps> = (props): JSX.Element => {
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号1：" >
-            <Input placeholder="请输入" name="data1"/>
+            <Input placeholder="请输入" name="data1" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号2：" >
-            <Input placeholder="请输入" name="data2"/>
+            <Input placeholder="请输入" name="data2" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号3：" >
-            <Input placeholder="请输入" name="data3"/>
+            <Input placeholder="请输入" name="data3" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号4：" >
-            <Input placeholder="请输入" name="data4"/>
+            <Input placeholder="请输入" name="data4" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号5：" >
-            <Input placeholder="请输入" name="data5"/>
+            <Input placeholder="请输入" name="data5" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号6：" >
-            <Input placeholder="请输入" name="data6"/>
+            <Input placeholder="请输入" name="data6" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号7：" >
-            <Input placeholder="请输入" name="data7"/>
+            <Input placeholder="请输入" name="data7" />
           </FormItem>
 
           <FormItem {...formItemLayout} label="项目编号8：" >
-            <Input placeholder="请输入" name="data8"/>
+            <Input placeholder="请输入" name="data8" />
           </FormItem>
 
           <FormItem colSpan={12}>
             <Box spacing={8} direction="row">
-              <Form.Submit 
-                type="primary" 
+              <Form.Submit
+                type="primary"
                 onClick={onSubmit}
                 validate
-              >提交</Form.Submit>
+              >提交
+              </Form.Submit>
               <Button onClick={onCancel} type="secondary">取消</Button>
             </Box>
           </FormItem>

@@ -21,7 +21,7 @@ const getDialogTitle = (actionType: ActionType): string => {
 const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
   const { actionType, dataSource, onOk = () => {}, ...lastProps } = props;
   const operationRef = useRef<OperationRef>(null);
-  
+
   const handleOk = useCallback(() => {
     if (actionType === 'preview') {
       return onOk(null);
@@ -29,7 +29,7 @@ const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
     operationRef.current.getValues((values) => {
       onOk(values);
     });
-  }, [actionType, onOk])
+  }, [actionType, onOk]);
 
   return (
     <Dialog
@@ -44,6 +44,6 @@ const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
       <Operation ref={operationRef} actionType={actionType} dataSource={dataSource} />
     </Dialog>
   );
-}
+};
 
 export default DialogOperation;

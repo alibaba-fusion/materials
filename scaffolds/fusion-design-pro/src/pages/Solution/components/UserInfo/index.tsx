@@ -7,7 +7,7 @@ const UserInfo = () => {
   useEffect(() => {
     userDispatchers.fetchUserProfile();
   }, []);
-  
+
   return (
     <Card free>
       <Card.Header

@@ -11,17 +11,17 @@ const routerConfig = [
       {
         path: '/',
         exact: true,
-        component: Home
+        component: Home,
       },
       {
         path: '/dashboard',
-        component: Dashboard
+        component: Dashboard,
       },
       {
-        component: NotFound
-      }
-    ]
-  }
+        component: NotFound,
+      },
+    ],
+  },
 ];
 
 export default routerConfig;

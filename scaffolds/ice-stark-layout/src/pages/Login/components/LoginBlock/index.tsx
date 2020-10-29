@@ -70,24 +70,24 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
     appHistory.push('/');
   };
 
-  const phoneForm = <>
+  const phoneForm = (<>
     <Item format="tel" required requiredMessage="必填" asterisk={false} >
       <Input
         name="phone"
-        innerBefore={<span className={styles.innerBeforeInput}>+86<span className={styles.line}/></span>}
+        innerBefore={<span className={styles.innerBeforeInput}>+86<span className={styles.line} /></span>}
         maxLength={20}
         placeholder="手机号"
       />
     </Item>
-    <Item required requiredMessage="必填" style={{marginBottom: 0}}>
+    <Item required requiredMessage="必填" style={{ marginBottom: 0 }}>
       <Input
         name="code"
         innerAfter={<span className={styles.innerAfterInput}>
-          <span className={styles.line}/>
+          <span className={styles.line} />
           <Form.Submit
             text
             type="primary"
-            style={{width: 64}}
+            style={{ width: 64 }}
             disabled={!!isRunning}
             validate={['phone']}
             onClick={sendCode}
@@ -100,9 +100,9 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
         placeholder="验证码"
       />
     </Item>
-  </>;
+  </>);
 
-  const accountForm = <>
+  const accountForm = (<>
     <Item required requiredMessage="必填">
       <Input
         name="name"
@@ -110,14 +110,14 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
         placeholder="用户名"
       />
     </Item>
-    <Item required requiredMessage="必填" style={{marginBottom: 0}}>
+    <Item required requiredMessage="必填" style={{ marginBottom: 0 }}>
       <Input.Password
         name="password"
         htmlType="password"
         placeholder="密码"
       />
     </Item>
-  </>;
+  </>);
 
   const byAccount = () => {
     checkPhone(false);
@@ -133,14 +133,14 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
         <a href="#" >
           <img
             className={styles.logo}
-            src='https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png'
+            src="https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png"
             alt="logo"
           />
         </a>
         <div className={styles.desc}>
-          <span onClick={byAccount} className={ isPhone ? undefined : styles.active }>账户密码登录</span>
+          <span onClick={byAccount} className={isPhone ? undefined : styles.active}>账户密码登录</span>
           <Divider direction="ver" />
-          <span onClick={byForm} className={ isPhone ? styles.active : undefined }>手机号登录</span>
+          <span onClick={byForm} className={isPhone ? styles.active : undefined}>手机号登录</span>
         </div>
 
         <Form
@@ -151,7 +151,7 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
           { isPhone ? phoneForm : accountForm }
 
           <div className={styles.infoLine}>
-            <Item style={{marginBottom: 0}}>
+            <Item style={{ marginBottom: 0 }}>
               <Checkbox name="autoLogin" className={styles.infoLeft} >自动登录</Checkbox>
             </Item>
             <div>
@@ -159,7 +159,7 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
             </div>
           </div>
 
-          <Item style={{marginBottom: 10}}>
+          <Item style={{ marginBottom: 10 }}>
             <Form.Submit
               type="primary"
               onClick={handleSubmit}
@@ -177,6 +177,6 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (props: LoginProps): JSX
       </div>
     </div>
   );
-}
+};
 
 export default LoginBlock;

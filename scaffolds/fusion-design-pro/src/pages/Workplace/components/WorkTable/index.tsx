@@ -92,9 +92,9 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const changeTab = (val: string) => setTab(val);
 
   const renderLevel = (text: string, index: number) => {
-    return <span key={text + index.toString()}>
+    return (<span key={text + index.toString()}>
       <Tag size="small" color={colorMap[text]}>{text}</Tag>
-    </span>;
+    </span>);
   };
 
   return (
@@ -102,7 +102,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
       <div className={styles.workerContainor}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
-            <Avatar size={80} src={person.avatar} className={styles.avatar}/>
+            <Avatar size={80} src={person.avatar} className={styles.avatar} />
             <Box>
               <Typography.Text className={styles.TitleName}>{person.surname}{person.name}</Typography.Text>
               <Typography.Text className={styles.TitleInfo}>{person.email}</Typography.Text>
@@ -176,12 +176,12 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                 <List>
                   {
                     projectList.map(project => {
-                      return <List.Item 
-                        title={project.projectName} 
-                        media={<Avatar src={project.img}/>}
+                      return (<List.Item
+                        title={project.projectName}
+                        media={<Avatar src={project.img} />}
                       >
                         {project.projectDesc}
-                      </List.Item>;
+                      </List.Item>);
                     })
                   }
                   <List.Item>查看全部任务</List.Item>
@@ -195,13 +195,13 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  <List.Item title="Fusion Design" media={<Avatar src="https://img.alicdn.com/tfs/TB1SFZAvQL0gK0jSZFAXXcA9pXa-200-200.png"/>} />
-                  <List.Item title="Alibaba ICS" media={<Avatar src="https://img.alicdn.com/tfs/TB1QwMzvHr1gK0jSZR0XXbP8XXa-200-200.png"/>} />
+                  <List.Item title="Fusion Design" media={<Avatar src="https://img.alicdn.com/tfs/TB1SFZAvQL0gK0jSZFAXXcA9pXa-200-200.png" />} />
+                  <List.Item title="Alibaba ICS" media={<Avatar src="https://img.alicdn.com/tfs/TB1QwMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />} />
                   {/* <List.Item title="Alibaba Piecework" media={<Avatar src="https://img.alicdn.com/tfs/TB1.7cxvUz1gK0jSZLeXXb9kVXa-200-200.png"/>}></List.Item> */}
-                  <List.Item title="Retcode 前端监控" media={<Avatar src="https://img.alicdn.com/tfs/TB1qxgDvG61gK0jSZFlXXXDKFXa-200-200.png"/>} />
-                  <List.Item title="新零售事业部" media={<Avatar src="https://img.alicdn.com/tfs/TB1TfwDvQT2gK0jSZFkXXcIQFXa-200-200.png"/>} />
-                  <List.Item title="前端物料中心" media={<Avatar src="https://img.alicdn.com/tfs/TB1GgMzvHr1gK0jSZR0XXbP8XXa-200-200.png"/>} />
-                  <List.Item title="大财鲸" media={<Avatar src="https://img.alicdn.com/tfs/TB1tHozvQP2gK0jSZPxXXacQpXa-200-200.png"/>} />
+                  <List.Item title="Retcode 前端监控" media={<Avatar src="https://img.alicdn.com/tfs/TB1qxgDvG61gK0jSZFlXXXDKFXa-200-200.png" />} />
+                  <List.Item title="新零售事业部" media={<Avatar src="https://img.alicdn.com/tfs/TB1TfwDvQT2gK0jSZFkXXcIQFXa-200-200.png" />} />
+                  <List.Item title="前端物料中心" media={<Avatar src="https://img.alicdn.com/tfs/TB1GgMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />} />
+                  <List.Item title="大财鲸" media={<Avatar src="https://img.alicdn.com/tfs/TB1tHozvQP2gK0jSZPxXXacQpXa-200-200.png" />} />
                 </List>
               </Card.Content>
             </Card>
@@ -215,26 +215,26 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                   {
                     updateList.map(one => {
                       let title;
-                      switch(one.action) {
-                        case 'create': 
+                      switch (one.action) {
+                        case 'create':
                           title = <div>{one.name} 在 <a href="/">{one.project}</a> 新建项目 <a href="/">{one.projectItem}</a> </div>;
                           break;
-                        case 'release': 
+                        case 'release':
                           title = <div>{one.name} 将 <a href="/">{one.project}</a> 更新至发布状态 </div>;
                           break;
-                        case 'note': 
+                        case 'note':
                           title = <div>{one.name} 在 <a href="/">{one.project}</a> 发布了 <a href="/">{one.projectItem}</a> </div>;
                           break;
                         default:
                           break;
                       }
 
-                      return <List.Item 
-                        title={title} 
-                        media={<Avatar src={one.avatar}/>}
+                      return (<List.Item
+                        title={title}
+                        media={<Avatar src={one.avatar} />}
                       >
                         {one.time}
-                      </List.Item>;
+                      </List.Item>);
                     })
                   }
                 </List>
@@ -243,7 +243,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
           </Cell>
           <Cell colSpan={4}>
             <Card free>
-              <Card.Header title="快捷入口" extra={<Button type="primary" size="large" text component="a" href="#/">设置</Button>}/>
+              <Card.Header title="快捷入口" extra={<Button type="primary" size="large" text component="a" href="#/">设置</Button>} />
               <Card.Divider />
               <Card.Content>
                 <Box spacing={[20, 50]} direction="row" wrap>

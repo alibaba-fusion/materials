@@ -68,59 +68,56 @@ const BasicList = props => {
     setLoading(true);
   };
 
-  const renderTagListA = () =>
-    dataSource.tagsA.map(name => (
-      <SelectableTag
-        key={name}
-        checked={tagAValue === name}
-        onChange={() => onTagAValueChange(name)}
-        {...props}
-      >
-        {name}
-      </SelectableTag>
-    ));
+  const renderTagListA = () => dataSource.tagsA.map(name => (
+    <SelectableTag
+      key={name}
+      checked={tagAValue === name}
+      onChange={() => onTagAValueChange(name)}
+      {...props}
+    >
+      {name}
+    </SelectableTag>
+  ));
 
-  const renderTagListB = () =>
-    dataSource.tagsB.map(name => (
-      <SelectableTag
-        key={name}
-        checked={tagBValue === name}
-        onChange={() => onTagBValueChange(name)}
-        {...props}
-      >
-        {name}
-      </SelectableTag>
-    ));
+  const renderTagListB = () => dataSource.tagsB.map(name => (
+    <SelectableTag
+      key={name}
+      checked={tagBValue === name}
+      onChange={() => onTagBValueChange(name)}
+      {...props}
+    >
+      {name}
+    </SelectableTag>
+  ));
 
-  const renderCards = () =>
-    dataSource.cards.map((c, i) => (
-      <div className={styles.ListItem} key={i}>
-        <div className={styles.main}>
-          <div className={styles.left}>
-            <img
-              src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png"
-              alt="img"
-            />
-            <div>
-              <div className={styles.title}>{c.title}</div>
-              <div className={styles.content}>{c.content}</div>
-              <div className={styles.subContent}>{c.subContent}</div>
-            </div>
-          </div>
-          <div className={styles.right}>
-            <Button type="primary" text>
-              编辑
-            </Button>
-            <Button type="primary" text>
-              订阅
-            </Button>
-            <Button type="primary" text>
-              删除
-            </Button>
+  const renderCards = () => dataSource.cards.map((c, i) => (
+    <div className={styles.ListItem} key={i}>
+      <div className={styles.main}>
+        <div className={styles.left}>
+          <img
+            src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png"
+            alt="img"
+          />
+          <div>
+            <div className={styles.title}>{c.title}</div>
+            <div className={styles.content}>{c.content}</div>
+            <div className={styles.subContent}>{c.subContent}</div>
           </div>
         </div>
+        <div className={styles.right}>
+          <Button type="primary" text>
+            编辑
+          </Button>
+          <Button type="primary" text>
+            订阅
+          </Button>
+          <Button type="primary" text>
+            删除
+          </Button>
+        </div>
       </div>
-    ));
+    </div>
+  ));
 
   return (
     <>
