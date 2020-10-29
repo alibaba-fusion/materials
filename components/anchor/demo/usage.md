@@ -6,16 +6,16 @@ importStyle: true
 
 基础用法。
 
-````jsx
+```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Anchor, {Link} from '@alifd/biz-anchor';
+import Anchor, { Link } from '@alifd/biz-anchor';
 
 class App extends Component {
   render() {
     return (
-      <div style={{height: 120}}>
-        <Anchor offsetTop={140} style={{width: 200, float: 'right'}} >
+      <div style={{ height: 120 }}>
+        <Anchor offsetTop={140} style={{ width: 200, float: 'right' }}>
           <Link href="#components-guide" title="Guide" />
           <Link href="#components-example" title="Example" />
           <Link href="#API" title="API">
@@ -28,7 +28,5 @@ class App extends Component {
   }
 }
 
-ReactDOM.render((
-  <App />
-), mountNode);
-````
+ReactDOM.render(<App />, mountNode);
+```

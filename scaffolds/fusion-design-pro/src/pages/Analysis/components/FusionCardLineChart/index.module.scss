@@ -1,4 +1,4 @@
-@import "~@alifd/next/variables.scss";
+@import '~@alifd/next/variables.scss';
 
 .subTitle {
   color: $color-text1-2;
@@ -15,12 +15,12 @@
   letter-spacing: 0;
   & > span {
     margin-left: 2px;
-    color: #36CFC9;
+    color: #36cfc9;
     font-weight: bold;
   }
 }
 
-.value{
+.value {
   margin-top: 10px;
   color: #333;
   font-weight: $font-weight-3;

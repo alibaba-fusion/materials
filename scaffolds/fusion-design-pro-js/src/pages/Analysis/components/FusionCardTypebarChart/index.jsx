@@ -13,7 +13,7 @@ const DEFAULT_DATA = {
   chartHeight: 100,
 };
 
-const FusionCardTypebarChart = props => {
+const FusionCardTypebarChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
   return (

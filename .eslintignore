@@ -10,3 +10,5 @@ _stylelintrc.js
 .ice/
 __tests__
 tmp
+
+mock.js

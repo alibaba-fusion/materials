@@ -21,7 +21,7 @@ interface CardConfig {
 }
 
 const DEFAULT_DATA: CardConfig = {
-  subTitle:  '门店量',
+  subTitle: '门店量',
   value: mock.value,
   chartData: mock.saleList,
   des: '周同比:',
@@ -33,27 +33,28 @@ export interface FusionCardTypebarChartProps {
   cardConfig?: CardConfig;
 }
 
-const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProps> = (props: FusionCardTypebarChartProps): JSX.Element => {
-  const {
-    cardConfig = DEFAULT_DATA,
-  } = props;
+const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProps> = (
+  props: FusionCardTypebarChartProps,
+): JSX.Element => {
+  const { cardConfig = DEFAULT_DATA } = props;
 
-  const {title, subTitle, value, chartData, des, rate, chartHeight} = cardConfig;
+  const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
 
   return (
     <Card free>
-      {
-        title ? (
-          <>
-            <Card.Header title={title} />
-            <Card.Divider />
-          </>
-        ) : null
-      }
+      {title ? (
+        <>
+          <Card.Header title={title} />
+          <Card.Divider />
+        </>
+      ) : null}
       <Card.Content>
         <div className={styles.subTitle}>{subTitle}</div>
         <div className={styles.value}>{value}</div>
-        <div className={styles.des}>{des}<span>{rate}↑</span></div>
+        <div className={styles.des}>
+          {des}
+          <span>{rate}↑</span>
+        </div>
         <Chart
           width={10}
           height={chartHeight}
@@ -67,7 +68,7 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
           padding={['auto', 'auto']}
         >
           <Coord transpose />
-          <Geom type="interval" position="type*value" color={['type',['#096DD9', '#209BFA']]} />
+          <Geom type="interval" position="type*value" color={['type', ['#096DD9', '#209BFA']]} />
         </Chart>
       </Card.Content>
     </Card>

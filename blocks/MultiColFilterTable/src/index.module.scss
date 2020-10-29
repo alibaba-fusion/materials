@@ -1,5 +1,4 @@
 .container {
-
   :global {
     .table-empty-block {
       width: 100%;
@@ -9,15 +8,15 @@
       justify-content: center;
       align-items: center;
       user-select: none;
-  
+
       .result-image {
         height: 120px;
-  
+
         img {
           height: 100%;
         }
       }
-  
+
       .result-title {
         font-size: 12px;
         line-height: 1.5;

@@ -4,8 +4,8 @@ import PageNav from './components/PageNav';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
 
-(function() {
-  const throttle = function(type, name, obj = window) {
+(function () {
+  const throttle = function (type, name, obj = window) {
     let running = false;
 
     const func = () => {
@@ -29,7 +29,7 @@ import Footer from './components/Footer';
 })();
 
 export default function BasicLayout({ children }) {
-  const getDevice = width => {
+  const getDevice = (width) => {
     const isPhone =
       typeof navigator !== 'undefined' && navigator && navigator.userAgent.match(/phone/gi);
 
@@ -45,7 +45,7 @@ export default function BasicLayout({ children }) {
   const [device, setDevice] = useState(getDevice(NaN));
 
   if (typeof window !== 'undefined') {
-    window.addEventListener('optimizedResize', e => {
+    window.addEventListener('optimizedResize', (e) => {
       const deviceWidth = (e && e.target && e.target.innerWidth) || NaN;
       setDevice(getDevice(deviceWidth));
     });
@@ -70,8 +70,8 @@ export default function BasicLayout({ children }) {
           style={{
             marginRight: 10,
           }}
-        ></Shell.Navigation>
-        <Shell.Action></Shell.Action>
+        />
+        <Shell.Action />
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

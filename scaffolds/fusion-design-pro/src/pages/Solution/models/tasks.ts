@@ -8,9 +8,7 @@ interface ITask {
 type IState = ITask[];
 
 export default {
-  state: [
-    { title: '示例任务', description: '初始示例任务说明...' },
-  ],
+  state: [{ title: '示例任务', description: '初始示例任务说明...' }],
   effects: (dispatch) => ({
     async addTask(task: ITask): Promise<void> {
       // fetch API to add task

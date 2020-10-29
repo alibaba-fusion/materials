@@ -11,11 +11,7 @@ const FusionMutilcolTable = () => {
       <Cell colSpan={12}>
         <PageHeader
           title="多列过滤"
-          breadcrumbs={[
-            { name: '列表页面' },
-            { name: '表格列表' },
-            { name: '多列过滤' },
-          ]}
+          breadcrumbs={[{ name: '列表页面' }, { name: '表格列表' }, { name: '多列过滤' }]}
           description="多列过滤多列过滤多列过滤多列过滤多列过滤多列过滤多列过滤多列过滤多列过滤多列过滤"
         />
       </Cell>

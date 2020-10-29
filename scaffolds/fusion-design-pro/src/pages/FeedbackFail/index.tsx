@@ -11,11 +11,7 @@ const FeedbackFail = () => {
       <Cell colSpan={12}>
         <PageHeader
           title="失败页面"
-          breadcrumbs={[
-            { name: 'Feedback页面' },
-            { name: '结果页面' },
-            { name: '失败页面' },
-          ]}
+          breadcrumbs={[{ name: 'Feedback页面' }, { name: '结果页面' }, { name: '失败页面' }]}
           description="失败页面描述失败页面描述失败页面描述失败页面描述失败页面描述失败页面描述失败页面描述"
         />
       </Cell>

@@ -6,7 +6,6 @@ import { FunctionHandler, FaaSContext } from '@midwayjs/faas';
 @Provide()
 @Func('render.handler', { event: 'HTTP', path: '/*', middleware: ['fmw:staticFile'] })
 export class Render implements FunctionHandler {
-
   @Inject()
   ctx: FaaSContext;
 
@@ -19,7 +18,6 @@ export class Render implements FunctionHandler {
     //   pathname: this.ctx.request.path,
     //   initialData: {},
     // });
-
     // if (error) {
     //   console.log('SSR 失败，降级到 CSR', error);
     // } else {

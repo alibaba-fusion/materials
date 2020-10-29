@@ -2,36 +2,36 @@
 @import '~@alifd/next/lib/core/index.scss';
 
 .biz-anchor {
-    font-size: 12px;
-    background: #fff;
+  font-size: 12px;
+  background: #fff;
 
-    .biz-anchor-link {
-        padding: 3px 0 3px 16px;
-        line-height: 1;
-        border-left: 2px solid #e8e8e8;
-    }
-    .biz-anchor-link-level-2 {
-        padding-left: 32px;
-    }
-    .biz-anchor-link-level-3 {
-        padding-left: 48px;
-    }
+  .biz-anchor-link {
+    padding: 3px 0 3px 16px;
+    line-height: 1;
+    border-left: 2px solid #e8e8e8;
+  }
+  .biz-anchor-link-level-2 {
+    padding-left: 32px;
+  }
+  .biz-anchor-link-level-3 {
+    padding-left: 48px;
+  }
 
-    .biz-anchor-link-title {
-        position: relative;
-        display: block;
-        margin-bottom: 6px;
-        overflow: hidden;
-        color: rgba(0, 0, 0, 0.65);
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-decoration: none;
-    }
-    .biz-anchor-link-active {
-        border-left-color: $color-brand1-6;
-    }
+  .biz-anchor-link-title {
+    position: relative;
+    display: block;
+    margin-bottom: 6px;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.65);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+  }
+  .biz-anchor-link-active {
+    border-left-color: $color-brand1-6;
+  }
 
-    .biz-anchor-link-active > a {
-        color: $color-brand1-6;
-    }
+  .biz-anchor-link-active > a {
+    color: $color-brand1-6;
+  }
 }

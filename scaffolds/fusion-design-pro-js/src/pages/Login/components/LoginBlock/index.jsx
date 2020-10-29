@@ -34,7 +34,7 @@ const LoginBlock = (
     isRunning ? 1000 : null,
   );
 
-  const formChange = values => {
+  const formChange = (values) => {
     setValue(values);
   };
 

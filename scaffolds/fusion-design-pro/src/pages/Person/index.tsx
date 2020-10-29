@@ -9,10 +9,7 @@ const Person = () => {
   return (
     <ResponsiveGrid gap={20}>
       <Cell colSpan={12}>
-        <PageHeader
-          title="个人设置"
-          breadcrumbs={[{ name: '设置页面' }, { name: '个人设置' }]}
-        />
+        <PageHeader title="个人设置" breadcrumbs={[{ name: '设置页面' }, { name: '个人设置' }]} />
       </Cell>
 
       <Cell colSpan={12}>

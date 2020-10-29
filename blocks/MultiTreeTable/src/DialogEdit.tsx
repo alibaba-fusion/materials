@@ -25,14 +25,14 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       field.setValues(newValues);
     }
   }, [field, dataSource]);
-  
+
   const handleOk = useCallback(() => {
     field.validate((errors, values): void => {
       if (errors) {
         return;
       }
       onOk(values);
-    })
+    });
   }, [field, onOk]);
 
   return (
@@ -45,45 +45,17 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       {...lastProps}
       onOk={handleOk}
     >
-      <Form
-        fullWidth
-        labelAlign="top"
-        field={field}
-      >
-        <FormItem
-          label="姓名:"
-          required
-          requiredMessage="必填"
-        >
-          <Input
-            {...field.init('name')}
-          />
+      <Form fullWidth labelAlign="top" field={field}>
+        <FormItem label="姓名:" required requiredMessage="必填">
+          <Input {...field.init('name')} />
         </FormItem>
-        <FormItem
-          label="邮箱:"
-          format="email"
-          required
-          requiredMessage="必填"
-        >
-          <Input
-            name="email"
-          />
+        <FormItem label="邮箱:" format="email" required requiredMessage="必填">
+          <Input name="email" />
         </FormItem>
-        <FormItem
-          label="手机号:"
-          format="tel"
-          required
-          requiredMessage="必填"
-        >
-          <Input
-            name="phone"
-          />
+        <FormItem label="手机号:" format="tel" required requiredMessage="必填">
+          <Input name="phone" />
         </FormItem>
-        <FormItem
-          label="性别:"
-          required
-          requiredMessage="必填"
-        >
+        <FormItem label="性别:" required requiredMessage="必填">
           <Select
             name="gender"
             dataSource={[
@@ -95,6 +67,6 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       </Form>
     </Dialog>
   );
-}
+};
 
 export default DialogEdit;

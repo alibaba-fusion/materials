@@ -126,8 +126,8 @@ const getTableData = async ({ current, pageSize }, formData) => {
     .map(([key, value]) => (value ? `&${key}=${value}` : ''))
     .reduce((prev, curr) => prev + curr, `page=${current}&size=${pageSize}`);
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-    .then(res => res.json())
-    .then(res => ({
+    .then((res) => res.json())
+    .then((res) => ({
       total: 55,
       list: res.results.slice(0, 10),
     }));

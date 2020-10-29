@@ -22,11 +22,7 @@ const Guide = () => {
             使用文档
           </Button>
         </a>
-        <a
-          href="https://github.com/ice-lab/icejs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/ice-lab/icejs" target="_blank" rel="noopener noreferrer">
           <Button type="secondary" size="large">
             GitHub
           </Button>

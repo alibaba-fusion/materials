@@ -42,10 +42,10 @@ export interface FusionCardGroupBarChartProps {
   cardConfig?: CardConfig;
 }
 
-const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartProps> = (props: FusionCardGroupBarChartProps): JSX.Element => {
-  const {
-    cardConfig = DEFAULT_DATA,
-  } = props;
+const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartProps> = (
+  props: FusionCardGroupBarChartProps,
+): JSX.Element => {
+  const { cardConfig = DEFAULT_DATA } = props;
 
   const { title, chartData, chartHeight } = cardConfig;
 
@@ -54,9 +54,16 @@ const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartPr
       <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
-        <Chart renderer='canvas' forceFit width={10} height={chartHeight} data={chartData} padding={['80', 'auto']}>
-          <Axis name='category' />
-          <Axis name='value' />
+        <Chart
+          renderer="canvas"
+          forceFit
+          width={10}
+          height={chartHeight}
+          data={chartData}
+          padding={['80', 'auto']}
+        >
+          <Axis name="category" />
+          <Axis name="value" />
           <Legend
             textStyle={{
               fill: '#666',

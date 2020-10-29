@@ -7,12 +7,10 @@ const UserInfo = () => {
   useEffect(() => {
     userDispatchers.fetchUserProfile();
   }, []);
-  
+
   return (
     <Card free>
-      <Card.Header
-        title="状态管理 - 全局状态"
-      />
+      <Card.Header title="状态管理 - 全局状态" />
       <Card.Divider />
       <Card.Content>
         <Avatar size="small" src={userInfo.avatar} />

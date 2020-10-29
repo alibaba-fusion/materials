@@ -1,9 +1,9 @@
-@import "~@alifd/next/variables.scss";
+@import '~@alifd/next/variables.scss';
 .GroupForm {
   padding-bottom: 84px;
 }
 
-.Card:not(:first-child){
+.Card:not(:first-child) {
   margin-top: 20px;
   border: none;
 }
@@ -27,6 +27,6 @@
 
 .Table {
   table {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
   }
 }

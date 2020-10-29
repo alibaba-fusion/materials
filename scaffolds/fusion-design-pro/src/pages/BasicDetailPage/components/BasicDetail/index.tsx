@@ -16,12 +16,12 @@ interface DataSource {
     forensicReview?: string;
     financialReview?: string;
   };
-  targetCompanys?: {
+  targetCompanys?: Array<{
     targetCompany?: string;
     business?: string;
     address?: string;
     creator?: string;
-  }[];
+  }>;
 }
 
 interface BasicDetailProps {
@@ -37,9 +37,12 @@ const DEFAULT_DATA: DataSource = {
     aliasProject: '杭州阿里巴巴集团新零售',
   },
   projectMember: {
-    icMemeber: '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
-    forensicReview: '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
-    financialReview: '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
+    icMemeber:
+      '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
+    forensicReview:
+      '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
+    financialReview:
+      '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
   },
   targetCompanys: new Array(10).fill({
     targetCompany: '蚂蚁证券投资有限公司',
@@ -50,9 +53,7 @@ const DEFAULT_DATA: DataSource = {
 };
 
 const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props) => {
-  const {
-    dataSource = DEFAULT_DATA,
-  } = props;
+  const { dataSource = DEFAULT_DATA } = props;
 
   return (
     <div>
@@ -106,7 +107,11 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props) => {
           <Card.Divider />
           <Card.Content>
             <div className={styles.Content}>
-              <Table dataSource={dataSource.targetCompanys} hasBorder={false} className={styles.Table}>
+              <Table
+                dataSource={dataSource.targetCompanys}
+                hasBorder={false}
+                className={styles.Table}
+              >
                 <Table.Column title="目标公司" dataIndex="targetCompany" />
                 <Table.Column title="主营业务" dataIndex="business" />
                 <Table.Column title="注册地" dataIndex="address" />

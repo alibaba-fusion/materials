@@ -11,11 +11,7 @@ const FeedbackForbidden = () => {
       <Cell colSpan={12}>
         <PageHeader
           title="403页面"
-          breadcrumbs={[
-            { name: 'Feedback页面' },
-            { name: '结果页面' },
-            { name: '403页面' },
-          ]}
+          breadcrumbs={[{ name: 'Feedback页面' }, { name: '结果页面' }, { name: '403页面' }]}
           description="403页面描述403页面描述403页面描述403页面描述403页面描述403页面描述403页面描述"
         />
       </Cell>

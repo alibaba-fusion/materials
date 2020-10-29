@@ -11,12 +11,12 @@ const Tasks = () => {
   const [taskList, taskDispatchers] = pageStore.useModel('tasks');
   console.log(taskList, taskDispatchers);
 
-  const handleSubmit = values => {
+  const handleSubmit = (values) => {
     taskDispatchers.addTask(values);
     Message.success('提交成功');
   };
 
-  const handleRemoveTask = index => {
+  const handleRemoveTask = (index) => {
     taskDispatchers.removeTask(index);
   };
 

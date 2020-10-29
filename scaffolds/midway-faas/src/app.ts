@@ -2,11 +2,11 @@ import { runApp, IAppConfig } from 'ice';
 
 const appConfig: IAppConfig = {
   app: {
-    rootId: 'ice-container'
+    rootId: 'ice-container',
   },
   router: {
-    type: 'browser'
-  }
+    type: 'browser',
+  },
 };
 
 runApp(appConfig);

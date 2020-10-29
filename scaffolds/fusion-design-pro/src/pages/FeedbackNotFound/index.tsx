@@ -11,11 +11,7 @@ const FeedbackNotFound = () => {
       <Cell colSpan={12}>
         <PageHeader
           title="404页面"
-          breadcrumbs={[
-            { name: 'Feedback页面' },
-            { name: '结果页面' },
-            { name: '404页面' },
-          ]}
+          breadcrumbs={[{ name: 'Feedback页面' }, { name: '结果页面' }, { name: '404页面' }]}
           description="404页面描述404页面描述404页面描述404页面描述404页面描述404页面描述404页面描述"
         />
       </Cell>

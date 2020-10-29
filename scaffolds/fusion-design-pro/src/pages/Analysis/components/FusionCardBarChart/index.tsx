@@ -33,27 +33,28 @@ export interface FusionCardBarChartProps {
   cardConfig?: CardConfig;
 }
 
-const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (props: FusionCardBarChartProps): JSX.Element => {
-  const {
-    cardConfig = DEFAULT_DATA,
-  } = props;
+const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (
+  props: FusionCardBarChartProps,
+): JSX.Element => {
+  const { cardConfig = DEFAULT_DATA } = props;
 
-  const {title, subTitle, value, chartData, des, rate, chartHeight} = cardConfig;
+  const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
 
   return (
     <Card free>
-      {
-        title ? (
-          <>
-            <Card.Header title={title} />
-            <Card.Divider />
-          </>
-        ) : null
-      }
+      {title ? (
+        <>
+          <Card.Header title={title} />
+          <Card.Divider />
+        </>
+      ) : null}
       <Card.Content>
         <div className={styles.subTitle}>{subTitle}</div>
         <div className={styles.value}>{value}</div>
-        <div className={styles.des}>{des}<span>{rate}↑</span></div>
+        <div className={styles.des}>
+          {des}
+          <span>{rate}↑</span>
+        </div>
         <Chart
           width={10}
           height={chartHeight}
@@ -66,7 +67,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
           forceFit
           padding={['auto', '16']}
         >
-          <Geom type="interval" position="date*value" color="#29A5FF"/>
+          <Geom type="interval" position="date*value" color="#29A5FF" />
         </Chart>
       </Card.Content>
     </Card>

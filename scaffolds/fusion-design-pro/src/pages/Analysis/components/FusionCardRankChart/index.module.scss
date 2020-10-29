@@ -1,4 +1,3 @@
-
 .hisMap {
   width: 100%;
   height: 345px;
@@ -57,10 +56,10 @@
     margin-top: 50px;
     & > div {
       &:first-child {
-        color: rgba(153,153,153,1)
+        color: rgba(153, 153, 153, 1);
       }
       &:nth-child(2) {
-        color: rgba(54,207,201,1);
+        color: rgba(54, 207, 201, 1);
         font-size: 32px;
       }
     }
@@ -68,7 +67,7 @@
 
   .subBody {
     width: 100%;
-    .subName{
+    .subName {
       color: #222;
       font-weight: bold;
       font-size: 16px;
@@ -82,16 +81,16 @@
     }
   }
 
-  .subMain{
+  .subMain {
     margin-top: 50px;
 
     .subTypeName {
-      color: rgba(153,153,153,1);
+      color: rgba(153, 153, 153, 1);
       font-size: 12px;
     }
 
     .subMainDiv {
-      height: 20px
+      height: 20px;
     }
 
     .subTypeValue {

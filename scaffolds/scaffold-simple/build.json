@@ -1,5 +1,4 @@
 {
   "publicPath": "./",
-  "plugins": [
-  ]
+  "plugins": []
 }

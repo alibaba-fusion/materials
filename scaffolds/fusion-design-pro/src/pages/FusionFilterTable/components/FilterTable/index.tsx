@@ -11,19 +11,19 @@ const FormItem = Form.Item;
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
-  formData: { status: 'normal' | 'empty' | 'exception' }
+  formData: { status: 'normal' | 'empty' | 'exception' },
 ): Promise<any> => {
   console.log(current, pageSize, formData);
   if (!formData.status || formData.status === 'normal') {
     let query = `page=${current}&size=${pageSize}`;
     Object.entries(formData).forEach(([key, value]) => {
       if (value) {
-        query += `&${key}=${value}`
+        query += `&${key}=${value}`;
       }
     });
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-      .then(res => res.json())
-      .then(res => ({
+      .then((res) => res.json())
+      .then((res) => ({
         total: 55,
         list: res.results.slice(0, 10),
       }));
@@ -69,19 +69,8 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
     <div className={styles.FilterTable}>
       <Card free>
         <Card.Content>
-          <Form
-            className="filter-form"
-            responsive
-            fullWidth
-            labelAlign="top"
-            field={field}
-          >
-            <FormItem
-              colSpan={3}
-              label="数据状态"
-              required
-              requiredMessage="必填"
-            >
+          <Form className="filter-form" responsive fullWidth labelAlign="top" field={field}>
+            <FormItem colSpan={3} label="数据状态" required requiredMessage="必填">
               <Select
                 name="status"
                 dataSource={[
@@ -96,7 +85,7 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
                   {
                     label: '数据异常状态',
                     value: 'exception',
-                  }
+                  },
                 ]}
               />
             </FormItem>
@@ -108,12 +97,7 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
                 alignItems: 'center',
               }}
             >
-              <Form.Submit
-                type="primary"
-                onClick={submit}
-                validate
-                style={{ marginRight: '20px' }}
-              >
+              <Form.Submit type="primary" onClick={submit} validate style={{ marginRight: '20px' }}>
                 提交
               </Form.Submit>
               <Form.Reset onClick={reset}>重置</Form.Reset>
@@ -129,16 +113,33 @@ const FilterTable: React.FunctionComponent = (): JSX.Element => {
             emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
             primaryKey="email"
           >
-            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
+            <Table.Column
+              title="name"
+              dataIndex="name.last"
+              resizable
+              width={columnWidth['name.last']}
+            />
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
           </Table>
-          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>}  {...paginationProps} />
+          <Pagination
+            style={{ marginTop: 16, textAlign: 'right' }}
+            totalRender={(total) => (
+              <>
+                共{' '}
+                <Button text type="primary">
+                  {total}
+                </Button>{' '}
+                个记录
+              </>
+            )}
+            {...paginationProps}
+          />
         </Card.Content>
       </Card>
     </div>
   );
-}
+};
 
 export default FilterTable;

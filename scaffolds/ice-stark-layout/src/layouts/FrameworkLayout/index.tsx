@@ -23,7 +23,5 @@ export default function FrameworkLayout(props: {
     console.log('== app enter ==', appEnter);
   }, [appEnter]);
 
-  return (
-    <Layout pathname={pathname}>{children}</Layout>
-  );
+  return <Layout pathname={pathname}>{children}</Layout>;
 }

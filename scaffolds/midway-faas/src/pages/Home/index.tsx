@@ -14,7 +14,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1>Home</h1>
       <div>
-        <>请求函数结果：{ loading ? 'loading....' : data?.message }</>
+        <>请求函数结果：{loading ? 'loading....' : data?.message}</>
       </div>
     </div>
   );

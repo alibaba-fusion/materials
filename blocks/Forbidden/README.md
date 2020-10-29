@@ -2,4 +2,4 @@
 
 简介：Forbidden
 
-forbidden  exception
+forbidden exception

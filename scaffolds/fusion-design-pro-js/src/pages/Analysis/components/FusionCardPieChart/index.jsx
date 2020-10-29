@@ -37,12 +37,12 @@ const DEFAULT_DATA = {
   chartHeight: 500,
 };
 
-const FusionCardLineChart = props => {
+const FusionCardLineChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, value, chartData, chartHeight } = cardConfig;
   const [type, setType] = useState('one');
 
-  const changeType = key => setType(key);
+  const changeType = (key) => setType(key);
 
   return (
     <Card free>

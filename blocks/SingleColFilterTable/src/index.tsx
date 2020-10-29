@@ -65,7 +65,10 @@ const LOCATIONS = [
   { label: '杭州', value: 'hz' },
 ];
 
-const getTableData = async ({ current, pageSize }: { current: number; pageSize: number }, formData: Record<string, any>) => {
+const getTableData = async (
+  { current, pageSize }: { current: number; pageSize: number },
+  formData: Record<string, any>,
+) => {
   const query = Object.entries(formData)
     .map(([key, value]) => (value ? `&${key}=${value}` : ''))
     .reduce((prev, curr) => prev + curr, `page=${current}&size=${pageSize}`);
@@ -80,12 +83,9 @@ const getTableData = async ({ current, pageSize }: { current: number; pageSize: 
 
 export default function SingleColFilterTable() {
   const field = Field.useField();
-  const { paginationProps, tableProps, search, loading } = useFusionTable(
-    getTableData,
-    {
-      field,
-    }
-  );
+  const { paginationProps, tableProps, search, loading } = useFusionTable(getTableData, {
+    field,
+  });
   const { type, changeType, submit, reset } = search;
   return (
     <Card free>

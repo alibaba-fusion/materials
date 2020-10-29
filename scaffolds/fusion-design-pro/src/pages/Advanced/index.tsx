@@ -9,9 +9,7 @@ const Advanced = () => {
   return (
     <ResponsiveGrid>
       <Cell colSpan={12}>
-        <PageHeader
-          breadcrumbs={[{ name: '详情页面' }, { name: '高级详情' }]}
-        />
+        <PageHeader breadcrumbs={[{ name: '详情页面' }, { name: '高级详情' }]} />
       </Cell>
 
       <Cell colSpan={12}>

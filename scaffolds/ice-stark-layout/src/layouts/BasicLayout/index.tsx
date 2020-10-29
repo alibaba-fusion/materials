@@ -9,10 +9,7 @@ declare global {
   }
 }
 
-export default function BasicLayout(props: {
-  children: React.ReactNode;
-  pathname: string;
-}) {
+export default function BasicLayout(props: { children: React.ReactNode; pathname: string }) {
   const { children, pathname } = props;
 
   return (
@@ -22,9 +19,7 @@ export default function BasicLayout(props: {
         minHeight: '100vh',
       }}
     >
-      <Shell.Branding>
-        Framework
-      </Shell.Branding>
+      <Shell.Branding>Framework</Shell.Branding>
 
       <Shell.Navigation>
         <PageNav pathname={pathname} />

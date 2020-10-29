@@ -11,11 +11,7 @@ const FusionActionTable = () => {
       <Cell colSpan={12}>
         <PageHeader
           title="带操作列"
-          breadcrumbs={[
-            { name: '列表页面' },
-            { name: '表格列表' },
-            { name: '带操作列' },
-          ]}
+          breadcrumbs={[{ name: '列表页面' }, { name: '表格列表' }, { name: '带操作列' }]}
           description="带操作列带操作列带操作列带操作列带操作列带操作列带操作列带操作列带操作列带操作列"
         />
       </Cell>

@@ -7,11 +7,9 @@ const cwd = process.cwd();
 const blocksPath = path.join(cwd, 'blocks');
 const blocksList = fs.readdirSync(blocksPath);
 
-const updateMap = [
-
-];
+const updateMap = [];
 const arr = [];
-blocksList.forEach(block => {
+blocksList.forEach((block) => {
   const blockDirPath = path.join(cwd, 'blocks', block);
   const blockPkgjson = path.join(blockDirPath, 'package.json');
 
@@ -21,7 +19,7 @@ blocksList.forEach(block => {
   }
 
   const packageInfo = require(blockPkgjson);
-  const {version, name} = packageInfo;
+  const { version, name } = packageInfo;
 
   // 升级 updateMap 中区块的版本号
   // if (updateMap.indexOf(block) > -1) {
@@ -41,8 +39,6 @@ blocksList.forEach(block => {
 
   // fs.writeJsonSync(blockPkgjson, packageInfo, { spaces: 2 });
 
-
-
   // 批量写入 tsconfig.json
   // fs.writeJSONSync(path.join(blockDirPath, 'tsconfig.json'), {
   //   "extends": "../../tsconfig.block.json",
@@ -60,7 +56,6 @@ blocksList.forEach(block => {
   //   const classes: { [key: string]: string };
   //   export default classes;
   // }`);
-
 
   // 批量修改 package.json
   // if (!fs.existsSync(blockPkgjson)) {
@@ -96,8 +91,6 @@ blocksList.forEach(block => {
   // fs.writeJSONSync(blockPkgjson, packageInfo, {
   //   spaces: 2
   // });
-  
-
 
   // 批量发布区块
   let stdout = '';

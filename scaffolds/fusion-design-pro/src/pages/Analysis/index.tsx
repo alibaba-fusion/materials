@@ -15,10 +15,7 @@ const Analysis = () => {
   return (
     <ResponsiveGrid gap={20}>
       <Cell colSpan={12}>
-        <PageHeader
-          title="分析页面"
-          breadcrumbs={[{ name: 'Dashboard' }, { name: '分析页面' }]}
-        />
+        <PageHeader title="分析页面" breadcrumbs={[{ name: 'Dashboard' }, { name: '分析页面' }]} />
       </Cell>
 
       <Cell colSpan={3}>

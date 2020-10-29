@@ -1,9 +1,9 @@
-const { stylelint, deepmerge } = require('@ice/spec');
+const { getStylelintConfig } = require('@iceworks/spec');
 
-module.exports = deepmerge(stylelint, {
+module.exports = getStylelintConfig('react', {
   rules: {
+    "max-line-length": null,
     "block-no-empty": null,
-    "font-family-no-missing-generic-family-keyword": null,
-    "order/properties-order": null,
+    "font-family-no-missing-generic-family-keyword": null
   }
 });

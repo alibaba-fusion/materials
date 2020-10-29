@@ -13,8 +13,8 @@ const getTableData = ({ current, pageSize }, formData) => {
     }
   });
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-    .then(res => res.json())
-    .then(res => ({
+    .then((res) => res.json())
+    .then((res) => ({
       total: 55,
       list: res.results.slice(0, 10),
     }));
@@ -72,9 +72,9 @@ export default function ExpandTable() {
           tableWidth={1000}
           hasBorder={false}
           primaryKey="email"
-          expandedRowRender={record => <SubTable dataSource={[record.location]} />}
+          expandedRowRender={(record) => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
-          onRowOpen={keys => setOpenrows(keys)}
+          onRowOpen={(keys) => setOpenrows(keys)}
           expandedRowIndent={[0, 0]}
         >
           <Table.Column title="name" dataIndex="name.last" lock width={140} />

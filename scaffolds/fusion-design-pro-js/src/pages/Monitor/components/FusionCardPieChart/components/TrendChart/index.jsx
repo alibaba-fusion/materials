@@ -215,7 +215,7 @@ const DEFAULT_DATA = {
   chartHeight: 260,
 };
 
-const JSErrorChart = props => {
+const JSErrorChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   const scale = {
@@ -248,7 +248,7 @@ const JSErrorChart = props => {
           <Legend
             position="top"
             useHtml
-            itemTpl={alias => {
+            itemTpl={(alias) => {
               let name = '';
 
               switch (alias) {

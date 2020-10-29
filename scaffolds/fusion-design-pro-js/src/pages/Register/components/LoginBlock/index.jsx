@@ -27,7 +27,7 @@ export default function RegisterBlock() {
     isRunning ? 1000 : null,
   );
 
-  const formChange = value => {
+  const formChange = (value) => {
     setValue(value);
   };
 

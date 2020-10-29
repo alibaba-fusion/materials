@@ -9,7 +9,7 @@ const DEFAULT_DATA = {
   desc: '',
 };
 
-const StepForm = props => {
+const StepForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = () => {} } = props;
   const projectField = Field.useField({
     values: dataSource,

@@ -35,7 +35,7 @@ export default function SelectLang() {
               alignItems: 'center',
             }}
           >
-            {Object.keys(LANG_CONFIG).map(lang => (
+            {Object.keys(LANG_CONFIG).map((lang) => (
               <Option value={lang} key={lang}>
                 {LANG_CONFIG[lang].text}
               </Option>

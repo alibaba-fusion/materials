@@ -14,16 +14,12 @@ const Guide = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            marginRight: 20
+            marginRight: 20,
           }}
         >
           使用文档
         </a>
-        <a
-          href="https://github.com/ice-lab/icejs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/ice-lab/icejs" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
       </div>

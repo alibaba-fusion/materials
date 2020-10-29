@@ -8,35 +8,36 @@
 
 ```javascript
 const dataSource = [
-  { id: "1", name: "xx", group: "a" },
-  { id: "2", name: "xx", group: "a" },
-  { id: "3", name: "xx", group: "a" },
-  { id: "4", name: "xx", group: "b" },
-  { id: "5", name: "xx", group: "b" },
+  { id: '1', name: 'xx', group: 'a' },
+  { id: '2', name: 'xx', group: 'a' },
+  { id: '3', name: 'xx', group: 'a' },
+  { id: '4', name: 'xx', group: 'b' },
+  { id: '5', name: 'xx', group: 'b' },
 ];
 ```
 
 ```javascript
 const dataSource = [
   {
-    group: "a",
+    group: 'a',
     children: [
-      { id: "1", name: "xx" },
-      { id: "2", name: "xx" },
-      { id: "3", name: "xx" },
+      { id: '1', name: 'xx' },
+      { id: '2', name: 'xx' },
+      { id: '3', name: 'xx' },
     ],
   },
   {
-    group: "b",
+    group: 'b',
     children: [
-      { id: "4", name: "xx" },
-      { id: "5", name: "xx" },
+      { id: '4', name: 'xx' },
+      { id: '5', name: 'xx' },
     ],
   },
 ];
 ```
 
 为了实现合并单元格, 需要对上述数据源做转换, 拉平数据并添加`groupCount` `groupIndex`，并且保证同一分组排在相邻的位置上。
+
 - `groupCount`为当数据所在分组的数据总数
 - `groupIndex`为当前数据在分组内的排序
 
@@ -48,6 +49,6 @@ const dataSource = [
   { "id": "2", "name": "xx", "group": "a", "groupCount": 3, "groupIndex": 1 },
   { "id": "3", "name": "xx", "group": "a", "groupCount": 3, "groupIndex": 2 },
   { "id": "4", "name": "xx", "group": "b", "groupCount": 2, "groupIndex": 0 },
-  { "id": "5", "name": "xx", "group": "b", "groupCount": 2, "groupIndex": 1 },
+  { "id": "5", "name": "xx", "group": "b", "groupCount": 2, "groupIndex": 1 }
 ]
 ```

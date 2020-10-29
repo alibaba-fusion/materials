@@ -4,7 +4,7 @@ import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
-const SubNav = Nav.SubNav;
+const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
 export interface IMenuItem {
@@ -31,7 +31,12 @@ function getSubMenuOrItem(item: IMenuItem, index: number, isCollapse: boolean) {
     const childrenItems = getNavMenuItems(item.children);
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
-        <SubNav key={index} icon={item.icon} label={item.name} mode={isCollapse ? 'popup' : 'inline'}>
+        <SubNav
+          key={index}
+          icon={item.icon}
+          label={item.name}
+          mode={isCollapse ? 'popup' : 'inline'}
+        >
           {childrenItems}
         </SubNav>
       );
@@ -71,7 +76,7 @@ const Navigation = (props, context) => {
 };
 
 Navigation.contextTypes = {
-  isCollapse: PropTypes.bool
+  isCollapse: PropTypes.bool,
 };
 
 const PageNav = withRouter(Navigation);

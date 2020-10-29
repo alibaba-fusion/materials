@@ -65,11 +65,10 @@ const MockData = [
   },
 ];
 
-const getTableData = () =>
-  Promise.resolve({
-    total: MockData.length,
-    list: MockData,
-  });
+const getTableData = () => Promise.resolve({
+  total: MockData.length,
+  list: MockData,
+});
 
 const cellProps = (rowIndex, colIndex, dataIndex, record) => {
   const { groupCount, groupIndex, group2Merged } = record;
@@ -82,10 +81,7 @@ const cellProps = (rowIndex, colIndex, dataIndex, record) => {
 };
 
 export default function MergeCellTable() {
-  const { paginationProps, tableProps } = useFusionTable(
-    getTableData,
-    {}
-  );
+  const { paginationProps, tableProps } = useFusionTable(getTableData, {});
   return (
     <Card free>
       <Card.Content>
@@ -95,10 +91,7 @@ export default function MergeCellTable() {
           <Table.Column title="email" dataIndex="email" width={500} />
           <Table.Column title="phone" dataIndex="phone" width={500} />
         </Table>
-        <Pagination
-          style={{ marginTop: 16, textAlign: 'right' }}
-          {...paginationProps}
-        />
+        <Pagination style={{ marginTop: 16, textAlign: 'right' }} {...paginationProps} />
       </Card.Content>
     </Card>
   );

@@ -3,9 +3,7 @@
     "title": "用户登录",
     "description": "定制生成用户登录页",
     "type": "object",
-    "required": [
-      "loginBtnStr"
-    ],
+    "required": ["loginBtnStr"],
     "properties": {
       "isShowOther": {
         "type": "boolean",
@@ -19,9 +17,9 @@
         "type": "boolean",
         "title": "显示自动登录选项"
       },
-      "loginBtnStr":{
-        "type":"string",
-        "title":"表单提交按钮的文案",
+      "loginBtnStr": {
+        "type": "string",
+        "title": "表单提交按钮的文案",
         "default": "登录"
       }
     }

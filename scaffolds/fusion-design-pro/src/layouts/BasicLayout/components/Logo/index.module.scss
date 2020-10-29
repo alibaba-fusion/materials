@@ -1,4 +1,4 @@
-.logo{
+.logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,8 @@
   font-size: 14px;
   line-height: 22px;
 
-  &:visited, &:link {
+  &:visited,
+  &:link {
     color: $color-text1-1;
   }
 

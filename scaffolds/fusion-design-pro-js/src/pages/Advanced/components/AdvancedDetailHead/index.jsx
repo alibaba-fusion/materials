@@ -21,7 +21,7 @@ const DEFAULT_DATA = {
     ['C&B审核人', '吴永辉'],
     ['业务线审批', '倩倩'],
     ['HR线审批', '叶俊'],
-  ].map(item => ({
+  ].map((item) => ({
     opStatus: item[0],
     operator: item[1],
     opResult: '同意',
@@ -57,7 +57,7 @@ const DEFAULT_DATA = {
   },
 };
 
-const AdvancedDetail = props => {
+const AdvancedDetail = (props) => {
   const { dataSource = DEFAULT_DATA, onTabChange = () => {}, onTableTabChange = () => {} } = props;
 
   const renderTab = () => (

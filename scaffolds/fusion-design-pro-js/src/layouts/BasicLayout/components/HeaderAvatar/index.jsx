@@ -17,7 +17,7 @@ const UserProfile = ({ name, avatar, mail }) => (
   </div>
 );
 
-const HeaderAvatar = props => {
+const HeaderAvatar = (props) => {
   const { name, avatar } = props;
   return (
     <Popup

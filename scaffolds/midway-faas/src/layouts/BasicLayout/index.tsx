@@ -10,18 +10,21 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
       <Shell
         type="brand"
         style={{
-          minHeight: '100vh'
+          minHeight: '100vh',
         }}
       >
         <Shell.Branding>
-          <Logo image="https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png" text="Logo" />
+          <Logo
+            image="https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png"
+            text="Logo"
+          />
         </Shell.Branding>
         <Shell.Navigation
           direction="hoz"
           style={{
-            marginRight: 10
+            marginRight: 10,
           }}
-        ></Shell.Navigation>
+        />
 
         <Shell.Navigation>
           <PageNav />

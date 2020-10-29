@@ -1,4 +1,4 @@
-@import "~@alifd/next/variables.scss";
+@import '~@alifd/next/variables.scss';
 
 .CardList {
   margin-top: -$shell-dark-content-paddingTop;
@@ -37,11 +37,11 @@
   .content {
     padding: 14px;
   }
-  .title{
+  .title {
     color: #333;
     font-size: 14px;
   }
-  .info{
+  .info {
     margin-top: 13px;
     color: #999;
     font-size: 12px;

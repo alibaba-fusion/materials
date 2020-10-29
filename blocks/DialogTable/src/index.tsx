@@ -11,18 +11,18 @@ import styles from './index.module.scss';
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
-  formData: { status: 'normal' | 'empty' | 'exception' }
+  formData: { status: 'normal' | 'empty' | 'exception' },
 ): Promise<any> => {
   if (!formData.status || formData.status === 'normal') {
     let query = `page=${current}&size=${pageSize}`;
     Object.entries(formData).forEach(([key, value]) => {
       if (value) {
-        query += `&${key}=${value}`
+        query += `&${key}=${value}`;
       }
     });
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-      .then(res => res.json())
-      .then(res => ({
+      .then((res) => res.json())
+      .then((res) => ({
         total: 55,
         list: res.results.slice(0, 10),
       }));
@@ -86,13 +86,16 @@ const DialogTable: React.FC = () => {
     setState({ columnWidth: newWidth });
   };
 
-  const operationCallback = useCallback(({ actionType, dataSource }: OperaitionProps): void => {
-    setState({
-      actionType,
-      optCol: dataSource,
-      actionVisible: true,
-    });
-  }, [setState]);
+  const operationCallback = useCallback(
+    ({ actionType, dataSource }: OperaitionProps): void => {
+      setState({
+        actionType,
+        optCol: dataSource,
+        actionVisible: true,
+      });
+    },
+    [setState],
+  );
 
   const handleCancel = useCallback((): void => {
     setState({ actionVisible: false });
@@ -109,19 +112,22 @@ const DialogTable: React.FC = () => {
     handleCancel();
   }, [handleCancel, reset, state]);
 
-  const handleDelete = useCallback((data: any) => {
-    if (!data) {
-      return;
-    }
-    Dialog.confirm({
-      title: '删除提醒',
-      content: `确定删除 ${data.name.last} 吗`,
-      onOk() {
-        Message.success(`${data.name.last} 删除成功!`);
-        reset();
+  const handleDelete = useCallback(
+    (data: any) => {
+      if (!data) {
+        return;
       }
-    });
-  }, [reset]);
+      Dialog.confirm({
+        title: '删除提醒',
+        content: `确定删除 ${data.name.last} 吗`,
+        onOk() {
+          Message.success(`${data.name.last} 删除成功!`);
+          reset();
+        },
+      });
+    },
+    [reset],
+  );
 
   const cellOperation = (...args: any[]): React.ReactNode => {
     const record = args[2];
@@ -135,11 +141,7 @@ const DialogTable: React.FC = () => {
           编辑
         </Button>
         &nbsp;&nbsp;
-        <Button
-          text
-          type="primary"
-          onClick={() => handleDelete(record)}
-        >
+        <Button text type="primary" onClick={() => handleDelete(record)}>
           删除
         </Button>
         &nbsp;&nbsp;
@@ -168,9 +170,26 @@ const DialogTable: React.FC = () => {
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
-            <Table.Column title="操作" resizable width={columnWidth.operation} cell={cellOperation} />
+            <Table.Column
+              title="操作"
+              resizable
+              width={columnWidth.operation}
+              cell={cellOperation}
+            />
           </Table>
-          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>}  {...paginationProps} />
+          <Pagination
+            style={{ marginTop: 16, textAlign: 'right' }}
+            totalRender={(total) => (
+              <>
+                共{' '}
+                <Button text type="primary">
+                  {total}
+                </Button>{' '}
+                个记录
+              </>
+            )}
+            {...paginationProps}
+          />
         </Card.Content>
       </Card>
       <DialogOperation
@@ -183,6 +202,6 @@ const DialogTable: React.FC = () => {
       />
     </div>
   );
-}
+};
 
 export default DialogTable;

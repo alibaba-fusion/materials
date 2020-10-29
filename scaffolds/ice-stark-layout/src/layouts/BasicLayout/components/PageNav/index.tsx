@@ -4,7 +4,7 @@ import { AppLink } from '@ice/stark';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
-const SubNav = Nav.SubNav;
+const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
 export interface IMenuItem {
@@ -20,14 +20,14 @@ function getNavMenuItems(menusData: any[], isCollapse: boolean) {
   }
 
   return menusData
-    .filter(item => item.name && !item.hideInMenu)
+    .filter((item) => item.name && !item.hideInMenu)
     .map((item, index) => {
       return getSubMenuOrItem(item, index, isCollapse);
     });
 }
 
 function getSubMenuOrItem(item: IMenuItem, index: number, isCollapse: boolean) {
-  if (item.children && item.children.some(child => child.name)) {
+  if (item.children && item.children.some((child) => child.name)) {
     const childrenItems = getNavMenuItems(item.children, false);
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
@@ -47,9 +47,7 @@ function getSubMenuOrItem(item: IMenuItem, index: number, isCollapse: boolean) {
   }
   const navItem = (
     <NavItem key={item.path} icon={item.icon}>
-      <AppLink to={item.path}>
-        {item.name}
-      </AppLink>
+      <AppLink to={item.path}>{item.name}</AppLink>
     </NavItem>
   );
 

@@ -28,20 +28,19 @@ const DEFAULT_DATA: FusionCardAreaChartProps = {
   chartHeight: 300,
 };
 
-const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (props = DEFAULT_DATA): JSX.Element => {
-
+const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
+  props = DEFAULT_DATA,
+): JSX.Element => {
   const { title, subTitle, value, chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
 
   return (
     <Card free className={styles.areaChart}>
-      {
-        title ? (
-          <React.Fragment>
-            <Card.Header title={<span className={styles.title}>{title}</span>} />
-            <Card.Divider />
-          </React.Fragment>
-        ) : null
-      }
+      {title ? (
+        <React.Fragment>
+          <Card.Header title={<span className={styles.title}>{title}</span>} />
+          <Card.Divider />
+        </React.Fragment>
+      ) : null}
       <Card.Content>
         <div className={styles.subTitle}>{subTitle}</div>
         <div className={styles.value}>{value}</div>
@@ -58,10 +57,9 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
           forceFit
           padding={['auto', '0']}
         >
-          <Geom type="area" position="date*value" color="#2B7FFB" shape="smooth" opacity={1}/>
+          <Geom type="area" position="date*value" color="#2B7FFB" shape="smooth" opacity={1} />
         </Chart>
       </Card.Content>
-    
     </Card>
   );
 };

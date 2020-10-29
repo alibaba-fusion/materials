@@ -37,12 +37,12 @@ const colorMap = {
   low: 'green',
 };
 
-const WorkTable = props => {
+const WorkTable = (props) => {
   const { dataSource = DEFAULT_DATA } = props;
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
   const [tab, setTab] = useState('1');
 
-  const changeTab = val => setTab(val);
+  const changeTab = (val) => setTab(val);
 
   const renderLevel = (text, index) => (
     <span key={text + index.toString()}>
@@ -119,7 +119,7 @@ const WorkTable = props => {
                     共 <span className={styles.strong}>{timeLineList.length}</span>个日程
                   </Typography.Text>
                   <Timeline>
-                    {timeLineList.map(item => (
+                    {timeLineList.map((item) => (
                       <TimelineItem
                         key={item.planTime}
                         title={item.planName}
@@ -143,7 +143,7 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {projectList.map(project => (
+                  {projectList.map((project) => (
                     <List.Item title={project.projectName} media={<Avatar src={project.img} />}>
                       {project.projectDesc}
                     </List.Item>
@@ -211,7 +211,7 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {updateList.map(one => {
+                  {updateList.map((one) => {
                     let title;
 
                     switch (one.action) {
@@ -268,7 +268,7 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <Box spacing={[20, 50]} direction="row" wrap>
-                  {entranceList.map(item => (
+                  {entranceList.map((item) => (
                     <Button size="large" text component="a" href={item.link}>
                       {item.name}
                     </Button>

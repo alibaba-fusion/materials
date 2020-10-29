@@ -85,7 +85,7 @@ export default function Detail() {
   }, []);
 
   function mockApi() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(mockData());
       }, 600);
@@ -101,7 +101,7 @@ export default function Detail() {
         <div className={styles.infoColumn}>
           <h5 className={styles.infoColumnTitle}>基本信息</h5>
           <Row wrap className={styles.infoItems}>
-            {basic.map(item => {
+            {basic.map((item) => {
               const { key, label, value } = item;
               return (
                 <Col xxs="24" l="12" className={styles.infoItem} key={key}>
@@ -115,7 +115,7 @@ export default function Detail() {
         <div className={styles.infoColumn}>
           <h5 className={styles.infoColumnTitle}>更多信息</h5>
           <Row wrap className={styles.infoItems}>
-            {more.map(item => {
+            {more.map((item) => {
               const { key, label, value } = item;
               return (
                 <Col xxs="24" l="12" className={styles.infoItem} key={key}>

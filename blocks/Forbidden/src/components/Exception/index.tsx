@@ -2,7 +2,6 @@ import React, { SFC } from 'react';
 import { Card } from '@alifd/next';
 import styles from './index.module.scss';
 
-
 export interface ExceptionProps {
   statusCode: string;
   description: string;

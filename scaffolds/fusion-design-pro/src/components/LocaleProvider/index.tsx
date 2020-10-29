@@ -38,15 +38,11 @@ interface Props {
 function LocaleProvider(props: Props) {
   const { locale, children } = props;
 
-  const myLocale = localeInfo[locale]
-    ? localeInfo[locale]
-    : localeInfo['en-US'];
+  const myLocale = localeInfo[locale] ? localeInfo[locale] : localeInfo['en-US'];
 
   return (
     <IntlProvider locale={myLocale.appLocale} messages={myLocale.appMessages}>
-      <ConfigProvider locale={myLocale.nextLocale}>
-        {React.Children.only(children)}
-      </ConfigProvider>
+      <ConfigProvider locale={myLocale.nextLocale}>{React.Children.only(children)}</ConfigProvider>
     </IntlProvider>
   );
 }

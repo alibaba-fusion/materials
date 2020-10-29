@@ -43,7 +43,7 @@ export default function List() {
   }, [current]);
 
   function mockApi() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(mockData());
       }, 600);
@@ -53,12 +53,7 @@ export default function List() {
   return (
     <IceContainer>
       <PageTitle title="商家列表" />
-      <Table
-        loading={isLoading}
-        dataSource={data}
-        hasBorder={false}
-        className={styles.customTable}
-      >
+      <Table loading={isLoading} dataSource={data} hasBorder={false} className={styles.customTable}>
         <Table.Column title="合同编号" dataIndex="id" key="id" width={100} />
         <Table.Column title="合同名称" dataIndex="name" key="name" width={100} />
         <Table.Column title="商家名称" dataIndex="ourCompany" key="ourCompany" width={160} />
@@ -69,7 +64,7 @@ export default function List() {
           dataIndex="state"
           key="state"
           width={100}
-          cell={value => (
+          cell={(value) => (
             <div className={styles.state}>
               <span className={styles.stateText}>{value}</span>
             </div>
