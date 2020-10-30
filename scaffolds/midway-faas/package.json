@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/scaffold-midway-faas",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "icejs & midway faas",
   "files": [
     ".vscode/",
@@ -34,16 +34,16 @@
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
-    "@ice/spec": "^1.0.1",
+    "@iceworks/spec": "^1.0.0",
     "@midwayjs/build-plugin-hooks": "0.x",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "build-plugin-fusion": "^0.1.0",
     "build-plugin-ice-faas": "^0.1.0",
     "build-plugin-moment-locales": "^0.1.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.8.0",
     "ice.js": "^1.0.0",
-    "stylelint": "^13.1.0"
+    "stylelint": "^13.7.2"
   },
   "midway-integration": {
     "tsCodeRoot": "src/apis",
@@ -57,7 +57,7 @@
     "screenshot": "../../node_modules/.bin/screenshot -l",
     "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "stylelint": "stylelint ./**/*.scss"
   },
   "publishConfig": {
