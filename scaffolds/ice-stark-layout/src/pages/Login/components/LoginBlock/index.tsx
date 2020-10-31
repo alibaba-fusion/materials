@@ -1,4 +1,3 @@
-/* eslint-disable @iceworks/best-practices/no-secret-info */
 import React, { useState } from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { appHistory } from '@ice/stark';
@@ -18,6 +17,7 @@ export interface IDataSource {
 
 const DEFAULT_DATA: IDataSource = {
   name: '',
+  // eslint-disable-next-line
   password: '',
   autoLogin: true,
   phone: '',
