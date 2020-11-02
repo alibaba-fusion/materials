@@ -1,14 +1,38 @@
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
+const { spawnSync } = require('child_process');
 // const request = require('request');
 const scaffolds = require('./scaffolds');
 
 const bucket = 'iceworks';
 const accessKeyId = process.env.ACCESS_KEY_ID;
 const accessKeySecret = process.env.ACCESS_KEY_SECRET;
-const dirPath = 'materials/';   // / 对应 iceworks 2.x
+const dirPath = 'materials/';  
 const assetsPath = process.env.BRANCH_NAME === 'master' ? 'assets' : 'pre-assets'; // assets 正式
+const rootDir = path.resolve(__dirname, '../../');
+
+console.log('generate and upload, current branch', process.env.BRANCH_NAME);
+
+// 1. iceworks generate
+spawnSync('iceworks -V', {
+  stdio: 'inherit',
+  cwd: rootDir,
+});
+try {
+  spawnSync('CONCURRENCY=5 LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate', {
+    stdio: 'inherit',
+    cwd: rootDir,
+  });
+} catch(err) {
+  console.error('iceworks generate error', err);
+  // 预发环境 generate 失败不影响 CI 状态
+  process.exit(process.env.BRANCH_NAME === 'master' ? 1 : 0);
+}
+
+// 2. upload build/materials.json to oss
+const materialPath = path.resolve(__dirname, '../../build/materials.json');
+const toPath = path.join(assetsPath, dirPath, 'react-materials.json');
 
 const ossClient = oss({
   bucket,
@@ -17,9 +41,6 @@ const ossClient = oss({
   accessKeySecret,
   timeout: '120s',
 });
-
-const materialPath = path.resolve(__dirname, '../../build/materials.json');
-const toPath = path.join(assetsPath, dirPath, 'react-materials.json');
 
 console.log('start upload oss', materialPath, toPath);
 
