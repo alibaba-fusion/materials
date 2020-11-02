@@ -8,7 +8,7 @@ const bucket = 'iceworks';
 const accessKeyId = process.env.ACCESS_KEY_ID;
 const accessKeySecret = process.env.ACCESS_KEY_SECRET;
 const dirPath = 'materials/';   // / 对应 iceworks 2.x
-const assetsPath = process.env.ENV === 'prod' ? 'assets' : 'pre-assets'; // assets 正式
+const assetsPath = process.env.BRANCH_NAME === 'master' ? 'assets' : 'pre-assets'; // assets 正式
 
 const ossClient = oss({
   bucket,
