@@ -2,3 +2,14 @@ node_modules/
 coverage/
 
 build/
+
+scripts/
+pages/
+blocks/
+# 一级 components
+/components/ 
+
+scaffolds/fusion-design-pro
+scaffolds/fusion-design-pro-js
+scaffolds/scaffold-lite-js
+scaffolds/scaffold-lite

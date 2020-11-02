@@ -15,12 +15,11 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "stylelint": "stylelint **/*.{css,scss,less}"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run eslint-blocks",
       "pre-push": "npm run lint"
     }
   },
@@ -38,6 +37,7 @@
     "@commitlint/cli": "^8.2.0",
     "@ice/screenshot": "^0.1.5",
     "@ice/spec": "^1.0.1",
+    "@iceworks/spec": "^1.0.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.12.17",
     "ali-oss": "^6.5.1",

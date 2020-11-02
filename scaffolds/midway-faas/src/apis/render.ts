@@ -6,7 +6,6 @@ import { FunctionHandler, FaaSContext } from '@midwayjs/faas';
 @Provide()
 @Func('render.handler', { event: 'HTTP', path: '/*', middleware: ['fmw:staticFile'] })
 export class Render implements FunctionHandler {
-
   @Inject()
   ctx: FaaSContext;
 
