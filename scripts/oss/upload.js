@@ -1,7 +1,7 @@
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
-const { spawnSync } = require('child_process');
+const { execSync } = require('child_process');
 // const request = require('request');
 const scaffolds = require('./scaffolds');
 
@@ -15,15 +15,13 @@ const rootDir = path.resolve(__dirname, '../../');
 console.log('generate and upload, current branch', process.env.BRANCH_NAME);
 
 // 1. iceworks generate
-console.log('iceworks -v start');
-spawnSync('iceworks -V', {
+execSync('iceworks -V', {
   stdio: 'inherit',
   cwd: rootDir,
 });
-console.log('iceworks -v end');
 
 try {
-  spawnSync('CONCURRENCY=5 LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate', {
+  execSync('CONCURRENCY=5 LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate', {
     stdio: 'inherit',
     cwd: rootDir,
   });
