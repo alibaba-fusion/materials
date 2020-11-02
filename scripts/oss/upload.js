@@ -15,10 +15,13 @@ const rootDir = path.resolve(__dirname, '../../');
 console.log('generate and upload, current branch', process.env.BRANCH_NAME);
 
 // 1. iceworks generate
+console.log('iceworks -v start');
 spawnSync('iceworks -V', {
   stdio: 'inherit',
   cwd: rootDir,
 });
+console.log('iceworks -v end');
+
 try {
   spawnSync('CONCURRENCY=5 LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate', {
     stdio: 'inherit',
