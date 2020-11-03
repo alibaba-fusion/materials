@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRequest } from 'ice';
-import { hello, sendMessage } from '@/apis/lambda';
+import { hello } from '@/apis/lambda';
 import styles from './index.module.scss';
 
 export default function Home() {

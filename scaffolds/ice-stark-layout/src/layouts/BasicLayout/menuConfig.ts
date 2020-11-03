@@ -28,7 +28,7 @@ const asideMenuConfig = [
         path: '/angular/detail',
         name: 'router detail',
       },
-    ]
+    ],
   },
   {
     name: '商家平台',
