@@ -69,6 +69,8 @@ Install [Iceworks for VS Code](https://marketplace.visualstudio.com/items?itemNa
 
 Add the materials data URL to Iceworks:
 
+> https://ice.alicdn.com/assets/materials/react-materials.json
+
 ![add custom material](https://img.alicdn.com/tfs/TB1g9iMjTM11u4jSZPxXXahcXXa-1446-906.gif)
 
 See [Custom Material](https://ice.work/docs/iceworks/guide/material) to learn more about how to use materials in Iceworks.
