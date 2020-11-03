@@ -88,7 +88,6 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             type="intervalStack"
             position="value"
             color="title"
-
             style={{
               lineWidth: 1,
               stroke: '#fff',

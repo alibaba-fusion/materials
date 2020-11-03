@@ -86,12 +86,22 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
       <Card.Divider />
       <Card.Content>
         <div className={styles.dataRow}>
-          <span className={styles.total}>今日PV：<span className={styles.num}>490,760,415</span></span>
-          <span className={styles.total}>今日PV：<span className={styles.num}>490,760,415</span></span>
+          <span className={styles.total}>
+            今日PV：<span className={styles.num}>490,760,415</span>
+          </span>
+          <span className={styles.total}>
+            今日PV：<span className={styles.num}>490,760,415</span>
+          </span>
         </div>
-        <Chart height={chartHeight} width={chartWidth} className={styles.map} padding={[0, 20, 40, 20]} scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}>
+        <Chart
+          height={chartHeight}
+          width={chartWidth}
+          className={styles.map}
+          padding={[0, 20, 40, 20]}
+          scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}
+        >
           <Coord reflect />
-          <View data={mapDataFormat} >
+          <View data={mapDataFormat}>
             <Geom
               type="polygon"
               position="x*y"
@@ -104,7 +114,14 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
             />
           </View>
           <View data={chartDataFormat}>
-            <Geom type="point" position="x*y" size={['value', [2, 30]]} shape="circle" opacity={0.45} color="#ff2f29" />
+            <Geom
+              type="point"
+              position="x*y"
+              size={['value', [2, 30]]}
+              shape="circle"
+              opacity={0.45}
+              color="#ff2f29"
+            />
           </View>
         </Chart>
         <Table dataSource={tableData}>

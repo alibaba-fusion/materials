@@ -168,9 +168,26 @@ const DialogTable: React.FC = () => {
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
-            <Table.Column title="操作" resizable width={columnWidth.operation} cell={cellOperation} />
+            <Table.Column
+              title="操作"
+              resizable
+              width={columnWidth.operation}
+              cell={cellOperation}
+            />
           </Table>
-          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
+          <Pagination
+            style={{ marginTop: 16, textAlign: 'right' }}
+            totalRender={(total) => (
+              <>
+                共{' '}
+                <Button text type="primary">
+                  {total}
+                </Button>{' '}
+                个记录
+              </>
+            )}
+            {...paginationProps}
+          />
         </Card.Content>
       </Card>
       <DialogOperation

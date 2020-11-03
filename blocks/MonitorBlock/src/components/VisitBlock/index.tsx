@@ -92,33 +92,25 @@ const RenderPvChart: React.FunctionComponent<CardConfig> = (props = DEFAULT_DATA
   const areaColors = ['l(100) 0:rgba(253,250,242) 1:rgba(255,245,205)', 'l(100) 0:rgba(221,246,250) 1:rgba(244,252,253)'];
   const lineColors = ['#FFCE03', '#00C1DE'];
   // 传入的height - 底部padding
-  return (<Chart
-    data={chartData}
-    height={chartHeight - 30 || 230}
-    width={10}
-    forceFit
-    scale={cols}
-    padding={[20, 55, 30, 30]}
-  >
-    <Axis title={null} name="date" />
-    <Axis title={null} name="value" />
-    <Tooltip />
-    <Geom
-      type="area"
-      position="date*value"
-      color={['type', areaColors]}
-      shape="smooth"
-    />
-    <Geom
-      type="line"
-      position="date*value"
-      color={['type', lineColors]}
-      shape="smooth"
-    />
-          </Chart>);
+  return (
+    <Chart
+      data={chartData}
+      height={chartHeight - 30 || 230}
+      width={10}
+      forceFit
+      scale={cols}
+      padding={[20, 55, 30, 30]}
+    >
+      <Axis title={null} name="date" />
+      <Axis title={null} name="value" />
+      <Tooltip />
+      <Geom type="area" position="date*value" color={['type', areaColors]} shape="smooth" />
+      <Geom type="line" position="date*value" color={['type', lineColors]} shape="smooth" />
+    </Chart>
+  );
 };
 
-const VisitBlock: React.FunctionComponent<CardConfigProps> = ({ cardConfig = DEFAULT_DATA, ...props }): JSX.Element => {
+const VisitBlock: React.FunctionComponent<CardConfigProps> = ({ cardConfig = DEFAULT_DATA }): JSX.Element => {
   const { titleItem, chartData, chartHeight } = cardConfig;
 
   return (

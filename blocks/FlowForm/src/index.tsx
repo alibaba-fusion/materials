@@ -105,7 +105,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = dom && dom.getBoundingClientRect() || {};
+    const rect = (dom && dom.getBoundingClientRect()) || {};
     setLeft(rect.left);
     setRight(document.documentElement.offsetWidth - rect.left - rect.width);
   }, []);

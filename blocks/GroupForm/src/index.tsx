@@ -51,59 +51,66 @@ export interface GroupFormProps {
 }
 
 const DEFAULT_DATA: DataSource = {
-  basic: {
-  },
-  member: {
-  },
-  company: [{
-    id: '1',
-    name: '蚂蚁证券投资有限公司 A',
-    business: '金融证券代理',
-    address: '1569 Cronin Ways Apt. 082',
-    creatorName: '欧鹏',
-  }, {
-    id: '2',
-    name: '蚂蚁证券投资有限公司 B',
-    business: '金融证券代理',
-    address: '4016 Kautzer Route Suite 366',
-    creatorName: '阮小五',
-  }, {
-    id: '3',
-    name: '蚂蚁证券投资有限公司 C',
-    business: '金融证券代理',
-    address: '22 Haag Manor',
-    creatorName: '阮小二',
-  }, {
-    id: '4',
-    name: '蚂蚁证券投资有限公司 D',
-    business: '金融证券代理',
-    address: '1014 McLaughlin Unions',
-    creatorName: '阮小七',
-  }, {
-    id: '5',
-    name: '蚂蚁证券投资有限公司 E',
-    business: '金融证券代理',
-    address: '8748 Devante Center',
-    creatorName: '公孙胜',
-  }, {
-    id: '6',
-    name: '蚂蚁证券投资有限公司 F',
-    business: '金融证券代理',
-    address: '1014 McLaughlin Unions',
-    creatorName: '曹正',
-  }, {
-    id: '7',
-    name: '蚂蚁证券投资有限公司 G',
-    business: '金融证券代理',
-    address: '8748 Devante Center',
-    creatorName: '李立',
-  }, {
-    id: '8',
-    name: '蚂蚁证券投资有限公司 H',
-    business: '金融证券代理',
-    address: '1569 Cronin Ways Apt. 082',
-    creatorName: '樊瑞',
-  }],
+  basic: {},
+  member: {},
+  company: [
+    {
+      id: '1',
+      name: '蚂蚁证券投资有限公司 A',
+      business: '金融证券代理',
+      address: '1569 Cronin Ways Apt. 082',
+      creatorName: '欧鹏',
+    },
+    {
+      id: '2',
+      name: '蚂蚁证券投资有限公司 B',
+      business: '金融证券代理',
+      address: '4016 Kautzer Route Suite 366',
+      creatorName: '阮小五',
+    },
+    {
+      id: '3',
+      name: '蚂蚁证券投资有限公司 C',
+      business: '金融证券代理',
+      address: '22 Haag Manor',
+      creatorName: '阮小二',
+    },
+    {
+      id: '4',
+      name: '蚂蚁证券投资有限公司 D',
+      business: '金融证券代理',
+      address: '1014 McLaughlin Unions',
+      creatorName: '阮小七',
+    },
+    {
+      id: '5',
+      name: '蚂蚁证券投资有限公司 E',
+      business: '金融证券代理',
+      address: '8748 Devante Center',
+      creatorName: '公孙胜',
+    },
+    {
+      id: '6',
+      name: '蚂蚁证券投资有限公司 F',
+      business: '金融证券代理',
+      address: '1014 McLaughlin Unions',
+      creatorName: '曹正',
+    },
+    {
+      id: '7',
+      name: '蚂蚁证券投资有限公司 G',
+      business: '金融证券代理',
+      address: '8748 Devante Center',
+      creatorName: '李立',
+    },
+    {
+      id: '8',
+      name: '蚂蚁证券投资有限公司 H',
+      business: '金融证券代理',
+      address: '1569 Cronin Ways Apt. 082',
+      creatorName: '樊瑞',
+    },
+  ],
 };
 
 const GroupForm: SFC<GroupFormProps> = (props) => {
@@ -124,12 +131,16 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = dom && dom.getBoundingClientRect() || {};
+    const rect = (dom && dom.getBoundingClientRect()) || {};
     setLeft(rect.left);
     setRight(document.documentElement.offsetWidth - rect.left - rect.width);
   }, []);
 
-  const changeRowData = (index: number, key: keyof Company, value: string | number | boolean | []) => {
+  const changeRowData = (
+    index: number,
+    key: keyof Company,
+    value: string | number | boolean | [],
+  ) => {
     const company: Company[] = [...dataSource.company];
     (company[index][key] as string | number | boolean | []) = value;
 
@@ -178,7 +189,13 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
 
   const renderEditCell = (v: string, i: number, row: { edited: boolean }, key: keyof Company) => {
     if (row.edited) {
-      return <Input style={{ width: '100%' }} onChange={(value) => changeRowData(i, key, value)} value={v || ''} />;
+      return (
+        <Input
+          style={{ width: '100%' }}
+          onChange={(value) => changeRowData(i, key, value)}
+          value={v || ''}
+        />
+      );
     }
     return v;
   };
@@ -258,33 +275,60 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
       <Card free className={styles.Card}>
         <Card.Header title="基础信息" />
         <Card.Divider />
-        <Card.Content >
+        <Card.Content>
           <Box direction="row" margin={[0, 0, 16, 0]}>
-            <Button onClick={addRow} className={styles.Button} type="primary"> 新增</Button>
+            <Button onClick={addRow} className={styles.Button} type="primary">
+              {' '}
+              新增
+            </Button>
           </Box>
           <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
-            <Table.Column title="目标公司" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')} dataIndex="name" />
-            <Table.Column title="主营业务" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'business')} dataIndex="business" />
-            <Table.Column title="注册地" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'address')} dataIndex="address" />
-            <Table.Column title="创始人" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'creatorName')} dataIndex="creatorName" />
+            <Table.Column
+              title="目标公司"
+              cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')}
+              dataIndex="name"
+            />
+            <Table.Column
+              title="主营业务"
+              cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'business')}
+              dataIndex="business"
+            />
+            <Table.Column
+              title="注册地"
+              cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'address')}
+              dataIndex="address"
+            />
+            <Table.Column
+              title="创始人"
+              cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'creatorName')}
+              dataIndex="creatorName"
+            />
             <Table.Column
               title="操作"
               cell={(v: string, i: number, row: { edited: boolean }) => {
                 if (row.edited) {
                   return (
                     <div>
-                      <Button text type="primary" onClick={() => changeRowData(i, 'edited', false)}>保存</Button>
+                      <Button text type="primary" onClick={() => changeRowData(i, 'edited', false)}>
+                        保存
+                      </Button>
                       <Divider direction="ver" />
-                      <Button text type="primary" onClick={() => deleteRow(i)}>删除</Button>
+                      <Button text type="primary" onClick={() => deleteRow(i)}>
+                        删除
+                      </Button>
                     </div>
                   );
                 }
 
                 return (
                   <div>
-                    <Button type="primary" onClick={() => changeRowData(i, 'edited', true)} text>编辑</Button>
+                    <Button type="primary" onClick={() => changeRowData(i, 'edited', true)} text>
+                      编辑
+                    </Button>
                     <Divider direction="ver" />
-                    <Button type="primary" text onClick={() => deleteRow(i)}>删除</Button>
+                    <Button type="primary" text onClick={() => deleteRow(i)}>
+                      删除
+                    </Button>
                     <Divider direction="ver" />
                     <MenuButton type="primary" popupTriggerType="hover" label="更多" text>
                       <MenuButton.Item>操作一</MenuButton.Item>
@@ -298,9 +342,20 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
           </Table>
         </Card.Content>
       </Card>
-      <Box direction="row" spacing={16} style={{ left, right }} align="center" justify="center" className={styles.fixedButtons}>
-        <Button className={styles.Button} onClick={submit} type="primary">提交</Button>
-        <Button className={styles.Button} onClick={onCancel}>取消</Button>
+      <Box
+        direction="row"
+        spacing={16}
+        style={{ left, right }}
+        align="center"
+        justify="center"
+        className={styles.fixedButtons}
+      >
+        <Button className={styles.Button} onClick={submit} type="primary">
+          提交
+        </Button>
+        <Button className={styles.Button} onClick={onCancel}>
+          取消
+        </Button>
       </Box>
     </div>
   );

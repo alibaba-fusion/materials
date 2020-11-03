@@ -44,24 +44,31 @@ const FusionCardRankChart: React.FunctionComponent<FusionCardRankChartProps> = (
           </Cell>
           <Cell colSpan={3}>
             <Box justify="flex-start" spacing={20} className={styles.histogram}>
-              {
-                dataSource && dataSource.map(item => (<Box justify="flex-start" spacing={5}>
-                  <div className={styles.hisTitle}>{item.name}</div>
-                  <Box direction="row">
-                    <div style={{ backgroundColor: item.color, width: item.rate }} />
-                    <div className={styles.hisRate}>{item.rate}</div>
+              {dataSource &&
+                dataSource.map((item) => (
+                  <Box justify="flex-start" spacing={5}>
+                    <div className={styles.hisTitle}>{item.name}</div>
+                    <Box direction="row">
+                      <div style={{ backgroundColor: item.color, width: item.rate }} />
+                      <div className={styles.hisRate}>{item.rate}</div>
+                    </Box>
                   </Box>
-                </Box>))
-              }
+                ))}
             </Box>
           </Cell>
           <Cell colSpan={3}>
-            <Box direction="row" className={styles.subCard} >
+            <Box direction="row" className={styles.subCard}>
               <Divider direction="ver" className={styles.subDiv} />
-              <div className={styles.subBody} >
+              <div className={styles.subBody}>
                 <div className={styles.subName}>亚洲</div>
                 <Divider direction="hoz" />
-                <Box className={styles.subMain} spacing={20} direction="row" align="center" justify="center">
+                <Box
+                  className={styles.subMain}
+                  spacing={20}
+                  direction="row"
+                  align="center"
+                  justify="center"
+                >
                   <Box>
                     <div className={styles.subTypeName}>商品类目1</div>
                     <div className={styles.subTypeValue}>6,123</div>
@@ -72,7 +79,12 @@ const FusionCardRankChart: React.FunctionComponent<FusionCardRankChartProps> = (
                     <div className={styles.subTypeValue}>132,4</div>
                   </Box>
                 </Box>
-                <Box className={styles.subFooter} direction="column" justify="center" align="center">
+                <Box
+                  className={styles.subFooter}
+                  direction="column"
+                  justify="center"
+                  align="center"
+                >
                   <div>周同比</div>
                   <div>45%↑</div>
                 </Box>

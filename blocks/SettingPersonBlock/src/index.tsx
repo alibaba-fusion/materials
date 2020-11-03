@@ -69,23 +69,20 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
 
   return (
     <Card free>
-      <Card.Content
-        className={styles.SettingPersonBlock}
-      >
-        <Form
-          value={postData}
-          labelAlign="top"
-          onChange={formChange}
-          responsive
-        >
+      <Card.Content className={styles.SettingPersonBlock}>
+        <Form value={postData} labelAlign="top" onChange={formChange} responsive>
           <FormItem label="" colSpan={12}>
             <ResponsiveGrid gap={10}>
-              <Cell colSpan={2}><Avatar shape="circle" size={64} icon="account" /></Cell>
+              <Cell colSpan={2}>
+                <Avatar shape="circle" size={64} icon="account" />
+              </Cell>
               <Cell colSpan={10} className={styles.changeLogo}>
                 <Box spacing={12}>
                   <FormItem>
                     <Upload name="pic">
-                      <Button className={styles.uploadButton} type="normal">更新头像</Button>
+                      <Button className={styles.uploadButton} type="normal">
+                        更新头像
+                      </Button>
                     </Upload>
                   </FormItem>
                   <Box>
@@ -105,8 +102,19 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
 
           <FormItem label="手机：" colSpan={12}>
             <ResponsiveGrid gap={10} device="desktop">
-              <Cell colSpan={8}><Input className={styles.validateCodeInput} placeholder="请输入手机" name="phone" /></Cell>
-              <Cell colSpan={4}><Button className={styles.valideCodeButton} type="secondary" disabled={buttonDisabled} onClick={onValideCodeButtonClicked}>{buttonText}</Button></Cell>
+              <Cell colSpan={8}>
+                <Input className={styles.validateCodeInput} placeholder="请输入手机" name="phone" />
+              </Cell>
+              <Cell colSpan={4}>
+                <Button
+                  className={styles.valideCodeButton}
+                  type="secondary"
+                  disabled={buttonDisabled}
+                  onClick={onValideCodeButtonClicked}
+                >
+                  {buttonText}
+                </Button>
+              </Cell>
             </ResponsiveGrid>
           </FormItem>
 
@@ -116,11 +124,8 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
 
           <FormItem colSpan={12}>
             <Box spacing={8} direction="row">
-              <Form.Submit
-                type="primary"
-                onClick={onSubmit}
-                validate
-              >更新信息
+              <Form.Submit type="primary" onClick={onSubmit} validate>
+                更新信息
               </Form.Submit>
             </Box>
           </FormItem>

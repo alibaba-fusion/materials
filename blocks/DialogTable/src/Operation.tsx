@@ -1,5 +1,5 @@
 import React, { useEffect, useImperativeHandle } from 'react';
-import { Select, Form, Field, Input, Card } from '@alifd/next';
+import { Select, Form, Field, Input } from '@alifd/next';
 
 const FormItem = Form.Item;
 

@@ -120,7 +120,9 @@ const AppList = () => {
       <Card.Content>
         <div className={styles.actionBar}>
           <div className={styles.buttonGroup}>
-            <Button type="primary" onClick={() => Message.success('已批量处理xx条数据')}>批量提交</Button>
+            <Button type="primary" onClick={() => Message.success('已批量处理xx条数据')}>
+              批量提交
+            </Button>
             <Button onClick={() => Message.success('已批量处理xx条数据')}>批量删除</Button>
             <Button onClick={() => Message.success('已批量处理xx条数据')}>批量下载</Button>
           </div>
@@ -137,15 +139,22 @@ const AppList = () => {
             <CustomList columns={columns} onChange={onColumnChange} />
           </div>
         </div>
-        <Table
-          {...tableProps}
-          size={sizeStatus}
-          isZebra={zebraStatus}
-          primaryKey="id.value"
-        >
+        <Table {...tableProps} size={sizeStatus} isZebra={zebraStatus} primaryKey="id.value">
           {filterColumns(columns)}
         </Table>
-        <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
+        <Pagination
+          style={{ marginTop: 16, textAlign: 'right' }}
+          totalRender={(total) => (
+            <>
+              共{' '}
+              <Button text type="primary">
+                {total}
+              </Button>{' '}
+              个记录
+            </>
+          )}
+          {...paginationProps}
+        />
       </Card.Content>
     </Card>
   );

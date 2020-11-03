@@ -110,28 +110,11 @@ const MultiColFilterTable: React.FC = () => {
     <div className={styles.container}>
       <Card free>
         <Card.Content>
-          <Form
-            className="filter-form"
-            responsive
-            fullWidth
-            labelAlign="top"
-            field={field}
-          >
-            <FormItem
-              colSpan={3}
-              label="ID:"
-            >
-              <Input
-                name="id"
-              />
+          <Form className="filter-form" responsive fullWidth labelAlign="top" field={field}>
+            <FormItem colSpan={3} label="ID:">
+              <Input name="id" />
             </FormItem>
-            <FormItem
-              colSpan={3}
-              label="性别:"
-              defaultValue="all"
-              required
-              requiredMessage="必填"
-            >
+            <FormItem colSpan={3} label="性别:" defaultValue="all" required requiredMessage="必填">
               <Select
                 name="gender"
                 dataSource={[
@@ -150,63 +133,59 @@ const MultiColFilterTable: React.FC = () => {
                 ]}
               />
             </FormItem>
-            <FormItem
-              colSpan={3}
-              label="邮箱:"
-            >
-              <Input
-                name="email"
-              />
+            <FormItem colSpan={3} label="邮箱:">
+              <Input name="email" />
             </FormItem>
             {!state.expandStatus ? null : (
               <>
-                <FormItem
-                  colSpan={3}
-                  label="手机号:"
-                >
-                  <Input
-                    name="phone"
-                  />
+                <FormItem colSpan={3} label="手机号:">
+                  <Input name="phone" />
                 </FormItem>
-                <FormItem
-                  colSpan={3}
-                  label="国家:"
-                  defaultValue={[]}
-                >
+                <FormItem colSpan={3} label="国家:" defaultValue={[]}>
                   <Select
                     name="nat"
                     hasClear
                     mode="multiple"
-                    dataSource={['AU', 'BR', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'IE', 'IR', 'NL', 'NZ', 'TR', 'US']}
+                    dataSource={[
+                      'AU',
+                      'BR',
+                      'CA',
+                      'CH',
+                      'DE',
+                      'DK',
+                      'ES',
+                      'FI',
+                      'FR',
+                      'GB',
+                      'IE',
+                      'IR',
+                      'NL',
+                      'NZ',
+                      'TR',
+                      'US',
+                    ]}
                   />
                 </FormItem>
               </>
             )}
-            <FormItem
-              colSpan={state.actionListSpan}
-              className={styles['form-actions']}
-            >
-              <Form.Submit
-                type="primary"
-                onClick={submit}
-                validate
-                style={{ marginRight: 10 }}
-              >
+            <FormItem colSpan={state.actionListSpan} className={styles['form-actions']}>
+              <Form.Submit type="primary" onClick={submit} validate style={{ marginRight: 10 }}>
                 提交
               </Form.Submit>
-              <Form.Reset
-                onClick={reset}
-                style={{ marginRight: 10 }}
-              >
+              <Form.Reset onClick={reset} style={{ marginRight: 10 }}>
                 重置
               </Form.Reset>
-              <Button
-                onClick={handleSetExpand}
-              >
+              <Button onClick={handleSetExpand}>
                 {state.expandStatus ? (
-                  <>收起<Icon type="arrow-up" /></>
+                  <>
+                    收起
+                    <Icon type="arrow-up" />
+                  </>
                 ) : (
-                  <>展开<Icon type="arrow-down" /></>
+                  <>
+                    展开
+                    <Icon type="arrow-down" />
+                  </>
                 )}
               </Button>
             </FormItem>
@@ -226,7 +205,19 @@ const MultiColFilterTable: React.FC = () => {
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
           </Table>
-          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
+          <Pagination
+            style={{ marginTop: 16, textAlign: 'right' }}
+            totalRender={(total) => (
+              <>
+                共{' '}
+                <Button text type="primary">
+                  {total}
+                </Button>{' '}
+                个记录
+              </>
+            )}
+            {...paginationProps}
+          />
         </Card.Content>
       </Card>
     </div>

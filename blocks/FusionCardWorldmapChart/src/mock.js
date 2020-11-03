@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default [{
   date: '1902/04/19',
   location: 'Quezaltenango and San Marcos, Guatemala',
