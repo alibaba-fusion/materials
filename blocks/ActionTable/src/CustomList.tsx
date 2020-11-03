@@ -10,7 +10,7 @@ import styles from './index.module.scss';
 export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
   children?: Column[];
-}
+};
 
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
@@ -114,7 +114,7 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (colum
         </ReactSortable>
       </Overlay>
     </React.Fragment>
-  )
+  );
 }
 
 export default CustomList;

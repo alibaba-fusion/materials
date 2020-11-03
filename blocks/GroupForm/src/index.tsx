@@ -138,7 +138,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
       company,
     });
   };
-  
+
   const deleteRow = (index: number) => {
     const company: Company[] = [...dataSource.company];
     if (!company[index].id) {
@@ -175,7 +175,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
       company: dataSource.company,
     });
   };
-  
+
   const renderEditCell = (v: string, i: number, row: { edited: boolean }, key: keyof Company) => {
     if (row.edited) {
       return <Input style={{ width: '100%' }} onChange={(value) => changeRowData(i, key, value)} value={v || ''} />;
@@ -267,31 +267,34 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
             <Table.Column title="主营业务" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'business')} dataIndex="business" />
             <Table.Column title="注册地" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'address')} dataIndex="address" />
             <Table.Column title="创始人" cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'creatorName')} dataIndex="creatorName" />
-            <Table.Column title="操作" cell={(v: string, i: number, row: { edited: boolean }) => {
-              if (row.edited) {
+            <Table.Column
+              title="操作"
+              cell={(v: string, i: number, row: { edited: boolean }) => {
+                if (row.edited) {
+                  return (
+                    <div>
+                      <Button text type="primary" onClick={() => changeRowData(i, 'edited', false)}>保存</Button>
+                      <Divider direction="ver" />
+                      <Button text type="primary" onClick={() => deleteRow(i)}>删除</Button>
+                    </div>
+                  );
+                }
+
                 return (
                   <div>
-                    <Button text type="primary" onClick={() => changeRowData(i, 'edited', false)}>保存</Button>
-                    <Divider direction="ver"/>
-                    <Button text type="primary" onClick={() => deleteRow(i)}>删除</Button>
+                    <Button type="primary" onClick={() => changeRowData(i, 'edited', true)} text>编辑</Button>
+                    <Divider direction="ver" />
+                    <Button type="primary" text onClick={() => deleteRow(i)}>删除</Button>
+                    <Divider direction="ver" />
+                    <MenuButton type="primary" popupTriggerType="hover" label="更多" text>
+                      <MenuButton.Item>操作一</MenuButton.Item>
+                      <MenuButton.Item>操作二</MenuButton.Item>
+                      <MenuButton.Item>操作三</MenuButton.Item>
+                    </MenuButton>
                   </div>
                 );
-              }
-
-              return (
-                <div>
-                  <Button type="primary" onClick={() => changeRowData(i, 'edited', true)} text>编辑</Button>
-                  <Divider direction="ver"/>
-                  <Button type="primary" text onClick={() => deleteRow(i)}>删除</Button>
-                  <Divider direction="ver"/>
-                  <MenuButton type="primary" popupTriggerType="hover" label="更多" text>
-                    <MenuButton.Item>操作一</MenuButton.Item>
-                    <MenuButton.Item>操作二</MenuButton.Item>
-                    <MenuButton.Item>操作三</MenuButton.Item>
-                  </MenuButton>
-                </div>
-              );
-            }} />
+              }}
+            />
           </Table>
         </Card.Content>
       </Card>

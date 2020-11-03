@@ -11,14 +11,14 @@ const FormItem = Form.Item;
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
-  formData: { status: 'normal' | 'empty' | 'exception' }
+  formData: { status: 'normal' | 'empty' | 'exception' },
 ): Promise<any> => {
   console.log(current, pageSize, formData);
   if (!formData.status || formData.status === 'normal') {
     let query = `page=${current}&size=${pageSize}`;
     Object.entries(formData).forEach(([key, value]) => {
       if (value) {
-        query += `&${key}=${value}`
+        query += `&${key}=${value}`;
       }
     });
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
@@ -226,11 +226,11 @@ const MultiColFilterTable: React.FC = () => {
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
           </Table>
-          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>}  {...paginationProps} />
+          <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
         </Card.Content>
       </Card>
     </div>
   );
-}
+};
 
 export default MultiColFilterTable;

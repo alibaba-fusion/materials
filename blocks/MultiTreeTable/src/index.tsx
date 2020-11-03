@@ -36,13 +36,13 @@ type MoreAction = 'submitAudit' | 'backTo';
 
 type RowRecord = DataItem & {
   [key: string]: any;
-}
+};
 
 type CellOperation = (value: any, rowIndex: number, record: RowRecord) => React.ReactNode;
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
-  formData: { status: 'normal' | 'empty' | 'exception' }
+  formData: { status: 'normal' | 'empty' | 'exception' },
 ): Promise<Result> => {
   console.log(current, pageSize, formData);
   if (!formData.status || formData.status === 'normal') {
@@ -138,7 +138,7 @@ const MultiTreeTable: React.FC = () => {
       onOk() {
         Message.success(`${dataSource.name} 删除成功!`);
         reset();
-      }
+      },
     });
   }, [reset]);
 
@@ -184,7 +184,7 @@ const MultiTreeTable: React.FC = () => {
       onOk() {
         Message.success(`${selectedRowKeys.join(', ')} 批量删除成功!`);
         reset();
-      }
+      },
     });
   }, [selectedRowKeys, reset]);
 
@@ -198,7 +198,7 @@ const MultiTreeTable: React.FC = () => {
 
   const cellOperation: CellOperation = useCallback((value, rowIndex, record) => {
     if (!record) {
-      return null
+      return null;
     }
     // eslint-disable-next-line no-underscore-dangle
     const isHead = record.__level === 0;
@@ -286,6 +286,6 @@ const MultiTreeTable: React.FC = () => {
       />
     </div>
   );
-}
+};
 
 export default MultiTreeTable;

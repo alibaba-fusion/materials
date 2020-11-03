@@ -13,7 +13,7 @@ export interface FailDetailProps {
   onButtonBack: () => any;
 }
 
-export default function FailDetail(props: FailDetailProps ) {
+export default function FailDetail(props: FailDetailProps) {
   const {
     statusCode = '提交失败',
     description = '请核对并修改信息后，再重新提交。',
@@ -23,9 +23,9 @@ export default function FailDetail(props: FailDetailProps ) {
   } = props;
 
   const gobackHandle = () => {
-    if(onButtonBack){
+    if (onButtonBack) {
       onButtonBack();
-    }else {
+    } else {
       Message.notice('返回修改');
     }
   };

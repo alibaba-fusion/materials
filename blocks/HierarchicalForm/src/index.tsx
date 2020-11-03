@@ -90,7 +90,7 @@ const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
                           </Form.Item>
                         </ResponsiveGrid.Cell>
                       </>
-                    ): null
+                    ) : null
                   }
                 </ResponsiveGrid>
               )
@@ -101,7 +101,7 @@ const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
           </Form.Item>
           <Form.Item>
             <Box direction="row" spacing={8}>
-              <Form.Submit validate onClick={(value, errors) => errors ? null : onSubmit(value)} className={styles.Button} type="primary">提交</Form.Submit>
+              <Form.Submit validate onClick={(value, errors) => (errors ? null : onSubmit(value))} className={styles.Button} type="primary">提交</Form.Submit>
               <Button className={styles.Button} onClick={onCancel}>退回</Button>
             </Box>
           </Form.Item>

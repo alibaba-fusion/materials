@@ -68,7 +68,7 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
     userData.transform({
       type: 'map',
       callback: (obj) => {
-        const newObj = {...obj};
+        const newObj = { ...obj };
         const projectedCoord = dv.geoProjectPosition([newObj.lng * 1, newObj.lat * 1], 'geoMercator');
         newObj.x = projectedCoord[0];
         newObj.y = projectedCoord[1];
@@ -92,15 +92,19 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
         <Chart height={chartHeight} width={chartWidth} className={styles.map} padding={[0, 20, 40, 20]} scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}>
           <Coord reflect />
           <View data={mapDataFormat} >
-            <Geom type="polygon" position="x*y" style={{
-              fill: '#DDDDDD',
-              stroke: '#593821',
-              lineWidth: 0.5,
-              fillOpacity: 0.85,
-            }} />
+            <Geom
+              type="polygon"
+              position="x*y"
+              style={{
+                fill: '#DDDDDD',
+                stroke: '#593821',
+                lineWidth: 0.5,
+                fillOpacity: 0.85,
+              }}
+            />
           </View>
           <View data={chartDataFormat}>
-            <Geom type="point" position="x*y" size={['value', [2, 30]]} shape="circle" opacity={0.45} color="#ff2f29"  />
+            <Geom type="point" position="x*y" size={['value', [2, 30]]} shape="circle" opacity={0.45} color="#ff2f29" />
           </View>
         </Chart>
         <Table dataSource={tableData}>

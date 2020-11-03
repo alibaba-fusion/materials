@@ -4,8 +4,6 @@ coverage/
 build/
 
 scripts/
-pages/
-blocks/
 # 一级 components
 /components/ 
 

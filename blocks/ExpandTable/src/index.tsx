@@ -22,27 +22,27 @@ const getTableData = ({ current, pageSize }, formData: any): Promise<any> => {
 };
 
 function tableActions(val: string, index: number, record: any) {
-  return <div className={styles.tableActions}>
+  return (<div className={styles.tableActions}>
     <Button type="primary" text onClick={() => console.log(record, '操作1')}>操作1</Button>
     <Button type="primary" text onClick={() => console.log(record, '操作2')}>操作2</Button>
     <Button type="primary" text onClick={() => console.log(record, '操作3')}>操作3</Button>
-  </div>
+          </div>);
 }
 function subTableActions(val: string, index: number, record: any) {
-  return <div className={styles.tableActions}>
+  return (<div className={styles.tableActions}>
     <Button type="primary" text onClick={() => console.log(record, '子表格操作1')}>子表格操作1</Button>
-  </div>
+          </div>);
 }
 
 
 function SubTable(props: any) {
-  return <Table dataSource={props.dataSource} size="small" hasBorder={false} primaryKey="postcode">
+  return (<Table dataSource={props.dataSource} size="small" hasBorder={false} primaryKey="postcode">
     <Table.Column title="country" dataIndex="country" />
     <Table.Column title="state" dataIndex="state" />
     <Table.Column title="city" dataIndex="city" />
     <Table.Column title="street" dataIndex="street.name" />
     <Table.Column cell={subTableActions} />
-  </Table>;
+          </Table>);
 }
 
 export default function ExpandTable() {
@@ -54,14 +54,16 @@ export default function ExpandTable() {
   return (
     <Card free className={styles.container}>
       <Card.Content>
-        <Table {...tableProps}
+        <Table
+          {...tableProps}
           tableWidth={1000}
           hasBorder={false}
           primaryKey="email"
           expandedRowRender={record => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
           onRowOpen={keys => setOpenrows(keys)}
-          expandedRowIndent={[0, 0]}>
+          expandedRowIndent={[0, 0]}
+        >
           <Table.Column title="name" dataIndex="name.last" lock width={140} />
           <Table.Column title="email" dataIndex="email" width={500} />
           <Table.Column title="phone" dataIndex="phone" width={300} />

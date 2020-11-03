@@ -65,7 +65,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
       <Card.Header title={<span className={styles.title}>{title}</span>} />
       <Card.Divider />
       <Card.Content>
-      
+
         <Chart
           width={10}
           height={chartHeight}

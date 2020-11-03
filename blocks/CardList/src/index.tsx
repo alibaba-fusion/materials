@@ -64,19 +64,25 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
 
   const renderTagListA = () => {
     return dataSource.tagsA.map((name: string) => (
-      <SelectableTag key={name}
+      <SelectableTag
+        key={name}
         checked={tagAValue === name}
         onChange={() => onTagAValueChange(name)}
-        {...props}>{name}</SelectableTag>
+        {...props}
+      >{name}
+      </SelectableTag>
     ));
   };
 
   const renderTagListB = () => {
     return dataSource.tagsB.map((name: string) => (
-      <SelectableTag key={name}
+      <SelectableTag
+        key={name}
         checked={tagBValue === name}
         onChange={() => onTagBValueChange(name)}
-        {...props}>{name}</SelectableTag>
+        {...props}
+      >{name}
+      </SelectableTag>
     ));
   };
 
@@ -119,7 +125,7 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
         </div>
       </Box>
     </Card>
-    <Loading visible={loading} style={{display: 'block'}}>
+    <Loading visible={loading} style={{ display: 'block' }}>
       <ResponsiveGrid gap={20}>
         <Cell colSpan={3} className={styles.ListItem}>
           <Box className={styles.add} justify="center" align="center">

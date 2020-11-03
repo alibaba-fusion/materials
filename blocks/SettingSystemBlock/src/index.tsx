@@ -124,13 +124,13 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
                   onChange={formChange}
                   responsive
                 >
-                  <FormItem label='项目封面' colSpan={12}>
+                  <FormItem label="项目封面" colSpan={12}>
                     <ResponsiveGrid gap={10}>
                       <Cell colSpan={2}><Avatar shape="circle" size={64} icon="account" /></Cell>
                       <Cell colSpan={10} className={styles.changeLogo}>
                         <Box spacing={12}>
                           <FormItem>
-                            <Upload name='pic'>
+                            <Upload name="pic">
                               <Button className={styles.uploadButton} type="normal">更新头像</Button>
                             </Upload>
                           </FormItem>
@@ -167,7 +167,8 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
                         type="primary"
                         onClick={onSubmit}
                         validate
-                      >保存</Form.Submit>
+                      >保存
+                      </Form.Submit>
                     </Box>
                   </FormItem>
                 </Form>
@@ -178,12 +179,15 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
 
         <Tab.Item title="权限设置" key="privilege">
           <Card free contentHeight={600}>
-            <Card.Header title="权限设置" extra={
-              <Box spacing={10} direction="row">
-                <Button type="secondary">设置角色 1 权限</Button>
-                <Button type="primary">新增</Button>
-              </Box>
-            } />
+            <Card.Header
+              title="权限设置"
+              extra={
+                <Box spacing={10} direction="row">
+                  <Button type="secondary">设置角色 1 权限</Button>
+                  <Button type="primary">新增</Button>
+                </Box>
+            }
+            />
             <Card.Content>
               <Table dataSource={priList} hasHeader={false} hasBorder={false}>
                 <Table.Column dataIndex="logo" cell={url => <Avatar src={url} />} width={50} />

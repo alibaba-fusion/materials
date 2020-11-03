@@ -84,7 +84,7 @@ export default function SingleColFilterTable() {
     getTableData,
     {
       field,
-    }
+    },
   );
   const { type, changeType, submit, reset } = search;
   return (

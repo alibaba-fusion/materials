@@ -6,28 +6,28 @@ module.exports = {
     componentProps: {
       dataSource: [{
         label: '服饰',
-        value: 'dress'
-      }]
-    }
+        value: 'dress',
+      }],
+    },
   }, {
     title: '叶子类目',
-    field: 'idPath'
+    field: 'idPath',
   }, {
     title: '季节',
-    field: 'seasonCode'
+    field: 'seasonCode',
   }],
   actionSchema: [{
     buttonText: '新建',
     buttonProps: {
-      type: 'primary'
+      type: 'primary',
     },
     onClick: () => {
-      console.log('新建')
-    }
+      console.log('新建');
+    },
   }],
   dataSchema: [{
     title: '序号',
-    field: 'id'
+    field: 'id',
   }, {
     title: '测款名称',
     field: 'name',
@@ -36,24 +36,24 @@ module.exports = {
     field: 'itemSize',
   }, {
     title: '店铺Logo',
-    field: 'logo'
+    field: 'logo',
   }, {
     title: '发布时间',
     field: 'publishTime',
   }, {
     title: '测款进度',
-    field: 'progress'
+    field: 'progress',
   }, {
     title: '状态',
     field: 'statusDesc',
   }, {
     title: '操作',
-    field: 'action'
-  }
+    field: 'action',
+  },
   ],
   paginationParams: {
     pageSize: 10,
     currentPage: 1,
-    totalCount: 100
-  }
+    totalCount: 100,
+  },
 };

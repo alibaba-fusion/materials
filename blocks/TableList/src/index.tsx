@@ -8,10 +8,10 @@ const { Option } = Select;
 const FormItem = Form.Item;
 
 export interface IDataSource {
-  tableData: Record<string, unknown>[];
+  tableData: Array<Record<string, unknown>>;
   tableColumn: any;
 }
-const mockTableData: Record<string, unknown>[] = [];
+const mockTableData: Array<Record<string, unknown>> = [];
 for (let i = 0; i <= 10; i += 1) {
   mockTableData.push({
     name: `品牌营销服务设计 ${String.fromCharCode(97 + i).toUpperCase()}`,
@@ -111,7 +111,7 @@ const TableList: React.FunctionComponent<ITableListProps> = (props: ITableListPr
               </>
             )}
             <Cell colSpan={3} className={styles.btns}>
-              <Box spacing={8} direction="row" align="flex-end" justify='center' style={{ height: '100%' }}>
+              <Box spacing={8} direction="row" align="flex-end" justify="center" style={{ height: '100%' }}>
                 <Button type="primary" onClick={onOperation}>查询</Button>
                 <Form.Reset>重置</Form.Reset>
                 <Button onClick={toggleSeachList}>
@@ -126,7 +126,7 @@ const TableList: React.FunctionComponent<ITableListProps> = (props: ITableListPr
         </Box>
         <Divider dashed />
         <div className={styles.Main}>
-          <Loading visible={loading} style={{display: 'block'}}>
+          <Loading visible={loading} style={{ display: 'block' }}>
             <div className={styles.add}>
               <Button type="primary">新增</Button>
               <Button type="normal">下载</Button>
