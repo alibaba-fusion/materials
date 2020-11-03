@@ -30,19 +30,19 @@ const DEFAULT_DATA: CardConfig = {
     value: '234,465789',
     des: '周同比:',
     rate: 10.1,
-  },{
+  }, {
     name: '总UV',
     value: '234,465789',
     des: '周同比:',
     rate: -10.1,
   }],
   chartData: [
-    {type: 'pv', date: 1489593600000, value: 100},
-    {type: 'pv', date: 1489593630000, value: 220},
-    {type: 'pv', date: 1489591630000, value: 230},
-    {type: 'uv', date: 1489592600000, value: 140},
-    {type: 'uv', date: 1489592630000, value: 350},
-    {type: 'uv', date: 1489590630000, value: 370},
+    { type: 'pv', date: 1489593600000, value: 100 },
+    { type: 'pv', date: 1489593630000, value: 220 },
+    { type: 'pv', date: 1489591630000, value: 230 },
+    { type: 'uv', date: 1489592600000, value: 140 },
+    { type: 'uv', date: 1489592630000, value: 350 },
+    { type: 'uv', date: 1489590630000, value: 370 },
   ],
   chartHeight: 300,
 };
@@ -61,12 +61,12 @@ const InfoBlock: React.FC<CardConfig> = (props = DEFAULT_DATA.titleItem[0]): JSX
         <span className={styles.totle_font}>{name}</span>
       </div>
       <Box align="baseline" direction="row">
-        <span  className={styles.title}>{value}</span>
+        <span className={styles.title}>{value}</span>
         <span className={styles.compare}>
           <span>{des}123</span>
-          <span style={{color: rate>0 ? '#36CFC9':'#D23C26' }}>8.1%
-            {rate>0 ? <> ↑ </> :<>↓</>} 
-          </span> 
+          <span style={{ color: rate > 0 ? '#36CFC9' : '#D23C26' }}>8.1%
+            {rate > 0 ? <> ↑ </> : <>↓</>}
+          </span>
           {/* <i className={classNames(styles.cocofont, styles.arrow_down)} /></span> */}
         </span>
       </Box>
@@ -92,24 +92,25 @@ const RenderPvChart: React.FunctionComponent<CardConfig> = (props = DEFAULT_DATA
   const areaColors = ['l(100) 0:rgba(253,250,242) 1:rgba(255,245,205)', 'l(100) 0:rgba(221,246,250) 1:rgba(244,252,253)'];
   const lineColors = ['#FFCE03', '#00C1DE'];
   // 传入的height - 底部padding
-  return <Chart data={chartData} height={chartHeight - 30 || 230}  width={10}
-    forceFit scale={cols}
-    padding={[20, 55, 30, 30]}
-  >
-    <Axis title={null} name="date" />
-    <Axis title={null} name="value"/>
-    <Tooltip />
-    <Geom type="area" position="date*value"
-      color={['type', areaColors]}
-      shape="smooth"/>
-    <Geom type="line" position="date*value"
-      color={['type', lineColors]}
-      shape="smooth"
-    />
-  </Chart>;
+  return (
+    <Chart
+      data={chartData}
+      height={chartHeight - 30 || 230}
+      width={10}
+      forceFit
+      scale={cols}
+      padding={[20, 55, 30, 30]}
+    >
+      <Axis title={null} name="date" />
+      <Axis title={null} name="value" />
+      <Tooltip />
+      <Geom type="area" position="date*value" color={['type', areaColors]} shape="smooth" />
+      <Geom type="line" position="date*value" color={['type', lineColors]} shape="smooth" />
+    </Chart>
+  );
 };
 
-const VisitBlock: React.FunctionComponent<CardConfigProps> = ({cardConfig = DEFAULT_DATA, ...props}): JSX.Element => {
+const VisitBlock: React.FunctionComponent<CardConfigProps> = ({ cardConfig = DEFAULT_DATA }): JSX.Element => {
   const { titleItem, chartData, chartHeight } = cardConfig;
 
   return (
@@ -117,12 +118,13 @@ const VisitBlock: React.FunctionComponent<CardConfigProps> = ({cardConfig = DEFA
       <React.Fragment>
         <Card.Header title={
           <Box direction="row" spacing={50}>
-            <InfoBlock {...titleItem[0]}/>
-            <InfoBlock {...titleItem[1]}/>
-          </Box>} />
+            <InfoBlock {...titleItem[0]} />
+            <InfoBlock {...titleItem[1]} />
+          </Box>}
+        />
       </React.Fragment>
       <Card.Content>
-        <RenderPvChart chartData={chartData} chartHeight={chartHeight}/>
+        <RenderPvChart chartData={chartData} chartHeight={chartHeight} />
       </Card.Content>
     </Card>
   );

@@ -38,7 +38,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
     cardConfig = DEFAULT_DATA,
   } = props;
 
-  const {title, subTitle, value, chartData, des, rate, chartHeight} = cardConfig;
+  const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
 
   return (
     <Card free>
@@ -66,7 +66,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
           forceFit
           padding={['auto', '16']}
         >
-          <Geom type="interval" position="date*value" color="#29A5FF"/>
+          <Geom type="interval" position="date*value" color="#29A5FF" />
         </Chart>
       </Card.Content>
     </Card>

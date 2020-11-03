@@ -25,14 +25,14 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       field.setValues(newValues);
     }
   }, [field, dataSource]);
-  
+
   const handleOk = useCallback(() => {
     field.validate((errors, values): void => {
       if (errors) {
         return;
       }
       onOk(values);
-    })
+    });
   }, [field, onOk]);
 
   return (
@@ -95,6 +95,6 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       </Form>
     </Dialog>
   );
-}
+};
 
 export default DialogEdit;

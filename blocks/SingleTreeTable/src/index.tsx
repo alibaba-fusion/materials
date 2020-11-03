@@ -32,7 +32,7 @@ const data = [{
       // eslint-disable-next-line
       rowContent: '法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容',
     },
-  ]
+  ],
 }, {
   id: 'second',
   rowNo: '中华人民共和国海商法',
@@ -62,7 +62,7 @@ const data = [{
       // eslint-disable-next-line
       rowContent: '法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容',
     },
-  ]
+  ],
 }, {
   id: 'third',
   rowNo: '纳税担保试行方法',
@@ -92,7 +92,7 @@ const data = [{
       // eslint-disable-next-line
       rowContent: '法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容',
     },
-  ]
+  ],
 }, {
   id: 'fourth',
   rowNo: '中华人民共和国担保法',
@@ -122,7 +122,7 @@ const data = [{
       // eslint-disable-next-line
       rowContent: '法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容',
     },
-  ]
+  ],
 }, {
   id: 'fifth',
   rowNo: '纳税担保试行方法',
@@ -152,7 +152,7 @@ const data = [{
       // eslint-disable-next-line
       rowContent: '法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容法律条文内容',
     },
-  ]
+  ],
 }];
 
 export default function SingleTreeTable() {
@@ -181,7 +181,7 @@ export default function SingleTreeTable() {
         </>
         }
       </div>
-    )
+    );
   };
 
 
@@ -201,8 +201,8 @@ export default function SingleTreeTable() {
             }
           }}
         >
-          <Table.Column title="法律条文编号" dataIndex="rowNo" width={140}/>
-          <Table.Column title="法律条文内容" dataIndex="rowContent"/>
+          <Table.Column title="法律条文编号" dataIndex="rowNo" width={140} />
+          <Table.Column title="法律条文内容" dataIndex="rowContent" />
           <Table.Column title="操作" dataIndex="operation" width={180} cell={tableOperation} />
         </Table>
         <Dialog

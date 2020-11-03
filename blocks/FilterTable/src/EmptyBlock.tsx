@@ -10,7 +10,7 @@ const EmptyBlock: React.FunctionComponent = (): JSX.Element => {
         数据为空
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default EmptyBlock;

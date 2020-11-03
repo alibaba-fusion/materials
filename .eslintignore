@@ -12,8 +12,6 @@ __tests__
 tmp
 
 scripts/
-pages/
-blocks/
 # 一级 components
 /components/ 
 

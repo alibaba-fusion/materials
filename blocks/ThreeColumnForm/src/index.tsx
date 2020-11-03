@@ -113,7 +113,8 @@ const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props): JSX.Element =>
                 type="primary"
                 onClick={onSubmit}
                 validate
-              >提交</Form.Submit>
+              >提交
+              </Form.Submit>
               <Button onClick={onCancel} type="secondary">取消</Button>
             </Box>
           </FormItem>
