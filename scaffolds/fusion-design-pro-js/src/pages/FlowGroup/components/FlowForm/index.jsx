@@ -17,7 +17,6 @@ import {
   ResponsiveGrid,
 } from '@alifd/next';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   approval: {
     approverId: 1,
@@ -54,7 +53,7 @@ const DEFAULT_DATA = {
   },
 };
 
-const FlowForm = props => {
+const FlowForm = (props) => {
   const {
     dataSource = DEFAULT_DATA,
     onAgree = () => {},
@@ -217,7 +216,7 @@ const FlowForm = props => {
       <Card free>
         <Card.Header title="工作经历" />
         <Card.Divider />
-        {dataSource.person.experiences.map(experience => (
+        {dataSource.person.experiences.map((experience) => (
           <Card.Content>
             <Box>
               <Typography.Text className={styles.SubTitle}>公司信息</Typography.Text>

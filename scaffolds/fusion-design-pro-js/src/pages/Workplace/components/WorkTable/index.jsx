@@ -15,7 +15,6 @@ import {
 } from '@alifd/next';
 import mock from './mock';
 import styles from './index.module.scss';
-
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
 const DEFAULT_DATA = {
@@ -37,20 +36,22 @@ const colorMap = {
   low: 'green',
 };
 
-const WorkTable = props => {
+const WorkTable = (props) => {
   const { dataSource = DEFAULT_DATA } = props;
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
   const [tab, setTab] = useState('1');
 
-  const changeTab = val => setTab(val);
+  const changeTab = (val) => setTab(val);
 
-  const renderLevel = (text, index) => (
-    <span key={text + index.toString()}>
-      <Tag size="small" color={colorMap[text]}>
-        {text}
-      </Tag>
-    </span>
-  );
+  const renderLevel = (text, index) => {
+    return (
+      <span key={text + index.toString()}>
+        <Tag size="small" color={colorMap[text]}>
+          {text}
+        </Tag>
+      </span>
+    );
+  };
 
   return (
     <div className={styles.WorkTable}>
@@ -119,7 +120,7 @@ const WorkTable = props => {
                     共 <span className={styles.strong}>{timeLineList.length}</span>个日程
                   </Typography.Text>
                   <Timeline>
-                    {timeLineList.map(item => (
+                    {timeLineList.map((item) => (
                       <TimelineItem
                         key={item.planTime}
                         title={item.planName}
@@ -143,11 +144,13 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {projectList.map(project => (
-                    <List.Item title={project.projectName} media={<Avatar src={project.img} />}>
-                      {project.projectDesc}
-                    </List.Item>
-                  ))}
+                  {projectList.map((project) => {
+                    return (
+                      <List.Item title={project.projectName} media={<Avatar src={project.img} />}>
+                        {project.projectDesc}
+                      </List.Item>
+                    );
+                  })}
                   <List.Item>查看全部任务</List.Item>
                 </List>
               </Card.Content>
@@ -176,7 +179,6 @@ const WorkTable = props => {
                       <Avatar src="https://img.alicdn.com/tfs/TB1QwMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />
                     }
                   />
-                  {/* <List.Item title="Alibaba Piecework" media={<Avatar src="https://img.alicdn.com/tfs/TB1.7cxvUz1gK0jSZLeXXb9kVXa-200-200.png"/>}></List.Item> */}
                   <List.Item
                     title="Retcode 前端监控"
                     media={
@@ -211,7 +213,7 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {updateList.map(one => {
+                  {updateList.map((one) => {
                     let title;
 
                     switch (one.action) {
@@ -268,11 +270,13 @@ const WorkTable = props => {
               <Card.Divider />
               <Card.Content>
                 <Box spacing={[20, 50]} direction="row" wrap>
-                  {entranceList.map(item => (
-                    <Button size="large" text component="a" href={item.link}>
-                      {item.name}
-                    </Button>
-                  ))}
+                  {entranceList.map((item) => {
+                    return (
+                      <Button size="large" text component="a" href={item.link}>
+                        {item.name}
+                      </Button>
+                    );
+                  })}
                 </Box>
               </Card.Content>
             </Card>

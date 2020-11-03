@@ -1,23 +1,24 @@
 import React from 'react';
 import { Avatar, Overlay, Menu, Icon } from '@alifd/next';
 import styles from './index.module.scss';
-
 const { Item } = Menu;
 const { Popup } = Overlay;
 
-const UserProfile = ({ name, avatar, mail }) => (
-  <div className={styles.profile}>
-    <div className={styles.avatar}>
-      <Avatar src={avatar} alt="用户头像" />
+const UserProfile = ({ name, avatar, mail }) => {
+  return (
+    <div className={styles.profile}>
+      <div className={styles.avatar}>
+        <Avatar src={avatar} alt="用户头像" />
+      </div>
+      <div className={styles.content}>
+        <h4>{name}</h4>
+        <span>{mail}</span>
+      </div>
     </div>
-    <div className={styles.content}>
-      <h4>{name}</h4>
-      <span>{mail}</span>
-    </div>
-  </div>
-);
+  );
+};
 
-const HeaderAvatar = props => {
+const HeaderAvatar = (props) => {
   const { name, avatar } = props;
   return (
     <Popup

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'ice';
 import styles from './index.module.scss';
-
 export default function Logo({ image, text, url }) {
   return (
     <div className="logo">

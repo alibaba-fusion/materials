@@ -1,5 +1,5 @@
+// stylelint-disable-next-line block-no-empty
 .container {
-
 }
 
 .actionBar {
@@ -27,7 +27,7 @@
 
 .columnSortPanel {
   :global {
-    background: #FFF;
+    background: #fff;
     padding: 20px;
     border-radius: $corner-1;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);

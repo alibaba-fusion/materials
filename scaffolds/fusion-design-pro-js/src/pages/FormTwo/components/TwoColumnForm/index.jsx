@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Input, Box, Button, Form, Card, DatePicker, Message, Radio, Upload } from '@alifd/next';
 import styles from './index.module.scss';
-
 const FormItem = Form.Item;
 const formItemLayout = {
   colSpan: 6,
@@ -20,11 +19,11 @@ const DEFAULT_ON_SUBMIT = (values, errors) => {
   Message.success('提交成功');
 };
 
-const TwoColumnForm = props => {
+const TwoColumnForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = DEFAULT_ON_SUBMIT, onCancel = () => {} } = props;
   const [postData, setValue] = useState(dataSource);
 
-  const formChange = value => {
+  const formChange = (value) => {
     setValue(value);
   };
 

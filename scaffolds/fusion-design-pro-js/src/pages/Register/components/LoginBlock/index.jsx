@@ -1,9 +1,9 @@
+/* eslint-disable @iceworks/best-practices/no-secret-info */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
-
 const { Item } = Form;
 export default function RegisterBlock() {
   const [postData, setValue] = useState({
@@ -27,7 +27,7 @@ export default function RegisterBlock() {
     isRunning ? 1000 : null,
   );
 
-  const formChange = value => {
+  const formChange = (value) => {
     setValue(value);
   };
 
@@ -42,8 +42,9 @@ export default function RegisterBlock() {
   const checkPass = (rule, values, callback) => {
     if (values && values !== postData.password) {
       return callback('密码不一致');
+    } else {
+      return callback();
     }
-    return callback();
   };
 
   const handleSubmit = (values, errors) => {

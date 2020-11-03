@@ -4,7 +4,6 @@ import { useFusionTable, useSetState } from 'ahooks';
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
 import styles from './index.module.scss';
-
 const FormItem = Form.Item;
 
 const getTableData = ({ current, pageSize }, formData) => {
@@ -18,8 +17,8 @@ const getTableData = ({ current, pageSize }, formData) => {
       }
     });
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-      .then(res => res.json())
-      .then(res => ({
+      .then((res) => res.json())
+      .then((res) => ({
         total: 55,
         list: res.results.slice(0, 10),
       }));
@@ -53,7 +52,7 @@ const expandFieldLenth = 5; // 收起状态下一共有多少项目
 
 const collapseFieldLenth = 3;
 
-const getNextActionListSpan = expandStatus => {
+const getNextActionListSpan = (expandStatus) => {
   const totalFieldLength = expandStatus ? expandFieldLenth : collapseFieldLenth;
 
   if (totalFieldLength < 3) {
@@ -209,7 +208,7 @@ const MultiColFilterTable = () => {
               marginTop: 16,
               textAlign: 'right',
             }}
-            totalRender={total => (
+            totalRender={(total) => (
               <>
                 共{' '}
                 <Button text type="primary">

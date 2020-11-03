@@ -29,7 +29,6 @@ const DEFAULT_DATA: FusionCardAreaChartProps = {
 };
 
 const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (props = DEFAULT_DATA): JSX.Element => {
-
   const { title, subTitle, value, chartData, chartHeight } = { ...DEFAULT_DATA, ...props };
 
   return (
@@ -58,10 +57,10 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
           forceFit
           padding={['auto', '0']}
         >
-          <Geom type="area" position="date*value" color="#2B7FFB" shape="smooth" opacity={1}/>
+          <Geom type="area" position="date*value" color="#2B7FFB" shape="smooth" opacity={1} />
         </Chart>
       </Card.Content>
-    
+
     </Card>
   );
 };

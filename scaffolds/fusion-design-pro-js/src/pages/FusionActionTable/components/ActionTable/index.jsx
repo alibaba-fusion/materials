@@ -4,7 +4,6 @@ import { useFusionTable, useFullscreen } from 'ahooks';
 import CustomList from './CustomList';
 import { getColumnKey } from './util';
 import styles from './index.module.scss';
-
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
@@ -12,24 +11,24 @@ const TableActionIcon = Icon.createFromIconfontCN({
 const getTableData = ({ current, pageSize }) => {
   const query = `page=${current}&size=${pageSize}`;
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-    .then(res => res.json())
-    .then(res => ({
+    .then((res) => res.json())
+    .then((res) => ({
       total: 55,
       list: res.results.slice(0, 10),
     }));
 }; // 根据 hidden 切换当前 column 是否显示
 
-const filterColumns = columnList => {
+const filterColumns = (columnList) => {
   const newColumnList = [...columnList];
   return newColumnList
-    .filter(columnItem => {
+    .filter((columnItem) => {
       if (columnItem.hidden) {
         return false;
       }
 
       return true;
     })
-    .map(columnItem => {
+    .map((columnItem) => {
       if (columnItem.children) {
         const groupProps = { ...columnItem };
         delete groupProps.children;
@@ -139,7 +138,7 @@ const AppList = () => {
             marginTop: 16,
             textAlign: 'right',
           }}
-          totalRender={total => (
+          totalRender={(total) => (
             <>
               共{' '}
               <Button text type="primary">

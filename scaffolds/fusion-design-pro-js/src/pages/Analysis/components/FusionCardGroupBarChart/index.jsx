@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Legend } from 'bizcharts';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   title: '消费数据',
   chartData: [
@@ -85,7 +84,7 @@ const DEFAULT_DATA = {
   chartHeight: 500,
 };
 
-const FusionCardGroupBarChart = props => {
+const FusionCardGroupBarChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   return (

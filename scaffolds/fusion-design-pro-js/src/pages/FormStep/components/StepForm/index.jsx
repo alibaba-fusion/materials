@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   name: '',
   category: '',
@@ -9,7 +8,7 @@ const DEFAULT_DATA = {
   desc: '',
 };
 
-const StepForm = props => {
+const StepForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = () => {} } = props;
   const projectField = Field.useField({
     values: dataSource,

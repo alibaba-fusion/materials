@@ -12,7 +12,6 @@ import {
   Message,
 } from '@alifd/next';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   job: {
     address: '美国 洛杉矶',
@@ -22,7 +21,7 @@ const DEFAULT_DATA = {
   },
 };
 
-const ClassifiedForm = props => {
+const ClassifiedForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = () => {}, onCancel = () => {} } = props;
   const jobField = Field.useField({
     values: dataSource.job,

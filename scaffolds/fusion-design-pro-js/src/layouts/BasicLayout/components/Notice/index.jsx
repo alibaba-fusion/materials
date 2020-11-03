@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Icon, Badge, Overlay, Avatar, Message, List } from '@alifd/next';
 import styles from './index.module.scss';
-
 const { Popup } = Overlay;
 const defaultNoticeList = [
   {
@@ -28,7 +27,7 @@ const Notice = ({ noticeList }) => {
   }
 
   function clearNotice() {
-    const noticeIds = noticeList.map(item => item.id);
+    const noticeIds = noticeList.map((item) => item.id);
     setBageCount(0);
     setReadList(noticeIds);
   }
@@ -37,7 +36,7 @@ const Notice = ({ noticeList }) => {
     Message.success('点击了查看更多操作');
   }
 
-  const renderList = noticeList.filter(item => readList.indexOf(item.id) === -1);
+  const renderList = noticeList.filter((item) => readList.indexOf(item.id) === -1);
   return (
     <Popup
       trigger={
@@ -67,7 +66,7 @@ const Notice = ({ noticeList }) => {
           </div>
         }
       >
-        {renderList.map(noticeItem => {
+        {renderList.map((noticeItem) => {
           const { id, name, avatar, message } = noticeItem;
           return (
             <List.Item

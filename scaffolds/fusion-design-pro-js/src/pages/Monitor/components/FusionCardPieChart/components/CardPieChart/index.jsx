@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   title: '用户浏览器占比',
   value: 183112,
@@ -36,7 +35,7 @@ const DEFAULT_DATA = {
   chartHeight: 400,
 };
 
-const FusionCardLineChart = props => {
+const FusionCardLineChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Form, ResponsiveGrid, Field, Input, Radio, Select, Button, Box } from '@alifd/next';
 import styles from './index.module.scss';
 
-const HierarchicalForm = props => {
+const HierarchicalForm = (props) => {
   const {
     dataSource = {
       authType: 1,
@@ -60,7 +60,7 @@ const HierarchicalForm = props => {
                   <Form.Item label="权限成员">
                     <Select
                       maxTagCount={2}
-                      maxTagPlaceholder={values => `+${values.length - 2}`}
+                      maxTagPlaceholder={(values) => `+${values.length - 2}`}
                       name="authMembers"
                       mode="multiple"
                       placeholder="请选择权限成员"

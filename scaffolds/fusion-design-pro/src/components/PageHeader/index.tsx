@@ -3,7 +3,7 @@ import { Breadcrumb, Box, Typography } from '@alifd/next';
 import styles from './index.module.scss';
 
 export interface PageHeaderProps {
-  breadcrumbs?: { name: string; path?: string }[];
+  breadcrumbs?: Array<{ name: string; path?: string }>;
   title?: string;
   description?: string;
 }

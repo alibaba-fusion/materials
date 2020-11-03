@@ -12,7 +12,6 @@ import {
   Pagination,
 } from '@alifd/next';
 import styles from './index.module.scss';
-
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const DEFAULT_DATA = {
   tagsA: [
@@ -38,7 +37,7 @@ const DEFAULT_DATA = {
   }),
 };
 
-const BasicList = props => {
+const BasicList = (props) => {
   const { dataSource = DEFAULT_DATA, onSearch = () => {} } = props;
   const [tagAValue, setTagAValue] = useState(dataSource.tagA);
   const [tagBValue, setTagBValue] = useState(dataSource.tagB);
@@ -49,12 +48,12 @@ const BasicList = props => {
     }, 2000);
   });
 
-  const onTagAValueChange = v => {
+  const onTagAValueChange = (v) => {
     setLoading(true);
     setTagAValue(v);
   };
 
-  const onTagBValueChange = v => {
+  const onTagBValueChange = (v) => {
     setLoading(true);
     setTagBValue(v);
   };
@@ -68,8 +67,8 @@ const BasicList = props => {
     setLoading(true);
   };
 
-  const renderTagListA = () =>
-    dataSource.tagsA.map(name => (
+  const renderTagListA = () => {
+    return dataSource.tagsA.map((name) => (
       <SelectableTag
         key={name}
         checked={tagAValue === name}
@@ -79,9 +78,10 @@ const BasicList = props => {
         {name}
       </SelectableTag>
     ));
+  };
 
-  const renderTagListB = () =>
-    dataSource.tagsB.map(name => (
+  const renderTagListB = () => {
+    return dataSource.tagsB.map((name) => (
       <SelectableTag
         key={name}
         checked={tagBValue === name}
@@ -91,9 +91,10 @@ const BasicList = props => {
         {name}
       </SelectableTag>
     ));
+  };
 
-  const renderCards = () =>
-    dataSource.cards.map((c, i) => (
+  const renderCards = () => {
+    return dataSource.cards.map((c, i) => (
       <div className={styles.ListItem} key={i}>
         <div className={styles.main}>
           <div className={styles.left}>
@@ -121,6 +122,7 @@ const BasicList = props => {
         </div>
       </div>
     ));
+  };
 
   return (
     <>

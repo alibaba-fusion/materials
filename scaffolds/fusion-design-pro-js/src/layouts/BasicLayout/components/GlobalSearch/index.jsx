@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Search } from '@alifd/next';
-
 const mockData = [
   {
     label: '搜索条件一',

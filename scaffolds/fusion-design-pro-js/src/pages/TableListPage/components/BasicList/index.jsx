@@ -14,7 +14,6 @@ import {
   Loading,
 } from '@alifd/next';
 import styles from './index.module.scss';
-
 const { Cell } = ResponsiveGrid;
 const { Option } = Select;
 const FormItem = Form.Item;
@@ -43,7 +42,7 @@ const DEFAULT_DATA = {
   },
 };
 
-const TableList = props => {
+const TableList = (props) => {
   const { dataSource = DEFAULT_DATA } = props;
   const [loading, setLoading] = useState(true);
   const [expand, setExpand] = useState(false);
@@ -166,7 +165,7 @@ const TableList = props => {
                   }),
                 }}
               >
-                {Object.keys(dataSource.tableColumn).map(col => (
+                {Object.keys(dataSource.tableColumn).map((col) => (
                   <Table.Column title={dataSource.tableColumn[col]} dataIndex={col} key={col} />
                 ))}
                 <Table.Column

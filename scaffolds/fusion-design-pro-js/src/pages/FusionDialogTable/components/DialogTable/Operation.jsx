@@ -1,6 +1,5 @@
 import React, { useEffect, useImperativeHandle } from 'react';
 import { Select, Form, Field, Input } from '@alifd/next';
-
 const FormItem = Form.Item;
 const formItemLayout = {
   labelCol: {
@@ -28,17 +27,19 @@ const Operation = (props, ref) => {
       field.setValues(newValues);
     }
   }, [field, dataSource]);
-  useImperativeHandle(ref, () => ({
-    getValues(callback) {
-      field.validate((errors, values) => {
-        if (errors) {
-          return;
-        }
+  useImperativeHandle(ref, () => {
+    return {
+      getValues(callback) {
+        field.validate((errors, values) => {
+          if (errors) {
+            return;
+          }
 
-        callback(values);
-      });
-    },
-  }));
+          callback(values);
+        });
+      },
+    };
+  });
   const isPreview = actionType === 'preview';
   return (
     <>

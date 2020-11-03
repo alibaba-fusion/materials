@@ -34,7 +34,7 @@ const filterColumns = (columnList: Column[]) => {
     })
     .map((columnItem) => {
       if (columnItem.children) {
-        const groupProps = {...columnItem};
+        const groupProps = { ...columnItem };
         delete groupProps.children;
 
         return (
@@ -46,7 +46,7 @@ const filterColumns = (columnList: Column[]) => {
 
       return <Table.Column key={getColumnKey(columnItem)} {...columnItem} />;
     });
-}
+};
 
 const defaultColumns: Column[] = [
   {
@@ -67,8 +67,8 @@ const defaultColumns: Column[] = [
         id: '1-3',
         title: '姓',
         dataIndex: 'name.last',
-      }
-    ]
+      },
+    ],
   },
   {
     id: '2',
@@ -84,7 +84,7 @@ const defaultColumns: Column[] = [
     id: '4',
     title: '性别',
     dataIndex: 'gender',
-  }
+  },
 ];
 
 const AppList = () => {
@@ -96,7 +96,7 @@ const AppList = () => {
     } else {
       changeSize('medium');
     }
-  }
+  };
 
   // 切换 zebra
   const [zebraStatus, changeZebra] = useState(false);
@@ -106,7 +106,7 @@ const AppList = () => {
     onFull: () => {
       const ele = document.getElementById('table-container');
       ele.setAttribute('style', 'padding: 20px;background: #ffffff');
-    }
+    },
   });
 
   // 获取表格数据
@@ -120,7 +120,9 @@ const AppList = () => {
       <Card.Content>
         <div className={styles.actionBar}>
           <div className={styles.buttonGroup}>
-            <Button type="primary" onClick={() => Message.success('已批量处理xx条数据')}>批量提交</Button>
+            <Button type="primary" onClick={() => Message.success('已批量处理xx条数据')}>
+              批量提交
+            </Button>
             <Button onClick={() => Message.success('已批量处理xx条数据')}>批量删除</Button>
             <Button onClick={() => Message.success('已批量处理xx条数据')}>批量下载</Button>
           </div>
@@ -137,18 +139,25 @@ const AppList = () => {
             <CustomList columns={columns} onChange={onColumnChange} />
           </div>
         </div>
-        <Table
-          {...tableProps}
-          size={sizeStatus}
-          isZebra={zebraStatus}
-          primaryKey="id.value"
-        >
+        <Table {...tableProps} size={sizeStatus} isZebra={zebraStatus} primaryKey="id.value">
           {filterColumns(columns)}
         </Table>
-        <Pagination style={{ marginTop: 16, textAlign: 'right' }} totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>} {...paginationProps} />
+        <Pagination
+          style={{ marginTop: 16, textAlign: 'right' }}
+          totalRender={(total) => (
+            <>
+              共{' '}
+              <Button text type="primary">
+                {total}
+              </Button>{' '}
+              个记录
+            </>
+          )}
+          {...paginationProps}
+        />
       </Card.Content>
     </Card>
-  )
+  );
 };
 
 export default AppList;

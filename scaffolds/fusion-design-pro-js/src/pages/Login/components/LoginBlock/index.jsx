@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
-
 const { Item } = Form;
 const DEFAULT_DATA = {
   name: '',
+  // eslint-disable-next-line @iceworks/best-practices/no-secret-info
   password: '',
   autoLogin: true,
   phone: '',
@@ -34,7 +34,7 @@ const LoginBlock = (
     isRunning ? 1000 : null,
   );
 
-  const formChange = values => {
+  const formChange = (values) => {
     setValue(values);
   };
 

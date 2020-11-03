@@ -3,7 +3,6 @@ import { Button, Icon, Checkbox, Overlay } from '@alifd/next';
 import { ReactSortable } from 'react-sortablejs';
 import { getColumnKey } from './util';
 import styles from './index.module.scss';
-
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
@@ -19,9 +18,9 @@ function CustomList({ columns, onChange }) {
   };
 
   const onHiddenChange = (key, status) => {
-    const columnsHiddenChange = items => {
+    const columnsHiddenChange = (items) => {
       const newItems = [];
-      items.forEach(item => {
+      items.forEach((item) => {
         const columnItem = { ...item };
         const columnKey = getColumnKey(columnItem);
 
@@ -60,7 +59,7 @@ function CustomList({ columns, onChange }) {
                 <Checkbox
                   className="sort-checkbox"
                   checked={!item.hidden}
-                  onChange={status => onHiddenChange(getColumnKey(item), !status)}
+                  onChange={(status) => onHiddenChange(getColumnKey(item), !status)}
                 >
                   {item.title}
                 </Checkbox>
@@ -71,13 +70,13 @@ function CustomList({ columns, onChange }) {
                 <ReactSortable
                   handle=".column-handle"
                   list={item.children}
-                  setList={newState => onColumnChildrenChange(idx, newState)}
+                  setList={(newState) => onColumnChildrenChange(idx, newState)}
                 >
-                  {item.children.map(childrenItem => (
+                  {item.children.map((childrenItem) => (
                     <div key={getColumnKey(childrenItem)} className="sort-item sort-item-children">
                       <Checkbox
                         checked={!childrenItem.hidden}
-                        onChange={status => onHiddenChange(getColumnKey(childrenItem), !status)}
+                        onChange={(status) => onHiddenChange(getColumnKey(childrenItem), !status)}
                       >
                         {childrenItem.title}
                       </Checkbox>

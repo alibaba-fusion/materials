@@ -105,7 +105,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = dom && dom.getBoundingClientRect() || {};
+    const rect = (dom && dom.getBoundingClientRect()) || {};
     setLeft(rect.left);
     setRight(document.documentElement.offsetWidth - rect.left - rect.width);
   }, []);
@@ -115,13 +115,13 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
       <Card free>
         <Card.Content>
           <Step shape="dot" current={1}>
-            <Step.Item key={0} title="申请"/>
-            <Step.Item key={1} title="审批" content="李强"/>
-            <Step.Item key={2} title="接受"/>
-            <Step.Item key={3} title="合同发送"/>
-            <Step.Item key={4} title="合同接受"/>
-            <Step.Item key={5} title="入职准备"/>
-            <Step.Item key={6} title="完成"/>
+            <Step.Item key={0} title="申请" />
+            <Step.Item key={1} title="审批" content="李强" />
+            <Step.Item key={2} title="接受" />
+            <Step.Item key={3} title="合同发送" />
+            <Step.Item key={4} title="合同接受" />
+            <Step.Item key={5} title="入职准备" />
+            <Step.Item key={6} title="完成" />
           </Step>
         </Card.Content>
       </Card>
@@ -167,8 +167,8 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
           <ResponsiveGrid>
             <ResponsiveGrid.Cell colSpan={6}>
               <Box spacing={16} direction="row" align="top">
-                <Box padding={[9,0,0,0]}>
-                  <Avatar src={dataSource.person.avatar}/>
+                <Box padding={[9, 0, 0, 0]}>
+                  <Avatar src={dataSource.person.avatar} />
                 </Box>
                 <Box spacing={10}>
                   <Form labelAlign="top" responsive>

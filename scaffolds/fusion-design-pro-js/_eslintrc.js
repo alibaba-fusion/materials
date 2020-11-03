@@ -1,3 +1,4 @@
-const { eslint } = require('@ice/spec');
+const { getESLintConfig } = require('@iceworks/spec');
 
-module.exports = eslint;
+// https://www.npmjs.com/package/@iceworks/spec
+module.exports = getESLintConfig('react');

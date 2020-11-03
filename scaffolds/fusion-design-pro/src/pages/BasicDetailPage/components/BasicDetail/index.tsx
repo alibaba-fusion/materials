@@ -16,12 +16,12 @@ interface DataSource {
     forensicReview?: string;
     financialReview?: string;
   };
-  targetCompanys?: {
+  targetCompanys?: Array<{
     targetCompany?: string;
     business?: string;
     address?: string;
     creator?: string;
-  }[];
+  }>;
 }
 
 interface BasicDetailProps {

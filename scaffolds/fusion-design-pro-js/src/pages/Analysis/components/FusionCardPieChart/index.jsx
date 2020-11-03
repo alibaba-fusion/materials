@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Radio, Card, Box } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
 import styles from './index.module.scss';
-
 const { Html } = Guide;
 const DEFAULT_DATA = {
   title: '销售额类别占比',
@@ -37,12 +36,12 @@ const DEFAULT_DATA = {
   chartHeight: 500,
 };
 
-const FusionCardLineChart = props => {
+const FusionCardLineChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, value, chartData, chartHeight } = cardConfig;
   const [type, setType] = useState('one');
 
-  const changeType = key => setType(key);
+  const changeType = (key) => setType(key);
 
   return (
     <Card free>
@@ -82,7 +81,7 @@ const FusionCardLineChart = props => {
           />
           <Guide>
             <Html
-              position={['50%', '50%']}
+              position={['50%', '50%']} // eslint-disable-next-line max-len
               html={`<div style='color:#333;font-size:16px;text-align: center;width: 113px;'>销售额<br><span style='color:#333;font-family: Roboto-Bold;font-size:24px'>¥ ${value}</span></div>`}
               alignX="middle"
               alignY="middle"

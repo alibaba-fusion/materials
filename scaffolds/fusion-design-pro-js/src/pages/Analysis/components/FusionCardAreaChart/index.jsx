@@ -3,7 +3,6 @@ import { Card } from '@alifd/next';
 import { Chart, Geom } from 'bizcharts';
 import mock from './mock.js';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   title: '',
   subTitle: '访问量',

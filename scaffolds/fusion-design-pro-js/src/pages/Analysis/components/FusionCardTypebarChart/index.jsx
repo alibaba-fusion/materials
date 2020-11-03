@@ -3,7 +3,6 @@ import { Card } from '@alifd/next';
 import { Chart, Geom, Coord } from 'bizcharts';
 import mock from './mock.js';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   subTitle: '门店量',
   value: mock.value,
@@ -13,7 +12,7 @@ const DEFAULT_DATA = {
   chartHeight: 100,
 };
 
-const FusionCardTypebarChart = props => {
+const FusionCardTypebarChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, subTitle, value, chartData, des, rate, chartHeight } = cardConfig;
   return (

@@ -3,7 +3,6 @@ import { Card, Box } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import classNames from 'classnames';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   titleItem: [
     {
@@ -118,7 +117,7 @@ const RenderPvChart = (props = DEFAULT_DATA) => {
   );
 };
 
-const VisitBlock = ({ cardConfig = DEFAULT_DATA, ...props }) => {
+const VisitBlock = ({ cardConfig = DEFAULT_DATA }) => {
   const { titleItem, chartData, chartHeight } = cardConfig;
   return (
     <Card

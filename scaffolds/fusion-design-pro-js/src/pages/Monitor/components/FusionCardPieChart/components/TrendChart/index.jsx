@@ -3,7 +3,6 @@ import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip, Legend } from 'bizcharts';
 import classNames from 'classnames';
 import styles from './index.module.scss';
-
 const DEFAULT_DATA = {
   title: 'JS 错误',
   chartData: [
@@ -215,7 +214,7 @@ const DEFAULT_DATA = {
   chartHeight: 260,
 };
 
-const JSErrorChart = props => {
+const JSErrorChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   const scale = {
@@ -248,7 +247,7 @@ const JSErrorChart = props => {
           <Legend
             position="top"
             useHtml
-            itemTpl={alias => {
+            itemTpl={(alias) => {
               let name = '';
 
               switch (alias) {

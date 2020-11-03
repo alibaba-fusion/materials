@@ -15,8 +15,8 @@ const getTableData = ({ current, pageSize }, formData) => {
       }
     });
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-      .then(res => res.json())
-      .then(res => ({
+      .then((res) => res.json())
+      .then((res) => ({
         total: 55,
         list: res.results.slice(0, 10),
       }));
@@ -95,7 +95,7 @@ const DialogTable = () => {
     handleCancel();
   }, [handleCancel, reset, state]);
   const handleDelete = useCallback(
-    data => {
+    (data) => {
       if (!data) {
         return;
       }
@@ -176,7 +176,7 @@ const DialogTable = () => {
               marginTop: 16,
               textAlign: 'right',
             }}
-            totalRender={total => (
+            totalRender={(total) => (
               <>
                 共{' '}
                 <Button text type="primary">
