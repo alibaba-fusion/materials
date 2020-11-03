@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-single-col-filter-table",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "table with single filter column",
   "files": [
     "src/!(style.d.ts)",

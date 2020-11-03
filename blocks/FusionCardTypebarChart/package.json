@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-typebar-chart",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "类型区分的柱形卡片",
   "files": [
     "build/",

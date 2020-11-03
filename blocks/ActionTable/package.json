@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-action-table",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "action bar table",
   "files": [
     "src/!(style.d.ts)",

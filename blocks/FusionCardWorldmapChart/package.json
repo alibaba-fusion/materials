@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-worldmap-chart",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "世界地图卡片",
   "files": [
     "build/",

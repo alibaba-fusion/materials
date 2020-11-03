@@ -25,11 +25,12 @@ blocksList.forEach(block => {
 
   // 升级 updateMap 中区块的版本号
   // if (updateMap.indexOf(block) > -1) {
-  // const versions = packageInfo.version.split('.');
-  // versions[2] = parseInt(versions[2]) + 1;
-  // packageInfo.version = versions.join('.');
+  const versions = packageInfo.version.split('.');
+  versions[2] = parseInt(versions[2]) + 1;
+  packageInfo.version = versions.join('.');
 
-  // fs.writeJsonSync(blockPkgjson, packageInfo, { spaces: 2 });
+  fs.writeJsonSync(blockPkgjson, packageInfo, { spaces: 2 });
+  return;
   // }
 
   // 修改package json 中的 files
@@ -115,7 +116,7 @@ blocksList.forEach(block => {
 
   try {
     // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
-    execSync(`cd blocks/${block};tnpm install bizcharts;npm publish;`);
+    execSync(`cd blocks/${block};tnpm update;npm publish;`);
   } catch (err) {
     console.log(err);
   }

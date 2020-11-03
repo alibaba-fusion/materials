@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-server-error",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "server error",
   "files": [
     "build/",

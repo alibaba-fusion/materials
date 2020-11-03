@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-settings-person",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "基础的个人设置Block",
   "files": [
     "build/",

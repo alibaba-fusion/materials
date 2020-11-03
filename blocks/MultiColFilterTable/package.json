@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-multi-col-filter-table",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "多列可切换过滤表格",
   "files": [
     "src/!(style.d.ts)",

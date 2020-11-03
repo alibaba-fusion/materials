@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-hierarchical-form",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "分级表单",
   "files": [
     "build/",

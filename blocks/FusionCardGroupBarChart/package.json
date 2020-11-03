@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-group-bar-chart",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "分组柱形图卡片",
   "files": [
     "build/",

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-settings-system",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "基础的系统设置Block",
   "files": [
     "build/",

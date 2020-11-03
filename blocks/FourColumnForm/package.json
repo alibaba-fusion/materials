@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-four-column-form",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Form of four columns",
   "files": [
     "build/",

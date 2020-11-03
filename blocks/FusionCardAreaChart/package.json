@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-area-chart",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "面积图卡片",
   "files": [
     "build/",

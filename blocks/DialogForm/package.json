@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-dialog-form",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "弹出式表单",
   "files": [
     "build/",

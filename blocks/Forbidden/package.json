@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-forbidden",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "forbidden  exception",
   "files": [
     "build/",

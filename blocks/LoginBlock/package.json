@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-login",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "block for login",
   "files": [
     "build/",
