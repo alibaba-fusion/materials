@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Form, Card, Input, Message, Button, List, Divider } from '@alifd/next';
-import { store as pageStore } from 'ice/Solution';
+import store from '@/pages/Solution/store';
 
 interface IDataSource {
   title: string;
@@ -18,7 +18,7 @@ const formItemLayout = {
 
 const FormItem = Form.Item;
 const Tasks = () => {
-  const [taskList, taskDispatchers] = pageStore.useModel('tasks');
+  const [taskList, taskDispatchers] = store.useModel('tasks');
 
   console.log(taskList, taskDispatchers);
   const handleSubmit = (values: IFromValue): void => {
