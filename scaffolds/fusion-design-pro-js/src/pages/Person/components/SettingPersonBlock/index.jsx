@@ -29,13 +29,13 @@ const DEFAULT_ON_SUBMIT = (values, errors) => {
   Message.success('更新成功');
 };
 
-const SettingPersonBlock = props => {
+const SettingPersonBlock = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = DEFAULT_ON_SUBMIT } = props;
   const [postData, setValue] = useState(dataSource);
   const [buttonText, setButtonText] = useState('发送验证码');
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
-  const formChange = values => {
+  const formChange = (values) => {
     setValue(values);
   };
 

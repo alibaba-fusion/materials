@@ -11,50 +11,52 @@ import FusionCardGroupBarChart from './components/FusionCardGroupBarChart';
 
 const { Cell } = ResponsiveGrid;
 
-const Analysis = () => (
-  <ResponsiveGrid gap={20}>
-    <Cell colSpan={12}>
-      <PageHeader
-        title="分析页面"
-        breadcrumbs={[
-          {
-            name: 'Dashboard',
-          },
-          {
-            name: '分析页面',
-          },
-        ]}
-      />
-    </Cell>
+const Analysis = () => {
+  return (
+    <ResponsiveGrid gap={20}>
+      <Cell colSpan={12}>
+        <PageHeader
+          title="分析页面"
+          breadcrumbs={[
+            {
+              name: 'Dashboard',
+            },
+            {
+              name: '分析页面',
+            },
+          ]}
+        />
+      </Cell>
 
-    <Cell colSpan={3}>
-      <FusionCardBarChart />
-    </Cell>
+      <Cell colSpan={3}>
+        <FusionCardBarChart />
+      </Cell>
 
-    <Cell colSpan={3}>
-      <FusionCardAreaChart />
-    </Cell>
+      <Cell colSpan={3}>
+        <FusionCardAreaChart />
+      </Cell>
 
-    <Cell colSpan={3}>
-      <FusionCardTypebarChart />
-    </Cell>
+      <Cell colSpan={3}>
+        <FusionCardTypebarChart />
+      </Cell>
 
-    <Cell colSpan={3}>
-      <FusionCardLineChart />
-    </Cell>
+      <Cell colSpan={3}>
+        <FusionCardLineChart />
+      </Cell>
 
-    <Cell colSpan={12}>
-      <FusionCardRankChart />
-    </Cell>
+      <Cell colSpan={12}>
+        <FusionCardRankChart />
+      </Cell>
 
-    <Cell colSpan={4}>
-      <FusionCardPieChart />
-    </Cell>
+      <Cell colSpan={4}>
+        <FusionCardPieChart />
+      </Cell>
 
-    <Cell colSpan={8}>
-      <FusionCardGroupBarChart />
-    </Cell>
-  </ResponsiveGrid>
-);
+      <Cell colSpan={8}>
+        <FusionCardGroupBarChart />
+      </Cell>
+    </ResponsiveGrid>
+  );
+};
 
 export default Analysis;

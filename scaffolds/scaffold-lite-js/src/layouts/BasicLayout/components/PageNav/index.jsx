@@ -1,29 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
 const { SubNav } = Nav;
-const NavItem = Nav.Item;
+const NavItem = Nav.Item; // mock the auth object
+// Ref: https://ice.work/docs/guide/advance/auth#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9D%83%E9%99%90%E6%95%B0%E6%8D%AE
 
-function getNavMenuItems(menusData, initIndex) {
+const AUTH_CONFIG = {
+  admin: true,
+  guest: false,
+};
+
+function getNavMenuItems(menusData, initIndex, auth) {
   if (!menusData) {
     return [];
   }
 
   return menusData
-    .filter(item => item.name && !item.hideInMenu)
-    .map((item, index) => getSubMenuOrItem(item, `${initIndex}-${index}`));
+    .filter((item) => {
+      let roleAuth = true; // if item.roles is [] or undefined, roleAuth is true
+
+      if (auth && item.auth && item.auth instanceof Array) {
+        if (item.auth.length) {
+          roleAuth = item.auth.some((key) => auth[key]);
+        }
+      }
+
+      return item.name && !item.hideInMenu && roleAuth;
+    })
+    .map((item, index) => {
+      return getSubMenuOrItem(item, `${initIndex}-${index}`, auth);
+    });
 }
 
-function getSubMenuOrItem(item, index) {
-  if (item.children && item.children.some(child => child.name)) {
-    const childrenItems = getNavMenuItems(item.children, index);
+function getSubMenuOrItem(item, index, auth) {
+  if (item.children && item.children.some((child) => child.name)) {
+    const childrenItems = getNavMenuItems(item.children, index, auth);
 
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
-        <SubNav key={index} icon={item.icon} label={item.name}>
+        <SubNav key={item.name} icon={item.icon} label={item.name}>
           {childrenItems}
         </SubNav>
       );
@@ -42,12 +60,23 @@ function getSubMenuOrItem(item, index) {
 }
 
 const Navigation = (props, context) => {
+  const [openKey, setOpenKey] = useState('');
   const { location } = props;
   const { pathname } = location;
   const { isCollapse } = context;
+  useEffect(() => {
+    const curSubNav = asideMenuConfig.find((menuConfig) => {
+      return menuConfig.children && menuConfig.children.some((child) => child.path === pathname);
+    });
+
+    if (curSubNav) {
+      setOpenKey(curSubNav.name);
+    }
+  }, [pathname]);
   return (
     <Nav
       type="normal"
+      openKeys={openKey}
       selectedKeys={[pathname]}
       defaultSelectedKeys={[pathname]}
       embeddable
@@ -57,7 +86,7 @@ const Navigation = (props, context) => {
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
     >
-      {getNavMenuItems(asideMenuConfig, 0)}
+      {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>
   );
 };

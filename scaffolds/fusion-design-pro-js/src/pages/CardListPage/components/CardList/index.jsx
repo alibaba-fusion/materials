@@ -37,7 +37,7 @@ const DEFAULT_DATA = {
   }),
 };
 
-const CardList = props => {
+const CardList = (props) => {
   const { dataSource = DEFAULT_DATA, onSearch = () => {} } = props;
   const [tagAValue, setTagAValue] = useState(dataSource.tagA);
   const [tagBValue, setTagBValue] = useState(dataSource.tagB);
@@ -48,12 +48,12 @@ const CardList = props => {
     }, 1000);
   });
 
-  const onTagAValueChange = v => {
+  const onTagAValueChange = (v) => {
     setLoading(true);
     setTagAValue(v);
   };
 
-  const onTagBValueChange = v => {
+  const onTagBValueChange = (v) => {
     setLoading(true);
     setTagBValue(v);
   };
@@ -63,8 +63,8 @@ const CardList = props => {
     onSearch();
   };
 
-  const renderTagListA = () =>
-    dataSource.tagsA.map(name => (
+  const renderTagListA = () => {
+    return dataSource.tagsA.map((name) => (
       <SelectableTag
         key={name}
         checked={tagAValue === name}
@@ -74,9 +74,10 @@ const CardList = props => {
         {name}
       </SelectableTag>
     ));
+  };
 
-  const renderTagListB = () =>
-    dataSource.tagsB.map(name => (
+  const renderTagListB = () => {
+    return dataSource.tagsB.map((name) => (
       <SelectableTag
         key={name}
         checked={tagBValue === name}
@@ -86,9 +87,10 @@ const CardList = props => {
         {name}
       </SelectableTag>
     ));
+  };
 
-  const renderCards = () =>
-    dataSource.cards.map((c, i) => (
+  const renderCards = () => {
+    return dataSource.cards.map((c, i) => (
       <Cell colSpan={3} className={styles.ListItem} key={i}>
         <div className={styles.main}>
           <img
@@ -106,6 +108,7 @@ const CardList = props => {
         </div>
       </Cell>
     ));
+  };
 
   return (
     <>

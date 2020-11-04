@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react';
 import { Dialog } from '@alifd/next';
 import Operation from './Operation';
 
-const getDialogTitle = actionType => {
+const getDialogTitle = (actionType) => {
   switch (actionType) {
     case 'add':
     default:
@@ -16,7 +16,7 @@ const getDialogTitle = actionType => {
   }
 };
 
-const DialogOperation = props => {
+const DialogOperation = (props) => {
   const { actionType, dataSource, onOk = () => {}, ...lastProps } = props;
   const operationRef = useRef(null);
   const handleOk = useCallback(() => {
@@ -24,7 +24,7 @@ const DialogOperation = props => {
       return onOk(null);
     }
 
-    operationRef.current.getValues(values => {
+    operationRef.current.getValues((values) => {
       onOk(values);
     });
   }, [actionType, onOk]);

@@ -186,31 +186,33 @@ export default function SingleTreeTable() {
     Message.success('请求成功');
   };
 
-  const tableOperation = (value, index, record) => (
-    <div className={styles.buttonGroup}>
-      <Button type="primary" text onClick={fetchRemote}>
-        删除
-      </Button>
-      {record && record.children && (
-        <>
-          <Button type="primary" text onClick={() => setVisible(true)}>
-            编辑
-          </Button>
-          <MenuButton
-            type="primary"
-            text
-            popupProps={{
-              autoFit: true,
-            }}
-            label="更多"
-          >
-            <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
-            <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
-          </MenuButton>
-        </>
-      )}
-    </div>
-  );
+  const tableOperation = (value, index, record) => {
+    return (
+      <div className={styles.buttonGroup}>
+        <Button type="primary" text onClick={fetchRemote}>
+          删除
+        </Button>
+        {record && record.children && (
+          <>
+            <Button type="primary" text onClick={() => setVisible(true)}>
+              编辑
+            </Button>
+            <MenuButton
+              type="primary"
+              text
+              popupProps={{
+                autoFit: true,
+              }}
+              label="更多"
+            >
+              <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
+              <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
+            </MenuButton>
+          </>
+        )}
+      </div>
+    );
+  };
 
   return (
     <Card free className={styles.container}>

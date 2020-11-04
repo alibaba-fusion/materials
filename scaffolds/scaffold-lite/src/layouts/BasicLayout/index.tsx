@@ -3,8 +3,9 @@ import { Shell, ConfigProvider } from '@alifd/next';
 import PageNav from './components/PageNav';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
-(function() {
-  const throttle = function(type: string, name: string, obj: Window = window) {
+
+(function () {
+  const throttle = function (type: string, name: string, obj: Window = window) {
     let running = false;
 
     const func = () => {
@@ -35,7 +36,7 @@ export default function BasicLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const getDevice: IGetDevice = width => {
+  const getDevice: IGetDevice = (width) => {
     const isPhone =
       typeof navigator !== 'undefined' &&
       navigator &&
@@ -53,7 +54,7 @@ export default function BasicLayout({
   const [device, setDevice] = useState(getDevice(NaN));
 
   if (typeof window !== 'undefined') {
-    window.addEventListener('optimizedResize', e => {
+    window.addEventListener('optimizedResize', (e) => {
       const deviceWidth =
         (e && e.target && (e.target as Window).innerWidth) || NaN;
       setDevice(getDevice(deviceWidth));
@@ -79,8 +80,8 @@ export default function BasicLayout({
           style={{
             marginRight: 10,
           }}
-        ></Shell.Navigation>
-        <Shell.Action></Shell.Action>
+        />
+        <Shell.Action />
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

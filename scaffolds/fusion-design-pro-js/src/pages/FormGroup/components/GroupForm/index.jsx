@@ -78,7 +78,7 @@ const DEFAULT_DATA = {
   ],
 };
 
-const GroupForm = props => {
+const GroupForm = (props) => {
   const {
     dataSource: defaultDataSource = DEFAULT_DATA,
     onSubmit = () => {},
@@ -108,7 +108,7 @@ const GroupForm = props => {
     setDataSouce({ ...dataSource, company });
   };
 
-  const deleteRow = index => {
+  const deleteRow = (index) => {
     const company = [...dataSource.company];
 
     if (!company[index].id) {
@@ -153,7 +153,7 @@ const GroupForm = props => {
           style={{
             width: '100%',
           }}
-          onChange={value => changeRowData(i, key, value)}
+          onChange={(value) => changeRowData(i, key, value)}
           value={v || ''}
         />
       );

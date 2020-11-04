@@ -4,7 +4,7 @@ import { Search } from '@alifd/next';
 export interface IData {
   label: string;
   value: string;
-};
+}
 
 const mockData: IData[] = [{
   label: '搜索条件一',
@@ -29,4 +29,4 @@ export default function GlobalSearch() {
   return (
     <Search dataSource={dataSource} shape="simple" type="dark" onChange={onChange} />
   );
-};
+}

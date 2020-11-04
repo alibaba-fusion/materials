@@ -20,11 +20,11 @@ const DEFAULT_ON_SUBMIT = (values, errors) => {
   Message.success('提交成功');
 };
 
-const BasicForm = props => {
+const BasicForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = DEFAULT_ON_SUBMIT, onCancel = () => {} } = props;
   const [postData, setValue] = useState(dataSource);
 
-  const formChange = values => {
+  const formChange = (values) => {
     setValue(values);
   };
 

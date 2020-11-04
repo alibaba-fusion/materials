@@ -29,8 +29,8 @@ export interface NoticeProps {
 }
 
 const Notice: React.FC<NoticeProps> = ({ noticeList }) => {
-  const [ badgeCount, setBageCount ] = useState(2);
-  const [ readList, setReadList ] = useState<number[]>([]);
+  const [badgeCount, setBageCount] = useState(2);
+  const [readList, setReadList] = useState<number[]>([]);
 
   function markAsRead(id: number) {
     setReadList([...readList, id]);
@@ -91,7 +91,7 @@ const Notice: React.FC<NoticeProps> = ({ noticeList }) => {
         })}
         {renderList.length === 0 && (
           <List.Item className={styles.empty}>
-              你已查看所有通知
+            你已查看所有通知
           </List.Item>
         )}
       </List>

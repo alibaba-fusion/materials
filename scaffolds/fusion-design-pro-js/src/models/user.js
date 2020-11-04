@@ -7,7 +7,7 @@ export default {
     avatar: '',
     userid: null,
   },
-  effects: dispatch => ({
+  effects: (dispatch) => ({
     async fetchUserProfile() {
       const res = await request('/api/profile');
 

@@ -29,7 +29,7 @@ const DEFAULT_DATA = {
   ],
 };
 
-const FusionCardRankChart = props => {
+const FusionCardRankChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, dataSource } = cardConfig;
   return (
@@ -49,7 +49,7 @@ const FusionCardRankChart = props => {
           <Cell colSpan={3}>
             <Box justify="flex-start" spacing={20} className={styles.histogram}>
               {dataSource &&
-                dataSource.map(item => (
+                dataSource.map((item) => (
                   <Box justify="flex-start" spacing={5}>
                     <div className={styles.hisTitle}>{item.name}</div>
                     <Box direction="row">

@@ -144,25 +144,25 @@ export default {
   entrances: [{
     name: '操作一',
     link: '/',
-  },{
+  }, {
     name: '操作二',
     link: '/',
-  },{
+  }, {
     name: '操作三',
     link: '/',
-  },{
+  }, {
     name: '操作四',
     link: '/',
-  },{
+  }, {
     name: '操作五',
     link: '/',
-  },{
+  }, {
     name: '操作六',
     link: '/',
-  },{
+  }, {
     name: '操作七',
     link: '/',
-  },{
+  }, {
     name: '操作八',
     link: '/',
   }],

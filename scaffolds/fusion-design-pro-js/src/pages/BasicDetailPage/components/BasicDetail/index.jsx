@@ -26,7 +26,7 @@ const DEFAULT_DATA = {
   }),
 };
 
-const BasicDetail = props => {
+const BasicDetail = (props) => {
   const { dataSource = DEFAULT_DATA } = props;
   return (
     <div>
