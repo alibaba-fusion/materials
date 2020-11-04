@@ -1,3 +1,3 @@
-const { stylelint } = require('@ice/spec');
+const { getStylelintConfig } = require('@iceworks/spec');
 
-module.exports = stylelint;
+module.exports = getStylelintConfig('react');

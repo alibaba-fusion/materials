@@ -14,7 +14,7 @@
     "generate-and-deploy-oss": "node scripts/oss/upload.js",
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
-    "eslint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "stylelint": "stylelint **/*.{css,scss,less}"
   },
   "husky": {

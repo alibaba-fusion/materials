@@ -14,5 +14,3 @@ tmp
 scripts/
 # 一级 components
 /components/ 
-
-scaffolds/scaffold-lite

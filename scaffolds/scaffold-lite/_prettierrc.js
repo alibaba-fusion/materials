@@ -1,3 +1,3 @@
-const { prettier } = require('@ice/spec');
+const { getPrettierConfig } = require('@iceworks/spec');
 
-module.exports = prettier;
+module.exports = getPrettierConfig('react');
