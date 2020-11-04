@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Form, Card, Input, Message, Button, List, Divider } from '@alifd/next';
 import { store as pageStore } from 'ice/Solution';
+
 const formItemLayout = {
   colSpan: 6,
 };

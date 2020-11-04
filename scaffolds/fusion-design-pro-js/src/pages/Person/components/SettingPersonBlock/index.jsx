@@ -12,6 +12,7 @@ import {
   Message,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 const DEFAULT_DATA = {

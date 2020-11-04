@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
+
 const { Item } = Form;
 export default function RegisterBlock() {
   const [postData, setValue] = useState({

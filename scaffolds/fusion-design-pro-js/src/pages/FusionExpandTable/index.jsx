@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import PageHeader from '@/components/PageHeader';
 import ExpandTable from './components/ExpandTable';
+
 const { Cell } = ResponsiveGrid;
 
 const FusionExpandTable = () => {

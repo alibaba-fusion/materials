@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import PageHeader from '@/components/PageHeader';
 import FailDetail from './components/FailDetail';
+
 const { Cell } = ResponsiveGrid;
 
 const FeedbackFail = () => {

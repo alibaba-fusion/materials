@@ -12,6 +12,7 @@ import {
   Pagination,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const DEFAULT_DATA = {
   tagsA: [

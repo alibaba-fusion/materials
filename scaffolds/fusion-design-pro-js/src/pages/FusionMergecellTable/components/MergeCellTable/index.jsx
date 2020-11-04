@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Card, Table, Pagination } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
+
 const MockData = [
   {
     gender: 'female',
@@ -64,11 +65,10 @@ const MockData = [
   },
 ];
 
-const getTableData = () =>
-  Promise.resolve({
-    total: MockData.length,
-    list: MockData,
-  });
+const getTableData = () => Promise.resolve({
+  total: MockData.length,
+  list: MockData,
+});
 
 const cellProps = (rowIndex, colIndex, dataIndex, record) => {
   const { groupCount, groupIndex, group2Merged } = record; // 合并待 merge 的行

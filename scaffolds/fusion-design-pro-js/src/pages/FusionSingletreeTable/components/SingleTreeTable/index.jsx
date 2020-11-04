@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Table, Button, MenuButton, Message, Dialog } from '@alifd/next';
 import styles from './index.module.scss';
+
 const data = [
   {
     id: 'first',

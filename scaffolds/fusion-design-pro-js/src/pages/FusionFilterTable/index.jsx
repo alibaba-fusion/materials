@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import PageHeader from '@/components/PageHeader';
 import FilterTable from './components/FilterTable';
+
 const { Cell } = ResponsiveGrid;
 
 const FusionFilterTable = () => {

@@ -3,6 +3,7 @@ import { Card } from '@alifd/next';
 import { Chart, Geom } from 'bizcharts';
 import mock from './mock.js';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   subTitle: '门店活动效果',
   value: mock.value,

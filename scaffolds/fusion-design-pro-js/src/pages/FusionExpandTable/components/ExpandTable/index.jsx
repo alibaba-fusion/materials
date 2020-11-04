@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Card, Table, Pagination, Field, Button } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
 import styles from './index.module.scss';
+
 const { useState } = React;
 
 const getTableData = ({ current, pageSize }, formData) => {

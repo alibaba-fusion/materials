@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import styles from './index.module.scss';
+
 export default function FailDetail(props) {
   const {
     statusCode = '提交失败',

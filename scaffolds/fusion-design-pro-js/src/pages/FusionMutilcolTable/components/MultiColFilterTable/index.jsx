@@ -4,6 +4,7 @@ import { useFusionTable, useSetState } from 'ahooks';
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
 import styles from './index.module.scss';
+
 const FormItem = Form.Item;
 
 const getTableData = ({ current, pageSize }, formData) => {

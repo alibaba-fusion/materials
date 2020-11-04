@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Radio, Card, Box } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
 import styles from './index.module.scss';
+
 const { Html } = Guide;
 const DEFAULT_DATA = {
   title: '销售额类别占比',

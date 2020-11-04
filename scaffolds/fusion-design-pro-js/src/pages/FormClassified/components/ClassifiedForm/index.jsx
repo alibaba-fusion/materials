@@ -12,6 +12,7 @@ import {
   Message,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   job: {
     address: '美国 洛杉矶',

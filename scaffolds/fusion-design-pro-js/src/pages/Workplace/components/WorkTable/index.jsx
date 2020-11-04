@@ -15,6 +15,7 @@ import {
 } from '@alifd/next';
 import mock from './mock';
 import styles from './index.module.scss';
+
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
 const DEFAULT_DATA = {

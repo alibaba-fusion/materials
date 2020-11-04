@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Legend } from 'bizcharts';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   title: '消费数据',
   chartData: [

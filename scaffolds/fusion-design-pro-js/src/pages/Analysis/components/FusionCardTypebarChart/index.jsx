@@ -3,6 +3,7 @@ import { Card } from '@alifd/next';
 import { Chart, Geom, Coord } from 'bizcharts';
 import mock from './mock.js';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   subTitle: '门店量',
   value: mock.value,

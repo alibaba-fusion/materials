@@ -8,6 +8,7 @@ import FusionCardLineChart from './components/FusionCardLineChart';
 import FusionCardRankChart from './components/FusionCardRankChart';
 import FusionCardPieChart from './components/FusionCardPieChart';
 import FusionCardGroupBarChart from './components/FusionCardGroupBarChart';
+
 const { Cell } = ResponsiveGrid;
 
 const Analysis = () => {

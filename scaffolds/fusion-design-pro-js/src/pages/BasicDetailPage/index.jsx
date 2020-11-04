@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import PageHeader from '@/components/PageHeader';
 import BasicDetail from './components/BasicDetail';
+
 const { Cell } = ResponsiveGrid;
 
 const BasicDetailPage = () => {

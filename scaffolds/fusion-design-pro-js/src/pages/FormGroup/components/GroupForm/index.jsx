@@ -14,6 +14,7 @@ import {
   Field,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   basic: {},
   member: {},

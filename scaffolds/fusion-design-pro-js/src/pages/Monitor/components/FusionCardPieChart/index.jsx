@@ -6,6 +6,7 @@ import WebInfoBlock from './components/WebInfoBlock';
 import VisitBlock from './components/VisitBlock';
 import TrendChart from './components/TrendChart';
 import mock from './mock.js';
+
 const { Cell } = ResponsiveGrid;
 
 const MonitorBlock = () => {

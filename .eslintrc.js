@@ -13,7 +13,6 @@ const commonRules = {
 const jsRules = deepmerge(getESLintConfig('react'), {
   rules: {
     ...commonRules,
-    'implicit-arrow-linebreak': 0
   },
 });
 

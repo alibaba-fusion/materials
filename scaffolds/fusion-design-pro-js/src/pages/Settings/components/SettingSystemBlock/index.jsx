@@ -17,6 +17,7 @@ import {
   Icon,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 const MockData = [

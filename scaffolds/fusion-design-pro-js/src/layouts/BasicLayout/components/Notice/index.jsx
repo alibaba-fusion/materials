@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Icon, Badge, Overlay, Avatar, Message, List } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Popup } = Overlay;
 const defaultNoticeList = [
   {

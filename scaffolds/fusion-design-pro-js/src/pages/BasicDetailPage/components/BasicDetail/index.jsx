@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Card, Table, Form } from '@alifd/next';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   basicInfo: {
     company: '蚂蚁证券投资有限公司',

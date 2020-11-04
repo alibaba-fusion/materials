@@ -13,6 +13,7 @@ import {
   Divider,
 } from '@alifd/next';
 import styles from './index.module.scss';
+
 const DEFAULT_DATA = {
   logs: [
     ['主管审批', '梅长苏'],

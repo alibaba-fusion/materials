@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
+
 export default function SuccessDetail(props) {
   const {
     statusCode = '提交成功',

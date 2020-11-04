@@ -24,7 +24,8 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"],
-      "ice": [".ice/index.ts"]
+      "ice": [".ice/index.ts"],
+      "ice/*": [".ice/pages/*"]
     }
   },
   "include": ["src", ".ice"],

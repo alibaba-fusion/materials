@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, ResponsiveGrid, Box, Divider } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Cell } = ResponsiveGrid;
 const DEFAULT_DATA = {
   title: '区域销售',
