@@ -83,8 +83,8 @@ const Navigation = (props, context) => {
       return menuConfig.children && menuConfig.children.some(child => child.path === pathname);
     });
 
-    if (curSubNav) {
-      setOpenKeys([curSubNav.name]);
+    if (curSubNav && !openKeys.includes(curSubNav.name)) {
+      setOpenKeys([...openKeys, curSubNav.name]);
     }
   }, [pathname]);
 
