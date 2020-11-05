@@ -14,21 +14,21 @@ const MonitorBlock = () => {
   return (
     <ResponsiveGrid gap={20}>
       <Cell colSpan={3}>
-        <WebInfoBlock cardConfig={mock.JSErrorRate}/>
+        <WebInfoBlock cardConfig={mock.JSErrorRate} />
       </Cell>
       <Cell colSpan={6} rowSpan={2}>
-        <VisitBlock/>
+        <VisitBlock />
       </Cell>
       <Cell colSpan={3}>
-        <WebInfoBlock cardConfig={mock.APISuccessRate}/>
+        <WebInfoBlock cardConfig={mock.APISuccessRate} />
       </Cell>
       <Cell colSpan={3}>
-        <WebInfoBlock cardConfig={mock.FirstRenderTime}/>
+        <WebInfoBlock cardConfig={mock.FirstRenderTime} />
       </Cell>
       <Cell colSpan={3}>
-        <WebInfoBlock cardConfig={mock.ResourceError}/>
+        <WebInfoBlock cardConfig={mock.ResourceError} />
       </Cell>
-      
+
       <Cell colSpan={12}>
         <TrendChart />
       </Cell>

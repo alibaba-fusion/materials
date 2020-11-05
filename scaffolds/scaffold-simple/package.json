@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-simple",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "使用 TypeScript，未使用任何 UI 库。",
   "files": [
     ".vscode/",
@@ -29,10 +29,10 @@
   },
   "devDependencies": {
     "@ice/screenshot": "^0.1.5",
-    "@ice/spec": "^1.0.1",
-    "eslint": "^6.0.1",
+    "@iceworks/spec": "^1.0.0",
+    "eslint": "^6.8.0",
     "ice.js": "^1.0.0",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.7.2"
   },
   "scripts": {
     "start": "icejs start",
@@ -40,7 +40,7 @@
     "screenshot": "../../node_modules/.bin/screenshot -l",
     "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "stylelint": "stylelint ./**/*.scss"
   },
   "publishConfig": {

@@ -10,7 +10,7 @@ const Greeting = ({ name }: Props) => {
     <div>
       <h2>404</h2>
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/">{name}</Link>
       </div>
       <div>
         <Link to="/dashboard">Dashboard</Link>

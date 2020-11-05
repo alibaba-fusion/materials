@@ -1,4 +1,4 @@
-export const delay = time => new Promise(resolve => setTimeout(() => resolve(), time));
+export const delay = (time) => new Promise((resolve) => setTimeout(() => resolve(), time));
 export default {
   state: [
     {
@@ -6,7 +6,7 @@ export default {
       description: '初始示例任务说明...',
     },
   ],
-  effects: dispatch => ({
+  effects: (dispatch) => ({
     async addTask(task) {
       // fetch API to add task
       await delay(100); // update store

@@ -10,26 +10,23 @@
     "setup": "npm run clean && npm i",
     "deploy": "npm run generate && npm run sync",
     "generate": "iceworks generate",
-    "generate:ci": "CONCURRENCY=5 LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate",
-    "deploy-oss": "iceworks -V && npm run generate:ci && npm run upload-oss",
-    "upload-oss": "node scripts/oss/upload.js",
     "sync": "npm run lint && iceworks sync",
+    "generate-and-deploy-oss": "node scripts/oss/upload.js",
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "stylelint": "stylelint **/*.{css,scss,less}"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run eslint-blocks",
       "pre-push": "npm run lint"
     }
   },
   "dependencies": {
     "@alifd/next": "^1.19.5",
     "@types/react": "^16.9.16",
-    "ice-scaffold-generator": "^1.1.3",
+    "ice-scaffold-generator": "^1.1.19",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
@@ -40,6 +37,7 @@
     "@commitlint/cli": "^8.2.0",
     "@ice/screenshot": "^0.1.5",
     "@ice/spec": "^1.0.1",
+    "@iceworks/spec": "^1.0.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.12.17",
     "ali-oss": "^6.5.1",

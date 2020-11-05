@@ -5,26 +5,28 @@ import FusionCardPieChart from './components/FusionCardPieChart';
 
 const { Cell } = ResponsiveGrid;
 
-const Monitor = () => (
-  <ResponsiveGrid gap={20}>
-    <Cell colSpan={12}>
-      <PageHeader
-        title="监控台页面"
-        breadcrumbs={[
-          {
-            name: 'Dashboard',
-          },
-          {
-            name: '监控台页面',
-          },
-        ]}
-      />
-    </Cell>
+const Monitor = () => {
+  return (
+    <ResponsiveGrid gap={20}>
+      <Cell colSpan={12}>
+        <PageHeader
+          title="监控台页面"
+          breadcrumbs={[
+            {
+              name: 'Dashboard',
+            },
+            {
+              name: '监控台页面',
+            },
+          ]}
+        />
+      </Cell>
 
-    <Cell colSpan={12}>
-      <FusionCardPieChart />
-    </Cell>
-  </ResponsiveGrid>
-);
+      <Cell colSpan={12}>
+        <FusionCardPieChart />
+      </Cell>
+    </ResponsiveGrid>
+  );
+};
 
 export default Monitor;

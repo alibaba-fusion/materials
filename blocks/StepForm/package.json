@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-step-form",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Form of steps",
   "files": [
     "build/",

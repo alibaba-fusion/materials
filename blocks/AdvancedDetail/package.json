@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-advanced-detail",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "intro block",
   "main": "./src/index.tsx",
   "files": [

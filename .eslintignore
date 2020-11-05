@@ -10,3 +10,7 @@ _stylelintrc.js
 .ice/
 __tests__
 tmp
+
+scripts/
+# 一级 components
+/components/ 

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.1.23",
+  "version": "0.2.0",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     ".vscode/",
@@ -35,14 +35,14 @@
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "lodash.debounce": "^4.0.8",
-    "react-sortablejs": "^2.0.11",
+    "react-sortablejs": "^5.0.0",
     "sortablejs": "^1.12.0"
   },
   "devDependencies": {
-    "@ice/spec": "^1.0.0",
+    "@iceworks/spec": "^1.0.0",
     "build-plugin-fusion": "^0.1.0",
     "build-plugin-moment-locales": "^0.1.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.8.0",
     "ice.js": "^1.0.0",
     "stylelint": "^13.2.0",
     "build-plugin-fusion-material": "^0.1.5"

@@ -2,3 +2,7 @@ node_modules/
 coverage/
 
 build/
+
+scripts/
+# 一级 components
+/components/ 

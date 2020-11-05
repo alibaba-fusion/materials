@@ -14,7 +14,7 @@ const Guide = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            marginRight: 20
+            marginRight: 20,
           }}
         >
           使用文档

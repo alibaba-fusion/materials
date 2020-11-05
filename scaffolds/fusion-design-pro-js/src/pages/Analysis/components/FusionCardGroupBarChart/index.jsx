@@ -85,7 +85,7 @@ const DEFAULT_DATA = {
   chartHeight: 500,
 };
 
-const FusionCardGroupBarChart = props => {
+const FusionCardGroupBarChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   return (

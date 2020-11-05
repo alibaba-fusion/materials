@@ -20,14 +20,14 @@ export interface SuccessDetailProps {
 
 }
 
-export default function SuccessDetail(props: SuccessDetailProps ) {
+export default function SuccessDetail(props: SuccessDetailProps) {
   const {
     statusCode = '提交成功',
     description = 's 后自动跳转至工单页',
     image = 'https://img.alicdn.com/tfs/TB1UOSVoqL7gK0jSZFBXXXZZpXa-73-72.png',
     buttonBackDesc = '返回列表',
-    buttonContinueDesc =  '继续创建',
-    countDownSecnods =  5,
+    buttonContinueDesc = '继续创建',
+    countDownSecnods = 5,
     onButtonBack = null,
     onButtonContinue = null,
   } = props;
@@ -35,24 +35,24 @@ export default function SuccessDetail(props: SuccessDetailProps ) {
   const [second, setSecond] = useState(countDownSecnods);
 
   const gobackHandle = () => {
-    if(onButtonBack){
+    if (onButtonBack) {
       onButtonBack();
-    }else {
+    } else {
       Message.notice('返回列表函数响应');
     }
   };
 
   useInterval(() => {
     setSecond(second - 1);
-    if(second <= 0){
+    if (second <= 0) {
       gobackHandle();
     }
-  },  second >= 0 ? 1000 : null);
+  }, second >= 0 ? 1000 : null);
 
   const goContinueHandle = () => {
-    if(onButtonContinue){
+    if (onButtonContinue) {
       onButtonContinue();
-    }else {
+    } else {
       Message.notice('继续创建函数响应');
     }
   };

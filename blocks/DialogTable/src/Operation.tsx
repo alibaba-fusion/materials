@@ -1,5 +1,5 @@
 import React, { useEffect, useImperativeHandle } from 'react';
-import { Select, Form, Field, Input, Card } from '@alifd/next';
+import { Select, Form, Field, Input } from '@alifd/next';
 
 const FormItem = Form.Item;
 
@@ -7,7 +7,7 @@ export type ActionType = 'add' | 'edit' | 'preview';
 
 const formItemLayout = {
   labelCol: { span: 4 },
-  wrapperCol: { span: 20 }
+  wrapperCol: { span: 20 },
 };
 
 export interface OperaitionProps {
@@ -23,7 +23,7 @@ export interface OperaitionProps {
 }
 
 export interface OperationRef {
-  getValues(callback: (vals: Record<string, unknown>) => void): void;
+  getValues: (callback: (vals: Record<string, unknown>) => void) => void;
 }
 
 const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> = (props, ref) => {
@@ -52,10 +52,10 @@ const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> =
               return;
             }
             callback(values);
-          })
-        }
+          });
+        },
       };
-    }
+    },
   );
 
   const isPreview = actionType === 'preview';
@@ -114,6 +114,6 @@ const Operation: React.ForwardRefRenderFunction<OperationRef, OperaitionProps> =
       </Form>
     </>
   );
-}
+};
 
 export default React.forwardRef(Operation);

@@ -73,19 +73,24 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
       <Card.Divider />
       <Card.Content>
         <Box align="center">
-          <Radio.Group shape="button" value={type} onChange={changeType} className={styles.radioGroup}>
-            <Radio value="one" className={styles.flex1}>类目一</Radio>
-            <Radio value="two" className={styles.flex1}>类目二</Radio>
-            <Radio value="three" className={styles.flex1}>类目三</Radio>
+          <Radio.Group
+            shape="button"
+            value={type}
+            onChange={changeType}
+            className={styles.radioGroup}
+          >
+            <Radio value="one" className={styles.flex1}>
+              类目一
+            </Radio>
+            <Radio value="two" className={styles.flex1}>
+              类目二
+            </Radio>
+            <Radio value="three" className={styles.flex1}>
+              类目三
+            </Radio>
           </Radio.Group>
         </Box>
-        <Chart
-          width={10}
-          height={chartHeight}
-          forceFit
-          data={chartData}
-          padding={['auto', 'auto']}
-        >
+        <Chart width={10} height={chartHeight} forceFit data={chartData} padding={['auto', 'auto']}>
           <Coord type="theta" radius={0.75} innerRadius={0.6} />
           <Axis name="percent" />
           <Legend
@@ -101,7 +106,8 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
           <Guide>
             <Html
               position={['50%', '50%']}
-              html={`<div style='color:#333;font-size:16px;text-align: center;width: 113px;'>销售额<br><span style='color:#333;font-family: Roboto-Bold;font-size:24px'>¥ ${  value  }</span></div>`}
+              // eslint-disable-next-line max-len
+              html={`<div style='color:#333;font-size:16px;text-align: center;width: 113px;'>销售额<br><span style='color:#333;font-family: Roboto-Bold;font-size:24px'>¥ ${value}</span></div>`}
               alignX="middle"
               alignY="middle"
             />

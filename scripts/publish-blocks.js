@@ -114,9 +114,13 @@ blocksList.forEach(block => {
   }
 
   try {
+    console.log(`publish start: ${name} ${version}`);
     // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
-    execSync(`cd blocks/${block};tnpm install bizcharts;npm publish;`);
+    execSync(`cd blocks/${block};tnpm update;tnpm install bizcharts;npm publish;`, {
+      stdio: 'inherit'
+    });
+    console.log(`publish success: ${name} ${version}`);
   } catch (err) {
-    console.log(err);
+    console.log(`publish failed: ${name} ${version}`, err);
   }
 });

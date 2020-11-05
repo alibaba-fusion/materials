@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-cross-pie-chart",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "横向饼图",
   "files": [
     "build/",

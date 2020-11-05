@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Card } from '@alifd/next';
 import styles from './index.module.scss';
 
-const WebInfoBlock = props => {
+const WebInfoBlock = (props) => {
   const { cardConfig } = props;
   const { value, name, des, rate, isRise } = cardConfig;
   return (

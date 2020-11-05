@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-two-column-form",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Form with two coumns",
   "files": [
     "build/",

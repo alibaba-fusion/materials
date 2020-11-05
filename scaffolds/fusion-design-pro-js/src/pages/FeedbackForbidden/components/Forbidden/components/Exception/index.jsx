@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '@alifd/next';
 import styles from './index.module.scss';
 
-const Exception = props => {
+const Exception = (props) => {
   const {
     statusCode = '404',
     description = '服务器好像挂了你要等会了',

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-basic-form",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "single column form",
   "files": [
     "build/",

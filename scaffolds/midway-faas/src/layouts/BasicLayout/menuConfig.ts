@@ -4,13 +4,13 @@ const asideMenuConfig = [
   {
     name: 'CRUD Example',
     path: '/',
-    icon: 'smile'
+    icon: 'smile',
   },
   {
     name: 'Dashboard',
     path: '/dashboard',
-    icon: 'smile'
-  }
+    icon: 'smile',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

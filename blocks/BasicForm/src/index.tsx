@@ -98,7 +98,8 @@ const BasicForm: React.SFC<BasicFormProps> = (props): JSX.Element => {
                 type="primary"
                 onClick={onSubmit}
                 validate
-              >提交</Form.Submit>
+              >提交
+              </Form.Submit>
               <Button onClick={onCancel} type="secondary">取消</Button>
             </Box>
           </FormItem>

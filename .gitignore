@@ -20,3 +20,4 @@ index.module.scss.d.ts
 tmp/
 .faas_debug_tmp
 .severless
+blocks/**/*/style.d.ts

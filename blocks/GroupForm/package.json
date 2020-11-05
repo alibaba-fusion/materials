@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-group-form",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "分组表单",
   "files": [
     "build/",

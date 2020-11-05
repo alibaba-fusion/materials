@@ -21,7 +21,7 @@ const DEFAULT_DATA = {
     ['C&B审核人', '吴永辉'],
     ['业务线审批', '倩倩'],
     ['HR线审批', '叶俊'],
-  ].map(item => ({
+  ].map((item) => ({
     opStatus: item[0],
     operator: item[1],
     opResult: '同意',
@@ -57,24 +57,26 @@ const DEFAULT_DATA = {
   },
 };
 
-const AdvancedDetail = props => {
+const AdvancedDetail = (props) => {
   const { dataSource = DEFAULT_DATA, onTabChange = () => {}, onTableTabChange = () => {} } = props;
 
-  const renderTab = () => (
-    <Tab navClassName={styles.TabBar} onChange={onTableTabChange}>
-      <Tab.Item
-        title={<span className={styles.TabItemTitle}>操作日志一</span>}
-        key="1"
-        className={styles.TabItem}
-      />
-      <Tab.Item
-        title={<span className={styles.TabItemTitle}>操作日志二</span>}
-        key="2"
-        className={styles.TabItem}
-      />
-      <Tab.Item title={<span className={styles.TabItemTitle}>操作日志三</span>} key="3" />
-    </Tab>
-  );
+  const renderTab = () => {
+    return (
+      <Tab navClassName={styles.TabBar} onChange={onTableTabChange}>
+        <Tab.Item
+          title={<span className={styles.TabItemTitle}>操作日志一</span>}
+          key="1"
+          className={styles.TabItem}
+        />
+        <Tab.Item
+          title={<span className={styles.TabItemTitle}>操作日志二</span>}
+          key="2"
+          className={styles.TabItem}
+        />
+        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志三</span>} key="3" />
+      </Tab>
+    );
+  };
 
   return (
     <>

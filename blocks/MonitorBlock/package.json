@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-minitor-block",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "监控页面",
   "files": [
     "src/",

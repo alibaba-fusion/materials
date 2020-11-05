@@ -36,7 +36,7 @@ const DEFAULT_DATA = {
   chartHeight: 400,
 };
 
-const FusionCardLineChart = props => {
+const FusionCardLineChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   return (

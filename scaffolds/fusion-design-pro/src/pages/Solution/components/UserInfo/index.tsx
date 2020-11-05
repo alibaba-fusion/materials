@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Avatar, Card } from '@alifd/next';
-import { store as appStore } from 'ice';
+import store from '@/store';
 
 const UserInfo = () => {
-  const [userInfo, userDispatchers] = appStore.useModel('user');
+  const [userInfo, userDispatchers] = store.useModel('user');
   useEffect(() => {
     userDispatchers.fetchUserProfile();
   }, []);
-  
+
   return (
     <Card free>
       <Card.Header

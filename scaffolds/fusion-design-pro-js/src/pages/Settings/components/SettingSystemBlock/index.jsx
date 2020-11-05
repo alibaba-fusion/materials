@@ -79,7 +79,7 @@ const DEFAULT_ON_SUBMIT = (values, errors) => {
   Message.success('更新成功');
 };
 
-const SettingSystemBlock = props => {
+const SettingSystemBlock = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = DEFAULT_ON_SUBMIT } = props;
   const [priList, setPriList] = useState([]);
   const [inited, setInited] = useState(false);
@@ -89,7 +89,7 @@ const SettingSystemBlock = props => {
     setInited(true);
   }, [inited]);
 
-  const formChange = values => {
+  const formChange = (values) => {
     setValue(values);
   };
 
@@ -192,7 +192,7 @@ const SettingSystemBlock = props => {
             />
             <Card.Content>
               <Table dataSource={priList} hasHeader={false} hasBorder={false}>
-                <Table.Column dataIndex="logo" cell={url => <Avatar src={url} />} width={50} />
+                <Table.Column dataIndex="logo" cell={(url) => <Avatar src={url} />} width={50} />
                 <Table.Column dataIndex="name" />
                 <Table.Column dataIndex="privilege" />
                 <Table.Column cell={() => <Icon type="ellipsis" />} />

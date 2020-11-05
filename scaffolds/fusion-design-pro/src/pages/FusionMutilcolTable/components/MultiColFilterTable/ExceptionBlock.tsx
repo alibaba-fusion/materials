@@ -15,7 +15,7 @@ const ExceptionBlock: React.FC<Iprops> = ({ onRefresh = () => {} }) => {
         <Button type="secondary" onClick={onRefresh}>重新加载</Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ExceptionBlock;

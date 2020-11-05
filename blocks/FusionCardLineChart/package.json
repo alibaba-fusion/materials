@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-line-chart",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "折线图卡片",
   "files": [
     "build/",

@@ -35,11 +35,13 @@ export default function SelectLang() {
               alignItems: 'center',
             }}
           >
-            {Object.keys(LANG_CONFIG).map(lang => (
-              <Option value={lang} key={lang}>
-                {LANG_CONFIG[lang].text}
-              </Option>
-            ))}
+            {Object.keys(LANG_CONFIG).map((lang) => {
+              return (
+                <Option value={lang} key={lang}>
+                  {LANG_CONFIG[lang].text}
+                </Option>
+              );
+            })}
           </Select>
         }
       />

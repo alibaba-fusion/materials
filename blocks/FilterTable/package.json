@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-filter-table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "基础的过滤区加表格的组合",
   "files": [
     "src/!(style.d.ts)",

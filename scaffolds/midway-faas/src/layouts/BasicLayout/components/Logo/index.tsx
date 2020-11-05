@@ -8,7 +8,7 @@ export interface ILogoProps {
   url?: string;
 }
 
-export default function Logo({ image, text, url }: ILogoProps) {
+export default function Logo({ image, url }: ILogoProps) {
   return (
     <div className="logo">
       <Link to={url || '/'} className={styles.logo}>

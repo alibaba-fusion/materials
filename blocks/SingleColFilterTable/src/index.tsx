@@ -80,13 +80,13 @@ const getTableData = async ({ current, pageSize }: { current: number; pageSize: 
 
 export default function SingleColFilterTable() {
   const field = Field.useField();
-  const { paginationProps, tableProps, search, loading } = useFusionTable(
+  const { paginationProps, tableProps, search } = useFusionTable(
     getTableData,
     {
       field,
-    }
+    },
   );
-  const { type, changeType, submit, reset } = search;
+  const { type, changeType, submit } = search;
   return (
     <Card free>
       <Card.Content>

@@ -22,7 +22,7 @@ const DEFAULT_DATA = {
   },
 };
 
-const ClassifiedForm = props => {
+const ClassifiedForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = () => {}, onCancel = () => {} } = props;
   const jobField = Field.useField({
     values: dataSource.job,

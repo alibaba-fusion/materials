@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-table-list",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "intro block",
   "main": "./src/index.tsx",
   "files": [

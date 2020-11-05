@@ -11,7 +11,7 @@ export interface Props {
   mail: string;
 }
 
-const UserProfile = ({ name, avatar, mail}) => {
+const UserProfile = ({ name, avatar, mail }) => {
   return (
     <div className={styles.profile}>
       <div className={styles.avatar}>
@@ -32,7 +32,7 @@ const HeaderAvatar = (props: Props) => {
       trigger={
         <div className={styles.headerAvatar}>
           <Avatar size="small" src={avatar} alt="用户头像" />
-          <span style={{marginLeft: 10}}>{name}</span>
+          <span style={{ marginLeft: 10 }}>{name}</span>
         </div>
       }
       triggerType="click"

@@ -1,6 +1,7 @@
-const { tslint, deepmerge } = require('@ice/spec');
+const { getESLintConfig } = require('@iceworks/spec');
 
-module.exports = deepmerge(tslint, {
+// https://www.npmjs.com/package/@iceworks/spec
+module.exports = getESLintConfig('react-ts', {
   rules: {
     'react/jsx-filename-extension': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
