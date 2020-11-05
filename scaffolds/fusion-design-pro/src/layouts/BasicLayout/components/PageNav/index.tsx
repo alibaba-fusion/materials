@@ -72,7 +72,7 @@ function getSubMenuOrItem(item: IMenuItem, index?: number | string, auth?: any) 
 }
 
 const Navigation = (props, context) => {
-  const [openKey, setOpenKey] = useState('');
+  const [openKeys, setOpenKeys] = useState<string[]>([]);
 
   const { location } = props;
   const { pathname } = location;
@@ -84,21 +84,22 @@ const Navigation = (props, context) => {
     });
 
     if (curSubNav) {
-      setOpenKey(curSubNav.name);
+      setOpenKeys([curSubNav.name]);
     }
   }, [pathname]);
+
   return (
     <Nav
       type="normal"
-      openKeys={openKey}
+      openKeys={openKeys}
       selectedKeys={[pathname]}
       defaultSelectedKeys={[pathname]}
       embeddable
       activeDirection="right"
-      openMode="single"
       iconOnly={isCollapse}
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
+      onOpen={setOpenKeys}
     >
       {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>
