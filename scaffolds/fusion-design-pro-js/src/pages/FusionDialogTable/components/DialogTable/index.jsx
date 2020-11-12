@@ -162,12 +162,7 @@ const DialogTable = () => {
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />
-            <Table.Column
-              title="操作"
-              resizable
-              width={columnWidth.operation}
-              cell={cellOperation}
-            />
+            <Table.Column title="操作" resizable width={columnWidth.operation} cell={cellOperation} />
           </Table>
           <Pagination
             style={{

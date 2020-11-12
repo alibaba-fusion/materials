@@ -64,10 +64,11 @@ export default function BasicLayout({
   return (
     <ConfigProvider device={device}>
       <Shell
-        type="brand"
         style={{
           minHeight: '100vh',
         }}
+        type="brand"
+        fixedHeader={false}
       >
         <Shell.Branding>
           <Logo
@@ -80,7 +81,7 @@ export default function BasicLayout({
           style={{
             marginRight: 10,
           }}
-        />
+        ></Shell.Navigation>
         <Shell.Action />
         <Shell.Navigation>
           <PageNav />

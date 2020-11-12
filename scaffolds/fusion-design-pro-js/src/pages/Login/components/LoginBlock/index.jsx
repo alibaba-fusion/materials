@@ -175,12 +175,7 @@ const LoginBlock = (
               marginBottom: 10,
             }}
           >
-            <Form.Submit
-              type="primary"
-              onClick={handleSubmit}
-              className={styles.submitBtn}
-              validate
-            >
+            <Form.Submit type="primary" onClick={handleSubmit} className={styles.submitBtn} validate>
               登录
             </Form.Submit>
           </Item>

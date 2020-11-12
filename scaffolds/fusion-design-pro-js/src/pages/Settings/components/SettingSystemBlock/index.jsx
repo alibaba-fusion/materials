@@ -112,13 +112,7 @@ const SettingSystemBlock = (props) => {
           <Card free>
             <Card.Content>
               <Box className={styles.baseSettingContainer}>
-                <Form
-                  className={styles.baseSetting}
-                  value={postData}
-                  labelAlign="top"
-                  onChange={formChange}
-                  responsive
-                >
+                <Form className={styles.baseSetting} value={postData} labelAlign="top" onChange={formChange} responsive>
                   <FormItem label="项目封面" colSpan={12}>
                     <ResponsiveGrid gap={10}>
                       <Cell colSpan={2}>

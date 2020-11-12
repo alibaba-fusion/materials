@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Input,
-  Box,
-  Button,
-  Select,
-  Form,
-  DatePicker,
-  Message,
-  Radio,
-  Upload,
-  Card,
-} from '@alifd/next';
+import { Input, Box, Button, Select, Form, DatePicker, Message, Radio, Upload, Card } from '@alifd/next';
 import styles from './index.module.scss';
 
 const FormItem = Form.Item;
@@ -91,15 +80,8 @@ const ThreeColumnForm = (props) => {
             <Input.TextArea placeholder="请输入项目详细信息" name="desc" />
           </FormItem>
 
-          <FormItem
-            {...formItemLayout}
-            colSpan={12}
-            help="请选择大小不超过5M的文件，支持doc，docx，xls，xlsx，zip格式"
-          >
-            <Upload
-              name="pic"
-              action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-            >
+          <FormItem {...formItemLayout} colSpan={12} help="请选择大小不超过5M的文件，支持doc，docx，xls，xlsx，zip格式">
+            <Upload name="pic" action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload">
               <Button
                 type="normal"
                 style={{

@@ -48,12 +48,7 @@ function CustomList({ columns, onChange }) {
         <TableActionIcon type="custom-list" size="small" />
       </Button>
       <Overlay align="tr br" visible={visible} target={buttonRef.current}>
-        <ReactSortable
-          className={styles.columnSortPanel}
-          handle=".column-handle"
-          list={columns}
-          setList={onChange}
-        >
+        <ReactSortable className={styles.columnSortPanel} handle=".column-handle" list={columns} setList={onChange}>
           {columns.map((item, idx) => (
             <div className="sort-item-container" key={getColumnKey(item)}>
               <div className="sort-item">

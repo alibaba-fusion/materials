@@ -80,8 +80,14 @@ const Navigation = (props, context) => {
 
   useEffect(() => {
     const curSubNav = asideMenuConfig.find((menuConfig) => {
-      return menuConfig.children && menuConfig.children.some(child => child.path === pathname);
+      return menuConfig.children && checkChildPathExists(menuConfig);
     });
+
+    function checkChildPathExists(menuConfig) {
+      return menuConfig.children.some(child => {
+        return child.children ? checkChildPathExists(child) : child.path === pathname;
+      });
+    }
 
     if (curSubNav && !openKeys.includes(curSubNav.name)) {
       setOpenKeys([...openKeys, curSubNav.name]);

@@ -16,9 +16,7 @@ const PageHeader = (props) => {
 
       {title && <Typography.Text className={styles.Title}>{title}</Typography.Text>}
 
-      {description && (
-        <Typography.Text className={styles.Description}>{description}</Typography.Text>
-      )}
+      {description && <Typography.Text className={styles.Description}>{description}</Typography.Text>}
     </Box>
   );
 };

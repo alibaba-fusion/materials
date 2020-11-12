@@ -236,14 +236,7 @@ const JSErrorChart = (props) => {
         <Card.Divider />
       </React.Fragment>
       <Card.Content>
-        <Chart
-          data={chartData}
-          scale={scale}
-          height={chartHeight}
-          width={10}
-          forceFit
-          padding={[30, 55, 30, 65]}
-        >
+        <Chart data={chartData} scale={scale} height={chartHeight} width={10} forceFit padding={[30, 55, 30, 65]}>
           <Tooltip />
           <Legend
             position="top"

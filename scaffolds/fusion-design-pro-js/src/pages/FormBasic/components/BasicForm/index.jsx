@@ -31,14 +31,7 @@ const BasicForm = (props) => {
   return (
     <Card free>
       <Card.Content>
-        <Form
-          className={styles.BasicForm}
-          responsive
-          fullWidth
-          value={postData}
-          labelAlign="top"
-          onChange={formChange}
-        >
+        <Form className={styles.BasicForm} responsive fullWidth value={postData} labelAlign="top" onChange={formChange}>
           <FormItem {...formItemLayout} label="项目名称：" required requiredMessage="必填">
             <Input placeholder="请输入项目名称" name="name" />
           </FormItem>

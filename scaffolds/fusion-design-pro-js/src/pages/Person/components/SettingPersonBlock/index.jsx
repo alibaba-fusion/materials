@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  ResponsiveGrid,
-  Divider,
-  Card,
-  Avatar,
-  Upload,
-  Button,
-  Form,
-  Input,
-  Message,
-} from '@alifd/next';
+import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
 import styles from './index.module.scss';
 
 const { Cell } = ResponsiveGrid;

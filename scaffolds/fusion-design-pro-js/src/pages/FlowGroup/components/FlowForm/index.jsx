@@ -137,10 +137,7 @@ const FlowForm = (props) => {
                 </Box>
                 <Box spacing={10}>
                   <Form labelAlign="top" responsive>
-                    <Form.Item
-                      label={`${dataSource.person.surname}${dataSource.person.name}`}
-                      colSpan={12}
-                    >
+                    <Form.Item label={`${dataSource.person.surname}${dataSource.person.name}`} colSpan={12}>
                       <span className="next-form-preview">
                         {dataSource.person.phone} | {dataSource.person.email}
                       </span>

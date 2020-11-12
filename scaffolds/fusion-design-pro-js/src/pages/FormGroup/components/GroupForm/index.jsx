@@ -1,18 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { findDOMNode } from 'react-dom';
-import {
-  Card,
-  Form,
-  Input,
-  Select,
-  Button,
-  Table,
-  Box,
-  Divider,
-  MenuButton,
-  Dialog,
-  Field,
-} from '@alifd/next';
+import { Card, Form, Input, Select, Button, Table, Box, Divider, MenuButton, Dialog, Field } from '@alifd/next';
 import styles from './index.module.scss';
 
 const DEFAULT_DATA = {
@@ -79,11 +67,7 @@ const DEFAULT_DATA = {
 };
 
 const GroupForm = (props) => {
-  const {
-    dataSource: defaultDataSource = DEFAULT_DATA,
-    onSubmit = () => {},
-    onCancel = () => {},
-  } = props;
+  const { dataSource: defaultDataSource = DEFAULT_DATA, onSubmit = () => {}, onCancel = () => {} } = props;
   const [dataSource, setDataSouce] = useState(defaultDataSource);
   const basicField = Field.useField({
     values: dataSource.basic,
@@ -245,11 +229,7 @@ const GroupForm = (props) => {
             </Button>
           </Box>
           <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
-            <Table.Column
-              title="目标公司"
-              cell={(v, i, row) => renderEditCell(v, i, row, 'name')}
-              dataIndex="name"
-            />
+            <Table.Column title="目标公司" cell={(v, i, row) => renderEditCell(v, i, row, 'name')} dataIndex="name" />
             <Table.Column
               title="主营业务"
               cell={(v, i, row) => renderEditCell(v, i, row, 'business')}

@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Button,
-  Card,
-  Form,
-  Input,
-  Select,
-  Radio,
-  Field,
-  Divider,
-  Message,
-} from '@alifd/next';
+import { Box, Button, Card, Form, Input, Select, Radio, Field, Divider, Message } from '@alifd/next';
 import styles from './index.module.scss';
 
 const DEFAULT_DATA = {

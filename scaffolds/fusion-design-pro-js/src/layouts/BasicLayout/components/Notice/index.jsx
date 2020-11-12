@@ -85,9 +85,7 @@ const Notice = ({ noticeList }) => {
             </List.Item>
           );
         })}
-        {renderList.length === 0 && (
-          <List.Item className={styles.empty}>你已查看所有通知</List.Item>
-        )}
+        {renderList.length === 0 && <List.Item className={styles.empty}>你已查看所有通知</List.Item>}
       </List>
     </Popup>
   );
