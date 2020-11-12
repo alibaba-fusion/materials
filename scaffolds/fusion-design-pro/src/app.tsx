@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { runApp } from 'ice';
+import { runApp, IAppConfig } from 'ice';
 import LocaleProvider from '@/components/LocaleProvider';
 import { getLocale } from '@/utils/locale';
 
 const locale = getLocale();
 
-const appConfig = {
+const appConfig: IAppConfig = {
   app: {
     rootId: 'ice-container',
     addProvider: ({ children }) => (

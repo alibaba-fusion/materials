@@ -30,8 +30,7 @@ import Footer from './components/Footer';
 
 export default function BasicLayout({ children }) {
   const getDevice = (width) => {
-    const isPhone =
-      typeof navigator !== 'undefined' && navigator && navigator.userAgent.match(/phone/gi);
+    const isPhone = typeof navigator !== 'undefined' && navigator && navigator.userAgent.match(/phone/gi);
 
     if (width < 680 || isPhone) {
       return 'phone';
@@ -54,16 +53,14 @@ export default function BasicLayout({ children }) {
   return (
     <ConfigProvider device={device}>
       <Shell
-        type="brand"
         style={{
           minHeight: '100vh',
         }}
+        type="brand"
+        fixedHeader={false}
       >
         <Shell.Branding>
-          <Logo
-            image="https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png"
-            text="Logo"
-          />
+          <Logo image="https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png" text="Logo" />
         </Shell.Branding>
         <Shell.Navigation
           direction="hoz"

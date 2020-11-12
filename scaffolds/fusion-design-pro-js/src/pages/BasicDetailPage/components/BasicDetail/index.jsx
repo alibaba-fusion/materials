@@ -11,8 +11,7 @@ const DEFAULT_DATA = {
     aliasProject: '杭州阿里巴巴集团新零售',
   },
   projectMember: {
-    icMemeber:
-      '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
+    icMemeber: '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
     forensicReview:
       '阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞，阮小五，阮小二，阮小七，公孙胜，曹正，李立，樊瑞',
     financialReview:
@@ -80,11 +79,7 @@ const BasicDetail = (props) => {
           <Card.Divider />
           <Card.Content>
             <div className={styles.Content}>
-              <Table
-                dataSource={dataSource.targetCompanys}
-                hasBorder={false}
-                className={styles.Table}
-              >
+              <Table dataSource={dataSource.targetCompanys} hasBorder={false} className={styles.Table}>
                 <Table.Column title="目标公司" dataIndex="targetCompany" />
                 <Table.Column title="主营业务" dataIndex="business" />
                 <Table.Column title="注册地" dataIndex="address" />

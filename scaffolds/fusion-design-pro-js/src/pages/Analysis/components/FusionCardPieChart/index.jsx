@@ -50,12 +50,7 @@ const FusionCardLineChart = (props) => {
       <Card.Divider />
       <Card.Content>
         <Box align="center">
-          <Radio.Group
-            shape="button"
-            value={type}
-            onChange={changeType}
-            className={styles.radioGroup}
-          >
+          <Radio.Group shape="button" value={type} onChange={changeType} className={styles.radioGroup}>
             <Radio value="one" className={styles.flex1}>
               类目一
             </Radio>

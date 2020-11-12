@@ -1,32 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Search,
-  Card,
-  Tag,
-  Divider,
-  Typography,
-  Icon,
-  Loading,
-  Button,
-  Pagination,
-} from '@alifd/next';
+import { Box, Search, Card, Tag, Divider, Typography, Icon, Loading, Button, Pagination } from '@alifd/next';
 import styles from './index.module.scss';
 
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const DEFAULT_DATA = {
-  tagsA: [
-    '类目一',
-    '类目二',
-    '类目三',
-    '类目四',
-    '类目五',
-    '类目六',
-    '类目七',
-    '类目八',
-    '类目九',
-    '类目十',
-  ],
+  tagsA: ['类目一', '类目二', '类目三', '类目四', '类目五', '类目六', '类目七', '类目八', '类目九', '类目十'],
   tagA: '类目一',
   tagsB: ['不到一年', '一年以上三年以下', '三年以上五年以下', '五年以上'],
   tagB: '一年以上三年以下',
@@ -70,12 +48,7 @@ const BasicList = (props) => {
 
   const renderTagListA = () => {
     return dataSource.tagsA.map((name) => (
-      <SelectableTag
-        key={name}
-        checked={tagAValue === name}
-        onChange={() => onTagAValueChange(name)}
-        {...props}
-      >
+      <SelectableTag key={name} checked={tagAValue === name} onChange={() => onTagAValueChange(name)} {...props}>
         {name}
       </SelectableTag>
     ));
@@ -83,12 +56,7 @@ const BasicList = (props) => {
 
   const renderTagListB = () => {
     return dataSource.tagsB.map((name) => (
-      <SelectableTag
-        key={name}
-        checked={tagBValue === name}
-        onChange={() => onTagBValueChange(name)}
-        {...props}
-      >
+      <SelectableTag key={name} checked={tagBValue === name} onChange={() => onTagBValueChange(name)} {...props}>
         {name}
       </SelectableTag>
     ));

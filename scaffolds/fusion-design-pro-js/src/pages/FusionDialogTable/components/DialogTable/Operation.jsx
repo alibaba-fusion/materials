@@ -44,13 +44,7 @@ const Operation = (props, ref) => {
   const isPreview = actionType === 'preview';
   return (
     <>
-      <Form
-        isPreview={isPreview}
-        fullWidth
-        labelAlign={isPreview ? 'left' : 'top'}
-        field={field}
-        {...formItemLayout}
-      >
+      <Form isPreview={isPreview} fullWidth labelAlign={isPreview ? 'left' : 'top'} field={field} {...formItemLayout}>
         <FormItem label="姓名:" required={!isPreview} requiredMessage="必填">
           <Input {...field.init('name')} />
         </FormItem>

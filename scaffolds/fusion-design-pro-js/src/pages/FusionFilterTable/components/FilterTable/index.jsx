@@ -116,12 +116,7 @@ const FilterTable = () => {
             emptyContent={error ? <ExceptionBlock onRefresh={refresh} /> : <EmptyBlock />}
             primaryKey="email"
           >
-            <Table.Column
-              title="name"
-              dataIndex="name.last"
-              resizable
-              width={columnWidth['name.last']}
-            />
+            <Table.Column title="name" dataIndex="name.last" resizable width={columnWidth['name.last']} />
             <Table.Column title="email" dataIndex="email" resizable width={columnWidth.email} />
             <Table.Column title="phone" dataIndex="phone" resizable width={columnWidth.phone} />
             <Table.Column title="gender" dataIndex="gender" resizable width={columnWidth.gender} />

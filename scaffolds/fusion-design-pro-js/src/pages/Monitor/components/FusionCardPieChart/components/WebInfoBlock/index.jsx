@@ -24,11 +24,7 @@ const WebInfoBlock = (props) => {
             <div className={styles.name}>{name}</div>
             <div className={styles.des}>
               {des}
-              {isRise ? (
-                <span className={styles.rise}>{rate}↑</span>
-              ) : (
-                <span className={styles.fall}>{rate}↓</span>
-              )}
+              {isRise ? <span className={styles.rise}>{rate}↑</span> : <span className={styles.fall}>{rate}↓</span>}
             </div>
           </Box>
         </Box>

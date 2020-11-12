@@ -170,39 +170,27 @@ const WorkTable = (props) => {
                 <List>
                   <List.Item
                     title="Fusion Design"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1SFZAvQL0gK0jSZFAXXcA9pXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1SFZAvQL0gK0jSZFAXXcA9pXa-200-200.png" />}
                   />
                   <List.Item
                     title="Alibaba ICS"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1QwMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1QwMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />}
                   />
                   <List.Item
                     title="Retcode 前端监控"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1qxgDvG61gK0jSZFlXXXDKFXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1qxgDvG61gK0jSZFlXXXDKFXa-200-200.png" />}
                   />
                   <List.Item
                     title="新零售事业部"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1TfwDvQT2gK0jSZFkXXcIQFXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1TfwDvQT2gK0jSZFkXXcIQFXa-200-200.png" />}
                   />
                   <List.Item
                     title="前端物料中心"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1GgMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1GgMzvHr1gK0jSZR0XXbP8XXa-200-200.png" />}
                   />
                   <List.Item
                     title="大财鲸"
-                    media={
-                      <Avatar src="https://img.alicdn.com/tfs/TB1tHozvQP2gK0jSZPxXXacQpXa-200-200.png" />
-                    }
+                    media={<Avatar src="https://img.alicdn.com/tfs/TB1tHozvQP2gK0jSZPxXXacQpXa-200-200.png" />}
                   />
                 </List>
               </Card.Content>
@@ -221,8 +209,7 @@ const WorkTable = (props) => {
                       case 'create':
                         title = (
                           <div>
-                            {one.name} 在 <a href="/">{one.project}</a> 新建项目{' '}
-                            <a href="/">{one.projectItem}</a>{' '}
+                            {one.name} 在 <a href="/">{one.project}</a> 新建项目 <a href="/">{one.projectItem}</a>{' '}
                           </div>
                         );
                         break;
@@ -238,8 +225,7 @@ const WorkTable = (props) => {
                       case 'note':
                         title = (
                           <div>
-                            {one.name} 在 <a href="/">{one.project}</a> 发布了{' '}
-                            <a href="/">{one.projectItem}</a>{' '}
+                            {one.name} 在 <a href="/">{one.project}</a> 发布了 <a href="/">{one.projectItem}</a>{' '}
                           </div>
                         );
                         break;

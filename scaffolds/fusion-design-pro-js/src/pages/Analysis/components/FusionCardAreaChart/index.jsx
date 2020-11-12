@@ -15,10 +15,7 @@ const DEFAULT_DATA = {
 };
 
 const FusionCardAreaChart = (props = DEFAULT_DATA) => {
-  const { title, subTitle, value, chartData, des, rate, chartHeight } = {
-    ...DEFAULT_DATA,
-    ...props,
-  };
+  const { title, subTitle, value, chartData, des, rate, chartHeight } = { ...DEFAULT_DATA, ...props };
   return (
     <Card free className={styles.areaChart}>
       {title ? (

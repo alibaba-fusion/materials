@@ -1,6 +1,6 @@
-import { runApp } from 'ice';
+import { runApp, IAppConfig } from 'ice';
 
-const appConfig = {
+const appConfig: IAppConfig = {
   app: {
     rootId: 'ice-container',
   },

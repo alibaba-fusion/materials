@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-lite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
   "files": [
     ".vscode/",

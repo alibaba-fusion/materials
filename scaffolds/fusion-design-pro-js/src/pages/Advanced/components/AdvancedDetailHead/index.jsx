@@ -1,17 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Form,
-  Typography,
-  Avatar,
-  Tab,
-  MenuButton,
-  Button,
-  Card,
-  Step,
-  Table,
-  Divider,
-} from '@alifd/next';
+import { Box, Form, Typography, Avatar, Tab, MenuButton, Button, Card, Step, Table, Divider } from '@alifd/next';
 import styles from './index.module.scss';
 
 const DEFAULT_DATA = {
@@ -63,16 +51,8 @@ const AdvancedDetail = (props) => {
   const renderTab = () => {
     return (
       <Tab navClassName={styles.TabBar} onChange={onTableTabChange}>
-        <Tab.Item
-          title={<span className={styles.TabItemTitle}>操作日志一</span>}
-          key="1"
-          className={styles.TabItem}
-        />
-        <Tab.Item
-          title={<span className={styles.TabItemTitle}>操作日志二</span>}
-          key="2"
-          className={styles.TabItem}
-        />
+        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志一</span>} key="1" className={styles.TabItem} />
+        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志二</span>} key="2" className={styles.TabItem} />
         <Tab.Item title={<span className={styles.TabItemTitle}>操作日志三</span>} key="3" />
       </Tab>
     );

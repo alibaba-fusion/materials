@@ -75,20 +75,10 @@ export default function RegisterBlock() {
             <Input name="email" size="large" maxLength={20} placeholder="邮箱" />
           </Item>
           <Item required requiredMessage="必填">
-            <Input.Password
-              name="password"
-              size="large"
-              htmlType="password"
-              placeholder="至少六位密码，区分大小写"
-            />
+            <Input.Password name="password" size="large" htmlType="password" placeholder="至少六位密码，区分大小写" />
           </Item>
           <Item required requiredTrigger="onFocus" requiredMessage="必填" validator={checkPass}>
-            <Input.Password
-              name="rePassword"
-              size="large"
-              htmlType="password"
-              placeholder="确认密码"
-            />
+            <Input.Password name="rePassword" size="large" htmlType="password" placeholder="确认密码" />
           </Item>
           <Item format="tel" required requiredMessage="必填" asterisk={false}>
             <Input
@@ -131,12 +121,7 @@ export default function RegisterBlock() {
             />
           </Item>
           <Item>
-            <Form.Submit
-              type="primary"
-              onClick={handleSubmit}
-              className={styles.submitBtn}
-              validate
-            >
+            <Form.Submit type="primary" onClick={handleSubmit} className={styles.submitBtn} validate>
               注册账号
             </Form.Submit>
           </Item>
