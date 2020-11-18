@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/stark-child-scaffold",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "微前端方案 icestark 的子应用模板，用于快速初始化微应用",
   "homepage": "https://unpkg.com/@icedesign/stark-child-scaffold@latest/build/index.html",
   "files": [
@@ -49,7 +49,8 @@
     "prepublishOnly": "npm run build",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint '**/*.{css,scss,less}'"
   },
   "publishConfig": {
     "access": "public"
