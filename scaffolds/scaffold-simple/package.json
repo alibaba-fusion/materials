@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-simple",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "使用 TypeScript，未使用任何 UI 库。",
   "files": [
     ".vscode/",
@@ -41,7 +41,8 @@
     "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint '**/*.{css,scss,less}'"
   },
   "publishConfig": {
     "access": "public"
