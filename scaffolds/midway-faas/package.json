@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/scaffold-midway-faas",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "icejs & midway faas",
   "files": [
     ".vscode/",
@@ -58,7 +58,8 @@
     "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint '**/*.{css,scss,less}'"
   },
   "publishConfig": {
     "access": "public"

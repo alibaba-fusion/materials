@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-lite-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
   "files": [
     ".vscode/",
@@ -42,8 +42,9 @@
     "screenshot": "../../node_modules/.bin/screenshot -l",
     "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint --cache --ext .js,.jsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint '**/*.{css,scss,less}'"
   },
   "publishConfig": {
     "access": "public"
