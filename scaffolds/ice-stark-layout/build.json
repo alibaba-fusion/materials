@@ -1,7 +1,9 @@
 {
   "publicPath": "./",
   "plugins": [
-    "build-plugin-icestark",
+    ["build-plugin-icestark", {
+      "uniqueName": "frameworkJsonp"
+    }],
     ["build-plugin-fusion", {
       "themePackage": "@alifd/theme-design-pro",
       "themeConfig": {
