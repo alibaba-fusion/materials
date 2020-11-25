@@ -4,15 +4,17 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const cwd = process.cwd();
-const blocksPath = path.join(cwd, 'blocks');
+const TYPE = process.env.TYPE || 'blocks'; // scaffolds | blocks
+const blocksPath = path.join(cwd, TYPE);
 const blocksList = fs.readdirSync(blocksPath);
 
-const updateMap = [
+const published = [];
+const failedPublished = [];
+const notPublished = [];
 
-];
 const arr = [];
 blocksList.forEach(block => {
-  const blockDirPath = path.join(cwd, 'blocks', block);
+  const blockDirPath = path.join(cwd, TYPE, block);
   const blockPkgjson = path.join(blockDirPath, 'package.json');
 
   if (!fs.existsSync(blockDirPath) || !fs.existsSync(blockPkgjson)) {
@@ -96,8 +98,6 @@ blocksList.forEach(block => {
   // fs.writeJSONSync(blockPkgjson, packageInfo, {
   //   spaces: 2
   // });
-  
-
 
   // 批量发布区块
   let stdout = '';
@@ -110,17 +110,33 @@ blocksList.forEach(block => {
   if (stdout.match(version)) {
     console.error(`${name} ${version} 已存在！！！！`);
     arr.push(`${name}@${version}`);
+    notPublished.push({
+      name, version
+    });
     return false;
   }
 
   try {
     console.log(`publish start: ${name} ${version}`);
-    // execSync(`cd blocks/${block}; tnpm install; tnpm install build-plugin-fusion-material; tnpm uninstall @alifd/next;tnpm install @alifd/next@1.19.2; npm publish;`);
-    execSync(`cd blocks/${block};tnpm update;tnpm install bizcharts;npm publish;`, {
+    const cmd = TYPE === 'scaffolds'
+                  ? `cd ${TYPE}/${block};tnpm update;npm publish;`
+                  : `cd blocks/${block};tnpm update;tnpm install bizcharts@3.x @antv/data-set@0.10.x;npm publish;`
+    execSync(cmd, {
       stdio: 'inherit'
     });
+    published.push({
+      name, version
+    });
+
     console.log(`publish success: ${name} ${version}`);
   } catch (err) {
+    failedPublished.push({
+      name, version
+    });
     console.log(`publish failed: ${name} ${version}`, err);
   }
 });
+
+console.log('not published', notPublished);
+console.log('publish failed', failedPublished);
+console.log('publish successed', published);

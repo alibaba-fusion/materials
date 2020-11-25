@@ -21,3 +21,4 @@ tmp/
 .faas_debug_tmp
 .severless
 blocks/**/*/style.d.ts
+.history
