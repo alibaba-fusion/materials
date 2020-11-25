@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro-js",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     ".vscode/",
@@ -55,7 +55,7 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "eslint:fix": "npm run eslint -- --fix",
-    "stylelint": "stylelint '**/*.{css,scss,less}'",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
     "design": "icejs build --design"
   },
   "publishConfig": {
