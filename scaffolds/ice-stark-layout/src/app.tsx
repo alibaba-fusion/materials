@@ -18,6 +18,19 @@ const appConfig: IAppConfig = {
     type: 'framework',
     Layout: FrameworkLayout,
     getApps: async () => {
+      /**
+       * 官方微应用注册生命周期已变更为 UMD 导出，配置时请开启 umd：
+       * {
+       *  path: '/seller',
+       *  title: '标题',
+       *  umd: true,
+       *  url: ['./js/index.js', './css/index.css']
+       * }
+       * 如果不希望以 umd 导出，请修改微应用 build.json 配置，移除 { "umd": true } 配置即可
+       * {
+       *  "plugins": ["build-plugin-icestark", { "umd": true }]
+       * }
+       */
       const apps = [{
         path: '/seller',
         title: '商家平台',
