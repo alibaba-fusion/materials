@@ -15,7 +15,8 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint **/*.{css,scss,less}"
+    "stylelint": "stylelint **/*.{css,scss,less}",
+    "tsChecker": "node scripts/ts-checker.js"
   },
   "husky": {
     "hooks": {
