@@ -1,7 +1,7 @@
 {
   "pkgData": {
     "name": "@alifd/scaffold-lite",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
     "repository": {
       "type": "git",
