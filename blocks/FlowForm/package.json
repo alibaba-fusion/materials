@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-flow-form",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "流程表单",
   "files": [
     "build/",
