@@ -68,7 +68,7 @@ export default function ExpandTable() {
   return (
     <Card free className={styles.container}>
       <Card.Content>
-        <Table
+        <Table.StickyLock
           {...tableProps}
           tableWidth={1000}
           hasBorder={false}
@@ -85,7 +85,7 @@ export default function ExpandTable() {
           <Table.Column title="uuid" dataIndex="login.uuid" width={300} />
           <Table.Column title="gender" dataIndex="gender" width={200} />
           <Table.Column width={500} cell={tableActions} />
-        </Table>
+        </Table.StickyLock>
         <Pagination style={{ marginTop: 16, textAlign: 'right' }} {...paginationProps} />
       </Card.Content>
     </Card>
