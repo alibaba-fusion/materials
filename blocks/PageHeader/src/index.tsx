@@ -16,8 +16,8 @@ const PageHeader: SFC<PageHeaderProps> = (props) => {
         breadcrumbs && breadcrumbs.length > 0 ? (
           <Breadcrumb className={styles.Breadcrumbs} separator=" / ">
             {
-              breadcrumbs.map((item) => (
-                <Breadcrumb.Item link={item.path}>{item.name}</Breadcrumb.Item>
+              breadcrumbs.map((item, idx) => (
+                <Breadcrumb.Item key={idx} link={item.path}>{item.name}</Breadcrumb.Item>
               ))
             }
           </Breadcrumb>

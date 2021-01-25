@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-card-rank-chart",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "排行卡片",
   "files": [
     "build/",
