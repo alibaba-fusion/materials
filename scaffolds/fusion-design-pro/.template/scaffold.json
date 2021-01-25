@@ -4,12 +4,6 @@
 	"auth": false,
 	"store": true,
 	"mock": true,
-	"files": [
-		{
-			"source": "types",
-			"targetDir": "src"
-		}
-	],
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro",
 		"version": "0.2.5",
