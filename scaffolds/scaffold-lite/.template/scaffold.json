@@ -20,12 +20,6 @@
       "version": "^0.x"
     }
   },
-  "files": [
-		{
-			"source": "types",
-			"targetDir": "src"
-		}
-	],
   "layouts": [
     {
       "type": "builtIn",
