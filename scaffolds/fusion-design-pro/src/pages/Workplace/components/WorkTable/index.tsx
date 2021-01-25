@@ -152,7 +152,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                       ),
                     }),
                     columnProps: () => ({ width: 330 }),
-                    titleAddons: () => <span className="next-table-cell-wrapper">任务名称</span>,
+                    titleAddons: () => <span key="title" className="next-table-cell-wrapper">任务名称</span>,
                   }}
                 >
                   <Table.Column title="所属阶段" dataIndex="state" width={230} />
@@ -180,8 +180,9 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                           content={item.planAddress}
                           timeLeft={
                             <>
-                              <div className={styles.planTime}>{item.planTime}</div>
-                              <div className={styles.planDuaring}>{item.planDuaring}</div>
+                              <span className={styles.planTime}>{item.planTime}</span>
+                              <br />
+                              <span className={styles.planDuaring}>{item.planDuaring}</span>
                             </>
                           }
                         />
