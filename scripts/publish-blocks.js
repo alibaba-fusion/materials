@@ -7,6 +7,15 @@ const cwd = process.cwd();
 const TYPE = process.env.TYPE || 'blocks'; // scaffolds | blocks
 const blocksPath = path.join(cwd, TYPE);
 const blocksList = fs.readdirSync(blocksPath);
+// const blocksList = [
+//   'ActionTable',
+//   'ClassifiedForm',
+//   'ExpandTable',
+//   'FlowForm',
+//   'FusionCardRankChart',
+//   'PageHeader',
+//   'WorkTable'
+// ];
 
 const published = [];
 const failedPublished = [];

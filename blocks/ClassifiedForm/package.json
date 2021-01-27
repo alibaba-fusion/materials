@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-classified-form",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Classified form",
   "files": [
     "build/",
@@ -47,5 +47,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/alibaba-fusion/materials/tree/master/blocks/ClassifiedForm"
+  },
+  "devDependencies": {
+    "@alifd/theme-design-pro": "^0.6.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-expand-table",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "可展开的表格",
   "files": [
     "src/!(style.d.ts)",
@@ -26,9 +26,10 @@
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "@alifd/next": "^1.21.0-beta.4"
+    "@alifd/next": "^1.21.0"
   },
   "devDependencies": {
+    "@alifd/next": "^1.21.0",
     "@alifd/theme-design-pro": "^0.6.2"
   },
   "blockConfig": {

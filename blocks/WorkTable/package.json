@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-worktable",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "工作台模板",
   "files": [
     "build/",
