@@ -1,4 +1,5 @@
 /* eslint-disable @iceworks/best-practices/no-secret-info */
+// @ts-nocheck
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
@@ -7,7 +8,6 @@ import { useInterval } from './utils';
 import styles from './index.module.scss';
 
 const { Item } = Form;
-
 export interface RegisterProps {
   email: string;
   password: string;
@@ -89,7 +89,7 @@ export default function RegisterBlock() {
               placeholder="至少六位密码，区分大小写"
             />
           </Item>
-          <Item required requiredTrigger="onFocus" requiredMessage="必填" validator={checkPass}>
+          <Item required requiredTrigger="onFocus" requiredMessage="必填" validator={checkPass}> 
             <Input.Password
               name="rePassword"
               size="large"

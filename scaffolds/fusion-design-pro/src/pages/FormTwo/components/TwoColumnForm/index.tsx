@@ -47,9 +47,9 @@ const TwoColumnForm: React.SFC<TwoColumnFormProps> = (props): JSX.Element => {
     onCancel = () => {},
   } = props;
 
-  const [postData, setValue] = useState<TwoColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: TwoColumnFormProps): void => {
+  const formChange = (value: DataSource): void => {
     setValue(value);
   };
 

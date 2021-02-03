@@ -26,7 +26,7 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (cols:
     onChange(newColumnList);
   };
 
-  const onHiddenChange = (key: string, status: boolean): void => {
+  const onHiddenChange = (key: string |null, status: boolean): void => {
     const columnsHiddenChange = (items: Column[]) => {
       const newItems: Column[] = [];
       items.forEach((item) => {

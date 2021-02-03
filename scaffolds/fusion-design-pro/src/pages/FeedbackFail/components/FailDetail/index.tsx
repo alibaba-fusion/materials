@@ -4,13 +4,13 @@ import { Button, Message, Card } from '@alifd/next';
 import styles from './index.module.scss';
 
 export interface FailDetailProps {
-  statusCode: string;
-  description: string;
-  image: string;
-  buttonBackDesc: string;
-  buttonContinueDesc: string;
-  countDownSecnods: number;
-  onButtonBack: () => any;
+  statusCode?: string;
+  description?: string;
+  image?: string;
+  buttonBackDesc?: string;
+  buttonContinueDesc?: string;
+  countDownSecnods?: number;
+  onButtonBack?: () => any;
 }
 
 export default function FailDetail(props: FailDetailProps) {

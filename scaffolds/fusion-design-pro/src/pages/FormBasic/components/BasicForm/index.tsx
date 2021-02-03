@@ -47,9 +47,9 @@ const BasicForm: React.SFC<BasicFormProps> = (props): JSX.Element => {
     onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<BasicFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (values: BasicFormProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 

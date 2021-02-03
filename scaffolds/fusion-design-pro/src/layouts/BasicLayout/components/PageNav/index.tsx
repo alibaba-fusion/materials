@@ -1,9 +1,9 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
-
 const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
@@ -27,12 +27,12 @@ function getNavMenuItems(menusData: any[], initIndex?: number | string, auth?: a
   }
 
   return menusData
-    .filter(item => {
+    .filter((item) => {
       let roleAuth = true;
       // if item.roles is [] or undefined, roleAuth is true
       if (auth && item.auth && item.auth instanceof Array) {
         if (item.auth.length) {
-          roleAuth = item.auth.some(key => auth[key]);
+          roleAuth = item.auth.some((key) => auth[key]);
         }
       }
       return item.name && !item.hideInMenu && roleAuth;
@@ -43,7 +43,7 @@ function getNavMenuItems(menusData: any[], initIndex?: number | string, auth?: a
 }
 
 function getSubMenuOrItem(item: IMenuItem, index?: number | string, auth?: any) {
-  if (item.children && item.children.some(child => child.name)) {
+  if (item.children && item.children.some((child) => child.name)) {
     const childrenItems = getNavMenuItems(item.children, index, auth);
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
@@ -84,7 +84,7 @@ const Navigation = (props, context) => {
     });
 
     function checkChildPathExists(menuConfig) {
-      return menuConfig.children.some(child => {
+      return menuConfig.children.some((child) => {
         return child.children ? checkChildPathExists(child) : child.path === pathname;
       });
     }

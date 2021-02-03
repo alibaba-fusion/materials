@@ -105,7 +105,7 @@ const AppList = () => {
   const [, { toggleFull }] = useFullscreen(document.getElementById('table-container'), {
     onFull: () => {
       const ele = document.getElementById('table-container');
-      ele.setAttribute('style', 'padding: 20px;background: #ffffff');
+      ele ?ele.setAttribute('style', 'padding: 20px;background: #ffffff'):null;
     },
   });
 

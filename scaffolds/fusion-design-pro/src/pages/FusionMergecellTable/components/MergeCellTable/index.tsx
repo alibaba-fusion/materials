@@ -73,7 +73,11 @@ const cellProps = (rowIndex, colIndex, dataIndex, record) => {
   if (group2Merged.find((val: string) => val === dataIndex)) {
     if (groupIndex === 0) {
       return { rowSpan: groupCount };
+    }else{
+      return undefined
     }
+  }else{
+    return undefined
   }
 };
 

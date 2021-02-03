@@ -14,7 +14,7 @@ import {
 import styles from './index.module.scss';
 
 export interface DataSource {
-  job: {
+  job?: {
     address?: string;
     position?: string;
     companyName?: string;
@@ -22,7 +22,7 @@ export interface DataSource {
     annualSalary?: number;
     expectAnnualSalary?: number;
   };
-  treatment: {
+  treatment?: {
     monthlySalary?: number;
     monthNumber?: number;
     bonus?: number;
@@ -31,6 +31,8 @@ export interface DataSource {
     rsu?: boolean;
     rsuDesc?: string;
   };
+  basic?:unknown,
+  member?:unknown
 }
 
 export interface ClassifiedFormProps {
@@ -99,10 +101,10 @@ const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
               </Select>
             </Form.Item>
             <Form.Item colSpan={4} label="年薪" required>
-              <Input name="annualSalary" placeholder="请输入薪资信息" textAfter="CNY" />
+              <Input name="annualSalary" placeholder="请输入薪资信息" addonTextAfter="CNY" />
             </Form.Item>
             <Form.Item colSpan={4} label="期望年薪">
-              <Input name="expectAnnualSalary" placeholder="请输入期望薪资" textAfter="CNY" />
+              <Input name="expectAnnualSalary" placeholder="请输入期望薪资" addonTextAfter="CNY" />
             </Form.Item>
           </Form>
         </Card.Content>

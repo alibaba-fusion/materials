@@ -57,6 +57,11 @@ export interface DataSource {
   pic?: UploadProps[];
 }
 
+export interface PriList{
+  name?:string,
+  logo?:string,
+  privilege?:string
+}
 export interface SettingSystemProps {
   dataSource?: DataSource;
   onSubmit?: () => void;
@@ -84,9 +89,9 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
     onSubmit = DEFAULT_ON_SUBMIT,
   } = props;
 
-  const [priList, setPriList] = useState([]);
+  const [priList, setPriList] = useState<PriList[]>([]);
   const [inited, setInited] = useState(false);
-  const [postData, setValue] = useState<SettingSystemProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
   useEffect(() => {
     setPriList(MockData);
@@ -94,7 +99,7 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
   }, [inited]);
 
 
-  const formChange = (values: SettingSystemProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 

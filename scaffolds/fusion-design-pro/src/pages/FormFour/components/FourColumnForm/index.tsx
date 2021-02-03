@@ -48,9 +48,9 @@ const FourColumnForm: React.SFC<FourColumnFormProps> = (props): JSX.Element => {
     onCancel = () => {},
   } = props;
 
-  const [postData, setValue] = useState<FourColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: FourColumnFormProps) => {
+  const formChange = (value: DataSource) => {
     setValue(value);
   };
 

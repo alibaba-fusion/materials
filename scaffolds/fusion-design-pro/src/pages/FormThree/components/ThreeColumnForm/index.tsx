@@ -49,9 +49,9 @@ const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props): JSX.Element =>
     onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<ThreeColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: ThreeColumnFormProps) => {
+  const formChange = (value: DataSource) => {
     setValue(value);
   };
 

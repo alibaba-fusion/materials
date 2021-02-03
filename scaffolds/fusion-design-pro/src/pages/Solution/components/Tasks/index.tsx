@@ -9,6 +9,8 @@ interface IDataSource {
 
 interface IFromValue {
   dataSource?: IDataSource;
+  title: string;
+  description: string;
   onSubmit?: () => void;
   onCancel?: () => void;
 }
