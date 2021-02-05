@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
 
 import styles from './index.module.scss';
+import { UploadProps } from '@alifd/next/types/upload';
 
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
@@ -32,17 +33,17 @@ const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element => {
+const SettingPersonBlock: React.SFC<SettingPersonProps> = (props:SettingPersonProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
   } = props;
 
-  const [postData, setValue] = useState<SettingPersonProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
   const [buttonText, setButtonText] = useState('发送验证码');
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
-  const formChange = (values: SettingPersonProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 

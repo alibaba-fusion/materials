@@ -91,12 +91,12 @@ const JSErrorChart: React.FunctionComponent<JSErrorChartProps> = (props: JSError
         <Card.Divider />
       </React.Fragment>
       <Card.Content>
-        <Chart data={chartData} scale={scale} height={chartHeight} width={10} forceFit padding={[30, 55, 30, 65]}>
+        <Chart data={chartData} scale={scale} height={chartHeight?chartHeight:0} width={10} forceFit padding={[30, 55, 30, 65]}>
           <Tooltip />
           <Legend
             position="top"
             useHtml
-            itemTpl={(alias) => {
+            itemTpl={(alias: string) => {
               let name = '';
               switch (alias) {
                 case 'rate': name = '成功率'; break;

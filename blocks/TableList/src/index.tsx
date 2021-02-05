@@ -36,7 +36,7 @@ const DEFAULT_DATA: IDataSource = {
 };
 
 interface ITableListProps {
-  dataSource: IDataSource;
+  dataSource?: IDataSource;
 }
 
 const TableList: React.FunctionComponent<ITableListProps> = (props: ITableListProps): JSX.Element => {

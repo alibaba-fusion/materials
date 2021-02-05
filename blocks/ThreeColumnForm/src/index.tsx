@@ -42,16 +42,16 @@ const DEFAULT_ON_SUBMIT = (values: ThreeColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props): JSX.Element => {
+const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props:ThreeColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
     onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<ThreeColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: ThreeColumnFormProps) => {
+  const formChange = (value: DataSource) => {
     setValue(value);
   };
 
