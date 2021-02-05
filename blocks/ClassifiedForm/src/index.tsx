@@ -31,8 +31,8 @@ export interface DataSource {
     rsu?: boolean;
     rsuDesc?: string;
   };
-  basic?:unknown,
-  member?:unknown
+  basic?: unknown;
+  member?: unknown;
 }
 
 export interface ClassifiedFormProps {

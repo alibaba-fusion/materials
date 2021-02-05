@@ -89,7 +89,7 @@ export default function RegisterBlock() {
               placeholder="至少六位密码，区分大小写"
             />
           </Item>
-          <Item required requiredTrigger="onFocus" requiredMessage="必填" validator={checkPass}> 
+          <Item required requiredTrigger="onFocus" requiredMessage="必填" validator={checkPass}>
             <Input.Password
               name="rePassword"
               size="large"

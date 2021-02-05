@@ -8,6 +8,7 @@ import { getColumnKey } from './util';
 
 import styles from './index.module.scss';
 
+// @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
@@ -15,8 +16,8 @@ const TableActionIcon = Icon.createFromIconfontCN({
 const getTableData = ({ current, pageSize }: { current: number; pageSize: number }): Promise<any> => {
   const query = `page=${current}&size=${pageSize}`;
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-    .then(res => res.json())
-    .then(res => ({
+    .then((res) => res.json())
+    .then((res) => ({
       total: 55,
       list: res.results.slice(0, 10),
     }));
@@ -105,7 +106,7 @@ const AppList = () => {
   const [, { toggleFull }] = useFullscreen(document.getElementById('table-container'), {
     onFull: () => {
       const ele = document.getElementById('table-container');
-      ele ?ele.setAttribute('style', 'padding: 20px;background: #ffffff'):null;
+      ele ? ele.setAttribute('style', 'padding: 20px;background: #ffffff') : null;
     },
   });
 

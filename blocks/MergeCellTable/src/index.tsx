@@ -67,17 +67,17 @@ const MockData = [
 
 const getTableData = () => Promise.resolve({ total: MockData.length, list: MockData });
 
-const cellProps = (rowIndex: number, colIndex: number, dataIndex: string, record: { groupCount: any; groupIndex: any; group2Merged: any; }) => {
+const cellProps = (rowIndex: number, colIndex: number, dataIndex: string, record: { groupCount: any; groupIndex: any; group2Merged: any }) => {
   const { groupCount, groupIndex, group2Merged } = record;
   // 合并待 merge 的行
   if (group2Merged.find((val: string) => val === dataIndex)) {
     if (groupIndex === 0) {
       return { rowSpan: groupCount };
-    }else{
-      return undefined
+    } else {
+      return undefined;
     }
-  }else{
-    return undefined
+  } else {
+    return undefined;
   }
 };
 

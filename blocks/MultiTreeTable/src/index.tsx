@@ -58,7 +58,7 @@ const getTableData = (
     //     total: 55,
     //     list: res.results.slice(0, 10),
     //   }));
-    return new Promise<Result>(resolve => {
+    return new Promise<Result>((resolve) => {
       setTimeout(() => {
         resolve(getData(current, pageSize));
       }, 300);
@@ -272,7 +272,7 @@ const MultiTreeTable: React.FC = () => {
           </Table>
           <Pagination
             className={styles.Pagination}
-            totalRender={total => <>共 <Button text type="primary">{total}</Button> 个记录</>}
+            totalRender={(total) => <>共 <Button text type="primary">{total}</Button> 个记录</>}
             {...paginationProps}
           />
         </Card.Content>

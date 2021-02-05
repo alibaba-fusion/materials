@@ -65,8 +65,8 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(0);
   };
 
-  let actions: JSX.Element =<Button></Button>;
-  let mainbody: JSX.Element = <Box></Box>;
+  let actions: JSX.Element = <Button />;
+  let mainbody: JSX.Element = <Box />;
   switch (currentStep) {
     case 0:
       actions = (

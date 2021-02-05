@@ -94,7 +94,7 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (cols:
                     list={item.children}
                     setList={(newState: any[]) => onColumnChildrenChange(idx, newState)}
                   >
-                    {item.children.map((childrenItem: ColumnProps & { key?: string; }) => (
+                    {item.children.map((childrenItem: ColumnProps & { key?: string }) => (
                       <div key={getColumnKey(childrenItem)} className="sort-item sort-item-children">
                         <Checkbox
                           checked={!childrenItem.hidden}
