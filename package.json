@@ -20,13 +20,12 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run lint"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
     "@alifd/next": "^1.19.5",
-    "@types/react": "^16.9.16",
+    "@types/react": "^16.14.3",
     "ice-scaffold-generator": "^1.1.19",
     "moment": "^2.24.0",
     "react": "^16.12.0",
