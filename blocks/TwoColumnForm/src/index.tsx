@@ -40,7 +40,7 @@ const DEFAULT_ON_SUBMIT = (values: TwoColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const TwoColumnForm: React.SFC<TwoColumnFormProps> = (props: TwoColumnFormProps): JSX.Element => {
+const TwoColumnForm: React.FC<TwoColumnFormProps> = (props: TwoColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,

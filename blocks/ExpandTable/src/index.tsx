@@ -68,7 +68,7 @@ export default function ExpandTable() {
   const { paginationProps, tableProps } = useFusionTable(getTableData, {
     field,
   });
-  const [openRows, setOpenrows] = useState<any>([]);
+  const [openRows, setOpenrows] = useState<string[]>([]);
   return (
     <Card free className={styles.container}>
       <Card.Content>
@@ -79,7 +79,7 @@ export default function ExpandTable() {
           primaryKey="email"
           expandedRowRender={(record) => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
-          onRowOpen={(keys) => setOpenrows(keys)}
+          onRowOpen={(keys:string[]) => setOpenrows(keys)}
           expandedRowIndent={[0, 0]}
         >
           <Table.Column title="name" dataIndex="name.last" lock width={140} />

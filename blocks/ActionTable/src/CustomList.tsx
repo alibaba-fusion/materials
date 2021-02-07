@@ -92,7 +92,7 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (cols:
                   <ReactSortable
                     handle=".column-handle"
                     list={item.children}
-                    setList={(newState: any[]) => onColumnChildrenChange(idx, newState)}
+                    setList={(newState: Column[]) => onColumnChildrenChange(idx, newState)}
                   >
                     {item.children.map((childrenItem: ColumnProps & { key?: string }) => (
                       <div key={getColumnKey(childrenItem)} className="sort-item sort-item-children">

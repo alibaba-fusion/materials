@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import { Chart, Coord, View, Geom } from 'bizcharts';
 import { Card, Table } from '@alifd/next';
 import DataSet from '@antv/data-set';
@@ -43,7 +43,7 @@ const DEFAULT_DATA: DataSource = {
   title: '实时监控情况',
 };
 
-const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
+const FusionCardWorldmapChart: FC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
   } = props;

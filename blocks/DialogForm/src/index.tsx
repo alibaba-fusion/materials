@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import { Dialog, Form, Field, Input, Select } from '@alifd/next';
 
 export interface DataSource {
@@ -14,7 +14,7 @@ export interface DialogFormProps {
   onVisibleChange?: (visible: boolean) => void;
 }
 
-const DialogForm: SFC<DialogFormProps> = (props) => {
+const DialogForm: FC<DialogFormProps> = (props) => {
   const {
     dataSource = {},
     visible = true,

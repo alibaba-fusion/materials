@@ -1,4 +1,4 @@
-import React, { SFC, useState, useEffect, useRef } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import { findDOMNode } from 'react-dom';
 import {
   Card,
@@ -113,7 +113,7 @@ const DEFAULT_DATA: DataSource = {
   ],
 };
 
-const GroupForm: SFC<GroupFormProps> = (props) => {
+const GroupForm: FC<GroupFormProps> = (props) => {
   const {
     dataSource: defaultDataSource = DEFAULT_DATA,
     onSubmit = () => {},
