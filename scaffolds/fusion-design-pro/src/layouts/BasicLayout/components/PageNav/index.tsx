@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'ice';
@@ -105,7 +104,9 @@ const Navigation = (props, context) => {
       iconOnly={isCollapse}
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
-      onOpen={setOpenKeys}
+      onOpen={(keys)=>{
+        // @ts-ignore
+        setOpenKeys(keys)}}
     >
       {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>
