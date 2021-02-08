@@ -131,7 +131,7 @@ const FlowForm = (props) => {
         <Card.Content>
           <ResponsiveGrid>
             <ResponsiveGrid.Cell colSpan={6}>
-              <Box spacing={16} direction="row" align="top">
+              <Box spacing={16} direction="row" align="flex-start">
                 <Box padding={[9, 0, 0, 0]}>
                   <Avatar src={dataSource.person.avatar} />
                 </Box>
@@ -214,8 +214,8 @@ const FlowForm = (props) => {
       <Card free>
         <Card.Header title="工作经历" />
         <Card.Divider />
-        {dataSource.person.experiences.map((experience) => (
-          <Card.Content>
+        {dataSource.person.experiences.map((experience, idx) => (
+          <Card.Content key={idx}>
             <Box>
               <Typography.Text className={styles.SubTitle}>公司信息</Typography.Text>
               <Form labelAlign="top" responsive>

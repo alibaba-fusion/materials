@@ -101,7 +101,11 @@ const WorkTable = (props) => {
                     columnProps: () => ({
                       width: 330,
                     }),
-                    titleAddons: () => <span className="next-table-cell-wrapper">任务名称</span>,
+                    titleAddons: () => (
+                      <span key="title" className="next-table-cell-wrapper">
+                        任务名称
+                      </span>
+                    ),
                   }}
                 >
                   <Table.Column title="所属阶段" dataIndex="state" width={230} />
@@ -128,8 +132,9 @@ const WorkTable = (props) => {
                         content={item.planAddress}
                         timeLeft={
                           <>
-                            <div className={styles.planTime}>{item.planTime}</div>
-                            <div className={styles.planDuaring}>{item.planDuaring}</div>
+                            <span className={styles.planTime}>{item.planTime}</span>
+                            <br />
+                            <span className={styles.planDuaring}>{item.planDuaring}</span>
                           </>
                         }
                       />
@@ -147,7 +152,11 @@ const WorkTable = (props) => {
                 <List>
                   {projectList.map((project) => {
                     return (
-                      <List.Item title={project.projectName} media={<Avatar src={project.img} />}>
+                      <List.Item
+                        key={project.projectName}
+                        title={project.projectName}
+                        media={<Avatar src={project.img} />}
+                      >
                         {project.projectDesc}
                       </List.Item>
                     );
@@ -202,13 +211,13 @@ const WorkTable = (props) => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {updateList.map((one) => {
+                  {updateList.map((one, idx) => {
                     let title;
 
                     switch (one.action) {
                       case 'create':
                         title = (
-                          <div>
+                          <div key={idx}>
                             {one.name} 在 <a href="/">{one.project}</a> 新建项目 <a href="/">{one.projectItem}</a>{' '}
                           </div>
                         );
@@ -216,7 +225,7 @@ const WorkTable = (props) => {
 
                       case 'release':
                         title = (
-                          <div>
+                          <div key={idx}>
                             {one.name} 将 <a href="/">{one.project}</a> 更新至发布状态{' '}
                           </div>
                         );
@@ -224,7 +233,7 @@ const WorkTable = (props) => {
 
                       case 'note':
                         title = (
-                          <div>
+                          <div key={idx}>
                             {one.name} 在 <a href="/">{one.project}</a> 发布了 <a href="/">{one.projectItem}</a>{' '}
                           </div>
                         );
@@ -235,7 +244,7 @@ const WorkTable = (props) => {
                     }
 
                     return (
-                      <List.Item title={title} media={<Avatar src={one.avatar} />}>
+                      <List.Item key={idx} title={title} media={<Avatar src={one.avatar} />}>
                         {one.time}
                       </List.Item>
                     );
@@ -257,9 +266,9 @@ const WorkTable = (props) => {
               <Card.Divider />
               <Card.Content>
                 <Box spacing={[20, 50]} direction="row" wrap>
-                  {entranceList.map((item) => {
+                  {entranceList.map((item, idx) => {
                     return (
-                      <Button size="large" text component="a" href={item.link}>
+                      <Button key={idx} size="large" text component="a" href={item.link}>
                         {item.name}
                       </Button>
                     );

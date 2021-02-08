@@ -49,8 +49,8 @@ const FusionCardRankChart = (props) => {
           <Cell colSpan={3}>
             <Box justify="flex-start" spacing={20} className={styles.histogram}>
               {dataSource &&
-                dataSource.map((item) => (
-                  <Box justify="flex-start" spacing={5}>
+                dataSource.map((item, idx) => (
+                  <Box key={idx} justify="flex-start" spacing={5}>
                     <div className={styles.hisTitle}>{item.name}</div>
                     <Box direction="row">
                       <div
