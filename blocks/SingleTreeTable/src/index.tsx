@@ -162,7 +162,7 @@ export default function SingleTreeTable() {
     Message.success('请求成功');
   };
 
-  const tableOperation = (value: any, index: number, record: { children: unknown }) => {
+  const tableOperation = (value:unknown, index:number, record: { children: any; }) => {
     return (
       <div className={styles.buttonGroup}>
         <Button type="primary" text onClick={fetchRemote}>删除</Button>
@@ -198,8 +198,8 @@ export default function SingleTreeTable() {
               return {
                 colSpan: 2,
               };
-            } else {
-
+            }else{
+              return undefined
             }
           }}
         >

@@ -30,13 +30,14 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
 
   const steps = ['填写信息', '确认信息', '完成'].map(
     (item, index): React.ReactElement => (
-      <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
+      <Step.Item aria-current={index === currentStep ? 'step' : undefined} key={index} title={item} />
     ),
   );
 
   const submit = (): void => {
     const values = projectField.getValues();
     console.log('values:', values);
+    // @ts-ignore
     onSubmit(values);
 
     setStep(currentStep + 1);

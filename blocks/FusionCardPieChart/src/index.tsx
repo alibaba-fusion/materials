@@ -90,7 +90,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             </Radio>
           </Radio.Group>
         </Box>
-        <Chart width={10} height={chartHeight} forceFit data={chartData} padding={['auto', 'auto']}>
+        <Chart width={10} height={chartHeight?chartHeight:0} forceFit data={chartData} padding={['auto', 'auto']}>
           <Coord type="theta" radius={0.75} innerRadius={0.6} />
           <Axis name="percent" />
           <Legend

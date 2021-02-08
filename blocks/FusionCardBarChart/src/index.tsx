@@ -56,7 +56,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
           width={10}
-          height={chartHeight}
+          height={chartHeight?chartHeight:0}
           data={chartData}
           scale={{
             date: {

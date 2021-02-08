@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState, useRef } from 'react';
+import React, { SFC, useEffect, useState, useRef } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Box, Card, Button, Form, Input, Select, Radio, Step, Field, Divider, Tag, Avatar, Typography, ResponsiveGrid } from '@alifd/next';
 import styles from './index.module.scss';
@@ -85,7 +85,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const FlowForm: FC<FlowFormProps> = (props) => {
+const FlowForm: SFC<FlowFormProps> = (props) => {
   const {
     dataSource = DEFAULT_DATA,
     onAgree = () => {},
@@ -105,7 +105,7 @@ const FlowForm: FC<FlowFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = (dom && dom.getBoundingClientRect()) || null;
+    const rect = (dom && dom.getBoundingClientRect()) || {};
     setLeft(rect.left);
     setRight(document.documentElement.offsetWidth - rect.left - rect.width);
   }, []);
@@ -168,21 +168,21 @@ const FlowForm: FC<FlowFormProps> = (props) => {
             <ResponsiveGrid.Cell colSpan={6}>
               <Box spacing={16} direction="row" align="flex-start">
                 <Box padding={[9, 0, 0, 0]}>
-                  <Avatar src={dataSource.person.avatar} />
+                  <Avatar src={dataSource.person?.avatar} />
                 </Box>
                 <Box spacing={10}>
                   <Form labelAlign="top" responsive>
-                    <Form.Item label={`${dataSource.person.surname}${dataSource.person.name}`} colSpan={12}>
-                      <span className="next-form-preview">{dataSource.person.phone} | {dataSource.person.email}</span>
+                    <Form.Item label={`${dataSource.person?.surname}${dataSource.person?.name}`} colSpan={12}>
+                      <span className="next-form-preview">{dataSource.person?.phone} | {dataSource.person?.email}</span>
                     </Form.Item>
                     <Form.Item label="现在所在地" colSpan={6}>
-                      <span className="next-form-preview">{dataSource.person.address}</span>
+                      <span className="next-form-preview">{dataSource.person?.address}</span>
                     </Form.Item>
                     <Form.Item label="工作经验" colSpan={6}>
-                      <span className="next-form-preview">{dataSource.person.workTime}</span>
+                      <span className="next-form-preview">{dataSource.person?.workTime}</span>
                     </Form.Item>
                     <Form.Item label="教育经历" colSpan={6}>
-                      <span className="next-form-preview">{dataSource.person.education}</span>
+                      <span className="next-form-preview">{dataSource.person?.education}</span>
                     </Form.Item>
                   </Form>
                 </Box>
@@ -192,20 +192,20 @@ const FlowForm: FC<FlowFormProps> = (props) => {
               <Divider className={styles.Divider} direction="ver" />
               <Form labelAlign="top" responsive>
                 <Form.Item label="职级" colSpan={6}>
-                  <span className="next-form-preview">{dataSource.person.rank}</span>
+                  <span className="next-form-preview">{dataSource.person?.rank}</span>
                 </Form.Item>
                 <Form.Item label="职位" colSpan={6}>
-                  <span className="next-form-preview">{dataSource.person.position}</span>
+                  <span className="next-form-preview">{dataSource.person?.position}</span>
                 </Form.Item>
                 <Form.Item label="部门" colSpan={6}>
-                  <span className="next-form-preview">{dataSource.person.department}</span>
+                  <span className="next-form-preview">{dataSource.person?.department}</span>
                 </Form.Item>
                 <Form.Item label="工作地" colSpan={6}>
-                  <span className="next-form-preview">{dataSource.person.workAddress}</span>
+                  <span className="next-form-preview">{dataSource.person?.workAddress}</span>
                 </Form.Item>
                 <Form.Item label="薪水" colSpan={6}>
                   <Box direction="row" spacing={8} align="center" className="next-form-preview">
-                    {dataSource.person.salary} <Tag color="green">+23.2%</Tag>
+                    {dataSource.person?.salary} <Tag color="green">+23.2%</Tag>
                   </Box>
                 </Form.Item>
               </Form>
@@ -219,22 +219,22 @@ const FlowForm: FC<FlowFormProps> = (props) => {
         <Card.Content>
           <Form labelAlign="top" responsive>
             <Form.Item label="姓氏" required colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.surname}</span>
+              <span className="next-form-preview">{dataSource.person?.surname}</span>
             </Form.Item>
             <Form.Item label="名字" required colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.name}</span>
+              <span className="next-form-preview">{dataSource.person?.name}</span>
             </Form.Item>
             <Form.Item label="国家/地区" colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.region}</span>
+              <span className="next-form-preview">{dataSource.person?.region}</span>
             </Form.Item>
             <Form.Item label="电话号码" required colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.phone}</span>
+              <span className="next-form-preview">{dataSource.person?.phone}</span>
             </Form.Item>
             <Form.Item label="邮箱" required colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.email}</span>
+              <span className="next-form-preview">{dataSource.person?.email}</span>
             </Form.Item>
             <Form.Item label="现居地址" required colSpan={4}>
-              <span className="next-form-preview">{dataSource.person.address}</span>
+              <span className="next-form-preview">{dataSource.person?.address}</span>
             </Form.Item>
           </Form>
         </Card.Content>
@@ -242,8 +242,8 @@ const FlowForm: FC<FlowFormProps> = (props) => {
       <Card free>
         <Card.Header title="工作经历" />
         <Card.Divider />
-        {
-          dataSource.person.experiences.map((experience, idx) => (
+        {dataSource && dataSource.person && dataSource.person.experiences?
+         dataSource?.person?.experiences.map((experience, idx) => (
             <Card.Content key={idx}>
               <Box>
                 <Typography.Text className={styles.SubTitle}>公司信息</Typography.Text>
@@ -281,7 +281,7 @@ const FlowForm: FC<FlowFormProps> = (props) => {
                 </Form>
               </Box>
             </Card.Content>
-          ))
+          )):null
         }
       </Card>
       <div>
