@@ -120,10 +120,11 @@ const DialogTable = () => {
         <Button
           text
           type="primary"
-          onClick={() => operationCallback({
-            actionType: 'edit',
-            dataSource: record,
-          })
+          onClick={() =>
+            operationCallback({
+              actionType: 'edit',
+              dataSource: record,
+            })
           }
         >
           编辑
@@ -136,10 +137,11 @@ const DialogTable = () => {
         <Button
           text
           type="primary"
-          onClick={() => operationCallback({
-            actionType: 'preview',
-            dataSource: record,
-          })
+          onClick={() =>
+            operationCallback({
+              actionType: 'preview',
+              dataSource: record,
+            })
           }
         >
           查看

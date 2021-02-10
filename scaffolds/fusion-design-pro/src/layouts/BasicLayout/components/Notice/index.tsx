@@ -38,7 +38,7 @@ const Notice: React.FC<NoticeProps> = ({ noticeList }) => {
   }
 
   function clearNotice() {
-    const noticeIds = (noticeList as INotcieItem[]).map(item => item.id);
+    const noticeIds = (noticeList as INotcieItem[]).map((item) => item.id);
     setBageCount(0);
     setReadList(noticeIds);
   }
@@ -47,7 +47,7 @@ const Notice: React.FC<NoticeProps> = ({ noticeList }) => {
     Message.success('点击了查看更多操作');
   }
 
-  const renderList = (noticeList as INotcieItem[]).filter(item => readList.indexOf(item.id) === -1);
+  const renderList = (noticeList as INotcieItem[]).filter((item) => readList.indexOf(item.id) === -1);
   return (
     <Popup
       trigger={(

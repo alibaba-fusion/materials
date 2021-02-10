@@ -24,7 +24,7 @@
     }
   },
   "dependencies": {
-    "@alifd/next": "^1.19.5",
+    "@alifd/next": "^1.21.0",
     "@types/react": "^16.9.16",
     "ice-scaffold-generator": "^1.1.19",
     "moment": "^2.24.0",

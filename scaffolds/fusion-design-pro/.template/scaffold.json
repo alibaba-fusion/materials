@@ -4,19 +4,13 @@
 	"auth": false,
 	"store": true,
 	"mock": true,
-	"files": [
-		{
-			"source": "types",
-			"targetDir": "src"
-		}
-	],
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro",
-		"version": "0.2.4",
+		"version": "0.2.5",
 		"description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
-			"@alifd/next": "^1.21.0-beta.4",
+			"@alifd/next": "^1.21.0",
 			"@antv/data-set": "^0.10.2",
 			"bizcharts": "^3.5.6"
 		},

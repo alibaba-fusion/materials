@@ -1,6 +1,7 @@
 import { renderNotFound, isInIcestark } from '@ice/stark-app';
 import BasicLayout from '@/layouts/BasicLayout';
 import Detail from '@/pages/Detail';
+import Home from '@/pages/Home';
 import List from '@/pages/List';
 import NotFound from '@/components/NotFound';
 
@@ -12,6 +13,10 @@ const routerConfig = [
       {
         path: '/',
         exact: true,
+        component: Home,
+      },
+      {
+        path: '/list',
         component: List,
       },
       {
