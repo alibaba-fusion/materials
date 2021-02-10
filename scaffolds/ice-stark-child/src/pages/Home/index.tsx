@@ -16,17 +16,24 @@ export default function Home() {
   return (
     <IceContainer>
       <PageTitle title="商家首页" />
-
       <Link to="/detail">子应用内跳转</Link>
       <br />
       <Button
         type="primary"
         onClick={() => {
-          appHistory.push('/message');
+          appHistory.push('/');
         }}
-      >子应用间跳转
+      >子应用间跳转 1
       </Button>
       <br />
+      <br />
+      <Button
+        type="primary"
+        onClick={() => {
+          appHistory.push('/waiter');
+        }}
+      >子应用间跳转 2
+      </Button>
     </IceContainer>
   );
 }
