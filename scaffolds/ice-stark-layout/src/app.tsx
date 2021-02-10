@@ -18,43 +18,32 @@ const appConfig: IAppConfig = {
     type: 'framework',
     Layout: FrameworkLayout,
     getApps: async () => {
-      /**
-       * 官方微应用注册生命周期已变更为 UMD 导出，配置时请开启 umd：
-       * {
-       *  path: '/seller',
-       *  title: '标题',
-       *  umd: true,
-       *  url: ['./js/index.js', './css/index.css']
-       * }
-       * 如果不希望以 umd 导出，请修改微应用 build.json 配置，移除 { "umd": true } 配置即可
-       * {
-       *  "plugins": ["build-plugin-icestark", { "umd": true }]
-       * }
-       */
       const apps = [{
         path: '/seller',
         title: '商家平台',
         sandbox: true,
-        // React app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-seller-react-16
+        umd: true,
+        // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          '//ice.alicdn.com/icestark/child-seller-react/index.js',
-          '//ice.alicdn.com/icestark/child-seller-react/index.css',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.css',
         ],
       }, {
         path: '/waiter',
         title: '小二平台',
         sandbox: true,
+        umd: true,
         url: [
-          // Vue app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-waiter-vue-2
-          '//ice.alicdn.com/icestark/child-waiter-vue/app.js',
-          '//ice.alicdn.com/icestark/child-waiter-vue/app.css',
+          // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.css',
         ],
       }, {
         path: '/angular',
         title: 'Angular',
         sandbox: true,
-        // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
-        entry: '//ice.alicdn.com/icestark/child-common-angular/index.html',
+        // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular
+        entry: 'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-common-angular/index.html',
       }];
       return apps;
     },
