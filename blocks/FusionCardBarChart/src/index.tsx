@@ -78,7 +78,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
               active: {
                 style: {
                   fillOpacity: 0.8,
-                  stroke: "transparent",
+                  stroke: 'transparent',
                 },
               },
               inactive: {
