@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom } from 'bizcharts';
+import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import mock from './mock.js';
 
 import styles from './index.module.scss';
@@ -55,7 +55,6 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
           scale={{
@@ -63,10 +62,32 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', '16']}
+          autoFit
+          padding="auto"
+          appendPadding={[0, 16, 0, 16]}
+          interactions={['element-highlight']}
         >
-          <Geom type="interval" position="date*value" color="#29A5FF" />
+          <Axis name="date" label={null} line={null} />
+          <Axis name="value" grid={null} label={null} />
+          <Tooltip visible={false} />
+          <Geom
+            type="interval"
+            position="date*value"
+            color="#29A5FF"
+            state={{
+              active: {
+                style: {
+                  fillOpacity: 0.8,
+                  stroke: "transparent",
+                },
+              },
+              inactive: {
+                style: {
+                  fillOpacity: 1,
+                },
+              },
+            }}
+          />
         </Chart>
       </Card.Content>
     </Card>
