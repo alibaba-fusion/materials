@@ -29,6 +29,20 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 100,
 };
 
+const barState = {
+  active: {
+    style: {
+      fillOpacity: 0.8,
+      stroke: 'transparent',
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 1,
+    },
+  },
+};
+
 export interface FusionCardBarChartProps {
   cardConfig?: CardConfig;
 }
@@ -74,19 +88,7 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
             type="interval"
             position="date*value"
             color="#29A5FF"
-            state={{
-              active: {
-                style: {
-                  fillOpacity: 0.8,
-                  stroke: 'transparent',
-                },
-              },
-              inactive: {
-                style: {
-                  fillOpacity: 1,
-                },
-              },
-            }}
+            state={barState}
           />
         </Chart>
       </Card.Content>

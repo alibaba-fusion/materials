@@ -47,7 +47,26 @@ const DEFAULT_DATA: CardConfig = {
 };
 
 const colors_pie = ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0', '#3436C7', '#223273'];
-// const colors_pie_16 = ["#1890FF", "#73C9E6", "#13C2C2", "#6CD9B3", "#2FC25B", "#9DD96C", "#FACC14", "#E6965C", "#F04864", "#D66BCA", "#8543E0", "#8E77ED", "#3436C7", "#737EE6", "#223273", "#7EA2E6"];
+
+const pieState = {
+  active: {
+    style: {
+      fillOpacity: 0.7,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 0.85,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+    },
+  },
+};
 
 export interface FusionCardLineChartProps {
   cardConfig?: CardConfig;
@@ -98,25 +117,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
               fillOpacity: 0.85,
             }}
             adjust="stack"
-            state={{
-              active: {
-                style: {
-                  fillOpacity: 0.7,
-                  lineWidth: 1,
-                  stroke: 'white',
-                  strokeOpacity: 1,
-
-                },
-              },
-              inactive: {
-                style: {
-                  fillOpacity: 0.85,
-                  lineWidth: 1,
-                  stroke: 'white',
-                  strokeOpacity: 1,
-                },
-              },
-            }}
+            state={pieState}
           />
         </Chart>
       </Card.Content>
