@@ -42,9 +42,9 @@ export interface DataSource {
 }
 
 export interface AdvancedDetailProps{
-  dataSource?:DataSource,
-  onTabChange?:void,
-  onTableTabChange?:void
+  dataSource?: DataSource;
+  onTabChange?: void;
+  onTableTabChange?: void;
 }
 const DEFAULT_DATA: DataSource = {
   logs: [

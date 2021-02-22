@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
 
-import { Item } from '@alifd/next/types/step';
-
 import styles from './index.module.scss';
 
 export interface DataSource {
@@ -31,10 +29,8 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
   const [currentStep, setStep] = useState<number>(0);
 
   const steps = ['填写信息', '确认信息', '完成'].map(
-    // @ts-ignore
-    (item, index): Item => (
-      // @ts-ignore
-      <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
+    (item, index): React.ReactElement => (
+      <Step.Item aria-current={index === currentStep ? 'step' : undefined} key={index} title={item} />
     ),
   );
 
@@ -65,8 +61,8 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(0);
   };
 
-  let actions: JSX.Element =<Button></Button>;
-  let mainbody: JSX.Element = <Box></Box>;
+  let actions: JSX.Element = <Button />;
+  let mainbody: JSX.Element = <Box />;
   switch (currentStep) {
     case 0:
       actions = (

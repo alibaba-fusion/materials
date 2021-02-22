@@ -58,9 +58,9 @@ export interface DataSource {
 }
 
 export interface PriList{
-  name?:string,
-  logo?:string,
-  privilege?:string
+  name?: string;
+  logo?: string;
+  privilege?: string;
 }
 export interface SettingSystemProps {
   dataSource?: DataSource;
@@ -83,7 +83,7 @@ const DEFAULT_ON_SUBMIT = (values: SettingSystemProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element => {
+const SettingSystemBlock: React.FC<SettingSystemProps> = (props: SettingSystemProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
@@ -195,7 +195,7 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
             />
             <Card.Content>
               <Table dataSource={priList} hasHeader={false} hasBorder={false}>
-                <Table.Column dataIndex="logo" cell={url => <Avatar src={url} />} width={50} />
+                <Table.Column dataIndex="logo" cell={(url: string) => <Avatar src={url} />} width={50} />
                 <Table.Column dataIndex="name" />
                 <Table.Column dataIndex="privilege" />
                 <Table.Column cell={() => <Icon type="ellipsis" />} />

@@ -86,8 +86,12 @@ const DEFAULT_DATA: DataSource = {
 export interface WorkTableProps {
   dataSource?: DataSource;
 }
-
-const colorMap = {
+interface ColorMap{
+  high?: string;
+  middle?: string;
+  low?: string;
+}
+const colorMap: ColorMap = {
   high: 'red',
   middle: 'yellow',
   low: 'green',
@@ -102,7 +106,7 @@ const WorkTable: React.FunctionComponent<WorkTableProps> = (props: WorkTableProp
 
   const changeTab = (val: string) => setTab(val);
 
-  const renderLevel = (text: string, index: number) => {
+  const renderLevel = (text: 'high' | 'middle' | 'low', index: number) => {
     return (
       <span key={text + index.toString()}>
         <Tag size="small" color={colorMap[text]}>

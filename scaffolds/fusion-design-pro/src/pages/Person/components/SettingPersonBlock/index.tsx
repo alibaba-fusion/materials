@@ -33,7 +33,7 @@ const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element => {
+const SettingPersonBlock: React.FC<SettingPersonProps> = (props: SettingPersonProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,

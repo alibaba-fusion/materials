@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
+
 const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
@@ -104,9 +105,10 @@ const Navigation = (props, context) => {
       iconOnly={isCollapse}
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
-      onOpen={(keys)=>{
+      onOpen={(keys) => {
         // @ts-ignore
-        setOpenKeys(keys)}}
+        setOpenKeys(keys);
+      }}
     >
       {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>

@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import {
   Box,
   Button,
@@ -31,8 +31,8 @@ export interface DataSource {
     rsu?: boolean;
     rsuDesc?: string;
   };
-  basic?:unknown,
-  member?:unknown
+  basic?: unknown;
+  member?: unknown;
 }
 
 export interface ClassifiedFormProps {
@@ -50,7 +50,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
+const ClassifiedForm: FC<ClassifiedFormProps> = (props): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = () => {},

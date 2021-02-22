@@ -18,8 +18,8 @@ export interface DataSource {
   tagB: string;
 }
 export interface BasicListProps{
-  dataSource?:DataSource,
-  onSearch?: () => void
+  dataSource?: DataSource;
+  onSearch?: () => void;
 }
 
 const DEFAULT_DATA: DataSource = {

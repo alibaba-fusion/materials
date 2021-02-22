@@ -16,6 +16,5 @@
       }
     ],
     "build-plugin-fusion-material"
-  ],
-  "tsChecker":true
+  ]
 }

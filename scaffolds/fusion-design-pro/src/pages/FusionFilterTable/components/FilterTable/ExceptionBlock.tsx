@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from '@alifd/next';
+
 interface DataSource{
-  onRefresh?:()=>void
+  onRefresh?: () => void;
 }
-const ExceptionBlock: React.FunctionComponent<DataSource> = (props:DataSource):JSX.Element => {
-  const {onRefresh} =props
+const ExceptionBlock: React.FunctionComponent<DataSource> = (props: DataSource): JSX.Element => {
+  const { onRefresh } = props;
   return (
     <div className="table-empty-block">
       <div className="result-image">
