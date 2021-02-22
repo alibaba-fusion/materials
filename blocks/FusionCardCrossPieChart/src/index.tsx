@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
+import { Chart, Geom, Coord, Axis, Legend, Tooltip } from 'bizcharts';
 
 interface ChartItem {
   type?: string;
@@ -46,6 +46,9 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 240,
 };
 
+const colors_pie = ["#1890FF", "#13C2C2", "#2FC25B", "#FACC14", "#F04864", "#8543E0", "#3436C7", "#223273"];
+// const colors_pie_16 = ["#1890FF", "#73C9E6", "#13C2C2", "#6CD9B3", "#2FC25B", "#9DD96C", "#FACC14", "#E6965C", "#F04864", "#D66BCA", "#8543E0", "#8E77ED", "#3436C7", "#737EE6", "#223273", "#7EA2E6"];
+
 export interface FusionCardLineChartProps {
   cardConfig?: CardConfig;
 }
@@ -64,30 +67,55 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
       <Card.Divider />
       <Card.Content>
         <Chart
-          width={10}
           height={chartHeight}
-          forceFit
+          autoFit
           data={chartData}
-          padding={['auto', 'auto']}
+          padding="auto"
+          interactions={['element-single-selected', 'element-highlight']}
         >
-          <Coord type="theta" radius={0.75} innerRadius={0.6} />
+          <Coord type="theta" radius={0.72} innerRadius={0.6} />
           <Axis name="percent" />
           <Legend
-            position="right-center"
+            position="right"
             layout="vertical"
-            textStyle={{
-              fill: '#666',
-              fontSize: 14,
+            itemName={{
+              style: {
+                fill: '#666',
+                fontSize: 14,
+              }
             }}
+            itemValue={null}
             itemMarginBottom={24}
           />
+          <Tooltip visible={false} />
           <Geom
-            type="intervalStack"
+            type="interval"
             position="value"
-            color="title"
+            color={["title", colors_pie]}
             style={{
               lineWidth: 1,
-              stroke: '#fff',
+              stroke: 'white',
+              fillOpacity: 0.85
+            }}
+            adjust="stack"
+            state={{
+              active: {
+                style: {
+                  fillOpacity: 0.7,
+                  lineWidth: 1,
+                  stroke: 'white',
+                  strokeOpacity: 1,
+
+                },
+              },
+              inactive: {
+                style: {
+                  fillOpacity: 0.85,
+                  lineWidth: 1,
+                  stroke: 'white',
+                  strokeOpacity: 1,
+                },
+              },
             }}
           />
         </Chart>
