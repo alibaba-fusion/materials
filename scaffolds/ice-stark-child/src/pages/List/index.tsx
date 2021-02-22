@@ -43,7 +43,7 @@ export default function List() {
   }, [current]);
 
   function mockApi() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(mockData());
       }, 600);
@@ -69,7 +69,7 @@ export default function List() {
           dataIndex="state"
           key="state"
           width={100}
-          cell={value => (
+          cell={(value) => (
             <div className={styles.state}>
               <span className={styles.stateText}>{value}</span>
             </div>

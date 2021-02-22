@@ -73,9 +73,9 @@ export default function ExpandTable() {
           tableWidth={1000}
           hasBorder={false}
           primaryKey="email"
-          expandedRowRender={record => <SubTable dataSource={[record.location]} />}
+          expandedRowRender={(record) => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
-          onRowOpen={keys => setOpenrows(keys)}
+          onRowOpen={(keys) => setOpenrows(keys)}
           expandedRowIndent={[0, 0]}
         >
           <Table.Column title="name" dataIndex="name.last" lock width={140} />

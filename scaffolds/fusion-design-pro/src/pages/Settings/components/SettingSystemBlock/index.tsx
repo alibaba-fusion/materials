@@ -190,7 +190,7 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
             />
             <Card.Content>
               <Table dataSource={priList} hasHeader={false} hasBorder={false}>
-                <Table.Column dataIndex="logo" cell={url => <Avatar src={url} />} width={50} />
+                <Table.Column dataIndex="logo" cell={(url) => <Avatar src={url} />} width={50} />
                 <Table.Column dataIndex="name" />
                 <Table.Column dataIndex="privilege" />
                 <Table.Column cell={() => <Icon type="ellipsis" />} />

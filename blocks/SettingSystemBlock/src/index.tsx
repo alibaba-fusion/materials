@@ -186,11 +186,11 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
                   <Button type="secondary">设置角色 1 权限</Button>
                   <Button type="primary">新增</Button>
                 </Box>
-            }
+              }
             />
             <Card.Content>
               <Table dataSource={priList} hasHeader={false} hasBorder={false}>
-                <Table.Column dataIndex="logo" cell={url => <Avatar src={url} />} width={50} />
+                <Table.Column dataIndex="logo" cell={(url) => <Avatar src={url} />} width={50} />
                 <Table.Column dataIndex="name" />
                 <Table.Column dataIndex="privilege" />
                 <Table.Column cell={() => <Icon type="ellipsis" />} />

@@ -15,8 +15,8 @@ const TableActionIcon = Icon.createFromIconfontCN({
 const getTableData = ({ current, pageSize }: { current: number; pageSize: number }): Promise<any> => {
   const query = `page=${current}&size=${pageSize}`;
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
-    .then(res => res.json())
-    .then(res => ({
+    .then((res) => res.json())
+    .then((res) => ({
       total: 55,
       list: res.results.slice(0, 10),
     }));

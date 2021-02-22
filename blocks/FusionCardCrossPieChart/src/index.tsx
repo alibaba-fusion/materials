@@ -46,7 +46,7 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 240,
 };
 
-const colors_pie = ["#1890FF", "#13C2C2", "#2FC25B", "#FACC14", "#F04864", "#8543E0", "#3436C7", "#223273"];
+const colors_pie = ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0', '#3436C7', '#223273'];
 // const colors_pie_16 = ["#1890FF", "#73C9E6", "#13C2C2", "#6CD9B3", "#2FC25B", "#9DD96C", "#FACC14", "#E6965C", "#F04864", "#D66BCA", "#8543E0", "#8E77ED", "#3436C7", "#737EE6", "#223273", "#7EA2E6"];
 
 export interface FusionCardLineChartProps {
@@ -82,7 +82,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
               style: {
                 fill: '#666',
                 fontSize: 14,
-              }
+              },
             }}
             itemValue={null}
             itemMarginBottom={24}
@@ -91,11 +91,11 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
           <Geom
             type="interval"
             position="value"
-            color={["title", colors_pie]}
+            color={['title', colors_pie]}
             style={{
               lineWidth: 1,
               stroke: 'white',
-              fillOpacity: 0.85
+              fillOpacity: 0.85,
             }}
             adjust="stack"
             state={{
