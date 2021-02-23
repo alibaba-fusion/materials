@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom } from 'bizcharts';
+import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import mock from './mock.js';
 
 import styles from './index.module.scss';
@@ -55,21 +55,31 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
           scale={{
             date: {
               range: [0, 1],
             },
+            num: {
+              ticks: [1, 1.5, 2], // / 设置ticks 让Y轴刻度线对其
+            },
+            value: {
+              ticks: [1, 7, 13], // 设置ticks 让Y轴刻度线对其
+            }
           }}
-          forceFit
-          padding={['auto', '0']}
+          autoFit
+          padding="auto"
+          appendPadding={[2, 0, 0, 0]} // 为了让 date*Num 那条线展示齐全
         >
+          <Axis name="date" visible={false} />
+          <Axis name="value" visible={false} />
+          <Axis name="num" visible={false} />
+          <Tooltip visible={false} />
           <Geom type="line" position="date*value" shape="smooth" color="#2B7FFB" />
-          <Geom type="area" position="date*value" shape="smooth" color="#2B7FFB" opacity={0.1} />
-          <Geom type="line" position="date*num" shape="smooth" color="#00D6CB" opacity={1} />
-          <Geom type="area" position="date*num" shape="smooth" color="#00D6CB" opacity={0.1} />
+          <Geom type="area" position="date*value" shape="smooth" color="#2B7FFB" style={{ fillOpacity: 0.1 }} />
+          <Geom type="line" position="date*num" shape="smooth" color="#00D6CB" style={{ opacity: 1 }} />
+          <Geom type="area" position="date*num" shape="smooth" color="#00D6CB" style={{ fillOpacity: 0.1 }} />
         </Chart>
       </Card.Content>
     </Card>
