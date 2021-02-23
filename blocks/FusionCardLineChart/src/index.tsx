@@ -66,7 +66,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             },
             value: {
               ticks: [1, 7, 13], // 设置ticks 让Y轴刻度线对其
-            }
+            },
           }}
           autoFit
           padding="auto"

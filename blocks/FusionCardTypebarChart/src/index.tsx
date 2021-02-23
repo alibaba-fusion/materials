@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom, Coord } from 'bizcharts';
+import { Chart, Geom, Coord, Legend, Axis, Tooltip } from 'bizcharts';
 import mock from './mock.js';
 
 import styles from './index.module.scss';
@@ -29,6 +29,20 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 100,
 };
 
+const barState = {
+  active: {
+    style: {
+      fillOpacity: 0.8,
+      stroke: 'transparent',
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 1,
+    },
+  },
+};
+
 export interface FusionCardTypebarChartProps {
   cardConfig?: CardConfig;
 }
@@ -55,7 +69,6 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
           scale={{
@@ -63,11 +76,16 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', 'auto']}
+          autoFit
+          padding="auto"
+          interactions={['element-highlight']}
         >
           <Coord transpose />
-          <Geom type="interval" position="type*value" color={['type', ['#096DD9', '#209BFA']]} />
+          <Legend visible={false} />
+          <Tooltip visible={false} />
+          <Axis name="type" visible={false} />
+          <Axis name="value" visible={false} />
+          <Geom type="interval" position="type*value" color={['type', ['#096DD9', '#209BFA']]} state={barState} />
         </Chart>
       </Card.Content>
     </Card>
