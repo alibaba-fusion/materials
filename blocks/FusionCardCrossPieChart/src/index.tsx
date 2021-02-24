@@ -55,7 +55,6 @@ const pieState = {
       lineWidth: 1,
       stroke: 'white',
       strokeOpacity: 1,
-
     },
   },
   inactive: {
