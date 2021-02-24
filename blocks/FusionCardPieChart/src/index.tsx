@@ -137,15 +137,6 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             maxWidth={400}
             maxItemWidth={400}
           />
-          {/* <Guide>
-            <Html
-              position={['50%', '50%']}
-              // eslint-disable-next-line max-len
-              html={`<div style='color:#333;font-size:16px;text-align: center;width: 113px;'>销售额<br><span style='color:#333;font-family: Roboto-Bold;font-size:24px'>¥ ${value}</span></div>`}
-              alignX="middle"
-              alignY="middle"
-            />
-          </Guide> */}
           {/* @ts-ignore */}
           <Annotation.Text
             position={['50%', '44%']}
