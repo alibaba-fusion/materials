@@ -31,16 +31,21 @@ export interface DataSource {
     company?: string;
     position?: string;
     address?: string;
-    descripton?: string;
+    description?: string;
   };
   salary?: {
     month?: string;
-    monthNumber?: string;
+    monthNumber?: number;
     bonus?: string;
     rsu?: string;
   };
 }
 
+export interface AdvancedDetailProps{
+  dataSource?: DataSource;
+  onTabChange?: void;
+  onTableTabChange?: void;
+}
 const DEFAULT_DATA: DataSource = {
   logs: [
     ['主管审批', '梅长苏'],
@@ -73,7 +78,7 @@ const DEFAULT_DATA: DataSource = {
     company: '浙江杭州天猫有限公司',
     position: '高级研发专家',
     address: '中国/浙江',
-    descripton: 'Fusion 是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
+    description: 'Fusion 是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
   },
   salary: {
     month: '20,000 USD',
@@ -86,7 +91,7 @@ const DEFAULT_DATA: DataSource = {
 const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: AdvancedDetailProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
-    onTabChange = (): viod => { },
+    onTabChange = (): void => { },
     onTableTabChange = (): void => { },
   } = props;
 
@@ -105,16 +110,16 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
       <Card free className={styles.AdvancedDetailHead}>
         <Box spacing={10}>
           <Box direction="row" spacing={10}>
-            <Avatar size="large" src={dataSource.person.avatar} />
+            <Avatar size="large" src={dataSource.person?.avatar} />
             <Box flex={1} spacing={15}>
               <Box direction="row" justify="space-between">
                 <Box>
                   <Typography.Text className={styles.TitleName}>
-                    {dataSource.person.surname}
-                    {dataSource.person.name}
+                    {dataSource.person?.surname}
+                    {dataSource.person?.name}
                   </Typography.Text>
                   <Typography.Text className={styles.TitleInfo}>
-                    {dataSource.person.phone} | {dataSource.person.email}
+                    {dataSource.person?.phone} | {dataSource.person?.email}
                   </Typography.Text>
                 </Box>
                 <Box spacing={8} direction="row">
@@ -130,22 +135,22 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
               </Box>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="现在所在地">
-                  <span className="next-form-preview">{dataSource.person.region}</span>
+                  <span className="next-form-preview">{dataSource.person?.region}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="工作经验">
-                  <span className="next-form-preview">{dataSource.person.workTime}</span>
+                  <span className="next-form-preview">{dataSource.person?.workTime}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="高等教育">
-                  <span className="next-form-preview">{dataSource.person.education}</span>
+                  <span className="next-form-preview">{dataSource.person?.education}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="职级">
-                  <span className="next-form-preview">{dataSource.person.rank}</span>
+                  <span className="next-form-preview">{dataSource.person?.rank}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="职位">
-                  <span className="next-form-preview">{dataSource.person.position}</span>
+                  <span className="next-form-preview">{dataSource.person?.position}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="部门">
-                  <span className="next-form-preview">{dataSource.person.department}</span>
+                  <span className="next-form-preview">{dataSource.person?.department}</span>
                 </Form.Item>
               </Form>
             </Box>
@@ -173,10 +178,10 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
               content={
                 <div>
                   <span>
-                    {dataSource.person.surname}
-                    {dataSource.person.name}
+                    {dataSource.person?.surname}
+                    {dataSource.person?.name}
                   </span>
-                  <span>{dataSource.person.email}</span>
+                  <span>{dataSource.person?.email}</span>
                 </div>
               }
             />
@@ -195,22 +200,22 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
             <div className={styles.Content}>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="姓氏" required>
-                  <span className="next-form-preview">{dataSource.person.surname}</span>
+                  <span className="next-form-preview">{dataSource.person?.surname}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="名字" required>
-                  <span className="next-form-preview">{dataSource.person.name}</span>
+                  <span className="next-form-preview">{dataSource.person?.name}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="国家/地区" required>
-                  <span className="next-form-preview">{dataSource.person.region}</span>
+                  <span className="next-form-preview">{dataSource.person?.region}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="电话号码" required>
-                  <span className="next-form-preview">{dataSource.person.phone}</span>
+                  <span className="next-form-preview">{dataSource.person?.phone}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="邮箱" required>
-                  <span className="next-form-preview">{dataSource.person.email}</span>
+                  <span className="next-form-preview">{dataSource.person?.email}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="现居地址" required>
-                  <span className="next-form-preview">{dataSource.person.address}</span>
+                  <span className="next-form-preview">{dataSource.person?.address}</span>
                 </Form.Item>
               </Form>
             </div>
@@ -224,16 +229,16 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
               <Typography.Text className={styles.SubTitle}>分类标题</Typography.Text>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="工作单位" required>
-                  <span className="next-form-preview">{dataSource.preJob.company}</span>
+                  <span className="next-form-preview">{dataSource.preJob?.company}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="职位" required>
-                  <span className="next-form-preview">{dataSource.preJob.position}</span>
+                  <span className="next-form-preview">{dataSource.preJob?.position}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="国家/地区" required>
-                  <span className="next-form-preview">{dataSource.preJob.address}</span>
+                  <span className="next-form-preview">{dataSource.preJob?.address}</span>
                 </Form.Item>
                 <Form.Item colSpan={12} label="项目描述" required>
-                  <span className="next-form-preview">{dataSource.preJob.description}</span>
+                  <span className="next-form-preview">{dataSource.preJob?.description}</span>
                 </Form.Item>
               </Form>
             </Box>
@@ -242,14 +247,14 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
             <Box>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="月薪">
-                  <span className="next-form-preview">{dataSource.salary.month}</span>
+                  <span className="next-form-preview">{dataSource.salary?.month}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="月数">
-                  <span className="next-form-preview">{dataSource.salary.monthNumber}</span>
+                  <span className="next-form-preview">{dataSource.salary?.monthNumber}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="津贴">
                   5.000 USD
-                  <span className="next-form-preview">{dataSource.salary.bonus}</span>
+                  <span className="next-form-preview">{dataSource.salary?.bonus}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="标题">
                   <span className="next-form-preview">-</span>
@@ -258,7 +263,7 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
                   <span className="next-form-preview">-</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="Options/RSU">
-                  <span className="next-form-preview">{dataSource.salary.rsu}</span>
+                  <span className="next-form-preview">{dataSource.salary?.rsu}</span>
                 </Form.Item>
               </Form>
             </Box>

@@ -40,16 +40,16 @@ const DEFAULT_ON_SUBMIT = (values: TwoColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const TwoColumnForm: React.SFC<TwoColumnFormProps> = (props): JSX.Element => {
+const TwoColumnForm: React.FC<TwoColumnFormProps> = (props: TwoColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
     onCancel = () => {},
   } = props;
 
-  const [postData, setValue] = useState<TwoColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: TwoColumnFormProps): void => {
+  const formChange = (value: DataSource): void => {
     setValue(value);
   };
 

@@ -18,7 +18,10 @@ export interface DataSource {
   tagsB: string[];
   tagB: string;
 }
-
+export interface CardListProps{
+  dataSource?: DataSource;
+  onSearch?: () => void;
+}
 const DEFAULT_DATA: DataSource = {
   tagsA: ['类目一', '类目二', '类目三', '类目四', '类目五', '类目六', '类目七', '类目八', '类目九', '类目十'],
   tagA: '类目一',
@@ -99,8 +102,8 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
               {c.content}
             </div>
             <div className={styles.link}>
-              <a href="#">{c.link[0]}</a>
-              <a href="#">{c.link[1]}</a>
+              <a href="#">{c.link ? c.link[0] : ''}</a>
+              <a href="#">{c.link ? c.link[1] : ''}</a>
             </div>
           </div>
         </div>

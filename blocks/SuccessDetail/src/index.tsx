@@ -9,14 +9,14 @@ interface DetailProcessFunc {
 }
 
 export interface SuccessDetailProps {
-  statusCode: string;
-  description: string;
-  image: string;
-  buttonBackDesc: string;
-  buttonContinueDesc: string;
-  countDownSecnods: number;
-  onButtonBack: DetailProcessFunc;
-  onButtonContinue: DetailProcessFunc;
+  statusCode?: string;
+  description?: string;
+  image?: string;
+  buttonBackDesc?: string;
+  buttonContinueDesc?: string;
+  countDownSecnods?: number;
+  onButtonBack?: DetailProcessFunc;
+  onButtonContinue?: DetailProcessFunc;
 
 }
 

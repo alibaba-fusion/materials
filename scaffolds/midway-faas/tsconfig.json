@@ -25,8 +25,7 @@
     "types": ["node"],
     "paths": {
       "@/*": ["./src/*"],
-      "ice": [".ice/index.ts"],
-      "ice/*": [".ice/pages/*"]
+      "ice": [".ice/index.ts"]
     }
   },
   "include": ["src", ".ice"],

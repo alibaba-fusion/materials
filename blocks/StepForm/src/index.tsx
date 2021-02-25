@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
 
-import { Item } from '@alifd/next/types/step';
-
 import styles from './index.module.scss';
 
 export interface DataSource {
@@ -31,20 +29,21 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
   const [currentStep, setStep] = useState<number>(0);
 
   const steps = ['填写信息', '确认信息', '完成'].map(
-    (item, index): Item => (
-      <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
+    (item, index): React.ReactElement => (
+      <Step.Item aria-current={index === currentStep ? 'step' : undefined} key={index} title={item} />
     ),
   );
 
   const submit = (): void => {
     const values = projectField.getValues();
     console.log('values:', values);
+    // @ts-ignore
     onSubmit(values);
 
     setStep(currentStep + 1);
   };
 
-  const goNext = async (): Promise<T> => {
+  const goNext = async (): Promise<void> => {
     const { errors } = await projectField.validatePromise();
 
     if (errors) {
@@ -62,8 +61,8 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(0);
   };
 
-  let actions: JSX.Element;
-  let mainbody: JSX.Element;
+  let actions: JSX.Element = <Button />;
+  let mainbody: JSX.Element = <Box />;
   switch (currentStep) {
     case 0:
       actions = (

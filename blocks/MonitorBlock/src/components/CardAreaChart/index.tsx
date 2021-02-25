@@ -47,7 +47,7 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
         <div>周同比: 10.1%↑</div>
         <Chart
           data={chartData}
-          height={chartHeight}
+          height={chartHeight || 0}
           scale={{
             date: {
               range: [0, 1],

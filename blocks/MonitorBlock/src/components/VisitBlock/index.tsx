@@ -52,7 +52,7 @@ export interface CardConfigProps {
   cardConfig?: CardConfig;
 }
 
-const InfoBlock: React.FC<CardConfig> = (props = DEFAULT_DATA.titleItem[0]): JSX.Element => {
+const InfoBlock: React.FC<any> = (props = DEFAULT_DATA && DEFAULT_DATA.titleItem ? DEFAULT_DATA.titleItem[0] : null): JSX.Element => {
   const { name, value, des, rate } = props;
   return (
     <Box className={styles.header} direction="column">
@@ -95,7 +95,7 @@ const RenderPvChart: React.FunctionComponent<CardConfig> = (props = DEFAULT_DATA
   return (
     <Chart
       data={chartData}
-      height={chartHeight - 30 || 230}
+      height={chartHeight ? chartHeight - 30 : 230}
       width={10}
       forceFit
       scale={cols}
@@ -111,7 +111,7 @@ const RenderPvChart: React.FunctionComponent<CardConfig> = (props = DEFAULT_DATA
 };
 
 const VisitBlock: React.FunctionComponent<CardConfigProps> = ({ cardConfig = DEFAULT_DATA }): JSX.Element => {
-  const { titleItem, chartData, chartHeight } = cardConfig;
+  const { titleItem = [], chartData, chartHeight } = cardConfig;
 
   return (
     <Card free style={{ height: '100%' }}>

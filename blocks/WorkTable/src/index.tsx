@@ -86,14 +86,18 @@ const DEFAULT_DATA: DataSource = {
 export interface WorkTableProps {
   dataSource?: DataSource;
 }
-
-const colorMap = {
+interface ColorMap{
+  high?: string;
+  middle?: string;
+  low?: string;
+}
+const colorMap: ColorMap = {
   high: 'red',
   middle: 'yellow',
   low: 'green',
 };
 
-const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
+const WorkTable: React.FunctionComponent<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA } = props;
 
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
@@ -102,7 +106,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
 
   const changeTab = (val: string) => setTab(val);
 
-  const renderLevel = (text: string, index: number) => {
+  const renderLevel = (text: 'high' | 'middle' | 'low', index: number) => {
     return (
       <span key={text + index.toString()}>
         <Tag size="small" color={colorMap[text]}>
@@ -117,13 +121,13 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
       <div className={styles.workerContainor}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
-            <Avatar size={80} src={person.avatar} className={styles.avatar} />
+            <Avatar size={80} src={person?.avatar} className={styles.avatar} />
             <Box>
               <Typography.Text className={styles.TitleName}>
-                {person.surname}
-                {person.name}
+                {person?.surname}
+                {person?.name}
               </Typography.Text>
-              <Typography.Text className={styles.TitleInfo}>{person.email}</Typography.Text>
+              <Typography.Text className={styles.TitleInfo}>{person?.email}</Typography.Text>
             </Box>
           </Box>
           <Tab activeKey={tab} className={styles.tab} onChange={changeTab}>
@@ -169,10 +173,10 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                 <Box spacing={10}>
                   <Calendar shape="panel" />
                   <Typography.Text className={styles.planNumber}>
-                    共 <span className={styles.strong}>{timeLineList.length}</span>个日程
+                    共 <span className={styles.strong}>{timeLineList?.length}</span>个日程
                   </Typography.Text>
                   <Timeline>
-                    {timeLineList.map(
+                    {timeLineList?.map(
                       (item): JSX.Element => (
                         <TimelineItem
                           key={item.planTime}
@@ -199,7 +203,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {projectList.map((project) => {
+                  {projectList?.map((project) => {
                     return (
                       <List.Item key={project.projectName} title={project.projectName} media={<Avatar src={project.img} />}>
                         {project.projectDesc}
@@ -263,7 +267,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
               <Card.Divider />
               <Card.Content>
                 <List>
-                  {updateList.map((one, idx) => {
+                  {updateList?.map((one, idx) => {
                     let title;
                     switch (one.action) {
                       case 'create':
@@ -316,7 +320,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
               <Card.Divider />
               <Card.Content>
                 <Box spacing={[20, 50]} direction="row" wrap>
-                  {entranceList.map((item, idx) => {
+                  {entranceList?.map((item, idx) => {
                     return (
                       <Button key={idx} size="large" text component="a" href={item.link}>
                         {item.name}

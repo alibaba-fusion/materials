@@ -64,19 +64,19 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props) => {
             <div className={styles.Content}>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="公司简称" required>
-                  <span>{dataSource.basicInfo.company}</span>
+                  <span>{dataSource.basicInfo?.company}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="项目代号" required>
-                  <span>{dataSource.basicInfo.code}</span>
+                  <span>{dataSource.basicInfo?.code}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="投资委员会" required>
-                  <span>{dataSource.basicInfo.committee}</span>
+                  <span>{dataSource.basicInfo?.committee}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="所属行业" required>
-                  <span>{dataSource.basicInfo.trade}</span>
+                  <span>{dataSource.basicInfo?.trade}</span>
                 </Form.Item>
                 <Form.Item colSpan={4} label="关联项目" required>
-                  <span>{dataSource.basicInfo.aliasProject}</span>
+                  <span>{dataSource.basicInfo?.aliasProject}</span>
                 </Form.Item>
               </Form>
             </div>
@@ -89,13 +89,13 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props) => {
             <div className={styles.Content}>
               <Form labelAlign="top">
                 <Form.Item label="IC成语" required>
-                  <span>{dataSource.projectMember.icMemeber}</span>
+                  <span>{dataSource.projectMember?.icMemeber}</span>
                 </Form.Item>
                 <Form.Item label="法务评审" required>
-                  <span>{dataSource.projectMember.forensicReview}</span>
+                  <span>{dataSource.projectMember?.forensicReview}</span>
                 </Form.Item>
                 <Form.Item label="财务评审" required>
-                  <span>{dataSource.projectMember.financialReview}</span>
+                  <span>{dataSource.projectMember?.financialReview}</span>
                 </Form.Item>
               </Form>
             </div>

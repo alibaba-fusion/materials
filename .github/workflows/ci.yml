@@ -14,6 +14,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm run lint
+      - run: npx lerna exec -- npm install
+      - run: npx lerna exec -- npm run build
+      - run: npm run tsChecker
       - run: npm run generate-and-deploy-oss
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

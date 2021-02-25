@@ -6,7 +6,11 @@ import styles from './index.module.scss';
 
 const { useState } = React;
 
-const getTableData = ({ current, pageSize }, formData: any): Promise<any> => {
+interface ParamsType{
+  current?: number;
+  pageSize?: number;
+}
+const getTableData = ({ current, pageSize }: ParamsType, formData: any): Promise<any> => {
   let query = `page=${current}&size=${pageSize}`;
   Object.entries(formData).forEach(([key, value]) => {
     if (value) {
@@ -64,7 +68,7 @@ export default function ExpandTable() {
   const { paginationProps, tableProps } = useFusionTable(getTableData, {
     field,
   });
-  const [openRows, setOpenrows] = useState([]);
+  const [openRows, setOpenrows] = useState<string[]>([]);
   return (
     <Card free className={styles.container}>
       <Card.Content>
@@ -73,9 +77,9 @@ export default function ExpandTable() {
           tableWidth={1000}
           hasBorder={false}
           primaryKey="email"
-          expandedRowRender={record => <SubTable dataSource={[record.location]} />}
+          expandedRowRender={(record) => <SubTable dataSource={[record.location]} />}
           openRowKeys={openRows}
-          onRowOpen={keys => setOpenrows(keys)}
+          onRowOpen={(keys:string[]) => setOpenrows(keys)}
           expandedRowIndent={[0, 0]}
         >
           <Table.Column title="name" dataIndex="name.last" lock width={140} />

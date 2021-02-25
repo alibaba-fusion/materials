@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "scaffolds/*"
+  ],
+  "version": "0.0.0"
+}

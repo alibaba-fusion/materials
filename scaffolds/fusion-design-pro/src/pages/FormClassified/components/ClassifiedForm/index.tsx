@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import {
   Box,
   Button,
@@ -14,7 +14,7 @@ import {
 import styles from './index.module.scss';
 
 export interface DataSource {
-  job: {
+  job?: {
     address?: string;
     position?: string;
     companyName?: string;
@@ -22,7 +22,7 @@ export interface DataSource {
     annualSalary?: number;
     expectAnnualSalary?: number;
   };
-  treatment: {
+  treatment?: {
     monthlySalary?: number;
     monthNumber?: number;
     bonus?: number;
@@ -31,6 +31,8 @@ export interface DataSource {
     rsu?: boolean;
     rsuDesc?: string;
   };
+  basic?: unknown;
+  member?: unknown;
 }
 
 export interface ClassifiedFormProps {
@@ -48,7 +50,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
+const ClassifiedForm: FC<ClassifiedFormProps> = (props): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = () => {},

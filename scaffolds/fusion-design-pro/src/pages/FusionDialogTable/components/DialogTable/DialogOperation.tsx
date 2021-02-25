@@ -24,9 +24,11 @@ const DialogOperation: React.FC<OperaitionProps & DialogProps> = (props) => {
 
   const handleOk = useCallback(() => {
     if (actionType === 'preview') {
+      // @ts-ignore
       return onOk(null);
     }
-    operationRef.current.getValues((values) => {
+    operationRef.current?.getValues((values) => {
+      // @ts-ignore
       onOk(values);
     });
   }, [actionType, onOk]);

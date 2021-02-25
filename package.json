@@ -15,12 +15,12 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint **/*.{css,scss,less}"
+    "stylelint": "stylelint **/*.{css,scss,less}",
+    "tsChecker": "node scripts/ts-checker.js"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run lint"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
@@ -52,7 +52,7 @@
     "husky": "^3.1.0",
     "ice-scaffold-generator": "^1.1.5",
     "iceworks": "^3.1.13",
-    "lerna": "^3.19.0",
+    "lerna": "^3.22.1",
     "request": "^2.88.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.2.0",

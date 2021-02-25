@@ -68,7 +68,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
 
         <Chart
           width={10}
-          height={chartHeight}
+          height={chartHeight || 0}
           forceFit
           data={chartData}
           padding={['auto', 'auto']}

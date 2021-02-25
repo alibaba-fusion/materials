@@ -40,16 +40,16 @@ const DEFAULT_ON_SUBMIT = (values: BasicFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const BasicForm: React.SFC<BasicFormProps> = (props): JSX.Element => {
+const BasicForm: React.FC<BasicFormProps> = (props:BasicFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
     onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<BasicFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (values: BasicFormProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 

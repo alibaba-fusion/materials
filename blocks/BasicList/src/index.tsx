@@ -10,13 +10,16 @@ export interface ICardItem {
   content?: string;
   subContent?: string;
 }
-
 export interface DataSource {
   cards: ICardItem[];
   tagsA: string[];
   tagA: string;
   tagsB: string[];
   tagB: string;
+}
+export interface BasicListProps{
+  dataSource?: DataSource;
+  onSearch?: () => void;
 }
 
 const DEFAULT_DATA: DataSource = {
