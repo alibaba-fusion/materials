@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-lite",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
   "files": [
     ".vscode/",
@@ -54,16 +54,6 @@
     "title": "Fusion Design Lite - TS",
     "category": "Basic",
     "screenshot": "https://img.alicdn.com/tfs/TB12CtTsEY1gK0jSZFMXXaWcVXa-2480-1200.png"
-  },
-  "ideMode": {
-    "name": "ice-react"
-  },
-  "iceworks": {
-    "type": "react",
-    "adapter": "adapter-react-v3"
-  },
-  "engines": {
-    "node": ">=8.0.0"
   },
   "repository": {
     "type": "git",

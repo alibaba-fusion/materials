@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/scaffold-midway-faas",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "icejs & midway faas",
   "files": [
     ".vscode/",
@@ -69,18 +69,8 @@
     "title": "icejs+midway severless 一体化应用",
     "screenshot": "https://img.alicdn.com/tfs/TB1V0xQkAcx_u4jSZFlXXXnUFXa-1261-825.png"
   },
-  "engines": {
-    "node": ">=8.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/midway-faas"
-  },
-  "iceworks": {
-    "type": "react",
-    "adapter": "adapter-react-v3"
-  },
-  "ideMode": {
-    "name": "ice-react"
   }
 }
