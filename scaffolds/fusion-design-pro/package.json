@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     ".vscode/",
@@ -272,16 +272,6 @@
         "html": "build/views/page33.html"
       }
     ]
-  },
-  "ideMode": {
-    "name": "ice-react"
-  },
-  "iceworks": {
-    "type": "react",
-    "adapter": "adapter-react-v3"
-  },
-  "engines": {
-    "node": ">=8.0.0"
   },
   "repository": {
     "type": "git",

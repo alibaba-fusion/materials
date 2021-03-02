@@ -9,10 +9,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
     "rootDir": "./",
@@ -28,8 +25,7 @@
     "types": ["node"],
     "paths": {
       "@/*": ["./src/*"],
-      "ice": [".ice/index.ts"],
-      "ice/*": [".ice/pages/*"]
+      "ice": [".ice/index.ts"]
     }
   },
   "include": ["src", ".ice"],

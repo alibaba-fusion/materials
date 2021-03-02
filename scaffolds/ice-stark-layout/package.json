@@ -1,8 +1,8 @@
 {
   "name": "@icedesign/stark-layout-scaffold",
-  "version": "3.1.4",
-  "description": "微前端方案 icestark 的框架应用模板，用于快速初始化框架应用",
-  "homepage": "https://ice-lab.zeroling.com/",
+  "version": "3.1.5",
+  "description": "微前端方案 icestark 的主应用模板，用于快速初始化主应用",
+  "homepage": "https://icestark-react.surge.sh",
   "files": [
     ".vscode/",
     "src/",
@@ -60,24 +60,14 @@
   "scaffoldConfig": {
     "builder": "ice-scripts",
     "name": "ice-stark-layout",
-    "title": "icestark 框架应用",
+    "title": "icestark 主应用",
     "categories": [
       "icestark"
     ],
     "screenshot": "https://img.alicdn.com/tfs/TB1WMB9YAL0gK0jSZFAXXcA9pXa-1625-883.png"
   },
-  "engines": {
-    "node": ">=8.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-layout"
-  },
-  "iceworks": {
-    "type": "react",
-    "adapter": "adapter-react-v3"
-  },
-  "ideMode": {
-    "name": "ice-react"
   }
 }

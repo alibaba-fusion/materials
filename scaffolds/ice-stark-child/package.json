@@ -1,8 +1,8 @@
 {
   "name": "@icedesign/stark-child-scaffold",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "微前端方案 icestark 的子应用模板，用于快速初始化微应用",
-  "homepage": "https://ice-lab.zeroling.com/seller",
+  "homepage": "https://icestark-react.surge.sh/seller",
   "files": [
     ".vscode/",
     "src/",
@@ -62,16 +62,6 @@
       "icestark"
     ],
     "screenshot": "https://img.alicdn.com/tfs/TB1X5.paYr1gK0jSZFDXXb9yVXa-2480-1200.png"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "iceworks": {
-    "type": "react",
-    "adapter": "adapter-react-v3"
-  },
-  "ideMode": {
-    "name": "ice-react"
   },
   "repository": {
     "type": "git",

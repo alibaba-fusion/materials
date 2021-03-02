@@ -37,6 +37,13 @@ $ cd materials/
 $ node scripts/publish-blocks.js
 ```
 
+### Batch Publish Scaffolds
+
+```bash
+$ cd materials/
+$ TYPE=scaffolds node scripts/publish-blocks.js
+```
+
 ### Add New Material
 
 ```bash

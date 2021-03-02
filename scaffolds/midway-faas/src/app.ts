@@ -1,4 +1,5 @@
-import { runApp, IAppConfig } from 'ice';
+import { runApp, IAppConfig, request } from 'ice';
+import { defaults } from '@midwayjs/hooks/request';
 
 const appConfig: IAppConfig = {
   app: {
@@ -8,5 +9,7 @@ const appConfig: IAppConfig = {
     type: 'browser',
   },
 };
+
+defaults.request = request;
 
 runApp(appConfig);

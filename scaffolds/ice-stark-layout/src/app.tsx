@@ -22,21 +22,19 @@ const appConfig: IAppConfig = {
         path: '/seller',
         title: '商家平台',
         sandbox: true,
-        umd: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.js',
-          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.css',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/css/index.css',
         ],
       }, {
         path: '/waiter',
         title: '小二平台',
         sandbox: true,
-        umd: true,
         url: [
           // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
-          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.js',
-          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.css',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/js/app.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/css/app.css',
         ],
       }, {
         path: '/angular',
