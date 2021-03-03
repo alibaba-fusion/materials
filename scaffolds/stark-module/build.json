@@ -1,0 +1,15 @@
+
+{
+  "plugins": [
+    "build-plugin-component",
+    "build-plugin-icestark-module",
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ]
+  ]
+}
