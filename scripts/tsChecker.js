@@ -20,7 +20,6 @@ function dtsCompiler(targetFolder) {
     ignore: ['node_modules', '*.d.ts'],
     absolute: true,
   });
-  console.log(needCompileList);
   if (needCompileList.length === 0) {
     return;
   }
@@ -52,7 +51,6 @@ const blocks = ['ActionTable'];
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);
   const dtsFile = path.join(blockFolder, 'typings.d.ts');
-
   try {
     execSync(`cd blocks/${blocks} && npm i`, {
       stdio: 'inherit'
@@ -61,7 +59,7 @@ for (const block of blocks) {
     dtsCompiler(blockFolder);
     fse.removeSync(dtsFile)
   } catch (err) {
-    console.log(err.message);
     fse.removeSync(dtsFile)
+    throw err;
   } 
 }
