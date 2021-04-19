@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Search, Card, Tag, Divider, Typography, Icon, Loading, Button, Pagination } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 
@@ -31,6 +31,10 @@ const DEFAULT_DATA: DataSource = {
   }),
 };
 
+interface BasicListProps {
+  dataSource: DataSource;
+  onSearch: () => void;
+}
 const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
@@ -93,14 +97,14 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
       <div className={styles.ListItem} key={i}>
-        <div className={styles.main}>
-          <div className={styles.left}>
+        <div className={styles.CardMain}>
+          <div className={styles.CardLeft}>
             <img src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png" alt="img" />
             <div>
-              <div className={styles.title}>
+              <div className={styles.CardTitle}>
                 {c.title}
               </div>
-              <div className={styles.content}>
+              <div className={styles.CardContent}>
                 {c.content}
               </div>
               <div className={styles.subContent}>
@@ -108,7 +112,7 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
               </div>
             </div>
           </div>
-          <div className={styles.right}>
+          <div className={styles.CardRight}>
             <Button type="primary" text>编辑</Button>
             <Button type="primary" text>订阅</Button>
             <Button type="primary" text>删除</Button>
@@ -139,14 +143,14 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
         <Loading visible={loading} className={styles.MainList}>
           <Box className={styles.MainContent} spacing={10}>
             <div className={styles.ListItem}>
-              <div className={styles.add}>
-                <Icon type="add" className={styles.icon} size="xs" />
+              <div className={styles.addContent}>
+                <Icon type="add" className={styles.addContentIcon} size="xs" />
                 <div className={styles.addText}>添加内容</div>
               </div>
             </div>
             {renderCards()}
             <Box margin={[15, 0, 0, 0]} direction="row" align="center" justify="space-between">
-              <div className={styles.total}>
+              <div className={styles.totalPagin}>
                 共<span>200</span>条需求
               </div>
               <Pagination onChange={onPaginationChange} />
