@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Card, Table, Form } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface DataSource {
   basicInfo?: {
@@ -49,7 +49,7 @@ const DEFAULT_DATA: DataSource = {
   }),
 };
 
-const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props) => {
+const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props: BasicDetailProps) => {
   const {
     dataSource = DEFAULT_DATA,
   } = props;
