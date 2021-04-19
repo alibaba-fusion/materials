@@ -1,0 +1,88 @@
+/* // @import "~@alifd/next/variables.scss"; */
+
+.CardList {
+  margin-top: 20px;
+  margin-top: var(--shell-dark-content-paddingTop, 20px);
+  margin-right: 20px;
+  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 20px;
+  margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: 20px;
+  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+}
+
+.TagBox {
+  padding: 0 20px 32px;
+  padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
+}
+
+.TagBoxItem {
+  display: flex;
+  align-items: center;
+}
+
+.TagTitleName {
+  width: 56px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+.ListItem .ListMain {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.ListItem img {
+  width: 100%;
+}
+
+.ListItem .ListContent {
+  padding: 14px;
+}
+
+.ListItem .ListTitle {
+  color: #333;
+  font-size: 14px;
+}
+
+.ListItem .ListInfo {
+  margin-top: 13px;
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.ListItem .ListLink {
+  margin-top: 13px;
+}
+
+.ListItem .ListLink a {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+.ListItem .ListAdd {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px dashed #eee;
+  border-radius: 5px;
+
+}
+
+.ListItem .ListAdd .ListIcon {
+  color: #999;
+}
+
+.ListItem .addText {
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}

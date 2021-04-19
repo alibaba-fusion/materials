@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Search, Card, Tag, ResponsiveGrid, Divider, Typography, Icon, Loading } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const { Cell } = ResponsiveGrid;
@@ -31,6 +31,10 @@ const DEFAULT_DATA: DataSource = {
   }),
 };
 
+interface CardListProps {
+  dataSource: DataSource;
+  onSearch: () => void;
+}
 const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
@@ -89,16 +93,16 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
       <Cell colSpan={3} className={styles.ListItem} key={i}>
-        <div className={styles.main}>
+        <div className={styles.ListMain}>
           <img src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png" alt="img" />
           <div className={styles.content}>
-            <div className={styles.title}>
+            <div className={styles.ListContent}>
               {c.title}
             </div>
-            <div className={styles.info}>
+            <div className={styles.ListInfo}>
               {c.content}
             </div>
-            <div className={styles.link}>
+            <div className={styles.ListLink}>
               <a href="#">{c.link[0]}</a>
               <a href="#">{c.link[1]}</a>
             </div>
@@ -129,8 +133,8 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
       <Loading visible={loading} style={{ display: 'block' }}>
         <ResponsiveGrid gap={20}>
           <Cell colSpan={3} className={styles.ListItem}>
-            <Box className={styles.add} justify="center" align="center">
-              <Icon type="add" className={styles.icon} />
+            <Box className={styles.ListAdd} justify="center" align="center">
+              <Icon type="add" className={styles.ListIcon} />
               <div className={styles.addText}>添加内容</div>
             </Box>
           </Cell>
