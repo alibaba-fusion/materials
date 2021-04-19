@@ -1,19 +1,20 @@
 .BasicList {
-  margin-top:20px;
+  margin-top: 20px;
   margin-top: var(--shell-dark-content-paddingTop, 20px);
-  margin-right:20px;
-  margin-right:var(--shell-dark-content-paddingLeft, 20px);
-  margin-bottom:20px;
+  margin-right: 20px;
+  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 20px;
   margin-bottom: var(--shell-dark-content-paddingTop, 20px);
-  margin-left:20px;
-  margin-left:var(--shell-dark-content-paddingLeft, 20px);
+  margin-left: 20px;
+  margin-left: var(--shell-dark-content-paddingLeft, 20px);
 }
 
 .totalPagin {
   color: #4a5b6d;
   font-size: 12px;
 }
-.totalPagin span{
+
+.totalPagin span {
   padding: 0 3px;
   color: #5584ff;
 }
@@ -64,35 +65,43 @@
   background: #fff;
   border-bottom: 1px solid #eee;
 }
+
 .ListItem .CardLeft {
   display: flex;
   align-items: center;
 }
+
 .ListItem .CardRight {
   width: 100px;
   margin-right: 10px;
   margin-left: 10px;
 }
-.ListItem .CardRight button{
+
+.ListItem .CardRight button {
   margin-right: 5px;
 }
+
 .ListItem img {
   width: 160px;
   margin-right: 20px;
 }
+
 .ListItem .CardTitle {
   color: #000;
   font-size: 16px;
 }
+
 .ListItem .CardContent {
   margin: 12px 0;
   color: #999;
   font-size: 12px;
 }
+
 .ListItem .subContent {
   color: #999;
   font-size: 12px;
 }
+
 .ListItem .addContent {
   display: flex;
   align-items: center;
@@ -103,11 +112,13 @@
   background: #fff;
   border: 1px dashed #eee;
   border-radius: 5px;
- 
+
 }
-.ListItem .addContent .addContentIcon{
-    color: #999;
+
+.ListItem .addContent .addContentIcon {
+  color: #999;
 }
+
 .ListItem .addText {
   margin-left: 5px;
   color: #999;
