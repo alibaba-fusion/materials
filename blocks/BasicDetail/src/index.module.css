@@ -1,5 +1,5 @@
-// stylelint-disable-next-line block-no-empty
-.BasicDetail {}
+/* // stylelint-disable-next-line block-no-empty */
+/* .BasicDetail {} */
 
 .Content {
   margin-top: 4px;
@@ -9,5 +9,5 @@
 }
 
 .Table table {
-    border: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
 }
