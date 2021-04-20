@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button, Message, Card } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface FailDetailProps {
   statusCode: string;
