@@ -3,7 +3,7 @@ import { Card } from '@alifd/next';
 import { Chart, Geom } from 'bizcharts';
 import mock from './mock.js';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   date?: string | number;
@@ -44,9 +44,9 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
         ) : null
       }
       <Card.Content>
-        <div className={styles.subTitle}>{subTitle}</div>
-        <div className={styles.value}>{value}</div>
-        <div className={styles.des}>{des}<span>{rate}↑</span></div>
+        <div className={styles.CardSubTitle}>{subTitle}</div>
+        <div className={styles.CardValue}>{value}</div>
+        <div className={styles.CardDes}>{des}<span>{rate}↑</span></div>
         <Chart
           width={10}
           height={chartHeight}
