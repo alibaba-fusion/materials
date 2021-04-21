@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Radio, Card, Box } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Html } = Guide;
 
