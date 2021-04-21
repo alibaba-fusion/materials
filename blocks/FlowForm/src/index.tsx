@@ -1,7 +1,7 @@
 import React, { SFC, useEffect, useState, useRef } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Box, Card, Button, Form, Input, Select, Radio, Step, Field, Divider, Tag, Avatar, Typography, ResponsiveGrid } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface Experience {
   company?: string;
@@ -85,7 +85,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const FlowForm: SFC<FlowFormProps> = (props) => {
+const FlowForm: React.SFC<FlowFormProps> = (props: FlowFormProps) => {
   const {
     dataSource = DEFAULT_DATA,
     onAgree = () => {},
