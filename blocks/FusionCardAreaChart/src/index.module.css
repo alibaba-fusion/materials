@@ -8,8 +8,8 @@
 
 .CardDes {
   margin-top: 6px;
-  color: #999999;
-  color: var(--color-text1-2, #999999);
+  color: #999;
+  color: var(--color-text1-2, #999);
   font-size: 12px;
   line-height: 17px;
   letter-spacing: 0;
