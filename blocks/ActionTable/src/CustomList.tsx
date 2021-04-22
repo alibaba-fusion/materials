@@ -5,7 +5,7 @@ import { ColumnProps } from '@alifd/next/types/table/index';
 
 import { getColumnKey } from './util';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
@@ -92,9 +92,9 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (cols:
                   <ReactSortable
                     handle=".column-handle"
                     list={item.children}
-                    setList={(newState) => onColumnChildrenChange(idx, newState)}
+                    setList={(newState: Column[]) => onColumnChildrenChange(idx, newState)}
                   >
-                    {item.children.map((childrenItem) => (
+                    {item.children.map((childrenItem: ColumnProps & { key?: string }) => (
                       <div key={getColumnKey(childrenItem)} className="sort-item sort-item-children">
                         <Checkbox
                           checked={!childrenItem.hidden}

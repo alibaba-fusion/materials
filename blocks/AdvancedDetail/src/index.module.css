@@ -1,0 +1,98 @@
+.AdvancedDetailHead {
+  margin-top: 20px;
+  margin-top: var(--s-5, 20px);
+  margin-top: var(--shell-dark-content-paddingTop, 20px);
+  margin-right: 20px;
+  margin-right: var(--s-5, 20px);
+  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 20px;
+  margin-bottom: var(--s-5, 20px);
+  margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: 20px;
+  margin-left: var(--s-5, 20px);
+  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  padding: 20px 20px 0;
+  padding: var(--s-5, 20px) var(--s-5, 20px) 0;
+  padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px) 0;
+}
+
+.TabItemTitle {
+  padding: 6px 0;
+  padding: var(--s-6, 24px)/4 var(--s-zero, 0);
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.TabItem {
+  margin-right: 40px;
+}
+
+.TabBar {
+  border: none !important;
+}
+
+.Content {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  margin-left: 8px;
+  padding-top: 12px;
+}
+
+.TableCardHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Step {
+  margin-left: -40px;
+}
+
+.stepA {
+  color: #5584ff;
+  color: var(--color-brand1-6, #5584ff);
+}
+
+.boxButton {
+  width: 80px;
+}
+
+.TitleName {
+  color: #333;
+  font-weight: 500;
+  font-weight: var(--font-weight-medium, 500);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.TitleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.Table table {
+  border: 1px solid #e6e6e6;
+}
+
+.SubTitle {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.SubTitle::before {
+  position: absolute;
+  top: calc(50% - 16px / 2);
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 16px;
+  line-height: 16px;
+  background-color: #298dff;
+  content: '';
+}

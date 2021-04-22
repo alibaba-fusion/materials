@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Form, Typography, Avatar, Tab, MenuButton, Button, Card, Step, Table, Divider } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface LogItem {
   opStatus?: string;
@@ -31,7 +31,7 @@ export interface DataSource {
     company?: string;
     position?: string;
     address?: string;
-    descripton?: string;
+    description?: string;
   };
   salary?: {
     month?: string;
@@ -73,20 +73,24 @@ const DEFAULT_DATA: DataSource = {
     company: '浙江杭州天猫有限公司',
     position: '高级研发专家',
     address: '中国/浙江',
-    descripton: 'Fusion 是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
+    description: 'Fusion 是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
   },
   salary: {
     month: '20,000 USD',
-    monthNumber: 13,
+    monthNumber: '13',
     bonus: '5,000 USD',
     rsu: 'No',
   },
 };
-
+interface AdvancedDetailProps {
+  dataSource: DataSource;
+  onTabChange: () => void;
+  onTableTabChange: () => void;
+}
 const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: AdvancedDetailProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
-    onTabChange = (): viod => { },
+    onTabChange = (): void => { },
     onTableTabChange = (): void => { },
   } = props;
 
@@ -118,11 +122,11 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
                   </Typography.Text>
                 </Box>
                 <Box spacing={8} direction="row">
-                  <Button type="primary" className={styles.button}>
+                  <Button type="primary" className={styles.boxButton}>
                     主操作
                   </Button>
-                  <Button className={styles.button}>操作一</Button>
-                  <MenuButton label="更多" className={styles.button}>
+                  <Button className={styles.boxButton}>操作一</Button>
+                  <MenuButton label="更多" className={styles.boxButton}>
                     <MenuButton.Item key="1">操作一</MenuButton.Item>
                     <MenuButton.Item key="2">操作二</MenuButton.Item>
                   </MenuButton>
@@ -180,7 +184,7 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
                 </div>
               }
             />
-            <Step.Item title="审批" content={<a className={styles.a}>张三</a>} />
+            <Step.Item title="审批" content={<a className={styles.stepA}>张三</a>} />
             <Step.Item title="接受" />
             <Step.Item title="合同发送" />
             <Step.Item title="合同接受" />
