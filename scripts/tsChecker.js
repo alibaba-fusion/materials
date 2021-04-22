@@ -50,9 +50,9 @@ const blocks = ['ActionTable','AdvancedDetail','BasicDetail'];
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);
-  const dtsFile = path.join(blockFolder, 'typings.d.ts');
+  const dtsFile = path.join(blockFolder, 'src', 'typings.d.ts');
   try {
-    execSync(`cd blocks/${blocks} && npm i`, {
+    execSync(`cd blocks/${block} && npm i`, {
       stdio: 'inherit'
     });
     fse.copyFileSync(path.join(__dirname, '../types/typings.d.ts'), dtsFile);
