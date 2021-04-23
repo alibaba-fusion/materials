@@ -1,10 +1,10 @@
 export interface IListConfig {
-  uri? : string;
-  formatter? : (res: any) => IResponse;
+  uri?: string;
+  formatter?: (res: any) => IResponse;
   querySchema?: IQueryItem[];
   actionSchema?: IActionItem[];
-  dataSchema? : IDataItem[];
-  paginationParams? : IPaginationParams;
+  dataSchema?: IDataItem[];
+  paginationParams?: IPaginationParams;
 }
 
 export interface IQueryItem {
