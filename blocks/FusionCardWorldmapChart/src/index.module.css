@@ -3,7 +3,7 @@
   margin: 20px 0;
 }
 
-.total {
+.CardTotal {
   margin-right: 40px;
   color: #666;
   font-size: 14px;
@@ -12,7 +12,7 @@
   letter-spacing: 0;
 }
 
-.num {
+.CardNum {
   color: #333;
   font-size: 24px;
   font-family: Roboto-Bold;
@@ -20,7 +20,7 @@
   letter-spacing: 0;
 }
 
-.map {
+.CardMap {
   display: flex;
   justify-content: center;
 }
