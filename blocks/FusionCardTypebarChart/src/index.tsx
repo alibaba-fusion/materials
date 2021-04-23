@@ -3,7 +3,7 @@ import { Card } from '@alifd/next';
 import { Chart, Geom, Coord } from 'bizcharts';
 import mock from './mock.js';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   date?: string;
