@@ -15,7 +15,9 @@
 			"bizcharts": "^3.5.6"
 		},
 		"devDependencies": {
-			"build-plugin-fusion-material": "^0.1.5"
+			"build-plugin-fusion-material": "^0.1.5",
+			"build-plugin-webpack5": "^1.2.3",
+			"webpack": "^5.0.0"
 		},
 		"scripts": {
 			"design": "icejs build --design",
@@ -244,7 +246,11 @@
 			"version": "^0.6.2"
 		},
 		"buildConfig": {
+			"customWebpack": true,
 			"plugins": [
+				["build-plugin-webpack5", {
+					"remoteRuntime": true
+				}],
 				"build-plugin-fusion-material"
 			]
 		}

@@ -105,7 +105,10 @@ const Navigation = (props, context) => {
       iconOnly={isCollapse}
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
-      onOpen={setOpenKeys}
+      onOpen={(keys) => {
+        // @ts-ignore
+        setOpenKeys(keys);
+      }}
     >
       {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>
