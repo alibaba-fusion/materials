@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
 import { Card, Form, ResponsiveGrid, Field, Input, Radio, Select, Button, Box } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface DataSource {
   name?: string;
