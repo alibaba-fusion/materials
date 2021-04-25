@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/stark-layout-scaffold",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "description": "微前端方案 icestark 的主应用模板，用于快速初始化主应用",
   "homepage": "https://icestark-react.surge.sh",
   "files": [

@@ -1,3 +1,4 @@
+import { IRouterConfig } from 'ice';
 import UserLayout from '@/layouts/UserLayout';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
@@ -36,7 +37,7 @@ import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
 
-const routerConfig = [
+const routerConfig: IRouterConfig[] = [
   {
     path: '/user',
     component: UserLayout,
