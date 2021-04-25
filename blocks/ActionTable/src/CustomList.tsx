@@ -11,7 +11,7 @@ export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
   children?: Column[];
 };
-
+// @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });

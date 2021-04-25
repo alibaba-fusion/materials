@@ -20,7 +20,6 @@ function dtsCompiler(targetFolder) {
     ignore: ['node_modules', '*.d.ts'],
     absolute: true,
   });
-  console.log(needCompileList);
   if (needCompileList.length === 0) {
     return;
   }
@@ -47,21 +46,20 @@ function dtsCompiler(targetFolder) {
 
 // const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
 // 修改一个区块添加一个检测
-const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','ExpandTable','FailDetail','FilterTable','FlowForm','Forbidden','FourColumnForm'];
+const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','ExpandTable','FailDetail','FilterTable'];
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);
-  const dtsFile = path.join(blockFolder, 'typings.d.ts');
-
+  const dtsFile = path.join(blockFolder, 'src', 'typings.d.ts');
   try {
-    execSync(`cd blocks/${blocks} && npm i`, {
+    execSync(`cd blocks/${block} && npm i`, {
       stdio: 'inherit'
     });
     fse.copyFileSync(path.join(__dirname, '../types/typings.d.ts'), dtsFile);
     dtsCompiler(blockFolder);
     fse.removeSync(dtsFile)
   } catch (err) {
-    console.log(err.message);
     fse.removeSync(dtsFile)
+    throw err;
   } 
 }
