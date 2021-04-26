@@ -122,11 +122,11 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
                   </Typography.Text>
                 </Box>
                 <Box spacing={8} direction="row">
-                  <Button type="primary" className={styles.button}>
+                  <Button type="primary" className={styles.boxButton}>
                     主操作
                   </Button>
-                  <Button className={styles.button}>操作一</Button>
-                  <MenuButton label="更多" className={styles.button}>
+                  <Button className={styles.boxButton}>操作一</Button>
+                  <MenuButton label="更多" className={styles.boxButton}>
                     <MenuButton.Item key="1">操作一</MenuButton.Item>
                     <MenuButton.Item key="2">操作二</MenuButton.Item>
                   </MenuButton>
@@ -184,7 +184,7 @@ const AdvancedDetail: React.FunctionComponent<AdvancedDetailProps> = (props: Adv
                 </div>
               }
             />
-            <Step.Item title="审批" content={<a className={styles.a}>张三</a>} />
+            <Step.Item title="审批" content={<a className={styles.stepA}>张三</a>} />
             <Step.Item title="接受" />
             <Step.Item title="合同发送" />
             <Step.Item title="合同接受" />
