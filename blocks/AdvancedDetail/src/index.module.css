@@ -1,14 +1,17 @@
-@import "~@alifd/next/variables.scss";
-
 .AdvancedDetailHead {
+  margin-top: 20px;
   margin-top: var(--s-5, 20px);
   margin-top: var(--shell-dark-content-paddingTop, 20px);
+  margin-right: 20px;
   margin-right: var(--s-5, 20px);
   margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 20px;
   margin-bottom: var(--s-5, 20px);
   margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: 20px;
   margin-left: var(--s-5, 20px);
   margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  padding: 20px 20px 0;
   padding: var(--s-5, 20px) var(--s-5, 20px) 0;
   padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px) 0;
 }
@@ -47,12 +50,12 @@
   margin-left: -40px;
 }
 
-.a {
+.stepA {
   color: #5584ff;
   color: var(--color-brand1-6, #5584ff);
 }
 
-.button {
+.boxButton {
   width: 80px;
 }
 
