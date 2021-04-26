@@ -66,7 +66,7 @@ const MockData = [
   },
 ];
 
-export interface recordType{
+export interface recordType {
   groupCount: number;
   groupIndex: number;
   group2Merged: any[string];
@@ -74,7 +74,7 @@ export interface recordType{
 
 const getTableData = () => Promise.resolve({ total: MockData.length, list: MockData });
 
-const cellProps = (value: object, dataIndex: string, record: recordType) => {
+const cellProps = (rowIndex: number, colIndex: number, dataIndex: string, record: recordType) => {
   const { groupCount, groupIndex, group2Merged } = record;
   // 合并待 merge 的行
   if (group2Merged.find((val: string) => val === dataIndex)) {
