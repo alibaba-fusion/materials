@@ -79,13 +79,13 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             onChange={changeType}
             className={styles.radioGroup}
           >
-            <Radio value="one" className={styles.flex1}>
+            <Radio value="one" className={styles.ridioFlex}>
               类目一
             </Radio>
-            <Radio value="two" className={styles.flex1}>
+            <Radio value="two" className={styles.ridioFlex}>
               类目二
             </Radio>
-            <Radio value="three" className={styles.flex1}>
+            <Radio value="three" className={styles.ridioFlex}>
               类目三
             </Radio>
           </Radio.Group>
