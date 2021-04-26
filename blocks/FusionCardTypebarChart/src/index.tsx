@@ -51,9 +51,9 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
         ) : null
       }
       <Card.Content>
-        <div className={styles.subTitle}>{subTitle}</div>
-        <div className={styles.value}>{value}</div>
-        <div className={styles.des}>{des}<span>{rate}↑</span></div>
+        <div className={styles.cardSubTitle}>{subTitle}</div>
+        <div className={styles.cardValue}>{value}</div>
+        <div className={styles.cardDes}>{des}<span>{rate}↑</span></div>
         <Chart
           width={10}
           height={chartHeight}

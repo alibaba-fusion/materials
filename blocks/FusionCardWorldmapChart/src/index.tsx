@@ -86,17 +86,17 @@ const FusionCardWorldmapChart: React.SFC<FusionCardWorldmapChartProps> = (props:
       <Card.Divider />
       <Card.Content>
         <div className={styles.dataRow}>
-          <span className={styles.CardTotal}>
-            今日PV：<span className={styles.CardNum}>490,760,415</span>
+          <span className={styles.cardTotal}>
+            今日PV：<span className={styles.cardNum}>490,760,415</span>
           </span>
-          <span className={styles.CardTotal}>
-            今日PV：<span className={styles.CardNum}>490,760,415</span>
+          <span className={styles.cardTotal}>
+            今日PV：<span className={styles.cardNum}>490,760,415</span>
           </span>
         </div>
         <Chart
           height={chartHeight}
           width={chartWidth}
-          className={styles.CardMap}
+          className={styles.cardMap}
           padding={[0, 20, 40, 20]}
           scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}
         >
