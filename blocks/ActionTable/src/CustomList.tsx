@@ -11,10 +11,6 @@ export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
   children?: Column[];
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> dfd58022ac701c805a9c1402dd6e611af6ce46a9
 // @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
