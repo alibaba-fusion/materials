@@ -27,8 +27,8 @@
 }
 
 .MultiTreeTable:global .selectedData {
-  color: #5584FF;
-  color: var(--color-link-1, #5584FF); 
+  color: #5584ff;
+  color: var(--color-link-1, #5584ff);
 }
 
 .MultiTreeTable:global .actionBar {
