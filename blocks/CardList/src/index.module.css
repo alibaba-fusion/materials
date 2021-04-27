@@ -1,6 +1,5 @@
-/* // @import "~@alifd/next/variables.scss"; */
 
-.CardList {
+.cardList {
   margin-top: 20px;
   margin-top: var(--shell-dark-content-paddingTop, 20px);
   margin-right: 20px;
@@ -11,17 +10,20 @@
   margin-left: var(--shell-dark-content-paddingLeft, 20px);
 }
 
-.TagBox {
+
+.tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
 
-.TagBoxItem {
+
+.tagBoxItem {
   display: flex;
   align-items: center;
 }
 
-.TagTitleName {
+
+.tagTitleName {
   width: 56px;
   margin-right: 12px;
   margin-bottom: 8px;
@@ -31,43 +33,48 @@
 }
 
 
-.ListItem .ListMain {
+
+.listItem .listMain {
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
 }
 
-.ListItem img {
+
+.listItem img {
   width: 100%;
 }
 
-.ListItem .ListContent {
+.listItem .listContent {
   padding: 14px;
 }
 
-.ListItem .ListTitle {
+.listItem .listTitle {
   color: #333;
   font-size: 14px;
 }
 
-.ListItem .ListInfo {
+
+.listItem .listInfo {
   margin-top: 13px;
   color: #999;
   font-size: 12px;
   line-height: 20px;
 }
 
-.ListItem .ListLink {
+
+.listItem .listLink {
   margin-top: 13px;
 }
 
-.ListItem .ListLink a {
+.listItem .listLink a {
   margin-right: 20px;
   color: #999;
   font-size: 12px;
 }
 
-.ListItem .ListAdd {
+
+.listItem .listAdd {
   height: 100%;
   overflow: hidden;
   background: #fff;
@@ -76,11 +83,12 @@
 
 }
 
-.ListItem .ListAdd .ListIcon {
+
+.listItem .listAdd .listIcon {
   color: #999;
 }
 
-.ListItem .addText {
+.listItem .addText {
   margin-top: 20px;
   color: #999;
   font-size: 12px;
