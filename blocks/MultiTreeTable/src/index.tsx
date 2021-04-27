@@ -7,7 +7,7 @@ import ExceptionBlock from './ExceptionBlock';
 import DialogEdit from './DialogEdit';
 import { DataItem } from './types';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 import { getData } from './mock';
 
