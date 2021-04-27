@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Search, Card, Tag, Divider, Typography, Icon, Loading, Button, Pagination } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 
@@ -31,6 +31,10 @@ const DEFAULT_DATA: DataSource = {
   }),
 };
 
+interface BasicListProps {
+  dataSource: DataSource;
+  onSearch: () => void;
+}
 const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
@@ -92,15 +96,15 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
-      <div className={styles.ListItem} key={i}>
-        <div className={styles.main}>
-          <div className={styles.left}>
+      <div className={styles.listItem} key={i}>
+        <div className={styles.cardMain}>
+          <div className={styles.cardLeft}>
             <img src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png" alt="img" />
             <div>
-              <div className={styles.title}>
+              <div className={styles.cardTitle}>
                 {c.title}
               </div>
-              <div className={styles.content}>
+              <div className={styles.cardContent}>
                 {c.content}
               </div>
               <div className={styles.subContent}>
@@ -108,7 +112,7 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
               </div>
             </div>
           </div>
-          <div className={styles.right}>
+          <div className={styles.cardRight}>
             <Button type="primary" text>编辑</Button>
             <Button type="primary" text>订阅</Button>
             <Button type="primary" text>删除</Button>
@@ -120,33 +124,33 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   return (
     <>
-      <Card free className={styles.BasicList}>
+      <Card free className={styles.basicList}>
         <Box align="center">
           <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
         </Box>
         <Divider dashed style={{ margin: '24px 0' }} />
-        <Box className={styles.TagBox}>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
+        <Box className={styles.tagBox}>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>内容分类</Typography.Text>
             <TagGroup>{renderTagListA()}</TagGroup>
           </div>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>时间</Typography.Text>
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
 
-        <Loading visible={loading} className={styles.MainList}>
-          <Box className={styles.MainContent} spacing={10}>
-            <div className={styles.ListItem}>
-              <div className={styles.add}>
-                <Icon type="add" className={styles.icon} size="xs" />
+        <Loading visible={loading} className={styles.mainList}>
+          <Box className={styles.mainContent} spacing={10}>
+            <div className={styles.listItem}>
+              <div className={styles.addContent}>
+                <Icon type="add" className={styles.addContentIcon} size="xs" />
                 <div className={styles.addText}>添加内容</div>
               </div>
             </div>
             {renderCards()}
             <Box margin={[15, 0, 0, 0]} direction="row" align="center" justify="space-between">
-              <div className={styles.total}>
+              <div className={styles.totalPagin}>
                 共<span>200</span>条需求
               </div>
               <Pagination onChange={onPaginationChange} />
