@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Avatar, Card, Tab, ResponsiveGrid, Table, Typography, Upload, Button, Form, Input, Message, Box, Radio, Dialog, Icon } from '@alifd/next';
 import { UploadProps } from '@alifd/next/types/upload';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
@@ -78,7 +78,7 @@ const DEFAULT_ON_SUBMIT = (values: SettingSystemProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element => {
+const SettingSystemBlock: React.SFC<SettingSystemProps> = (props: SettingSystemProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
@@ -86,7 +86,7 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
 
   const [priList, setPriList] = useState([]);
   const [inited, setInited] = useState(false);
-  const [postData, setValue] = useState<SettingSystemProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
   useEffect(() => {
     setPriList(MockData);
@@ -94,7 +94,7 @@ const SettingSystemBlock: React.SFC<SettingSystemProps> = (props): JSX.Element =
   }, [inited]);
 
 
-  const formChange = (values: SettingSystemProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 
