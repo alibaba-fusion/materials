@@ -4,8 +4,8 @@
 }
 
 .succesIcon {
-  color: #46BC15;
-  color: var(--color-success-3, #46BC15);
+  color: #46bc15;
+  color: var(--color-success-3, #46bc15);
 }
 
 .form {

@@ -20,7 +20,7 @@
   margin-left: 10px;
 }
 
-.Operation .btns btnsIcon {
+.Operation .btns .btnsIcon {
   color: #999;
 }
 
@@ -31,7 +31,7 @@
 .main .mainAdd {
   padding-bottom: 15px;
 }
-.main .mainAdd mainIcon {
+.main .mainAdd .mainIcon {
   color: #999;
 }
 
