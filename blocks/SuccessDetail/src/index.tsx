@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import { useInterval } from './utils';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface DetailProcessFunc {
   (): any;
@@ -58,7 +58,7 @@ export default function SuccessDetail(props: SuccessDetailProps) {
   };
 
   return (
-    <Card free className={styles.SuccessDetail}>
+    <Card free className={styles.successDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
         <h1 className={styles.statuscode}>{statusCode}</h1>

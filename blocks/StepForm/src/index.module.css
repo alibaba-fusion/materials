@@ -1,12 +1,11 @@
-@import '~@alifd/next/variables.scss';
-
-.StepForm {
+.stepForm {
   width: 568px;
   margin: 40px auto 24px;
 }
 
 .succesIcon {
-  color: $color-success-3;
+  color: #46BC15;
+  color: var(--color-success-3, #46BC15);
 }
 
 .form {
