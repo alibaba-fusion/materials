@@ -1,0 +1,150 @@
+.workTable .workerContainor {
+  margin-top: 20px;
+  margin-top: var(--shell-dark-content-paddingTop, 20px);
+  margin-right: 20px;
+  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 20px;
+  margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: 20px;
+  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  padding: 20px 20px;
+  padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px);
+  padding-bottom: 0;
+  background: #fff;
+  background: var(--color-white, #fff)
+}
+
+.workTable .workerContainor .workerImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.workTable .tab {
+  margin-top: 20px;
+}
+
+.workTable .dailyWorkContainor .dailyTitle {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 12px;
+  font-family: PingFang-SC-Medium;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+.workTable .dailyWorkContainor .dailyTitle .num {
+  color: #2699f2;
+}
+
+.workTable .dailyWorkContainor .planTime {
+  color: #999;
+  font-size: 16px;
+  font-family: Roboto-Bold;
+  line-height: 19px;
+}
+
+.workTable .dailyWorkContainor .planDuaring {
+  color: #999;
+  font-size: 12px;
+  font-family: PingFang-SC-Regular;
+  line-height: 17px;
+}
+
+.workTable .dailyWorkContainor :global(.next-timeline-item-body) {
+  display: flex;
+  flex-direction: column;
+}
+
+.workTable .myProjectContainor {
+  margin-top: 20px;
+}
+
+.workTable .myProjectContainor .myProjectRow {
+  display: flex;
+  align-items: center;
+}
+
+.workTable .myProjectContainor .myProjectInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.workTable .myProjectContainor .myProjectInfo .myProjectName {
+  color: #333;
+  font-size: 14px;
+  font-family: PingFang-SC-Bold;
+  line-height: 16px;
+}
+
+.workTable .myProjectContainor .myProjectInfo .myProjectDesc {
+  margin-top: 8px;
+  color: #666;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  line-height: 16px;
+}
+
+.workTable .myProjectContainor .auth {
+  display: inline-block;
+  padding: 0 12px;
+  color: #999;
+  font-size: 12px;
+  font-family: PingFangSC-Regular;
+  line-height: 24px;
+  letter-spacing: 0;
+  border: 1px solid #ccc;
+}
+
+.titleName {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.titleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tableTitleName {
+  color: #333;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.tableTitleInfo {
+  color: #666;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.strong {
+  color: #5584ff;
+  color: var(--color-brand1-6, #5584ff)
+}
+
+.planNumber {
+  color: #999;
+  font-size: 14px;
+}
+
+.extra {
+  width: 300px;
+  height: 100%;
+}
+
+.extraTime {
+  width: 50%;
+}
+
+.extraUpdate {
+  width: 50%;
+}
+
+.avatar {
+  background: #c2dae1;
+}
