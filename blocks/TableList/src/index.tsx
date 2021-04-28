@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Table, Pagination, Divider, ResponsiveGrid, Button, Box, Form, Input, Select, Icon, Loading } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Cell } = ResponsiveGrid;
 const { Option } = Select;
@@ -126,11 +126,11 @@ const TableList: React.FunctionComponent<ITableListProps> = (props: ITableListPr
                   <Button onClick={toggleSeachList}>
                     {expand ? (
                       <>
-                        收起 <Icon className={styles.icon} type="arrow-up" size="xs" />
+                        收起 <Icon className={styles.btnsIcon} type="arrow-up" size="xs" />
                       </>
                     ) : (
                       <>
-                        展开 <Icon className={styles.icon} type="arrow-down" size="xs" />
+                        展开 <Icon className={styles.btnsIcon} type="arrow-down" size="xs" />
                       </>
                     )}
                   </Button>
@@ -139,19 +139,19 @@ const TableList: React.FunctionComponent<ITableListProps> = (props: ITableListPr
             </Form>
           </Box>
           <Divider dashed />
-          <div className={styles.Main}>
+          <div className={styles.main}>
             <Loading visible={loading} style={{ display: 'block' }}>
-              <div className={styles.add}>
+              <div className={styles.mainAdd}>
                 <Button type="primary">新增</Button>
                 <Button type="normal">下载</Button>
                 <Button type="normal">
                   更多操作
-                  <Icon className={styles.icon} type="arrow-down" />
+                  <Icon className={styles.mainIcon} type="arrow-down" />
                 </Button>
               </div>
               <Table
                 hasBorder={false}
-                className={styles.Table}
+                className={styles.table}
                 dataSource={dataSource.tableData}
                 rowSelection={{ columnProps: () => ({ lock: 'left' }) }}
               >
