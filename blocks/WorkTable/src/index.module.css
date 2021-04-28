@@ -11,7 +11,7 @@
   padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px);
   padding-bottom: 0;
   background: #fff;
-  background: var(--color-white, #fff)
+  background: var(--color-white, #fff);
 }
 
 .workTable .workerContainor .workerImage {
@@ -124,7 +124,7 @@
 
 .strong {
   color: #5584ff;
-  color: var(--color-brand1-6, #5584ff)
+  color: var(--color-brand1-6, #5584ff);
 }
 
 .planNumber {
