@@ -1,4 +1,3 @@
-/* // @import "~@alifd/next/variables.scss"; */
 
 .cardList {
   margin-top: 20px;
@@ -11,16 +10,27 @@
   margin-left: var(--shell-dark-content-paddingLeft, 20px);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagBoxItem {
   display: flex;
   align-items: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagTitleName {
   width: 56px;
   margin-right: 12px;
@@ -31,12 +41,20 @@
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .listItem .listMain {
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .listItem img {
   width: 100%;
 }

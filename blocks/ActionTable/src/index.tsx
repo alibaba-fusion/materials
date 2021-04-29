@@ -7,6 +7,10 @@ import CustomList, { Column } from './CustomList';
 import { getColumnKey } from './util';
 
 import styles from './index.module.css';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 // @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',

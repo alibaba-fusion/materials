@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .basicList {
   margin-top: 20px;
   margin-top: var(--shell-dark-content-paddingTop, 20px);
@@ -19,16 +23,28 @@
   color: #5584ff;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagBoxItem {
   display: flex;
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .tagTitleName {
   width: 56px;
   margin-right: 12px;
@@ -38,6 +54,10 @@
   text-align: right;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .mainList {
   display: flex;
   flex-direction: column;
@@ -46,16 +66,28 @@
   background: #f5f5f5;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .mainContent {
   padding: 40px 24px;
   background: #fff;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .listItem {
   box-sizing: border-box;
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ca5d23bc870ffe0e6b825f6c12401203c7ab51
 .listItem .cardMain {
   display: flex;
   align-items: center;
