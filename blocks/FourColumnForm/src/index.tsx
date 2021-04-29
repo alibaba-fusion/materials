@@ -54,7 +54,7 @@ const FourColumnForm: React.SFC<FourColumnFormProps> = (props: FourColumnFormPro
   };
 
   return (
-    <Card free>
+    <Card free >
       <Card.Content>
         <Form
           responsive
