@@ -57,7 +57,7 @@ const BasicForm: React.SFC<BasicFormProps> = (props: BasicFormProps): JSX.Elemen
     <Card free>
       <Card.Content>
         <Form
-          className={styles.BasicForm}
+          className={styles.basicForm}
           responsive
           fullWidth
           value={postData}

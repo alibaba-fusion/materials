@@ -96,15 +96,16 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
-      <div className={styles.ListItem} key={i}>
-        <div className={styles.CardMain}>
-          <div className={styles.CardLeft}>
+
+      <div className={styles.listItem} key={i}>
+        <div className={styles.cardMain}>
+          <div className={styles.cardLeft}>
             <img src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png" alt="img" />
             <div>
-              <div className={styles.CardTitle}>
+              <div className={styles.cardTitle}>
                 {c.title}
               </div>
-              <div className={styles.CardContent}>
+              <div className={styles.cardContent}>
                 {c.content}
               </div>
               <div className={styles.subContent}>
@@ -112,7 +113,7 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
               </div>
             </div>
           </div>
-          <div className={styles.CardRight}>
+          <div className={styles.cardRight}>
             <Button type="primary" text>编辑</Button>
             <Button type="primary" text>订阅</Button>
             <Button type="primary" text>删除</Button>
@@ -124,25 +125,26 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   return (
     <>
-      <Card free className={styles.BasicList}>
+      <Card free className={styles.basicList}>
         <Box align="center">
           <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
         </Box>
         <Divider dashed style={{ margin: '24px 0' }} />
-        <Box className={styles.TagBox}>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
+        <Box className={styles.tagBox}>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>内容分类</Typography.Text>
             <TagGroup>{renderTagListA()}</TagGroup>
           </div>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>时间</Typography.Text>
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
 
-        <Loading visible={loading} className={styles.MainList}>
-          <Box className={styles.MainContent} spacing={10}>
-            <div className={styles.ListItem}>
+
+        <Loading visible={loading} className={styles.mainList}>
+          <Box className={styles.mainContent} spacing={10}>
+            <div className={styles.listItem}>
               <div className={styles.addContent}>
                 <Icon type="add" className={styles.addContentIcon} size="xs" />
                 <div className={styles.addText}>添加内容</div>
