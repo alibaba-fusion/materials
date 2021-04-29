@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
 
 import { useInterval } from './utils';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Item } = Form;
 
