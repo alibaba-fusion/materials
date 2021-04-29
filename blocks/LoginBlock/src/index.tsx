@@ -131,7 +131,7 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (
   };
 
   return (
-    <div className={styles.LoginBlock}>
+    <div className={styles.loginBlock}>
       <div className={styles.innerBlock}>
         <a href="#">
           <img
