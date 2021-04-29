@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .basicList {
   margin-top: 20px;
   margin-top: var(--shell-dark-content-paddingTop, 20px);
@@ -19,16 +23,28 @@
   color: #5584ff;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .tagBoxItem {
   display: flex;
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .tagTitleName {
   width: 56px;
   margin-right: 12px;
@@ -38,6 +54,10 @@
   text-align: right;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .mainList {
   display: flex;
   flex-direction: column;
@@ -46,16 +66,28 @@
   background: #f5f5f5;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .mainContent {
   padding: 40px 24px;
   background: #fff;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .listItem {
   box-sizing: border-box;
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027579a511d7f3a2137d93d582bf6f20b50ee6ad
 .listItem .cardMain {
   display: flex;
   align-items: center;
