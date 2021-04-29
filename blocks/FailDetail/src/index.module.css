@@ -1,19 +1,19 @@
-.FailDetail {
+.failDetail {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 428px;
 }
 
-.FailDetail div {
+.failDetail div {
   text-align: center;
 }
 
-.FailDetail .exceptionImage {
+.failDetail .exceptionImage {
   margin-bottom: 22px;
 }
 
-.FailDetail .statuscode {
+.failDetail .statuscode {
   margin-bottom: 6px;
   color: #000;
   font-size: 28px;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.FailDetail .description {
+.failDetail .description {
   margin-bottom: 20px;
   color: #666;
   font-size: 14px;
@@ -29,10 +29,10 @@
   text-align: center;
 }
 
-.FailDetail .operationWrap {
+.failDetail .operationWrap {
   text-align: center;
 }
 
-.FailDetail .mainAction {
+.failDetail .mainAction {
   margin-right: 8px;
 }

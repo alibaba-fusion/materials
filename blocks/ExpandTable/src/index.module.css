@@ -1,4 +1,4 @@
-.container:global .next-table-expanded-row .next-table {
+.container :global .next-table-expanded-row .next-table {
   padding: 20px;
 }
 

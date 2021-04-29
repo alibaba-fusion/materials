@@ -31,7 +31,7 @@ export default function FailDetail(props: FailDetailProps) {
   };
 
   return (
-    <Card free className={styles.FailDetail}>
+    <Card free className={styles.failDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
         <h1 className={styles.statuscode}>{statusCode}</h1>
