@@ -241,7 +241,7 @@ const MultiTreeTable: React.FC = () => {
   }, [handleEdit, handleDelete, moreCallback]);
 
   return (
-    <div className={styles.MultiTreeTable}>
+    <div className={styles.multiTreeTable}>
       <Card free>
         <Card.Content>
           <div className={styles.actionBar}>
