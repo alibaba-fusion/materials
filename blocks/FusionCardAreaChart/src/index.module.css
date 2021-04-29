@@ -1,4 +1,4 @@
-.CardSubTitle {
+.cardSubTitle {
   color: #999;
   color: var(--color-text1-2, #999);
   font-size: 12px;
@@ -6,7 +6,7 @@
   letter-spacing: 0;
 }
 
-.CardDes {
+.cardDes {
   margin-top: 6px;
   color: #999;
   color: var(--color-text1-2, #999);
@@ -15,13 +15,13 @@
   letter-spacing: 0;
 }
 
-.CardDes span {
+.cardDes span {
   margin-left: 2px;
   color: #36cfc9;
   font-weight: bold;
 }
 
-.CardValue {
+.cardValue {
   margin-top: 10px;
   color: #333;
   font-weight: bold;

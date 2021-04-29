@@ -50,7 +50,7 @@ const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartPr
   const { title, chartData, chartHeight } = cardConfig;
 
   return (
-    <Card free className={styles.FusionCardGroupBarChart}>
+    <Card free className={styles.fusionCardGroupBarChart}>
       <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>
