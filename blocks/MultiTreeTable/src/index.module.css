@@ -1,4 +1,4 @@
-.MultiTreeTable:global .table-empty-block {
+.multiTreeTable :global .table-empty-block {
   width: 100%;
   min-height: 200px;
   display: flex;
@@ -8,34 +8,34 @@
   user-select: none;
 }
 
-.MultiTreeTable:global .table-empty-block .result-image {
+.multiTreeTable :global .table-empty-block .result-image {
   height: 120px;
 }
 
-.MultiTreeTable:global .table-empty-block .result-image img {
+.multiTreeTable :global .table-empty-block .result-image img {
   height: 100%;
 }
 
-.MultiTreeTable:global .table-empty-block .result-title {
+.multiTreeTable :global .table-empty-block .result-title {
   font-size: 12px;
   line-height: 1.5;
   color: #bcc4cc;
 }
 
-.MultiTreeTable:global .next-pagination-total {
+.multiTreeTable :global .next-pagination-total {
   float: left;
 }
 
-.MultiTreeTable:global .selectedData {
+.multiTreeTable  .selectedData {
   color: #5584ff;
   color: var(--color-link-1, #5584ff);
 }
 
-.MultiTreeTable:global .actionBar {
+.multiTreeTable  .actionBar {
   margin-bottom: 20px;
 }
 
-.MultiTreeTable:global .Pagination {
+.multiTreeTable .Pagination {
   margin-top: 16px;
   text-align: right;
 }
