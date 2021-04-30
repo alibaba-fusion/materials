@@ -46,7 +46,11 @@ function dtsCompiler(targetFolder) {
 
 // const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
 // 修改一个区块添加一个检测
-const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','MonitorBlock','WorkTable'];
+<<<<<<< HEAD
+const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList', 'FlowForm', 'Forbidden', 'FourColumnForm','MonitorBlock','WorkTable'];
+=======
+const blocks = ['ActionTable', 'AdvancedDetail', 'BasicDetail', 'BasicForm', 'BasicList', 'CardList', 'FlowForm', 'Forbidden', 'FourColumnForm'];
+>>>>>>> 52d56ca3f23431eae77a7801a0cf2566378b071a
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);
@@ -61,5 +65,5 @@ for (const block of blocks) {
   } catch (err) {
     fse.removeSync(dtsFile)
     throw err;
-  } 
+  }
 }
