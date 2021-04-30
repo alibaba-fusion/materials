@@ -87,12 +87,6 @@ export interface WorkTableProps {
   dataSource?: DataSource;
 }
 
-const colorMap: any = {
-  high: 'red',
-  middle: 'yellow',
-  low: 'green',
-};
-
 const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA } = props;
 
@@ -103,9 +97,17 @@ const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Elemen
   const changeTab = (val: string) => setTab(val);
 
   const renderLevel = (text: string, index: number) => {
+    let color;
+    if (text === 'high') {
+      color = 'red';
+    } else if (text === 'middle') {
+      color = 'yellow';
+    } else {
+      color = 'green';
+    }
     return (
       <span key={text + index.toString()}>
-        <Tag size="small" color={colorMap[text]}>
+        <Tag size="small" color={color}>
           {text}
         </Tag>
       </span>
