@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
+import { Chart, Geom, Coord, Legend } from 'bizcharts';
 
 interface ChartItem {
   type?: string;
@@ -46,6 +46,26 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 240,
 };
 
+// 自定义hover的图形样式
+const pieState = {
+  active: {
+    style: {
+      fillOpacity: 0.7,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 0.85,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+    },
+  },
+};
+
 export interface FusionCardLineChartProps {
   cardConfig?: CardConfig;
 }
@@ -64,31 +84,37 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
       <Card.Divider />
       <Card.Content>
         <Chart
-          width={10}
+          pure
           height={chartHeight}
-          forceFit
+          autoFit
           data={chartData}
-          padding={['auto', 'auto']}
+          padding="auto"
+          interactions={['element-single-selected', 'element-highlight']}
         >
-          <Coord type="theta" radius={0.75} innerRadius={0.6} />
-          <Axis name="percent" />
+          <Coord type="theta" radius={0.72} innerRadius={0.6} />
           <Legend
-            position="right-center"
+            position="right"
             layout="vertical"
-            textStyle={{
-              fill: '#666',
-              fontSize: 14,
+            itemName={{
+              style: {
+                fill: '#666',
+                fontSize: 14,
+              },
             }}
+            itemValue={null}
             itemMarginBottom={24}
           />
           <Geom
-            type="intervalStack"
+            type="interval"
             position="value"
             color="title"
             style={{
               lineWidth: 1,
-              stroke: '#fff',
+              stroke: 'white',
+              fillOpacity: 0.85,
             }}
+            adjust="stack"
+            state={pieState}
           />
         </Chart>
       </Card.Content>

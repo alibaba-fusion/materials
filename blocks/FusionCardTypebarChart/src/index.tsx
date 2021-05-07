@@ -55,16 +55,17 @@ const FusionCardTypebarChart: React.FunctionComponent<FusionCardTypebarChartProp
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
+          pure
           scale={{
             date: {
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', 'auto']}
+          autoFit
+          padding="auto"
+          interactions={['element-highlight']}
         >
           <Coord transpose />
           <Geom type="interval" position="type*value" color={['type', ['#096DD9', '#209BFA']]} />
