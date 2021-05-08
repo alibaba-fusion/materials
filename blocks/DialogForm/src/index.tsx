@@ -14,12 +14,12 @@ export interface DialogFormProps {
   onVisibleChange?: (visible: boolean) => void;
 }
 
-const DialogForm: SFC<DialogFormProps> = (props) => {
+const DialogForm: React.SFC<DialogFormProps> = (props: DialogFormProps) => {
   const {
     dataSource = {},
     visible = true,
-    onSubmit = () => {},
-    onVisibleChange = () => {},
+    onSubmit = () => { },
+    onVisibleChange = () => { },
   } = props;
 
   const field = Field.useField({
