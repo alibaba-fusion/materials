@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import { Card, Form, ResponsiveGrid, Field, Input, Radio, Select, Button, Box } from '@alifd/next';
 import styles from './index.module.css';
 

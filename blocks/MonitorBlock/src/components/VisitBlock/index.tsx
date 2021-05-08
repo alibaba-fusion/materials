@@ -3,7 +3,7 @@ import { Card, Box } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import classNames from 'classnames';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface TitleItem {
   name?: string;

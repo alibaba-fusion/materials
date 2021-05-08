@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
 import { Breadcrumb, Box, Typography } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface PageHeaderProps {
   breadcrumbs?: Array<{ name: string; path?: string }>;
@@ -8,13 +8,13 @@ export interface PageHeaderProps {
   description?: string;
 }
 
-const PageHeader: SFC<PageHeaderProps> = (props) => {
+const PageHeader: React.SFC<PageHeaderProps> = (props: PageHeaderProps) => {
   const { breadcrumbs, title, description, ...others } = props;
   return (
-    <Box spacing={8} className={styles.PageHeader} {...others}>
+    <Box spacing={8} className={styles.pageHeader} {...others}>
       {
         breadcrumbs && breadcrumbs.length > 0 ? (
-          <Breadcrumb className={styles.Breadcrumbs} separator=" / ">
+          <Breadcrumb className={styles.breadcrumbs} separator=" / ">
             {
               breadcrumbs.map((item, idx) => (
                 <Breadcrumb.Item key={idx} link={item.path}>{item.name}</Breadcrumb.Item>
@@ -26,13 +26,13 @@ const PageHeader: SFC<PageHeaderProps> = (props) => {
 
       {
         title && (
-          <Typography.Text className={styles.Title}>{title}</Typography.Text>
+          <Typography.Text className={styles.title}>{title}</Typography.Text>
         )
       }
 
       {
         description && (
-          <Typography.Text className={styles.Description}>{description}</Typography.Text>
+          <Typography.Text className={styles.description}>{description}</Typography.Text>
         )
       }
     </Box>

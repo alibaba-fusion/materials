@@ -1,8 +1,8 @@
-@import '~@alifd/next/variables.scss';
 
-.SettingPersonBlock {
+.settingPersonBlock {
   width: 568px;
-  margin: $s-19 auto;
+  margin: 76px auto;
+  margin: var( --s-19,76px) auto;
 }
 
 .uploadButton {
