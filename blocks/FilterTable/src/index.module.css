@@ -1,0 +1,23 @@
+.filterTable :global .table-empty-block {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.filterTable :global .table-empty-block .result-image {
+  height: 120px;
+}
+
+.filterTable :global .table-empty-block .result-image img {
+  height: 100%;
+}
+
+.filterTable :global .table-empty-block .result-title {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bcc4cc;
+}
