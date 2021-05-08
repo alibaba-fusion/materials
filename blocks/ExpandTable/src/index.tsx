@@ -2,11 +2,11 @@ import * as React from 'react';
 import { Card, Table, Pagination, Field, Button } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { useState } = React;
 
-const getTableData = ({ current, pageSize }, formData: any): Promise<any> => {
+const getTableData = ({ current, pageSize }: { current: number; pageSize: number }, formData: any): Promise<any> => {
   let query = `page=${current}&size=${pageSize}`;
   Object.entries(formData).forEach(([key, value]) => {
     if (value) {
