@@ -43,7 +43,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(currentStep + 1);
   };
 
-  const goNext = async (): Promise<any> => {
+  const goNext = async (): Promise<void> => {
     const { errors } = await projectField.validatePromise();
 
     if (errors) {
