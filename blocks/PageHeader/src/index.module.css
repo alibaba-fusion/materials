@@ -1,0 +1,33 @@
+.pageHeader {
+  margin-top: 20px;
+  margin-top: var(--shell-dark-content-paddingTop, 20px);
+  margin-right: 20px;
+  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  padding: 20px 20px;
+  padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px);
+  background-color: #fff;
+  background-color: var(--color-white, #fff);
+}
+
+.title {
+  display: block;
+  color: #333;
+  color: var(--color-text1-4, #333);
+  font-weight: bold;
+  font-weight: var(--font-weight-3, bold);
+  font-size: 20px;
+  font-size: var(--font-size-title, 20px);
+  line-height: 1.5;
+}
+
+.description {
+  display: block;
+  color: #666;
+  color: var(--color-text1-3, #666);
+  font-size: 14px;
+  font-size: var(--font-size-body-2, 14px);
+  line-height: 1.5;
+}
