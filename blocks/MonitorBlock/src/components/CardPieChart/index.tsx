@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   type?: string;
@@ -77,7 +77,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
           <Coord type="theta" radius={0.75} innerRadius={0.6} />
           <Axis name="percent" />
           <Legend
-            position="right-center"
+            position="right"
             textStyle={{
               fill: '#666',
               fontSize: 14,

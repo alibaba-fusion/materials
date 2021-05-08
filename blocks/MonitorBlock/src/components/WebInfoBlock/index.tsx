@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Card } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface CardConfig {
   value?: string;

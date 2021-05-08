@@ -270,7 +270,7 @@ const JSErrorChart = (props) => {
             type="intervalStack"
             position="date*value"
             adjust={['fail', 'success']}
-            color={['name', ['#2B7FFB', '#00D6CB']]}
+            color={['name', ['#00D6CB', '#2B7FFB']]}
           />
           <Axis name="date" title={null} />
           <Axis name="value" title={null} />

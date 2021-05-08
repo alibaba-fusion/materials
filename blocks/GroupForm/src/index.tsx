@@ -282,7 +282,7 @@ const GroupForm: React.SFC<GroupFormProps> = (props: GroupFormProps) => {
               新增
             </Button>
           </Box>
-          <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
+          <Table dataSource={dataSource.company} hasBorder={false} className={styles.mainTable}>
             <Table.Column
               title="目标公司"
               cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')}

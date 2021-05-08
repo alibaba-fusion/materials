@@ -27,6 +27,6 @@
   box-shadow: var(--shadow-3-up, 0 -3px 5px 0 rgba(0, 0, 0, 0.12));
 }
 
-.Table table {
+.mainTable table {
   border: 1px solid #e6e6e6;
 }
