@@ -139,7 +139,6 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
-
         <Loading visible={loading} className={styles.mainList}>
           <Box className={styles.mainContent} spacing={10}>
             <div className={styles.listItem}>
