@@ -3,7 +3,6 @@ import { Input, Box, Button, Select, Form, Card, DatePicker, Message, Radio } fr
 
 import { Moment } from 'moment';
 
-import styles from './index.module.scss';
 
 const FormItem = Form.Item;
 
@@ -41,21 +40,21 @@ const DEFAULT_ON_SUBMIT = (values: FourColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const FourColumnForm: React.SFC<FourColumnFormProps> = (props): JSX.Element => {
+const FourColumnForm: React.SFC<FourColumnFormProps> = (props: FourColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
-    onCancel = () => {},
+    onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<FourColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: FourColumnFormProps) => {
+  const formChange = (value: DataSource) => {
     setValue(value);
   };
 
   return (
-    <Card free className={styles.FourColumnForm}>
+    <Card free >
       <Card.Content>
         <Form
           responsive
