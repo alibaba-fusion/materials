@@ -16,7 +16,7 @@ import {
 
 import { useFusionTable } from 'ahooks';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const RadioGroup = Radio.Group;
 const CheckboxGroup = Checkbox.Group;
