@@ -7,20 +7,20 @@
   color: #999;
 }
 
-.Operation {
+.operation {
   padding: 10px 10px 5px;
   border-bottom: 1px dashed #eee;
 }
 
-.Operation .btns {
+.operation .btns {
   margin-top: 14px;
 }
 
-.Operation .btns Button {
+.operation .btns Button {
   margin-left: 10px;
 }
 
-.Operation .btns .btnsIcon {
+.operation .btns .btnsIcon {
   color: #999;
 }
 
