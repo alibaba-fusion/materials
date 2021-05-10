@@ -133,6 +133,7 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
       </Card>
       <Loading visible={loading} style={{ display: 'block' }}>
         <ResponsiveGrid gap={20}>
+
           <Cell colSpan={3} className={styles.listItem}>
             <Box className={styles.listAdd} justify="center" align="center">
               <Icon type="add" className={styles.listIcon} />

@@ -62,6 +62,7 @@
 }
 
 
+
 .listItem .cardMain {
   display: flex;
   align-items: center;
@@ -72,10 +73,12 @@
   border-bottom: 1px solid #eee;
 }
 
+
 .listItem .cardLeft {
   display: flex;
   align-items: center;
 }
+
 
 .listItem .cardRight {
   width: 100px;
@@ -93,6 +96,7 @@
   margin-right: 20px;
 }
 
+
 .listItem .cardTitle {
   color: #000;
   font-size: 16px;
@@ -104,6 +108,7 @@
   color: #999;
   font-size: 12px;
 }
+
 
 .listItem .subContent {
   color: #999;
