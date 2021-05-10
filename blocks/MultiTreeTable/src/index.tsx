@@ -7,7 +7,7 @@ import ExceptionBlock from './ExceptionBlock';
 import DialogEdit from './DialogEdit';
 import { DataItem } from './types';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 import { getData } from './mock';
 
@@ -241,7 +241,7 @@ const MultiTreeTable: React.FC = () => {
   }, [handleEdit, handleDelete, moreCallback]);
 
   return (
-    <div className={styles.MultiTreeTable}>
+    <div className={styles.multiTreeTable}>
       <Card free>
         <Card.Content>
           <div className={styles.actionBar}>
