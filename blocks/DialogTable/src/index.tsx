@@ -7,7 +7,7 @@ import ExceptionBlock from './ExceptionBlock';
 import DialogOperation from './DialogOperation';
 import { ActionType, OperaitionProps } from './Operation';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
@@ -155,7 +155,7 @@ const DialogTable: React.FC = () => {
   };
 
   return (
-    <div className={styles.DialogTable}>
+    <div className={styles.dialogTable}>
       <Card free>
         <Card.Content>
           <Table

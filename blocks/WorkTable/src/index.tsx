@@ -15,7 +15,7 @@ import {
 } from '@alifd/next';
 import mock from './mock';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
@@ -87,13 +87,7 @@ export interface WorkTableProps {
   dataSource?: DataSource;
 }
 
-const colorMap = {
-  high: 'red',
-  middle: 'yellow',
-  low: 'green',
-};
-
-const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
+const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA } = props;
 
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
@@ -103,9 +97,17 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const changeTab = (val: string) => setTab(val);
 
   const renderLevel = (text: string, index: number) => {
+    let color;
+    if (text === 'high') {
+      color = 'red';
+    } else if (text === 'middle') {
+      color = 'yellow';
+    } else {
+      color = 'green';
+    }
     return (
       <span key={text + index.toString()}>
-        <Tag size="small" color={colorMap[text]}>
+        <Tag size="small" color={color}>
           {text}
         </Tag>
       </span>
