@@ -9,10 +9,12 @@
   margin-left: var(--shell-dark-content-paddingLeft, 20px);
 }
 
+
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
+
 
 .tagBoxItem {
   display: flex;
@@ -28,6 +30,7 @@
   font-size: 14px;
   text-align: right;
 }
+
 
 
 .listItem .listMain {
@@ -69,6 +72,7 @@
   font-size: 12px;
 }
 
+
 .listItem .listAdd {
   height: 100%;
   overflow: hidden;
@@ -77,6 +81,7 @@
   border-radius: 5px;
 
 }
+
 
 .listItem .listAdd .listIcon {
   color: #999;
