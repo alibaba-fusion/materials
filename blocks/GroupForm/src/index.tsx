@@ -13,7 +13,7 @@ import {
   Dialog,
   Field,
 } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface Company {
   id?: string;
@@ -113,11 +113,11 @@ const DEFAULT_DATA: DataSource = {
   ],
 };
 
-const GroupForm: SFC<GroupFormProps> = (props) => {
+const GroupForm: React.SFC<GroupFormProps> = (props: GroupFormProps) => {
   const {
     dataSource: defaultDataSource = DEFAULT_DATA,
-    onSubmit = () => {},
-    onCancel = () => {},
+    onSubmit = () => { },
+    onCancel = () => { },
   } = props;
 
   const [dataSource, setDataSouce] = useState<DataSource>(defaultDataSource);
@@ -131,9 +131,9 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = (dom && dom.getBoundingClientRect()) || {};
-    setLeft(rect.left);
-    setRight(document.documentElement.offsetWidth - rect.left - rect.width);
+    const rect = dom?.getBoundingClientRect() as DOMRect;
+    setLeft(rect?.left);
+    setRight(document.documentElement.offsetWidth - rect?.left - rect?.width);
   }, []);
 
   const changeRowData = (
@@ -282,7 +282,7 @@ const GroupForm: SFC<GroupFormProps> = (props) => {
               新增
             </Button>
           </Box>
-          <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
+          <Table dataSource={dataSource.company} hasBorder={false} className={styles.mainTable}>
             <Table.Column
               title="目标公司"
               cell={(v: string, i: number, row: { edited: boolean }) => renderEditCell(v, i, row, 'name')}

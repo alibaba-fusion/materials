@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Table, Button, MenuButton, Message, Dialog } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 
 const data = [{
@@ -162,23 +162,23 @@ export default function SingleTreeTable() {
     Message.success('请求成功');
   };
 
-  const tableOperation = (value, index, record) => {
+  const tableOperation = (value: string, index: number, record: any) => {
     return (
       <div className={styles.buttonGroup}>
         <Button type="primary" text onClick={fetchRemote}>删除</Button>
         {record && record.children &&
-        <>
-          <Button type="primary" text onClick={() => setVisible(true)}>编辑</Button>
-          <MenuButton
-            type="primary"
-            text
-            popupProps={{ autoFit: true }}
-            label="更多"
-          >
-            <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
-            <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
-          </MenuButton>
-        </>
+          <>
+            <Button type="primary" text onClick={() => setVisible(true)}>编辑</Button>
+            <MenuButton
+              type="primary"
+              text
+              popupProps={{ autoFit: true }}
+              label="更多"
+            >
+              <MenuButton.Item onClick={fetchRemote}>提交审核</MenuButton.Item>
+              <MenuButton.Item onClick={fetchRemote}>打回</MenuButton.Item>
+            </MenuButton>
+          </>
         }
       </div>
     );

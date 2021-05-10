@@ -1,6 +1,6 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import { Card, Form, ResponsiveGrid, Field, Input, Radio, Select, Button, Box } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface DataSource {
   name?: string;
@@ -19,7 +19,7 @@ export interface HierarchicalFormProps {
   onCancel?: () => void;
 }
 
-const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
+const HierarchicalForm: React.SFC<HierarchicalFormProps> = (props: HierarchicalFormProps) => {
   const {
     dataSource = {
       authType: 1,
@@ -33,9 +33,9 @@ const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
   });
 
   return (
-    <Card free className={styles.Card}>
+    <Card free className={styles.card}>
       <Card.Content>
-        <Form fullWidth field={field} className={styles.HierarchicalForm}>
+        <Form fullWidth field={field} className={styles.hierarchicalForm}>
           <Form.Item label="项目名称" required requiredMessage="请输入项目名称">
             <Input name="name" placeholder="给项目起个名字" />
           </Form.Item>
@@ -53,7 +53,7 @@ const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
               <Radio value={3}>开放项目</Radio>
             </Radio.Group>
             {field.getValue('authType') !== 3 && (
-              <ResponsiveGrid gap={[0, 15]} columns={2} className={styles.HierarchicalBlock}>
+              <ResponsiveGrid gap={[0, 15]} columns={2} className={styles.hierarchicalBlock}>
                 <ResponsiveGrid.Cell colSpan={{ desktop: 1, tablet: 1, phone: 2 }}>
                   <Form.Item label="权限范围">
                     <Select name="authScope" placeholder="请选择权限范围">
@@ -107,12 +107,12 @@ const HierarchicalForm: SFC<HierarchicalFormProps> = (props) => {
               <Form.Submit
                 validate
                 onClick={(value, errors) => (errors ? null : onSubmit(value))}
-                className={styles.Button}
+                className={styles.formButton}
                 type="primary"
               >
                 提交
               </Form.Submit>
-              <Button className={styles.Button} onClick={onCancel}>
+              <Button className={styles.formButton} onClick={onCancel}>
                 退回
               </Button>
             </Box>

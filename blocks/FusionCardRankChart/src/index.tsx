@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, ResponsiveGrid, Box, Divider } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Cell } = ResponsiveGrid;
 

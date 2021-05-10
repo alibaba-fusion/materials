@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 
 import { useInterval } from './utils';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { Item } = Form;
 
@@ -131,7 +131,7 @@ const LoginBlock: React.FunctionComponent<LoginProps> = (
   };
 
   return (
-    <div className={styles.LoginBlock}>
+    <div className={styles.loginBlock}>
       <div className={styles.innerBlock}>
         <a href="#">
           <img

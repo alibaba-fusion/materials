@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
 
-import { Item } from '@alifd/next/types/step';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface DataSource {
   name?: string;
@@ -25,14 +24,14 @@ const DEFAULT_DATA: DataSource = {
 };
 
 const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps): JSX.Element => {
-  const { dataSource = DEFAULT_DATA, onSubmit = (): void => {} } = props;
+  const { dataSource = DEFAULT_DATA, onSubmit = (): void => { } } = props;
 
   const projectField = Field.useField({ values: dataSource });
   const [currentStep, setStep] = useState<number>(0);
 
   const steps = ['填写信息', '确认信息', '完成'].map(
-    (item, index): Item => (
-      <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
+    (item, index) => (
+      <Step.Item key={index} title={item} />
     ),
   );
 
@@ -44,7 +43,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(currentStep + 1);
   };
 
-  const goNext = async (): Promise<T> => {
+  const goNext = async (): Promise<void> => {
     const { errors } = await projectField.validatePromise();
 
     if (errors) {
@@ -151,7 +150,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
   return (
     <div>
       <Card free>
-        <Card.Content className={styles.StepForm}>
+        <Card.Content className={styles.stepForm}>
           <Step current={currentStep} shape="circle">
             {steps}
           </Step>
