@@ -96,6 +96,7 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
 
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
+
       <div className={styles.listItem} key={i}>
         <div className={styles.cardMain}>
           <div className={styles.cardLeft}>
@@ -112,6 +113,7 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
               </div>
             </div>
           </div>
+
           <div className={styles.cardRight}>
             <Button type="primary" text>编辑</Button>
             <Button type="primary" text>订阅</Button>
@@ -139,7 +141,6 @@ const BasicList: React.FunctionComponent<BasicListProps> = (props: BasicListProp
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
-
         <Loading visible={loading} className={styles.mainList}>
           <Box className={styles.mainContent} spacing={10}>
             <div className={styles.listItem}>

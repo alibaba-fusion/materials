@@ -92,6 +92,7 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
 
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
+
       <Cell colSpan={3} className={styles.listItem} key={i}>
         <div className={styles.listMain}>
           <img src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png" alt="img" />
@@ -132,6 +133,7 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
       </Card>
       <Loading visible={loading} style={{ display: 'block' }}>
         <ResponsiveGrid gap={20}>
+
           <Cell colSpan={3} className={styles.listItem}>
             <Box className={styles.listAdd} justify="center" align="center">
               <Icon type="add" className={styles.listIcon} />

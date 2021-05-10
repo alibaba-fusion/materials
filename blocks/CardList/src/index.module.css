@@ -9,15 +9,19 @@
   margin-left: var(--shell-dark-content-paddingLeft, 20px);
 }
 
+
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
 }
 
+
 .tagBoxItem {
   display: flex;
   align-items: center;
 }
+
+
 .tagTitleName {
   width: 56px;
   margin-right: 12px;
@@ -28,11 +32,13 @@
 }
 
 
+
 .listItem .listMain {
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
 }
+
 
 .listItem img {
   width: 100%;
@@ -47,12 +53,14 @@
   font-size: 14px;
 }
 
+
 .listItem .listInfo {
   margin-top: 13px;
   color: #999;
   font-size: 12px;
   line-height: 20px;
 }
+
 
 .listItem .listLink {
   margin-top: 13px;
@@ -64,6 +72,7 @@
   font-size: 12px;
 }
 
+
 .listItem .listAdd {
   height: 100%;
   overflow: hidden;
@@ -72,6 +81,7 @@
   border-radius: 5px;
 
 }
+
 
 .listItem .listAdd .listIcon {
   color: #999;
