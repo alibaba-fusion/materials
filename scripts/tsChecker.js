@@ -46,7 +46,8 @@ function dtsCompiler(targetFolder) {
 
 // const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
 // 修改一个区块添加一个检测
-const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','FlowForm','Forbidden','FourColumnForm','MonitorBlock','WorkTable','ClassifiedForm','DialogForm','DialogTable','SettingPersonBlock','SettingSystemBlock','SingleColFilterTable','FlowForm', 'Forbidden', 'FourColumnForm','PageHeader', 'RegisterBlock', 'ServerError','ExpandTable','FailDetail','FilterTable','FusionCardAreaChart','FusionCardBarChart','FusionCardGroupBarChart','HierarchicalForm','LoginBlock','MergeCellTable','FusionCardLineChart','FusionCardPieChart','FusionCardRankChart','FusionCardTypebarChart', 'FusionCardWorldmapChart', 'GroupForm'];
+const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','FlowForm','Forbidden','FourColumnForm','MultiColFilterTable','MultiTreeTable','NotFound','MonitorBlock','WorkTable','ClassifiedForm','DialogForm','DialogTable','SettingPersonBlock','SettingSystemBlock','SingleColFilterTable','FlowForm', 'Forbidden', 'FourColumnForm','PageHeader', 'RegisterBlock', 'ServerError','ExpandTable','FailDetail','FilterTable','FusionCardAreaChart','FusionCardBarChart','FusionCardGroupBarChart','HierarchicalForm','LoginBlock','MergeCellTable','FusionCardLineChart','FusionCardPieChart','FusionCardRankChart','FusionCardTypebarChart', 'FusionCardWorldmapChart', 'GroupForm'];
+
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);

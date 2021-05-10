@@ -1,0 +1,41 @@
+.multiTreeTable :global .table-empty-block {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.multiTreeTable :global .table-empty-block .result-image {
+  height: 120px;
+}
+
+.multiTreeTable :global .table-empty-block .result-image img {
+  height: 100%;
+}
+
+.multiTreeTable :global .table-empty-block .result-title {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bcc4cc;
+}
+
+.multiTreeTable :global .next-pagination-total {
+  float: left;
+}
+
+.multiTreeTable  .selectedData {
+  color: #5584ff;
+  color: var(--color-link-1, #5584ff);
+}
+
+.multiTreeTable  .actionBar {
+  margin-bottom: 20px;
+}
+
+.multiTreeTable .Pagination {
+  margin-top: 16px;
+  text-align: right;
+}
