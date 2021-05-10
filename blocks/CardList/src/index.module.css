@@ -36,6 +36,7 @@
   border-radius: 5px;
 }
 
+
 .listItem img {
   width: 100%;
 }
@@ -49,12 +50,14 @@
   font-size: 14px;
 }
 
+
 .listItem .listInfo {
   margin-top: 13px;
   color: #999;
   font-size: 12px;
   line-height: 20px;
 }
+
 
 .listItem .listLink {
   margin-top: 13px;
