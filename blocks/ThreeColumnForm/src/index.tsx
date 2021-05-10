@@ -4,7 +4,6 @@ import { Input, Box, Button, Select, Form, DatePicker, Message, Radio, Upload, C
 import { UploadProps } from '@alifd/next/types/upload';
 import { Moment } from 'moment';
 
-import styles from './index.module.scss';
 
 const FormItem = Form.Item;
 
@@ -42,21 +41,21 @@ const DEFAULT_ON_SUBMIT = (values: ThreeColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props): JSX.Element => {
+const ThreeColumnForm: React.SFC<ThreeColumnFormProps> = (props: ThreeColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
     onCancel = () => { },
   } = props;
 
-  const [postData, setValue] = useState<ThreeColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: ThreeColumnFormProps) => {
+  const formChange = (value: DataSource) => {
     setValue(value);
   };
 
   return (
-    <Card free className={styles.ThreeColumnForm}>
+    <Card free >
       <Card.Content>
         <Form
           responsive
