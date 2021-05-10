@@ -1,3 +1,4 @@
+
 .basicList {
   margin-top: 20px;
   margin-top: var(--shell-dark-content-paddingTop, 20px);
@@ -19,6 +20,7 @@
   color: #5584ff;
 }
 
+
 .tagBox {
   padding: 0 20px 32px;
   padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
@@ -28,6 +30,7 @@
   display: flex;
   align-items: center;
 }
+
 
 .tagTitleName {
   width: 56px;
@@ -56,6 +59,7 @@
 }
 
 
+
 .listItem .cardMain {
   display: flex;
   align-items: center;
@@ -66,10 +70,12 @@
   border-bottom: 1px solid #eee;
 }
 
+
 .listItem .cardLeft {
   display: flex;
   align-items: center;
 }
+
 
 .listItem .cardRight {
   width: 100px;
@@ -86,10 +92,12 @@
   margin-right: 20px;
 }
 
+
 .listItem .cardTitle {
   color: #000;
   font-size: 16px;
 }
+
 
 .listItem .cardContent {
   margin: 12px 0;
@@ -97,10 +105,12 @@
   font-size: 12px;
 }
 
+
 .listItem .subContent {
   color: #999;
   font-size: 12px;
 }
+
 
 .listItem .addContent {
   display: flex;
@@ -114,6 +124,7 @@
   border-radius: 5px;
 
 }
+
 
 .listItem .addContent .addContentIcon {
   color: #999;
