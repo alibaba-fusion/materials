@@ -12,6 +12,7 @@ const options = {
   allowJs: true,
   declaration: true,
   emitDeclarationOnly: true,
+  skipLibCheck: true,
 };
 
 function dtsCompiler(targetFolder) {
@@ -44,9 +45,7 @@ function dtsCompiler(targetFolder) {
   }
 };
 
-// const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
-// 修改一个区块添加一个检测
-const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','FlowForm','Forbidden','FourColumnForm','SingleTreeTable','StepForm','SuccessDetail','MultiColFilterTable','MultiTreeTable','NotFound','MonitorBlock','WorkTable','ClassifiedForm','DialogForm','DialogTable','SettingPersonBlock','SettingSystemBlock','SingleColFilterTable','FlowForm', 'Forbidden', 'FourColumnForm','PageHeader', 'RegisterBlock', 'ServerError','ExpandTable','FailDetail','FilterTable','FusionCardAreaChart','FusionCardBarChart','FusionCardGroupBarChart','HierarchicalForm','LoginBlock','MergeCellTable','FusionCardLineChart','FusionCardPieChart','FusionCardRankChart','FusionCardTypebarChart', 'FusionCardWorldmapChart', 'GroupForm','TableList','ThreeColumnForm','TwoColumnForm'];
+const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);

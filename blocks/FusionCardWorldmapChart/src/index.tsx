@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
 import { Chart, Coord, View, Geom } from 'bizcharts';
 import { Card, Table } from '@alifd/next';
 import DataSet from '@antv/data-set';
@@ -31,6 +31,7 @@ interface FusionCardWorldmapChartProps {
   dataSource: DataSource;
 }
 
+const { useEffect, useState } = React;
 const DEFAULT_DATA: DataSource = {
   chartData: mock,
   tableData: [
@@ -100,7 +101,7 @@ const FusionCardWorldmapChart: React.SFC<FusionCardWorldmapChartProps> = (props:
           padding={[0, 20, 40, 20]}
           scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}
         >
-          <Coord reflect />
+          <Coord reflect="x" />
           <View data={mapDataFormat}>
             <Geom
               type="polygon"

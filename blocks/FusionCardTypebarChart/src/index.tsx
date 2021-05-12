@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Coord } from 'bizcharts';
 import mock from './mock.js';

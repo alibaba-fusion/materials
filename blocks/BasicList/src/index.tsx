@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Box, Search, Card, Tag, Divider, Typography, Icon, Loading, Button, Pagination } from '@alifd/next';
 
 import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 
 export interface ICardItem {

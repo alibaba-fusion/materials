@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Form, Box, Button, Card, DatePicker, Message, Radio, Upload } from '@alifd/next';
 
 import { UploadProps } from '@alifd/next/types/upload';
@@ -6,6 +6,7 @@ import { Moment } from 'moment';
 
 import styles from './index.module.css';
 
+const { useState } = React;
 const FormItem = Form.Item;
 
 const formItemLayout = {

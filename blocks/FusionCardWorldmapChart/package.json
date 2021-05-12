@@ -21,7 +21,8 @@
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
-    "bizcharts":"^3.0.0",
+    "@antv/data-set": "^0.10.2",
+    "bizcharts": "^3.0.0",
     "prop-types": "^15.5.8"
   },
   "blockConfig": {

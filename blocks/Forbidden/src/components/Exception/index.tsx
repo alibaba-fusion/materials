@@ -1,7 +1,6 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import styles from './index.module.css';
-
 
 export interface ExceptionProps {
   statusCode: string;
@@ -9,7 +8,7 @@ export interface ExceptionProps {
   image: string;
 }
 
-const Exception: SFC<ExceptionProps> = (props: ExceptionProps) => {
+const Exception: React.FC<ExceptionProps> = (props: ExceptionProps) => {
   const {
     statusCode = '404',
     description = '服务器好像挂了你要等会了',

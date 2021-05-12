@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Card, Box } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import classNames from 'classnames';

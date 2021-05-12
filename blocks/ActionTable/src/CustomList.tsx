@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import * as React from 'react';
 import { Button, Icon, Checkbox, Overlay } from '@alifd/next';
 import { ReactSortable, ItemInterface } from 'react-sortablejs';
 import { ColumnProps } from '@alifd/next/types/table/index';
@@ -7,6 +7,7 @@ import { getColumnKey } from './util';
 
 import styles from './index.module.css';
 
+const { useState, useRef } = React;
 export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
   children?: Column[];

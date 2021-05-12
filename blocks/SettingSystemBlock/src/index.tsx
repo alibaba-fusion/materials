@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Avatar, Card, Tab, ResponsiveGrid, Table, Typography, Upload, Button, Form, Input, Message, Box, Radio, Dialog, Icon } from '@alifd/next';
 import { UploadProps } from '@alifd/next/types/upload';
 import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 

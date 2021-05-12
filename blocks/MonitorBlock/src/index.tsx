@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { ResponsiveGrid } from '@alifd/next';
 import FusionCardAreaChart from './components/CardAreaChart';
 import FusionCardPieChart from './components/CardPieChart';

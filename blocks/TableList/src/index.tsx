@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Card, Table, Pagination, Divider, ResponsiveGrid, Button, Box, Form, Input, Select, Icon, Loading } from '@alifd/next';
 
 import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Cell } = ResponsiveGrid;
 const { Option } = Select;
 const FormItem = Form.Item;

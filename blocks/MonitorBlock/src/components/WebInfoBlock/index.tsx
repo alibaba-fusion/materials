@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, Card } from '@alifd/next';
 
 import styles from './index.module.css';

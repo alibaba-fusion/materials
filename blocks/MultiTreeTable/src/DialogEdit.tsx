@@ -1,9 +1,10 @@
-import React, { useCallback, useEffect } from 'react';
+import * as React from 'react';
 import { Dialog, Select, Form, Field, Input } from '@alifd/next';
 import { ValidateResults } from '@alifd/field';
 import { DialogProps } from '@alifd/next/types/dialog';
 import { DataItem } from './types';
 
+const { useCallback, useEffect } = React;
 const FormItem = Form.Item;
 
 interface IProps {

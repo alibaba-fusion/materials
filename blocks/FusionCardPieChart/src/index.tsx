@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Radio, Card, Box } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
 
 import styles from './index.module.css';
 
+const { useState } = React;
 const { Html } = Guide;
 
 interface ChartItem {

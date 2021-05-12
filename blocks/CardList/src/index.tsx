@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Box, Search, Card, Tag, ResponsiveGrid, Divider, Typography, Icon, Loading } from '@alifd/next';
 
 import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const { Cell } = ResponsiveGrid;
 export interface ICardItem {

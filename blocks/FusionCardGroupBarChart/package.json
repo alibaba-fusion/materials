@@ -21,6 +21,7 @@
     "design": "../../node_modules/.bin/build-scripts build --design --config ../../build.block.json"
   },
   "dependencies": {
+    "bizcharts": "^3.5.6",
     "prop-types": "^15.5.8"
   },
   "blockConfig": {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 
 import { useInterval } from './utils';
@@ -26,7 +26,7 @@ const DEFAULT_DATA: IDataSource = {
 interface LoginProps {
   dataSource?: IDataSource;
 }
-
+const { useState } = React;
 const LoginBlock: React.FunctionComponent<LoginProps> = (
   props = { dataSource: DEFAULT_DATA },
 ): JSX.Element => {
