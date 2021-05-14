@@ -14,7 +14,6 @@ export interface IQueryItem {
   componentProps?: Record<string, unknown>;
 }
 
-
 export interface IActionItem {
   buttonText: string;
   buttonProps?: Record<string, unknown>;
