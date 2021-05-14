@@ -58,7 +58,6 @@
     "access": "public"
   },
   "scaffoldConfig": {
-    "builder": "ice-scripts",
     "name": "ice-stark-layout",
     "title": "icestark 主应用",
     "categories": [
