@@ -6,7 +6,7 @@
 	"mock": true,
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro",
-		"version": "0.2.6",
+		"version": "0.3.0",
 		"description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
@@ -15,7 +15,9 @@
 			"bizcharts": "^3.5.6"
 		},
 		"devDependencies": {
-			"build-plugin-fusion-material": "^0.1.5"
+			"build-plugin-fusion-material": "^0.1.5",
+			"build-plugin-webpack5": "^1.2.3",
+			"webpack": "^5.0.0"
 		},
 		"scripts": {
 			"design": "icejs build --design",
@@ -244,7 +246,11 @@
 			"version": "^0.6.2"
 		},
 		"buildConfig": {
+			"customWebpack": true,
 			"plugins": [
+				["build-plugin-webpack5", {
+					"remoteRuntime": true
+				}],
 				"build-plugin-fusion-material"
 			]
 		}
