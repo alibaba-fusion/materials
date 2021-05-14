@@ -245,8 +245,7 @@
 			"plugins": [
 				["build-plugin-webpack5", {
 					"remoteRuntime": true
-				}],
-				"build-plugin-fusion-material"
+				}]
 			]
 		}
 	},

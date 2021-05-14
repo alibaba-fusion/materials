@@ -21,7 +21,6 @@
       {
         "remoteRuntime": true
       }
-    ],
-    "build-plugin-fusion-material"
+    ]
   ]
 }
