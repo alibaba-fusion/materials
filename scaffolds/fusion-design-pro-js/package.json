@@ -53,7 +53,7 @@
     "start": "icejs start",
     "build": "icejs build",
     "screenshot": "../../node_modules/.bin/screenshot -l",
-    "prepublishOnly": "npm run build -- --design && npm run screenshot",
+    "prepublishOnly": "npm run build && npm run screenshot",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "eslint:fix": "npm run eslint -- --fix",

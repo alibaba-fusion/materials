@@ -16,7 +16,7 @@
 		},
 		"scripts": {
 			"design": "icejs build --design",
-			"prepublishOnly": "npm run build -- --design && npm run screenshot"
+			"prepublishOnly": "npm run build && npm run screenshot"
 		},
 		"repository": {
 			"type": "git",

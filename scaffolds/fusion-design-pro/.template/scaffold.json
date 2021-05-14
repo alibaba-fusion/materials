@@ -20,8 +20,8 @@
 			"webpack": "^5.0.0"
 		},
 		"scripts": {
-			"design": "icejs build --design",
-			"prepublishOnly": "npm run build -- --design && npm run screenshot"
+			"design": "icejs build",
+			"prepublishOnly": "npm run build && npm run screenshot"
 		},
 		"repository": {
 			"type": "git",
@@ -250,7 +250,7 @@
 			"plugins": [
 				["build-plugin-webpack5", {
 					"remoteRuntime": true
-				}]
+				}],
 			]
 		}
 	},
