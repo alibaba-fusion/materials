@@ -1,5 +1,6 @@
 {
   "publicPath": "./",
+  "customWebpack": true,
   "plugins": [
     [
       "build-plugin-fusion",
@@ -15,6 +16,11 @@
         ]
       }
     ],
-    "build-plugin-fusion-material"
+    [
+      "build-plugin-webpack5",
+      {
+        "remoteRuntime": true
+      }
+    ]
   ]
 }

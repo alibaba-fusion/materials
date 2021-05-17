@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-simple",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "使用 TypeScript，未使用任何 UI 库。",
   "files": [
     ".vscode/",
