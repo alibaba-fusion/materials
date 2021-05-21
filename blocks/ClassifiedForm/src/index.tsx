@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import {
   Box,
   Button,
@@ -47,7 +47,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const ClassifiedForm: React.SFC<ClassifiedFormProps> = (props: ClassifiedFormProps): JSX.Element => {
+const ClassifiedForm: React.FunctionComponent<ClassifiedFormProps> = (props: ClassifiedFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = () => {},

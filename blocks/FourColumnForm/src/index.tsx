@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Box, Button, Select, Form, Card, DatePicker, Message, Radio } from '@alifd/next';
 
 import { Moment } from 'moment';
 
-
+const { useState } = React;
 const FormItem = Form.Item;
-
 const formItemLayout = {
   colSpan: 3,
 };

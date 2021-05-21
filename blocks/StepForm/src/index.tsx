@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
-
 
 import styles from './index.module.css';
 
@@ -22,7 +21,7 @@ const DEFAULT_DATA: DataSource = {
   authority: 'private',
   desc: '',
 };
-
+const { useState } = React;
 const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA, onSubmit = (): void => { } } = props;
 

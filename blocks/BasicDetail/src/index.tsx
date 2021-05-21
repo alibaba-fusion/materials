@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, Card, Table, Form } from '@alifd/next';
 
 import styles from './index.module.css';
@@ -61,7 +61,7 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props: BasicDeta
           <Card.Header title="基础信息" />
           <Card.Divider />
           <Card.Content>
-            <div className={styles.Content}>
+            <div className={styles.content}>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="公司简称" required>
                   <span>{dataSource.basicInfo.company}</span>
@@ -86,7 +86,7 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props: BasicDeta
           <Card.Header title="项目成员信息" />
           <Card.Divider />
           <Card.Content>
-            <div className={styles.Content}>
+            <div className={styles.content}>
               <Form labelAlign="top">
                 <Form.Item label="IC成语" required>
                   <span>{dataSource.projectMember.icMemeber}</span>
@@ -105,8 +105,8 @@ const BasicDetail: React.FunctionComponent<BasicDetailProps> = (props: BasicDeta
           <Card.Header title="目标公司" />
           <Card.Divider />
           <Card.Content>
-            <div className={styles.Content}>
-              <Table dataSource={dataSource.targetCompanys} hasBorder={false} className={styles.Table}>
+            <div className={styles.content}>
+              <Table dataSource={dataSource.targetCompanys} hasBorder={false} className={styles.mainTable}>
                 <Table.Column title="目标公司" dataIndex="targetCompany" />
                 <Table.Column title="主营业务" dataIndex="business" />
                 <Table.Column title="注册地" dataIndex="address" />

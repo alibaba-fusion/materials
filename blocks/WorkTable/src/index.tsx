@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import {
   Avatar,
   Box,
@@ -17,6 +17,7 @@ import mock from './mock';
 
 import styles from './index.module.css';
 
+const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
 

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
 
 import styles from './index.module.css';
 import { UploadProps } from '@alifd/next/types/upload';
 
+const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 

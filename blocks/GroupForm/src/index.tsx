@@ -1,4 +1,4 @@
-import React, { SFC, useState, useEffect, useRef } from 'react';
+import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import {
   Card,
@@ -49,7 +49,7 @@ export interface GroupFormProps {
   onSubmit?: (data: DataSource) => void;
   onCancel?: () => void;
 }
-
+const { useState, useEffect, useRef } = React;
 const DEFAULT_DATA: DataSource = {
   basic: {},
   member: {},
@@ -113,7 +113,7 @@ const DEFAULT_DATA: DataSource = {
   ],
 };
 
-const GroupForm: React.SFC<GroupFormProps> = (props: GroupFormProps) => {
+const GroupForm: React.FC<GroupFormProps> = (props: GroupFormProps) => {
   const {
     dataSource: defaultDataSource = DEFAULT_DATA,
     onSubmit = () => { },

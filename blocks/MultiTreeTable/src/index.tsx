@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import * as React from 'react';
 import { Button, Table, Card, Pagination, Icon, Dropdown, Menu, Message, Dialog } from '@alifd/next';
 import { useFusionTable, useSetState } from 'ahooks';
 
@@ -40,6 +40,7 @@ type RowRecord = DataItem & {
 
 type CellOperation = (value: any, rowIndex: number, record: RowRecord) => React.ReactNode;
 
+const { useCallback } = React;
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
   formData: { status: 'normal' | 'empty' | 'exception' },

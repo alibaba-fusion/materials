@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Card, Table, Button, MenuButton, Message, Dialog } from '@alifd/next';
 import styles from './index.module.css';
 
-
+const { useState } = React;
 const data = [{
   id: 'first',
   rowNo: '中华人民共和国国内安全管理条例',

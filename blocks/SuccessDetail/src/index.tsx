@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import { useInterval } from './utils';
 
@@ -17,9 +17,8 @@ export interface SuccessDetailProps {
   countDownSecnods: number;
   onButtonBack: DetailProcessFunc;
   onButtonContinue: DetailProcessFunc;
-
 }
-
+const { useState } = React;
 export default function SuccessDetail(props: SuccessDetailProps) {
   const {
     statusCode = '提交成功',

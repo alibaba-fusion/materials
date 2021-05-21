@@ -1,4 +1,4 @@
-import React, { SFC, useEffect, useState, useRef } from 'react';
+import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import { Box, Card, Button, Form, Input, Select, Radio, Step, Field, Divider, Tag, Avatar, Typography, ResponsiveGrid } from '@alifd/next';
 import styles from './index.module.css';
@@ -51,6 +51,8 @@ export interface FlowFormProps {
   onTransfer?: () => void;
   onSignature?: () => void;
 }
+
+const { useEffect, useState, useRef } = React;
 
 const DEFAULT_DATA: DataSource = {
   approval: {

@@ -12,12 +12,13 @@ const options = {
   allowJs: true,
   declaration: true,
   emitDeclarationOnly: true,
+  skipLibCheck: true,
 };
 
 function dtsCompiler(targetFolder) {
   const needCompileList = globby.sync(['**/*.ts?(x)'], {
     cwd: targetFolder,
-    ignore: ['node_modules', '*.d.ts'],
+    ignore: ['node_modules'],
     absolute: true,
   });
   if (needCompileList.length === 0) {
@@ -28,7 +29,7 @@ function dtsCompiler(targetFolder) {
   const host = ts.createCompilerHost(options);
 
   // Prepare and emit the d.ts files
-  const program = ts.createProgram(needCompileList, options, host);
+  const program = ts.createProgram([...needCompileList, path.join(__dirname, '../types/typings.d.ts')], options, host);
   const emitResult = program.emit();
   if (emitResult.diagnostics && emitResult.diagnostics.length > 0) {
     emitResult.diagnostics.forEach(diagnostic => {
@@ -42,24 +43,25 @@ function dtsCompiler(targetFolder) {
       throw new Error('ts checker failed');
     });
   }
+  try {
+    needCompileList.forEach((filePath) => {
+      fse.unlinkSync(filePath.replace(/\.ts(x)?$/, '.d.ts'));
+    });
+  } catch(err) {
+    console.log(err);
+  }
 };
 
-// const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
-// 修改一个区块添加一个检测
-const blocks = ['ActionTable','AdvancedDetail','BasicDetail','BasicForm','BasicList','CardList','FlowForm','Forbidden','FourColumnForm','SingleTreeTable','StepForm','SuccessDetail','MultiColFilterTable','MultiTreeTable','NotFound','MonitorBlock','WorkTable','ClassifiedForm','DialogForm','DialogTable','SettingPersonBlock','SettingSystemBlock','SingleColFilterTable','FlowForm', 'Forbidden', 'FourColumnForm','PageHeader', 'RegisterBlock', 'ServerError','ExpandTable','FailDetail','FilterTable','FusionCardAreaChart','FusionCardBarChart','FusionCardGroupBarChart','HierarchicalForm','LoginBlock','MergeCellTable','FusionCardLineChart','FusionCardPieChart','FusionCardRankChart','FusionCardTypebarChart', 'FusionCardWorldmapChart', 'GroupForm','TableList','ThreeColumnForm','TwoColumnForm'];
+const blocks = fse.readdirSync(path.join(__dirname, '../blocks'));
 
 for (const block of blocks) {
   const blockFolder = path.join(__dirname, `../blocks/${block}`);
-  const dtsFile = path.join(blockFolder, 'src', 'typings.d.ts');
   try {
     execSync(`cd blocks/${block} && npm i`, {
       stdio: 'inherit'
     });
-    fse.copyFileSync(path.join(__dirname, '../types/typings.d.ts'), dtsFile);
     dtsCompiler(blockFolder);
-    fse.removeSync(dtsFile)
   } catch (err) {
-    fse.removeSync(dtsFile)
     throw err;
   }
 }
