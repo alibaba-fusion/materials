@@ -2,7 +2,7 @@
   margin-top: -20px;
   margin-top: calc(0px - var(--shell-dark-content-paddingTop, 20px));
   margin-right: -20px;
-  margin-right:calc(0px - var(--shell-dark-content-paddingLeft, 20px)); 
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px)); 
   margin-bottom: 20px;
   margin-bottom: var(--shell-dark-content-paddingTop, 20px);
   margin-left: -20px;
