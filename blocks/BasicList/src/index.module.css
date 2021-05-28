@@ -1,38 +1,38 @@
 .basicList {
-  margin-top: 20px;
-  margin-top: var(--shell-dark-content-paddingTop, 20px);
-  margin-right: 20px;
-  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-top: -20px;
+  margin-top: calc(0px - var(--shell-dark-content-paddingTop, 20px));
+  margin-right: -20px;
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
   margin-bottom: 20px;
   margin-bottom: var(--shell-dark-content-paddingTop, 20px);
-  margin-left: 20px;
-  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  margin-left: -20px;
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
 }
 
-.totalPagin {
+.basicList .totalPagin {
   color: #4a5b6d;
   font-size: 12px;
 }
 
-.totalPagin span {
+.basicList .totalPagin span {
   padding: 0 3px;
   color: #5584ff;
 }
 
 
-.tagBox {
+.basicList .tagBox {
   padding: 0 20px 32px;
-  padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
+  padding: 0 var(--shell-dark-content-paddingLeft, 20px) var(--s-8, 32px);
 }
 
 
-.tagBoxItem {
+.basicList .tagBox .tagBoxItem {
   display: flex;
   align-items: center;
 }
 
 
-.tagTitleName {
+.basicList .tagTitleName {
   width: 56px;
   margin-right: 12px;
   margin-bottom: 8px;
@@ -42,7 +42,7 @@
 }
 
 
-.mainList {
+.basicList .mainList {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,17 +50,17 @@
   background: #f5f5f5;
 }
 
-.mainContent {
+.basicList .mainContent {
   padding: 40px 24px;
   background: #fff;
 }
 
 
-.listItem {
+.basicList .listItem {
   box-sizing: border-box;
 }
 
-.listItem .cardMain {
+.basicList .listItem .cardMain {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,44 +70,44 @@
   border-bottom: 1px solid #eee;
 }
 
-.listItem .cardLeft {
+.basicList .listItem .cardLeft {
   display: flex;
   align-items: center;
 }
 
-.listItem .cardRight {
+.basicList .listItem .cardRight {
   width: 100px;
   margin-right: 10px;
   margin-left: 10px;
 }
 
-.listItem .cardRight button {
+.basicList .listItem .cardRight button {
   margin-right: 5px;
 }
 
-.listItem img {
+.basicList .listItem img {
   width: 160px;
   margin-right: 20px;
 }
 
 
-.listItem .cardTitle {
+.basicList .listItem .cardTitle {
   color: #000;
   font-size: 16px;
 }
 
-.listItem .cardContent {
+.basicList .listItem .cardContent {
   margin: 12px 0;
   color: #999;
   font-size: 12px;
 }
 
-.listItem .subContent {
+.basicList .listItem .subContent {
   color: #999;
   font-size: 12px;
 }
 
-.listItem .addContent {
+.basicList .listItem .addContent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,11 +120,11 @@
 
 }
 
-.listItem .addContent .addContentIcon {
+.basicList .listItem .addContent .addContentIcon {
   color: #999;
 }
 
-.listItem .addText {
+.basicList .listItem .addText {
   margin-left: 5px;
   color: #999;
   font-size: 12px;
