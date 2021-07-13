@@ -63,21 +63,4 @@ $ iceworks generate
 ```bash
 # sync to fusion material center
 $ iceworks sync
-
-# sync to oss, will work in Iceworks
-$ ACCESS_KEY_ID=xxx ACCESS_KEY_SECRET=yyy node scripts/oss/upload.js
 ```
-
-## Usage
-
-Install [Iceworks for VS Code](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks):
-
-![install Iceworks](https://img.alicdn.com/tfs/TB1EdEDfODsXe8jSZR0XXXK6FXa-1446-906.gif)
-
-Add the materials data URL to Iceworks:
-
-> https://ice.alicdn.com/assets/materials/react-materials.json
-
-![add custom material](https://img.alicdn.com/tfs/TB1g9iMjTM11u4jSZPxXXahcXXa-1446-906.gif)
-
-See [Custom Material](https://ice.work/docs/iceworks/guide/material) to learn more about how to use materials in Iceworks.

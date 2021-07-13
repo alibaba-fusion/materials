@@ -14,8 +14,3 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm run lint
-      - run: npm run generate-and-deploy-oss
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
-          ACCESS_KEY_SECRET: ${{ secrets.ACCESS_KEY_SECRET }}
