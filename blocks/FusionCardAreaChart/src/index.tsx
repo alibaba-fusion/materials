@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom } from 'bizcharts';
+import { Chart, Line, Area } from 'bizcharts';
 import mock from './mock.js';
 
 import styles from './index.module.scss';
@@ -48,20 +48,20 @@ const FusionCardAreaChart: React.FunctionComponent<FusionCardAreaChartProps> = (
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
+          pure
           scale={{
             date: {
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', '0']}
+          autoFit
+          padding="auto"
+          appendPadding={[2, 0]}
         >
-          <Geom type="line" position="date*value" color="#00D6CB" shape="smooth" opacity={1} />
-          <Geom type="area" position="date*value" color="#00D6CB" shape="smooth" opacity={0.1} />
-
+          <Line position="date*value" color="#00D6CB" shape="smooth" opacity={1} />
+          <Area position="date*value" color="#00D6CB" shape="smooth" opacity={0.1} />
         </Chart>
       </Card.Content>
     </Card>

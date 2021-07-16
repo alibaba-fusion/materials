@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Radio, Card, Box } from '@alifd/next';
-import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
+import { Chart, Geom, Coord, Axis, Legend, Annotation, Tooltip } from 'bizcharts';
 
 import styles from './index.module.scss';
 
-const { Html } = Guide;
 
 interface ChartItem {
   type?: string;
@@ -52,6 +51,28 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 500,
 };
 
+const colors_pie = ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0', '#3436C7', '#223273'];
+
+const pieState = {
+  active: {
+    style: {
+      fillOpacity: 0.7,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 0.85,
+      lineWidth: 1,
+      stroke: 'white',
+      strokeOpacity: 1,
+    },
+  },
+};
+
 export interface FusionCardLineChartProps {
   cardConfig?: CardConfig;
 }
@@ -90,36 +111,64 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             </Radio>
           </Radio.Group>
         </Box>
-        <Chart width={10} height={chartHeight} forceFit data={chartData} padding={['auto', 'auto']}>
-          <Coord type="theta" radius={0.75} innerRadius={0.6} />
+        <Chart
+          height={chartHeight}
+          autoFit
+          data={chartData}
+          padding="auto"
+          appendPadding={[-18, 0, 0, 0]}
+          interactions={['element-single-selected', 'element-highlight']}
+        >
+          <Coord type="theta" radius={0.65} innerRadius={0.6} />
           <Axis name="percent" />
+          <Tooltip visible={false} />
           <Legend
             position="bottom"
-            layout="vertical"
-            offsetY={-30}
-            textStyle={{
-              fill: '#666',
-              fontSize: 14,
+            offsetY={-48}
+            itemName={{
+              style: {
+                fill: '#666',
+                fontSize: 14,
+              },
             }}
+            itemValue={null}
             itemMarginBottom={24}
+            flipPage={false}
+            maxWidth={400}
+            maxItemWidth={400}
           />
-          <Guide>
-            <Html
-              position={['50%', '50%']}
-              // eslint-disable-next-line max-len
-              html={`<div style='color:#333;font-size:16px;text-align: center;width: 113px;'>销售额<br><span style='color:#333;font-family: Roboto-Bold;font-size:24px'>¥ ${value}</span></div>`}
-              alignX="middle"
-              alignY="middle"
-            />
-          </Guide>
+
+          <Annotation.Text
+            position={['50%', '44%']}
+            content="销售额"
+            style={{
+              fontSize: '16',
+              fill: '#333',
+              textAlign: 'center',
+            }}
+          />
+
+          <Annotation.Text
+            position={['50%', '52%']}
+            content="¥ 183112"
+            style={{
+              fontSize: 24,
+              fontFamily: 'Roboto-Bold',
+              fill: '#333',
+              textAlign: 'center',
+            }}
+          />
           <Geom
-            type="intervalStack"
+            type="interval"
             position="value"
-            color="title"
+            color={['title', colors_pie]}
             style={{
               lineWidth: 1,
-              stroke: '#fff',
+              stroke: 'white',
+              fillOpacity: 0.85,
             }}
+            adjust="stack"
+            state={pieState}
           />
         </Chart>
       </Card.Content>

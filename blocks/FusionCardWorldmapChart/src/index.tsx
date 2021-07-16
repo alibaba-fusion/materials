@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Chart, Coord, View, Geom } from 'bizcharts';
+import { Chart, View, Geom, Coordinate } from 'bizcharts';
 import { Card, Table } from '@alifd/next';
 import DataSet from '@antv/data-set';
 import styles from './index.module.scss';
@@ -41,6 +41,44 @@ const DEFAULT_DATA: DataSource = {
   chartHeight: 500,
   chartWidth: 800,
   title: '实时监控情况',
+};
+
+const circleState = {
+  active: {
+    style: {
+      fillOpacity: 0.55,
+      stroke: 'transparent',
+      shadowColor: '#ff2f29',
+      shadowBlur: 30,
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 0.45,
+      stroke: 'transparent',
+    },
+  },
+};
+
+const polygonState = {
+  active: {
+    style: {
+      fillOpacity: 0.75,
+      fill: '#DDDDDD',
+      stroke: '#593821',
+      strokeOpacity: 1,
+      lineWidth: 0.5,
+    },
+  },
+  inactive: {
+    style: {
+      fillOpacity: 0.85,
+      fill: '#DDDDDD',
+      stroke: '#593821',
+      strokeOpacity: 1,
+      lineWidth: 0.5,
+    },
+  },
 };
 
 const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
@@ -94,14 +132,16 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
           </span>
         </div>
         <Chart
+          pure
           height={chartHeight}
           width={chartWidth}
           className={styles.map}
-          padding={[0, 20, 40, 20]}
+          padding={[0, 20, 20, 20]}
           scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}
+          interactions={['element-highlight']}
         >
-          <Coord reflect />
-          <View data={mapDataFormat}>
+          <Coordinate reflect="y" />
+          <View data={mapDataFormat} >
             <Geom
               type="polygon"
               position="x*y"
@@ -111,6 +151,7 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
                 lineWidth: 0.5,
                 fillOpacity: 0.85,
               }}
+              state={polygonState}
             />
           </View>
           <View data={chartDataFormat}>
@@ -119,8 +160,12 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
               position="x*y"
               size={['value', [2, 30]]}
               shape="circle"
-              opacity={0.45}
+              style={{
+                fillOpacity: 0.45,
+                stroke: 'transparent',
+              }}
               color="#ff2f29"
+              state={circleState}
             />
           </View>
         </Chart>
