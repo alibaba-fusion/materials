@@ -1,6 +1,5 @@
 {
   "publicPath": "./",
-  "customWebpack": true,
   "plugins": [
     [
       "build-plugin-fusion",
@@ -14,12 +13,6 @@
         "locales": [
           "zh-cn"
         ]
-      }
-    ],
-    [
-      "build-plugin-webpack5",
-      {
-        "remoteRuntime": true
       }
     ]
   ]

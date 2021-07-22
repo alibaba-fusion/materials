@@ -9,10 +9,6 @@
 			"@antv/data-set": "^0.10.2",
 			"bizcharts": "^3.5.6"
 		},
-		"devDependencies": {
-			"build-plugin-webpack5": "^1.2.3",
-			"webpack": "^5.0.0"
-		},
 		"repository": {
 			"type": "git",
 			"url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/fusion-design-pro-js"
@@ -28,14 +24,6 @@
 		"theme": {
 			"package": "@alifd/theme-design-pro",
 			"version": "0.x"
-		},
-		"buildConfig": {
-			"customWebpack": true,
-			"plugins": [
-				["build-plugin-webpack5", {
-					"remoteRuntime": true
-				}]
-			]
 		}
 	},
 	"layouts": [

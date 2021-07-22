@@ -44,9 +44,7 @@
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^7.30.0",
     "ice.js": "^1.0.0",
-    "stylelint": "^13.2.0",
-    "build-plugin-webpack5": "^1.2.3",
-    "webpack": "^5.0.0"
+    "stylelint": "^13.2.0"
   },
   "scripts": {
     "start": "icejs start",
