@@ -34,6 +34,10 @@ blocksList.forEach(block => {
   const packageInfo = require(blockPkgjson);
   const {version, name} = packageInfo;
 
+  if (version === 'latest') {
+    return;
+  }
+
   // 升级 updateMap 中区块的版本号
   // if (updateMap.indexOf(block) > -1) {
   // const versions = packageInfo.version.split('.');
