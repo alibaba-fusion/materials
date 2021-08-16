@@ -1,5 +1,6 @@
 {
   "publicPath": "./",
+  "minify": "esbuild",
   "plugins": [
     [
       "build-plugin-fusion",

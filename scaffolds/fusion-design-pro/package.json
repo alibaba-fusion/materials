@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     ".vscode/",
@@ -30,6 +30,8 @@
     "ahooks": "^2.0.0",
     "@antv/data-set": "^0.10.2",
     "bizcharts": "^3.5.6",
+    "sass": "1.32.13",
+    "ice.js": "next",
     "@alifd/theme-design-pro": "0.x",
     "prop-types": "^15.5.8",
     "lodash.debounce": "^4.0.8",

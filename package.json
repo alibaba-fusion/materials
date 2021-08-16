@@ -31,7 +31,7 @@
   "devDependencies": {
     "@alib/build-scripts": "^0.1.5",
     "@alifd/theme-design-pro": "^0.6.2",
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^11.0.0",
     "@ice/screenshot": "^0.1.5",
     "@iceworks/spec": "^1.0.0",
     "@types/fs-extra": "^8.0.1",

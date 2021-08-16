@@ -1,13 +1,15 @@
 {
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro-js",
-		"version": "0.3.1",
+		"version": "0.4.0",
 		"description": "使用 JavaScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
 			"@alifd/next": "^1.21.0",
 			"@antv/data-set": "^0.10.2",
-			"bizcharts": "^3.5.6"
+			"bizcharts": "^3.5.6",
+			"sass": "1.32.13",
+			"ice.js": "next"
 		},
 		"repository": {
 			"type": "git",
@@ -21,6 +23,9 @@
 		}
 	},
 	"build": {
+		"buildConfig": {
+			"minify": "esbuild"
+		},
 		"theme": {
 			"package": "@alifd/theme-design-pro",
 			"version": "0.x"
