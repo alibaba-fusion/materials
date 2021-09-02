@@ -24,9 +24,6 @@
 		}
 	},
 	"build": {
-		"buildConfig": {
-			"minify": "esbuild"
-		},
 		"theme": {
 			"package": "@alifd/theme-design-pro",
 			"version": "0.x"
