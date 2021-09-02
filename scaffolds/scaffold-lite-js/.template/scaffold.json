@@ -3,9 +3,9 @@
     "name": "@alifd/scaffold-lite-js",
     "version": "0.3.0",
     "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
-    "dependencies": {
-      "ice.js": "next",
-      "sass": "1.32.13"
+    "devDependencies": {
+      "ice.js": "^2.0.0-rc.1",
+      "build-plugin-fusion": "^0.1.18-rc.1"
     },
     "repository": {
       "type": "git",
@@ -20,7 +20,7 @@
   },
   "build": {
     "buildConfig": {
-      "minify": "esbuild"
+      "vite": true
     },
     "theme": {
       "package": "@alifd/theme-design-pro",

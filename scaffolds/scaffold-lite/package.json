@@ -26,16 +26,14 @@
     "moment": "^2.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "ice.js": "next",
-    "sass": "1.32.13",
     "@alifd/theme-design-pro": "0.x"
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
-    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-fusion": "^0.1.18-rc.1",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^7.30.0",
-    "ice.js": "^1.0.0",
+    "ice.js": "^2.0.0-rc.1",
     "stylelint": "^13.2.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2"

@@ -1,6 +1,6 @@
 {
   "publicPath": "./",
-  "minify": "esbuild",
+  "vite": true,
   "plugins": [
     [
       "build-plugin-fusion",

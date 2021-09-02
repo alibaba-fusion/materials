@@ -12,9 +12,10 @@
 			"ahooks": "^2.0.0",
 			"@alifd/next": "^1.21.0",
 			"@antv/data-set": "^0.10.2",
-			"bizcharts": "^3.5.6",
-			"sass": "1.32.13",
-			"ice.js": "next"
+			"bizcharts": "^3.5.6"
+		},
+		"devDependencies": {
+			"ice.js": "^2.0.0-rc.1"
 		},
 		"repository": {
 			"type": "git",
