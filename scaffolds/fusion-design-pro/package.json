@@ -1,6 +1,6 @@
 {
   "name": "@alifd/fusion-design-pro",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
   "files": [
     ".vscode/",
@@ -41,7 +41,7 @@
     "build-plugin-fusion": "^0.1.0",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^7.30.0",
-    "ice.js": "^1.0.0",
+    "ice.js": "^2.0.0-rc.1",
     "stylelint": "^13.2.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2"
