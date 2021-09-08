@@ -1,6 +1,3 @@
-/* // stylelint-disable-next-line block-no-empty */
-/* .container {} */
-
 .actionBar {
   display: flex;
   align-items: center;
@@ -8,15 +5,15 @@
   margin-bottom: 20px;
 }
 
-.buttonGroup:global .next-btn {
+.buttonGroup :global .next-btn {
   margin-right: 12px;
 }
 
-.rightButtonGroup:global .next-btn {
+.rightButtonGroup :global .next-btn {
   margin-left: 12px;
 }
 
-.columnSortPanel:global {
+.columnSortPanel :global {
   background: #fff;
   padding: 20px;
   border-radius: 3px;
@@ -27,38 +24,38 @@
   width: 180px;
 }
 
-.columnSortPanel:global .sort-item-container {
+.columnSortPanel :global .sort-item-container {
   width: 100%;
 }
 
-.columnSortPanel:global .sort-item {
+.columnSortPanel :global .sort-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 11px;
 }
 
-.columnSortPanel:global .sort-item:hover .column-handle {
+.columnSortPanel :global .sort-item:hover .column-handle {
   visibility: initial;
   cursor: move;
 }
 
-.columnSortPanel:global .sort-item-children {
+.columnSortPanel :global .sort-item-children {
   margin-left: 18px;
 }
 
-.columnSortPanel:global .sort-item .column-handle {
+.columnSortPanel :global .sort-item .column-handle {
   display: block;
   visibility: hidden;
   margin-left: 20px;
 }
 
-.columnSortPanel:global .sort-item .next-checkbox-wrapper.sort-checkbox {
+.columnSortPanel :global .sort-item .next-checkbox-wrapper.sort-checkbox {
   white-space: nowrap;
   max-width: calc(100% - 16px - 20px);
 }
 
-.columnSortPanel:global .sort-item .next-checkbox-wrapper.sort-checkbox .next-checkbox-label {
+.columnSortPanel :global .sort-item .next-checkbox-wrapper.sort-checkbox .next-checkbox-label {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
