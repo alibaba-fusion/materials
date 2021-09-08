@@ -8,15 +8,12 @@
     "generate-scaffold": "node scripts/generate.js",
     "clean": "rm -rf node_modules && rm -rf blocks/*/node_modules",
     "setup": "npm run clean && npm i",
-    "deploy": "npm run generate && npm run sync",
     "generate": "iceworks generate",
-    "sync": "npm run lint && iceworks sync",
-    "generate-and-deploy-oss": "node scripts/oss/upload.js",
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
-    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
-    "stylelint": "stylelint **/*.{css,scss,less}",
-    "tsChecker": "node scripts/tsChecker"
+    "tsChecker": "node scripts/tsChecker",
+    "eslint": "eslint --cache --quiet --ext .js,.jsx,.ts,.tsx ./",
+    "stylelint": "stylelint **/*.{css,scss,less}"
   },
   "husky": {
     "hooks": {
@@ -35,9 +32,8 @@
   "devDependencies": {
     "@alib/build-scripts": "^0.1.5",
     "@alifd/theme-design-pro": "^0.6.2",
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^11.0.0",
     "@ice/screenshot": "^0.1.5",
-    "@ice/spec": "^1.0.1",
     "@iceworks/spec": "^1.0.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.12.17",

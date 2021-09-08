@@ -32,7 +32,7 @@ const localeInfo = {
 
 interface Props {
   locale: string;
-  children: React.ReactElement;
+  children: React.ReactNode;
 }
 
 function LocaleProvider(props: Props) {

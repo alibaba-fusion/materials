@@ -1,8 +1,12 @@
 {
   "pkgData": {
     "name": "@alifd/scaffold-lite",
-    "version": "0.2.6",
+    "version": "0.3.0",
     "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
+    "devDependencies": {
+      "ice.js": "^2.0.0-rc.1",
+      "build-plugin-fusion": "^0.1.18-rc.1"
+    },
     "repository": {
       "type": "git",
       "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-lite"
@@ -15,9 +19,12 @@
     }
   },
   "build": {
+    "buildConfig": {
+      "vite": true
+    },
     "theme": {
       "package": "@alifd/theme-design-pro",
-      "version": "^0.x"
+      "version": "0.x"
     }
   },
   "layouts": [

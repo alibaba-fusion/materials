@@ -23,7 +23,8 @@ const tsRules = deepmerge(getESLintConfig('react-ts'), {
     // '@typescript-eslint/interface-name-prefix': 0,
     // '@typescript-eslint/explicit-function-return-type': 0,
     // '@typescript-eslint/no-extra-semi': 0,
-    // "@typescript-eslint/ban-types": 0
+    // "@typescript-eslint/ban-types": 0,
+    'react/no-unused-prop-types': 0,
   },
 });
 
