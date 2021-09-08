@@ -116,17 +116,17 @@ const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Elemen
   };
 
   return (
-    <div className={styles.WorkTable}>
+    <div className={styles.workTable}>
       <div className={styles.workerContainor}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
             <Avatar size={80} src={person.avatar} className={styles.avatar} />
             <Box>
-              <Typography.Text className={styles.TitleName}>
+              <Typography.Text className={styles.titleName}>
                 {person.surname}
                 {person.name}
               </Typography.Text>
-              <Typography.Text className={styles.TitleInfo}>{person.email}</Typography.Text>
+              <Typography.Text className={styles.titleInfo}>{person.email}</Typography.Text>
             </Box>
           </Box>
           <Tab activeKey={tab} className={styles.tab} onChange={changeTab}>

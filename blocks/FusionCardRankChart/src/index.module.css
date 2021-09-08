@@ -49,29 +49,29 @@
   height: 100%;
 }
 
-.subDiv {
+.subCard .subDiv {
   height: 100%;
   margin: 0;
 }
 
-.subDiv .subFooter {
+.subCard  .subFooter {
   margin-top: 50px;
 }
 
-.subDiv .subFooter div:first-child {
+.subCard  .subFooter div:first-child {
   color: rgba(153, 153, 153, 1);
 }
 
-.subDiv .subFooter div:nth-child(2) {
+.subCard  .subFooter div:nth-child(2) {
   color: rgba(54, 207, 201, 1);
   font-size: 32px;
 }
 
-.subDiv .subBody {
+.subCard  .subBody {
   width: 100%;
 }
 
-.subDiv .subBody .subName {
+.subCard  .subBody .subName {
   color: #222;
   font-weight: bold;
   font-size: 16px;
@@ -79,25 +79,25 @@
   text-align: center;
 }
 
-.subDiv .subBody .subName+div {
+.subCard  .subBody .subName+div {
   width: 100%;
   margin-top: 0;
 }
 
-.subDiv .subMain {
+.subCard  .subMain {
   margin-top: 50px;
 }
 
-.subDiv .subMain .subTypeName {
+.subCard  .subMain .subTypeName {
   color: rgba(153, 153, 153, 1);
   font-size: 12px;
 }
 
-.subDiv .subMain .subMainDiv {
+.subCard  .subMain .subMainDiv {
   height: 20px;
 }
 
-.subDiv .subMain .subTypeValue {
+.subCard  .subMain .subTypeValue {
   font-weight: bold;
   font-size: 20px;
 }

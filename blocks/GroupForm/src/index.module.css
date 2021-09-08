@@ -18,10 +18,10 @@
   left: 0;
   z-index: 1;
   height: 66px;
-  margin-right: 20px;
-  margin-right: var(--shell-dark-content-paddingLeft, 20px);
-  margin-left: 20px;
-  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  margin-right: -20px;
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  margin-left: -20px;
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
   background: #fff;
   box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: var(--shadow-3-up, 0 -3px 5px 0 rgba(0, 0, 0, 0.12));

@@ -77,7 +77,7 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
           <Coord type="theta" radius={0.75} innerRadius={0.6} />
           <Axis name="percent" />
           <Legend
-            position="right"
+            position="right-center"
             textStyle={{
               fill: '#666',
               fontSize: 14,
