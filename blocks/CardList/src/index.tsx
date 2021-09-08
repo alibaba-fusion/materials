@@ -97,8 +97,8 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
       <Cell colSpan={3} className={styles.listItem} key={i}>
         <div className={styles.listMain}>
           <img src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png" alt="img" />
-          <div className={styles.content}>
-            <div className={styles.listContent}>
+          <div className={styles.listContent}>
+            <div className={styles.listTitle}>
               {c.title}
             </div>
             <div className={styles.listInfo}>

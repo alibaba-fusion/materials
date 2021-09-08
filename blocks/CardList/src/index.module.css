@@ -1,18 +1,18 @@
 .cardList {
-  margin-top: 20px;
-  margin-top: var(--shell-dark-content-paddingTop, 20px);
-  margin-right: 20px;
-  margin-right: var(--shell-dark-content-paddingLeft, 20px);
+  margin-top: -20px;
+  margin-top: calc(0px - var(--shell-dark-content-paddingTop, 20px));
+  margin-right: -20px;
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
   margin-bottom: 20px;
   margin-bottom: var(--shell-dark-content-paddingTop, 20px);
-  margin-left: 20px;
-  margin-left: var(--shell-dark-content-paddingLeft, 20px);
+  margin-left: -20px;
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
 }
 
 
 .tagBox {
   padding: 0 20px 32px;
-  padding: 0 var(--shell-dark-content-paddingLeft) var(--s-8);
+  padding: 0 var(--shell-dark-content-paddingLeft, 20px) var(--s-8, 32px);
 }
 
 
