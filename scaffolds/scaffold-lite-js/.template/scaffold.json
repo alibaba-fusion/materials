@@ -1,11 +1,11 @@
 {
   "pkgData": {
     "name": "@alifd/scaffold-lite-js",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
     "devDependencies": {
-      "ice.js": "^2.0.0-rc.1",
-      "build-plugin-fusion": "^0.1.18-rc.1"
+      "ice.js": "^2.0.0",
+      "build-plugin-fusion": "^0.1.18"
     },
     "repository": {
       "type": "git",
