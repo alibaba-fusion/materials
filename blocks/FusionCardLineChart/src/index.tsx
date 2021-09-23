@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@alifd/next';
-import { Chart, Geom } from 'bizcharts';
+import { Chart, LineAdvance } from 'bizcharts';
 import mock from './mock.js';
 
 import styles from './index.module.scss';
@@ -55,7 +55,6 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
           scale={{
@@ -63,13 +62,13 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', '0']}
+          pure
+          autoFit
+          padding="auto"
+          appendPadding={[2, 0, 0, 0]} // 留出图形出血位置
         >
-          <Geom type="line" position="date*value" shape="smooth" color="#2B7FFB" />
-          <Geom type="area" position="date*value" shape="smooth" color="#2B7FFB" opacity={0.1} />
-          <Geom type="line" position="date*num" shape="smooth" color="#00D6CB" opacity={1} />
-          <Geom type="area" position="date*num" shape="smooth" color="#00D6CB" opacity={0.1} />
+          <LineAdvance area position="date*value" shape="smooth" color="#2B7FFB" />
+          <LineAdvance area position="date*num" shape="smooth" color="#00D6CB"  />
         </Chart>
       </Card.Content>
     </Card>

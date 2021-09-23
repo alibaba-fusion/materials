@@ -29,6 +29,22 @@ const DEFAULT_DATA: CardConfig = {
   chartHeight: 100,
 };
 
+const barState = {
+  // 鼠标hover后的active
+  active: {
+    style: {
+      fillOpacity: 0.8,
+      stroke: 'transparent',
+    },
+  },
+  // 其他未被hover的图形样式
+  inactive: {
+    style: {
+      fillOpacity: 1,
+    },
+  },
+};
+
 export interface FusionCardBarChartProps {
   cardConfig?: CardConfig;
 }
@@ -55,7 +71,6 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
         <div className={styles.value}>{value}</div>
         <div className={styles.des}>{des}<span>{rate}↑</span></div>
         <Chart
-          width={10}
           height={chartHeight}
           data={chartData}
           scale={{
@@ -63,10 +78,21 @@ const FusionCardBarChart: React.FunctionComponent<FusionCardBarChartProps> = (pr
               range: [0, 1],
             },
           }}
-          forceFit
-          padding={['auto', '16']}
+          // pure chart 关闭图表默认组件
+          pure
+          autoFit
+          padding="auto"
+          appendPadding={[0, 16, 0, 16]}
+          // 鼠标hover产生active状态
+          interactions={['element-highlight']}
         >
-          <Geom type="interval" position="date*value" color="#29A5FF" />
+          <Geom
+            type="interval"
+            position="date*value"
+            color="#29A5FF"
+            // 自定义状态样式
+            state={barState}
+          />
         </Chart>
       </Card.Content>
     </Card>
