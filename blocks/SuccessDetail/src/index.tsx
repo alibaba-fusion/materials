@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import { useInterval } from './utils';
-
 import styles from './index.module.css';
 
 interface DetailProcessFunc {
@@ -14,7 +13,7 @@ export interface SuccessDetailProps {
   image: string;
   buttonBackDesc: string;
   buttonContinueDesc: string;
-  countDownSecnods: number;
+  countDownSeconds: number;
   onButtonBack: DetailProcessFunc;
   onButtonContinue: DetailProcessFunc;
 }
@@ -26,7 +25,7 @@ export default function SuccessDetail(props: SuccessDetailProps) {
     image = 'https://img.alicdn.com/tfs/TB1UOSVoqL7gK0jSZFBXXXZZpXa-73-72.png',
     buttonBackDesc = '返回列表',
     buttonContinueDesc = '继续创建',
-    countDownSecnods = 5,
+    countDownSeconds: countDownSecnods = 5,
     onButtonBack = null,
     onButtonContinue = null,
   } = props;
@@ -60,7 +59,7 @@ export default function SuccessDetail(props: SuccessDetailProps) {
     <Card free className={styles.successDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statuscode}>{statusCode}</h1>
+        <h1 className={styles.statusCode}>{statusCode}</h1>
         <div className={styles.description}>{`${second > 0 ? second : 0}${description}`}</div>
         <div className={styles.operationWrap}>
           <Button type="primary" onClick={gobackHandle} className={styles.mainAction}>{buttonBackDesc}</Button>

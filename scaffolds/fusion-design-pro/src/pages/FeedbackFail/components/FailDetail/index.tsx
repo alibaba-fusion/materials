@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button, Message, Card } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface FailDetailProps {
   statusCode: string;
@@ -31,10 +31,10 @@ export default function FailDetail(props: FailDetailProps) {
   };
 
   return (
-    <Card free className={styles.FailDetail}>
+    <Card free className={styles.failDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statuscode}>{statusCode}</h1>
+        <h1 className={styles.statusCode}>{statusCode}</h1>
         <div className={styles.description}>{description}</div>
         <div className={styles.operationWrap}>
           <Button type="primary" onClick={gobackHandle} className={styles.mainAction}>{buttonBackDesc}</Button>

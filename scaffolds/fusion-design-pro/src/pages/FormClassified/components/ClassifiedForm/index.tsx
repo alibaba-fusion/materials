@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import {
   Box,
   Button,
@@ -11,7 +11,6 @@ import {
   Divider,
   Message,
 } from '@alifd/next';
-import styles from './index.module.scss';
 
 export interface DataSource {
   job: {
@@ -48,7 +47,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
+const ClassifiedForm: React.FunctionComponent<ClassifiedFormProps> = (props: ClassifiedFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = () => {},
@@ -67,8 +66,8 @@ const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
       return;
     }
     const values = {
-      basic: jobField.getValues(),
-      member: treatmentField.getValues(),
+      job: jobField.getValues(),
+      treatment: treatmentField.getValues(),
     };
     console.log('values:', values);
     onSubmit(values);
@@ -76,8 +75,8 @@ const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
   };
 
   return (
-    <div className={styles.ClassifiedForm}>
-      <Card free className={styles.Card}>
+    <div >
+      <Card free >
         <Card.Header title="工作经历" />
         <Card.Divider />
         <Card.BulletHeader title="分类信息" />
@@ -132,7 +131,7 @@ const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
               </Radio.Group>
             </Form.Item>
             <Form.Item colSpan={8} label="选项/RSU 描述">
-              <Input.TextArea name="rsuDesc" placeholder="请输入" hasLimitHint maxLength={500} />
+              <Input.TextArea name="rsuDesc" placeholder="请输入" showLimitHint maxLength={500} />
             </Form.Item>
           </Form>
           <Divider />

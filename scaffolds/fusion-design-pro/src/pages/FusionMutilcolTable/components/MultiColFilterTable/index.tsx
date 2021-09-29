@@ -1,19 +1,19 @@
-import React, { useCallback } from 'react';
+import * as React from 'react';
 import { Button, Select, Input, Form, Field, Table, Card, Pagination, Icon } from '@alifd/next';
 import { useFusionTable, useSetState } from 'ahooks';
 
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useCallback } = React;
 const FormItem = Form.Item;
 
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
   formData: { status: 'normal' | 'empty' | 'exception' },
 ): Promise<any> => {
-  console.log(current, pageSize, formData);
   if (!formData.status || formData.status === 'normal') {
     let query = `page=${current}&size=${pageSize}`;
     Object.entries(formData).forEach(([key, value]) => {

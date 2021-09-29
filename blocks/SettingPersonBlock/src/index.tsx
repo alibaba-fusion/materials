@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
-
-import styles from './index.module.css';
 import { UploadProps } from '@alifd/next/types/upload';
+import styles from './index.module.css';
 
 const { useState } = React;
 const { Cell } = ResponsiveGrid;
@@ -34,7 +33,7 @@ const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingPersonBlock: React.SFC<SettingPersonProps> = (props: SettingPersonProps): JSX.Element => {
+const SettingPersonBlock: React.FC<SettingPersonProps> = (props: SettingPersonProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
@@ -48,18 +47,18 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props: SettingPersonP
     setValue(values);
   };
 
-  let coutDownTimer: NodeJS.Timeout;
+  let countDownTimer: NodeJS.Timeout;
   let countDown = 60;
 
   // 获取验证码按钮点击示例
-  const onValideCodeButtonClicked = (): void => {
+  const onValidateCodeButtonClicked = (): void => {
     setButtonDisabled(true);
     countDown = 60;
     setButtonText(`${countDown}s`);
 
-    coutDownTimer = setInterval(() => {
+    countDownTimer = setInterval(() => {
       if (--countDown <= 0) {
-        if (coutDownTimer) clearInterval(coutDownTimer);
+        if (countDownTimer) clearInterval(countDownTimer);
         setButtonText('获取验证码');
         setButtonDisabled(false);
         return;
@@ -109,10 +108,10 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props: SettingPersonP
               </Cell>
               <Cell colSpan={4}>
                 <Button
-                  className={styles.valideCodeButton}
+                  className={styles.validateCodeButton}
                   type="secondary"
                   disabled={buttonDisabled}
-                  onClick={onValideCodeButtonClicked}
+                  onClick={onValidateCodeButtonClicked}
                 >
                   {buttonText}
                 </Button>

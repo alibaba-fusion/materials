@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
+import { UploadProps } from '@alifd/next/types/upload';
+import styles from './index.module.css';
 
-import styles from './index.module.scss';
-
+const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 
@@ -32,32 +33,32 @@ const DEFAULT_ON_SUBMIT = (values: SettingPersonProps, errors: []): void => {
   Message.success('更新成功');
 };
 
-const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element => {
+const SettingPersonBlock: React.FC<SettingPersonProps> = (props: SettingPersonProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
   } = props;
 
-  const [postData, setValue] = useState<SettingPersonProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
   const [buttonText, setButtonText] = useState('发送验证码');
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
-  const formChange = (values: SettingPersonProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 
-  let coutDownTimer: NodeJS.Timeout;
+  let countDownTimer: NodeJS.Timeout;
   let countDown = 60;
 
   // 获取验证码按钮点击示例
-  const onValideCodeButtonClicked = (): void => {
+  const onValidateCodeButtonClicked = (): void => {
     setButtonDisabled(true);
     countDown = 60;
     setButtonText(`${countDown}s`);
 
-    coutDownTimer = setInterval(() => {
+    countDownTimer = setInterval(() => {
       if (--countDown <= 0) {
-        if (coutDownTimer) clearInterval(coutDownTimer);
+        if (countDownTimer) clearInterval(countDownTimer);
         setButtonText('获取验证码');
         setButtonDisabled(false);
         return;
@@ -69,7 +70,7 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
 
   return (
     <Card free>
-      <Card.Content className={styles.SettingPersonBlock}>
+      <Card.Content className={styles.settingPersonBlock}>
         <Form value={postData} labelAlign="top" onChange={formChange} responsive>
           <FormItem label="" colSpan={12}>
             <ResponsiveGrid gap={10}>
@@ -107,10 +108,10 @@ const SettingPersonBlock: React.SFC<SettingPersonProps> = (props): JSX.Element =
               </Cell>
               <Cell colSpan={4}>
                 <Button
-                  className={styles.valideCodeButton}
+                  className={styles.validateCodeButton}
                   type="secondary"
                   disabled={buttonDisabled}
-                  onClick={onValideCodeButtonClicked}
+                  onClick={onValidateCodeButtonClicked}
                 >
                   {buttonText}
                 </Button>

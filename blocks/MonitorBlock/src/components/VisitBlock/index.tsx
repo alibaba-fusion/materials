@@ -58,7 +58,7 @@ const InfoBlock: React.FC<TitleItem> = (props = DEFAULT_DATA.titleItem[0]): JSX.
     <Box className={styles.header} direction="column">
       <div>
         <i className={classNames(styles.rateIcon)} />
-        <span className={styles.totle_font}>{name}</span>
+        <span className={styles.titleFont}>{name}</span>
       </div>
       <Box align="baseline" direction="row">
         <span className={styles.title}>{value}</span>

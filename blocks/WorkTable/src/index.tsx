@@ -40,7 +40,7 @@ interface TimeLineItem {
   planName?: string;
   planAddress?: string;
   planTime?: string;
-  planDuaring?: string;
+  planDuring?: string;
 }
 
 interface UpdateItem {
@@ -88,7 +88,7 @@ export interface WorkTableProps {
   dataSource?: DataSource;
 }
 
-const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
+const WorkTable: React.FC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA } = props;
 
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
@@ -117,7 +117,7 @@ const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Elemen
 
   return (
     <div className={styles.workTable}>
-      <div className={styles.workerContainor}>
+      <div className={styles.workerContainer}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
             <Avatar size={80} src={person.avatar} className={styles.avatar} />
@@ -185,7 +185,7 @@ const WorkTable: React.SFC<WorkTableProps> = (props: WorkTableProps): JSX.Elemen
                             <>
                               <span className={styles.planTime}>{item.planTime}</span>
                               <br />
-                              <span className={styles.planDuaring}>{item.planDuaring}</span>
+                              <span className={styles.planDuring}>{item.planDuring}</span>
                             </>
                           }
                         />

@@ -34,7 +34,7 @@ export default function FailDetail(props: FailDetailProps) {
     <Card free className={styles.failDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statuscode}>{statusCode}</h1>
+        <h1 className={styles.statusCode}>{statusCode}</h1>
         <div className={styles.description}>{description}</div>
         <div className={styles.operationWrap}>
           <Button type="primary" onClick={gobackHandle} className={styles.mainAction}>{buttonBackDesc}</Button>

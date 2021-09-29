@@ -1,9 +1,9 @@
-import React, { useRef, useCallback } from 'react';
+import * as React from 'react';
 import { Dialog } from '@alifd/next';
 import { DialogProps } from '@alifd/next/types/dialog';
-
 import Operation, { ActionType, OperaitionProps, OperationRef } from './Operation';
 
+const { useRef, useCallback } = React;
 const getDialogTitle = (actionType: ActionType): string => {
   switch (actionType) {
     case 'add':

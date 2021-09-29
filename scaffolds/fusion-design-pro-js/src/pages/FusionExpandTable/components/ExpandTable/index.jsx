@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Card, Table, Pagination, Field, Button } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const { useState } = React;
 

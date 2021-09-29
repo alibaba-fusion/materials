@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Card, Table, Pagination } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
+import { number } from 'prop-types';
 
 const MockData = [
   {
@@ -65,9 +66,15 @@ const MockData = [
   },
 ];
 
+export interface recordType {
+  groupCount: number;
+  groupIndex: number;
+  group2Merged: any[string];
+}
+
 const getTableData = () => Promise.resolve({ total: MockData.length, list: MockData });
 
-const cellProps = (rowIndex, colIndex, dataIndex, record) => {
+const cellProps = (rowIndex: number, colIndex: number, dataIndex: string, record: recordType) => {
   const { groupCount, groupIndex, group2Merged } = record;
   // 合并待 merge 的行
   if (group2Merged.find((val: string) => val === dataIndex)) {

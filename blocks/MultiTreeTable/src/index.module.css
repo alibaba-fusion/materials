@@ -27,7 +27,6 @@
 }
 
 .multiTreeTable  .selectedData {
-  color: #5584ff;
   color: var(--color-link-1, #5584ff);
 }
 

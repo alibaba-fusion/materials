@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Box, Button, Select, Form, DatePicker, Message, Radio, Upload, Card } from '@alifd/next';
-import styles from './index.module.scss';
 
+const { useState } = React;
 const FormItem = Form.Item;
 const formItemLayout = {
   colSpan: 4,
@@ -29,7 +29,7 @@ const ThreeColumnForm = (props) => {
   };
 
   return (
-    <Card free className={styles.ThreeColumnForm}>
+    <Card free>
       <Card.Content>
         <Form responsive fullWidth value={postData} labelAlign="top" onChange={formChange}>
           <FormItem {...formItemLayout} label="项目名称：" required>

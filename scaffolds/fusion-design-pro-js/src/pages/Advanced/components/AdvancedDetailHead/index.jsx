@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, Form, Typography, Avatar, Tab, MenuButton, Button, Card, Step, Table, Divider } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const DEFAULT_DATA = {
   logs: [
@@ -34,12 +34,12 @@ const DEFAULT_DATA = {
     company: '浙江杭州天猫有限公司',
     position: '高级研发专家',
     address: '中国/浙江',
-    descripton:
+    description:
       'Fusion 是一套企业级中后台设计系统解决方案，致力于解决产品体验一致性问题、设计研发协同问题，以及UI开发效率问题。',
   },
   salary: {
     month: '20,000 USD',
-    monthNumber: 13,
+    monthNumber: '13',
     bonus: '5,000 USD',
     rsu: 'No',
   },
@@ -50,37 +50,37 @@ const AdvancedDetail = (props) => {
 
   const renderTab = () => {
     return (
-      <Tab navClassName={styles.TabBar} onChange={onTableTabChange}>
-        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志一</span>} key="1" className={styles.TabItem} />
-        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志二</span>} key="2" className={styles.TabItem} />
-        <Tab.Item title={<span className={styles.TabItemTitle}>操作日志三</span>} key="3" />
+      <Tab navClassName={styles.tabBar} onChange={onTableTabChange}>
+        <Tab.Item title={<span className={styles.tabItemTitle}>操作日志一</span>} key="1" className={styles.tabItem} />
+        <Tab.Item title={<span className={styles.tabItemTitle}>操作日志二</span>} key="2" className={styles.tabItem} />
+        <Tab.Item title={<span className={styles.tabItemTitle}>操作日志三</span>} key="3" />
       </Tab>
     );
   };
 
   return (
     <>
-      <Card free className={styles.AdvancedDetailHead}>
+      <Card free className={styles.advancedDetailHead}>
         <Box spacing={10}>
           <Box direction="row" spacing={10}>
             <Avatar size="large" src={dataSource.person.avatar} />
             <Box flex={1} spacing={15}>
               <Box direction="row" justify="space-between">
                 <Box>
-                  <Typography.Text className={styles.TitleName}>
+                  <Typography.Text className={styles.titleName}>
                     {dataSource.person.surname}
                     {dataSource.person.name}
                   </Typography.Text>
-                  <Typography.Text className={styles.TitleInfo}>
+                  <Typography.Text className={styles.titleInfo}>
                     {dataSource.person.phone} | {dataSource.person.email}
                   </Typography.Text>
                 </Box>
                 <Box spacing={8} direction="row">
-                  <Button type="primary" className={styles.button}>
+                  <Button type="primary" className={styles.boxButton}>
                     主操作
                   </Button>
-                  <Button className={styles.button}>操作一</Button>
-                  <MenuButton label="更多" className={styles.button}>
+                  <Button className={styles.boxButton}>操作一</Button>
+                  <MenuButton label="更多" className={styles.boxButton}>
                     <MenuButton.Item key="1">操作一</MenuButton.Item>
                     <MenuButton.Item key="2">操作二</MenuButton.Item>
                   </MenuButton>
@@ -108,24 +108,24 @@ const AdvancedDetail = (props) => {
               </Form>
             </Box>
           </Box>
-          <Tab navClassName={styles.TabBar} onChange={onTabChange}>
+          <Tab navClassName={styles.tabBar} onChange={onTabChange}>
             <Tab.Item
-              title={<span className={styles.TabItemTitle}>选项卡一</span>}
+              title={<span className={styles.tabItemTitle}>选项卡一</span>}
               key="1"
-              className={styles.TabItem}
+              className={styles.tabItem}
             />
             <Tab.Item
-              title={<span className={styles.TabItemTitle}>选项卡二</span>}
+              title={<span className={styles.tabItemTitle}>选项卡二</span>}
               key="2"
-              className={styles.TabItem}
+              className={styles.tabItem}
             />
-            <Tab.Item title={<span className={styles.TabItemTitle}>选项卡三</span>} key="3" />
+            <Tab.Item title={<span className={styles.tabItemTitle}>选项卡三</span>} key="3" />
           </Tab>
         </Box>
       </Card>
       <Box spacing={20}>
         <Card contentHeight="auto">
-          <Step shape="dot" current={1} className={styles.Step}>
+          <Step shape="dot" current={1} className={styles.step}>
             <Step.Item
               title="申请"
               content={
@@ -138,7 +138,7 @@ const AdvancedDetail = (props) => {
                 </div>
               }
             />
-            <Step.Item title="审批" content={<a className={styles.a}>张三</a>} />
+            <Step.Item title="审批" content={<a className={styles.stepA}>张三</a>} />
             <Step.Item title="接受" />
             <Step.Item title="合同发送" />
             <Step.Item title="合同接受" />
@@ -179,7 +179,7 @@ const AdvancedDetail = (props) => {
           <Card.Divider />
           <Card.Content>
             <Box>
-              <Typography.Text className={styles.SubTitle}>分类标题</Typography.Text>
+              <Typography.Text className={styles.subTitle}>分类标题</Typography.Text>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="工作单位" required>
                   <span className="next-form-preview">{dataSource.preJob.company}</span>
@@ -196,7 +196,7 @@ const AdvancedDetail = (props) => {
               </Form>
             </Box>
             <Divider dashed />
-            <Typography.Text className={styles.SubTitle}>分类标题</Typography.Text>
+            <Typography.Text className={styles.subTitle}>分类标题</Typography.Text>
             <Box>
               <Form labelAlign="top" responsive>
                 <Form.Item colSpan={4} label="月薪">
@@ -223,11 +223,11 @@ const AdvancedDetail = (props) => {
           </Card.Content>
         </Card>
         <Card free>
-          <Card.Header title={renderTab()} className={styles.TableCardHeader} />
+          <Card.Header title={renderTab()} className={styles.tableCardHeader} />
           <Card.Divider />
           <Card.Content>
-            <div className={styles.Content}>
-              <Table dataSource={dataSource.logs} hasBorder={false} className={styles.Table}>
+            <div className={styles.content}>
+              <Table dataSource={dataSource.logs} hasBorder={false} className={styles.mainTable}>
                 <Table.Column title="操作进程" dataIndex="opStatus" />
                 <Table.Column title="操作人" dataIndex="operator" />
                 <Table.Column title="执行结果" dataIndex="opResult" />

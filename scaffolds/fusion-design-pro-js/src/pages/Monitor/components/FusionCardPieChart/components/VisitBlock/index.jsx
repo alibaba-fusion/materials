@@ -1,20 +1,20 @@
-import React from 'react';
+import * as React from 'react';
 import { Card, Box } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip } from 'bizcharts';
 import classNames from 'classnames';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const DEFAULT_DATA = {
   titleItem: [
     {
       name: '总PV',
-      value: '234,465789',
+      value: '234,465',
       des: '周同比:',
       rate: 10.1,
     },
     {
       name: '总UV',
-      value: '234,465789',
+      value: '234,465',
       des: '周同比:',
       rate: -10.1,
     },
@@ -60,7 +60,7 @@ const InfoBlock = (props = DEFAULT_DATA.titleItem[0]) => {
     <Box className={styles.header} direction="column">
       <div>
         <i className={classNames(styles.rateIcon)} />
-        <span className={styles.totle_font}>{name}</span>
+        <span className={styles.titleFont}>{name}</span>
       </div>
       <Box align="baseline" direction="row">
         <span className={styles.title}>{value}</span>
@@ -72,7 +72,7 @@ const InfoBlock = (props = DEFAULT_DATA.titleItem[0]) => {
             }}
           >
             8.1%
-            {rate > 0 ? <> ↑ </> : <>↓</>}
+            {rate > 0 ? <> ↑ </> : <> ↓ </>}
           </span>
           {/* <i className={classNames(styles.cocofont, styles.arrow_down)} /></span> */}
         </span>

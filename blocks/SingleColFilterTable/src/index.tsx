@@ -13,9 +13,7 @@ import {
   Card,
   Pagination,
 } from '@alifd/next';
-
 import { useFusionTable } from 'ahooks';
-
 import styles from './index.module.css';
 
 const RadioGroup = Radio.Group;

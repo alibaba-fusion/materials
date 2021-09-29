@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const DEFAULT_DATA = {
   name: '',
@@ -8,6 +8,7 @@ const DEFAULT_DATA = {
   authority: 'private',
   desc: '',
 };
+const { useState } = React;
 
 const StepForm = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = () => {} } = props;
@@ -15,9 +16,7 @@ const StepForm = (props) => {
     values: dataSource,
   });
   const [currentStep, setStep] = useState(0);
-  const steps = ['填写信息', '确认信息', '完成'].map((item, index) => (
-    <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
-  ));
+  const steps = ['填写信息', '确认信息', '完成'].map((item, index) => <Step.Item key={index} title={item} />);
 
   const submit = () => {
     const values = projectField.getValues();
@@ -79,7 +78,7 @@ const StepForm = (props) => {
       mainbody = (
         <>
           <Box align="center">
-            <Icon type="success-filling" size={72} className={styles.succesIcon} />
+            <Icon type="success-filling" size={72} className={styles.successIcon} />
             <Typography.H1>提交成功</Typography.H1>
             <Typography.Text>5s 后自动跳转至工单页</Typography.Text>
             <Box margin={20} direction="row">
@@ -149,7 +148,7 @@ const StepForm = (props) => {
   return (
     <div>
       <Card free>
-        <Card.Content className={styles.StepForm}>
+        <Card.Content className={styles.stepForm}>
           <Step current={currentStep} shape="circle">
             {steps}
           </Step>

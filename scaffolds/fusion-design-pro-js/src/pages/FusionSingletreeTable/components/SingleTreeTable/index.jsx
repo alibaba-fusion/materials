@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Card, Table, Button, MenuButton, Message, Dialog } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const data = [
   {
     id: 'first',
