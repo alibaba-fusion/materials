@@ -7,10 +7,12 @@
 			"ahooks": "^2.0.0",
 			"@alifd/next": "^1.21.0",
 			"@antv/data-set": "^0.10.2",
+			"@alifd/theme-design-pro": "0.x",
 			"bizcharts": "^3.5.6"
 		},
 		"devDependencies": {
-			"ice.js": "^2.0.0-rc.1"
+			"ice.js": "^2.0.0",
+			"build-plugin-ignore-style": "^0.1.0-beta.0"
 		},
 		"repository": {
 			"type": "git",
@@ -24,9 +26,8 @@
 		}
 	},
 	"build": {
-		"theme": {
-			"package": "@alifd/theme-design-pro",
-			"version": "0.x"
+		"buildConfig": {
+			"plugins": [["build-plugin-ignore-style", { "libraryName": "@alifd/next"}]]
 		}
 	},
 	"layouts": [

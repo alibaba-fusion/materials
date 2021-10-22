@@ -1,5 +1,5 @@
 @import '@alifd/theme-design-pro/variables.css';
-@import '@alifd/next/reset.css';
+@import '@alifd/theme-design-pro/dist/next.var.css';
 
 body {
   -webkit-font-smoothing: antialiased;

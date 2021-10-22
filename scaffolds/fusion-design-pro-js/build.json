@@ -2,17 +2,17 @@
   "publicPath": "./",
   "plugins": [
     [
-      "build-plugin-fusion",
-      {
-        "cssVariable": true
-      }
-    ],
-    [
       "build-plugin-moment-locales",
       {
         "locales": [
           "zh-cn"
         ]
+      }
+    ],
+    [
+      "build-plugin-ignore-style",
+      {
+        "libraryName": "@alifd/next"
       }
     ]
   ]
