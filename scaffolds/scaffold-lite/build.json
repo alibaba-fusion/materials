@@ -2,14 +2,14 @@
   "publicPath": "./",
   "vite": true,
   "plugins": [
-    /* [
+    [
       "build-plugin-moment-locales",
       {
         "locales": [
           "zh-cn"
         ]
       }
-    ], */
+    ],
     [
       "build-plugin-ignore-style",
       {
