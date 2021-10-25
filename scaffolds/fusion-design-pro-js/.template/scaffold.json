@@ -12,7 +12,7 @@
 		},
 		"devDependencies": {
 			"ice.js": "^2.0.0",
-			"build-plugin-ignore-style": "^0.1.0-beta.0"
+			"build-plugin-ignore-style": "^0.1.0"
 		},
 		"repository": {
 			"type": "git",

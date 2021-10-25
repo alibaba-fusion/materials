@@ -81,7 +81,7 @@ export default function BasicLayout({
           style={{
             marginRight: 10,
           }}
-        />
+        ></Shell.Navigation>
         <Shell.Action />
         <Shell.Navigation>
           <PageNav />
