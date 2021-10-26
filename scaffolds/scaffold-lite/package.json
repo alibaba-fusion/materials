@@ -50,12 +50,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "resolutions": {
-    "@ice/runtime": "beta",
-    "create-app-shared": "beta",
-    "react-app-renderer": "beta",
-    "vite": "2.6.1"
-  },
   "scaffoldConfig": {
     "name": "Fusion Design Lite - TS",
     "title": "Fusion Design Lite - TS",
