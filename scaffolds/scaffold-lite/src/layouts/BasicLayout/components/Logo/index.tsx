@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'ice';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface ILogoProps {
   image?: string;

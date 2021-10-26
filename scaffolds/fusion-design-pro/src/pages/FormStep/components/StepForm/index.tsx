@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
-
-import { Item } from '@alifd/next/types/step';
-
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface DataSource {
   name?: string;
@@ -23,16 +20,16 @@ const DEFAULT_DATA: DataSource = {
   authority: 'private',
   desc: '',
 };
-
+const { useState } = React;
 const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps): JSX.Element => {
-  const { dataSource = DEFAULT_DATA, onSubmit = (): void => {} } = props;
+  const { dataSource = DEFAULT_DATA, onSubmit = (): void => { } } = props;
 
   const projectField = Field.useField({ values: dataSource });
   const [currentStep, setStep] = useState<number>(0);
 
   const steps = ['填写信息', '确认信息', '完成'].map(
-    (item, index): Item => (
-      <Step.Item aria-current={index === currentStep ? 'step' : null} key={index} title={item} />
+    (item, index) => (
+      <Step.Item key={index} title={item} />
     ),
   );
 
@@ -44,7 +41,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
     setStep(currentStep + 1);
   };
 
-  const goNext = async (): Promise<T> => {
+  const goNext = async (): Promise<void> => {
     const { errors } = await projectField.validatePromise();
 
     if (errors) {
@@ -88,7 +85,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
       mainbody = (
         <>
           <Box align="center">
-            <Icon type="success-filling" size={72} className={styles.succesIcon} />
+            <Icon type="success-filling" size={72} className={styles.successIcon} />
             <Typography.H1>提交成功</Typography.H1>
             <Typography.Text>5s 后自动跳转至工单页</Typography.Text>
             <Box margin={20} direction="row">
@@ -151,7 +148,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
   return (
     <div>
       <Card free>
-        <Card.Content className={styles.StepForm}>
+        <Card.Content className={styles.stepForm}>
           <Step current={currentStep} shape="circle">
             {steps}
           </Step>

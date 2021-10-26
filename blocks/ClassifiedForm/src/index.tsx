@@ -131,7 +131,7 @@ const ClassifiedForm: React.FunctionComponent<ClassifiedFormProps> = (props: Cla
               </Radio.Group>
             </Form.Item>
             <Form.Item colSpan={8} label="选项/RSU 描述">
-              <Input.TextArea name="rsuDesc" placeholder="请输入" hasLimitHint maxLength={500} />
+              <Input.TextArea name="rsuDesc" placeholder="请输入" showLimitHint maxLength={500} />
             </Form.Item>
           </Form>
           <Divider />

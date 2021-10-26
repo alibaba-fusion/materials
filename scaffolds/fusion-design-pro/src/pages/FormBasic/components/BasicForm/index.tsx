@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Form, Box, Button, Card, DatePicker, Message, Radio, Upload } from '@alifd/next';
 
 import { UploadProps } from '@alifd/next/types/upload';
 import { Moment } from 'moment';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const FormItem = Form.Item;
 
 const formItemLayout = {
@@ -40,16 +41,16 @@ const DEFAULT_ON_SUBMIT = (values: BasicFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const BasicForm: React.SFC<BasicFormProps> = (props): JSX.Element => {
+const BasicForm: React.FC<BasicFormProps> = (props: BasicFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
-    onCancel = () => { },
+    onCancel = (): void => { },
   } = props;
 
-  const [postData, setValue] = useState<BasicFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (values: BasicFormProps): void => {
+  const formChange = (values: DataSource): void => {
     setValue(values);
   };
 
@@ -57,7 +58,7 @@ const BasicForm: React.SFC<BasicFormProps> = (props): JSX.Element => {
     <Card free>
       <Card.Content>
         <Form
-          className={styles.BasicForm}
+          className={styles.basicForm}
           responsive
           fullWidth
           value={postData}

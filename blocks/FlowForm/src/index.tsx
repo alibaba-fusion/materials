@@ -87,7 +87,7 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const FlowForm: React.SFC<FlowFormProps> = (props: FlowFormProps) => {
+const FlowForm: React.FC<FlowFormProps> = (props: FlowFormProps) => {
   const {
     dataSource = DEFAULT_DATA,
     onAgree = () => { },
@@ -157,7 +157,7 @@ const FlowForm: React.SFC<FlowFormProps> = (props: FlowFormProps) => {
               </Radio.Group>
             </Form.Item>
             <Form.Item label="意见&反馈" colSpan={8}>
-              <Input.TextArea maxLength={500} hasLimitHint placeholder="请输入描述" />
+              <Input.TextArea maxLength={500} showLimitHint placeholder="请输入描述" />
             </Form.Item>
           </Form>
         </Card.Content>

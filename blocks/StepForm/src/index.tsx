@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Card, Form, Input, Icon, Radio, Field, Step, Button, Box, Typography } from '@alifd/next';
-
 import styles from './index.module.css';
 
 export interface DataSource {
@@ -86,7 +85,7 @@ const StepForm: React.FunctionComponent<StepFormProps> = (props: StepFormProps):
       mainbody = (
         <>
           <Box align="center">
-            <Icon type="success-filling" size={72} className={styles.succesIcon} />
+            <Icon type="success-filling" size={72} className={styles.successIcon} />
             <Typography.H1>提交成功</Typography.H1>
             <Typography.Text>5s 后自动跳转至工单页</Typography.Text>
             <Box margin={20} direction="row">

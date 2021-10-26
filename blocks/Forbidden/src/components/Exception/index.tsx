@@ -19,7 +19,7 @@ const Exception: React.FC<ExceptionProps> = (props: ExceptionProps) => {
     <Card free className={styles.exception}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statuscode}>{statusCode}</h1>
+        <h1 className={styles.statusCode}>{statusCode}</h1>
         <div className={styles.description}>{description}</div>
       </div>
     </Card>

@@ -44,7 +44,7 @@ const DEFAULT_DATA: DataSource = {
   title: '实时监控情况',
 };
 
-const FusionCardWorldmapChart: React.SFC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
+const FusionCardWorldmapChart: React.FC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
   } = props;

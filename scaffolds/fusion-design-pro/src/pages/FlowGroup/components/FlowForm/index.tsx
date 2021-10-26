@@ -1,7 +1,7 @@
-import React, { SFC, useEffect, useState, useRef } from 'react';
+import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import { Box, Card, Button, Form, Input, Select, Radio, Step, Field, Divider, Tag, Avatar, Typography, ResponsiveGrid } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface Experience {
   company?: string;
@@ -52,6 +52,8 @@ export interface FlowFormProps {
   onSignature?: () => void;
 }
 
+const { useEffect, useState, useRef } = React;
+
 const DEFAULT_DATA: DataSource = {
   approval: {
     approverId: 1,
@@ -85,13 +87,13 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const FlowForm: SFC<FlowFormProps> = (props) => {
+const FlowForm: React.FC<FlowFormProps> = (props: FlowFormProps) => {
   const {
     dataSource = DEFAULT_DATA,
-    onAgree = () => {},
-    onRefuse = () => {},
-    onTransfer = () => {},
-    onSignature = () => {},
+    onAgree = () => { },
+    onRefuse = () => { },
+    onTransfer = () => { },
+    onSignature = () => { },
   } = props;
 
   const field = Field.useField({
@@ -105,13 +107,13 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current) as HTMLDivElement;
-    const rect = (dom && dom.getBoundingClientRect()) || {};
-    setLeft(rect.left);
-    setRight(document.documentElement.offsetWidth - rect.left - rect.width);
+    const rect = dom?.getBoundingClientRect();
+    setLeft(rect?.left);
+    setRight(document.documentElement.offsetWidth - rect?.left - rect?.width);
   }, []);
 
   return (
-    <Box ref={containerRef} spacing={20} className={styles.FlowForm}>
+    <Box ref={containerRef} spacing={20} className={styles.flowForm}>
       <Card free>
         <Card.Content>
           <Step shape="dot" current={1}>
@@ -155,7 +157,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
               </Radio.Group>
             </Form.Item>
             <Form.Item label="意见&反馈" colSpan={8}>
-              <Input.TextArea maxLength={500} hasLimitHint placeholder="请输入描述" />
+              <Input.TextArea maxLength={500} showLimitHint placeholder="请输入描述" />
             </Form.Item>
           </Form>
         </Card.Content>
@@ -189,7 +191,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
               </Box>
             </ResponsiveGrid.Cell>
             <ResponsiveGrid.Cell colSpan={6} style={{ position: 'relative' }}>
-              <Divider className={styles.Divider} direction="ver" />
+              <Divider className={styles.divider} direction="ver" />
               <Form labelAlign="top" responsive>
                 <Form.Item label="职级" colSpan={6}>
                   <span className="next-form-preview">{dataSource.person.rank}</span>
@@ -246,7 +248,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
           dataSource.person.experiences.map((experience, idx) => (
             <Card.Content key={idx}>
               <Box>
-                <Typography.Text className={styles.SubTitle}>公司信息</Typography.Text>
+                <Typography.Text className={styles.subTitle}>公司信息</Typography.Text>
                 <Form labelAlign="top" responsive>
                   <Form.Item label="工作单位" required colSpan={4}>
                     <span className="next-form-preview">{experience.company}</span>
@@ -264,7 +266,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
               </Box>
               <Divider dashed />
               <Box>
-                <Typography.Text className={styles.SubTitle}>待遇信息</Typography.Text>
+                <Typography.Text className={styles.subTitle}>待遇信息</Typography.Text>
                 <Form labelAlign="top" responsive>
                   <Form.Item label="月薪" colSpan={4}>
                     <span className="next-form-preview">{experience.salary}</span>
@@ -285,7 +287,7 @@ const FlowForm: SFC<FlowFormProps> = (props) => {
         }
       </Card>
       <div>
-        <Box direction="row" spacing={8} align="center" justify="center" style={{ left, right }} className={styles.FlowFormFooter}>
+        <Box direction="row" spacing={8} align="center" justify="center" style={{ left, right }} className={styles.flowFormFooter}>
           <Button onClick={() => onAgree(field.getValues())} type="primary">同意</Button>
           <Button onClick={onRefuse} type="secondary">拒绝</Button>
           <Button onClick={onTransfer} type="secondary">转移</Button>

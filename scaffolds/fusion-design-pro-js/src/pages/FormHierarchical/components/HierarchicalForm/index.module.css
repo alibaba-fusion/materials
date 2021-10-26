@@ -1,0 +1,19 @@
+.hierarchicalForm {
+  width: 568px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hierarchicalBlock {
+  margin-top: 12px;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.card {
+  border: none;
+}
+
+.formButton {
+  min-width: 84px;
+}

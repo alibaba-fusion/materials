@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Radio, Card, Box } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend, Guide } from 'bizcharts';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const { Html } = Guide;
 
 interface ChartItem {
@@ -79,13 +80,13 @@ const FusionCardLineChart: React.FunctionComponent<FusionCardLineChartProps> = (
             onChange={changeType}
             className={styles.radioGroup}
           >
-            <Radio value="one" className={styles.flex1}>
+            <Radio value="one" className={styles.radioFlex}>
               类目一
             </Radio>
-            <Radio value="two" className={styles.flex1}>
+            <Radio value="two" className={styles.radioFlex}>
               类目二
             </Radio>
-            <Radio value="three" className={styles.flex1}>
+            <Radio value="three" className={styles.radioFlex}>
               类目三
             </Radio>
           </Radio.Group>

@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import { Card, Form, Input, Select, Button, Table, Box, Divider, MenuButton, Dialog, Field } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState, useEffect, useRef } = React;
 const DEFAULT_DATA = {
   basic: {},
   member: {},
@@ -81,9 +82,9 @@ const GroupForm = (props) => {
   useEffect(() => {
     // eslint-disable-next-line react/no-find-dom-node
     const dom = findDOMNode(containerRef.current);
-    const rect = (dom && dom.getBoundingClientRect()) || {};
-    setLeft(rect.left);
-    setRight(document.documentElement.offsetWidth - rect.left - rect.width);
+    const rect = dom?.getBoundingClientRect();
+    setLeft(rect?.left);
+    setRight(document.documentElement.offsetWidth - rect?.left - rect?.width);
   }, []);
 
   const changeRowData = (index, key, value) => {
@@ -228,7 +229,7 @@ const GroupForm = (props) => {
               新增
             </Button>
           </Box>
-          <Table dataSource={dataSource.company} hasBorder={false} className={styles.Table}>
+          <Table dataSource={dataSource.company} hasBorder={false} className={styles.mainTable}>
             <Table.Column title="目标公司" cell={(v, i, row) => renderEditCell(v, i, row, 'name')} dataIndex="name" />
             <Table.Column
               title="主营业务"

@@ -1,13 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { Breadcrumb, Box, Typography } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const PageHeader = (props) => {
   const { breadcrumbs, title, description, ...others } = props;
   return (
-    <Box spacing={8} className={styles.PageHeader} {...others}>
+    <Box spacing={8} className={styles.pageHeader} {...others}>
       {breadcrumbs && breadcrumbs.length > 0 ? (
-        <Breadcrumb className={styles.Breadcrumbs} separator=" / ">
+        <Breadcrumb className={styles.breadcrumbs} separator=" / ">
           {breadcrumbs.map((item, idx) => (
             <Breadcrumb.Item key={idx} link={item.path}>
               {item.name}
@@ -16,9 +16,9 @@ const PageHeader = (props) => {
         </Breadcrumb>
       ) : null}
 
-      {title && <Typography.Text className={styles.Title}>{title}</Typography.Text>}
+      {title && <Typography.Text className={styles.title}>{title}</Typography.Text>}
 
-      {description && <Typography.Text className={styles.Description}>{description}</Typography.Text>}
+      {description && <Typography.Text className={styles.description}>{description}</Typography.Text>}
     </Box>
   );
 };
