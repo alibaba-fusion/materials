@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import * as React from 'react';
 import { Button, Table, Card, Pagination, Icon, Dropdown, Menu, Message, Dialog } from '@alifd/next';
 import { useFusionTable, useSetState } from 'ahooks';
 
@@ -7,7 +7,7 @@ import ExceptionBlock from './ExceptionBlock';
 import DialogEdit from './DialogEdit';
 import { DataItem } from './types';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 import { getData } from './mock';
 
@@ -40,6 +40,7 @@ type RowRecord = DataItem & {
 
 type CellOperation = (value: any, rowIndex: number, record: RowRecord) => React.ReactNode;
 
+const { useCallback } = React;
 const getTableData = (
   { current, pageSize }: { current: number; pageSize: number },
   formData: { status: 'normal' | 'empty' | 'exception' },
@@ -241,7 +242,7 @@ const MultiTreeTable: React.FC = () => {
   }, [handleEdit, handleDelete, moreCallback]);
 
   return (
-    <div className={styles.MultiTreeTable}>
+    <div className={styles.multiTreeTable}>
       <Card free>
         <Card.Content>
           <div className={styles.actionBar}>

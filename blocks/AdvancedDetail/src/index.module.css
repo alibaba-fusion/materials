@@ -1,0 +1,89 @@
+.advancedDetailHead {
+  margin-top: calc(0px - var(--shell-dark-content-paddingTop, 20px));
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  padding: var(--shell-dark-content-paddingTop, 20px) var(--shell-dark-content-paddingLeft, 20px) 0;
+}
+
+.advancedDetailHead :global .next-btn.next-medium > .next-btn-icon.next-icon-last:before {
+  font-size: 12px;
+}
+
+.tabItemTitle {
+  padding: var(--s-6, 24px)/4 var(--s-zero, 0);
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.tabItem {
+  margin-right: 40px;
+}
+
+.tabBar {
+  border: none !important;
+}
+
+.content {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  margin-left: 8px;
+  padding-top: 12px;
+}
+
+.tableCardHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.step {
+  margin-left: -40px;
+}
+
+.stepA {
+  color: var(--color-brand1-6, #5584ff);
+}
+
+.boxButton {
+  width: 80px;
+}
+
+.titleName {
+  color: #333;
+  font-weight: var(--font-weight-medium, 500);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.titleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mainTable table {
+  border: 1px solid #e6e6e6;
+}
+
+.subTitle {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.subTitle::before {
+  position: absolute;
+  top: calc(50% - 16px / 2);
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 16px;
+  line-height: 16px;
+  background-color: #298dff;
+  content: '';
+}

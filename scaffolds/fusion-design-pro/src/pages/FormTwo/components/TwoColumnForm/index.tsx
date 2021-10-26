@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Box, Button, Form, Card, DatePicker, Message, Radio, Upload } from '@alifd/next';
 
 import { UploadProps } from '@alifd/next/types/upload';
 import { Moment } from 'moment';
 
-import styles from './index.module.scss';
-
+const { useState } = React;
 const FormItem = Form.Item;
 
 const formItemLayout = {
@@ -40,21 +39,21 @@ const DEFAULT_ON_SUBMIT = (values: TwoColumnFormProps, errors: []): void => {
   Message.success('提交成功');
 };
 
-const TwoColumnForm: React.SFC<TwoColumnFormProps> = (props): JSX.Element => {
+const TwoColumnForm: React.FC<TwoColumnFormProps> = (props: TwoColumnFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
     onSubmit = DEFAULT_ON_SUBMIT,
     onCancel = () => {},
   } = props;
 
-  const [postData, setValue] = useState<TwoColumnFormProps>(dataSource);
+  const [postData, setValue] = useState<DataSource>(dataSource);
 
-  const formChange = (value: TwoColumnFormProps): void => {
+  const formChange = (value: DataSource): void => {
     setValue(value);
   };
 
   return (
-    <Card free className={styles.TwoColumnForm}>
+    <Card free >
       <Card.Content>
         <Form
           responsive

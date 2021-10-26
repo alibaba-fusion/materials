@@ -1,17 +1,18 @@
-import React, { useState, useRef } from 'react';
+import * as React from 'react';
 import { Button, Icon, Checkbox, Overlay } from '@alifd/next';
 import { ReactSortable, ItemInterface } from 'react-sortablejs';
 import { ColumnProps } from '@alifd/next/types/table/index';
 
 import { getColumnKey } from './util';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState, useRef } = React;
 export type Column = ColumnProps & ItemInterface & {
   id?: string | number;
   children?: Column[];
 };
-
+// @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
@@ -92,9 +93,9 @@ function CustomList({ columns, onChange }: { columns: Column[]; onChange: (cols:
                   <ReactSortable
                     handle=".column-handle"
                     list={item.children}
-                    setList={(newState) => onColumnChildrenChange(idx, newState)}
+                    setList={(newState: Column[]) => onColumnChildrenChange(idx, newState)}
                   >
-                    {item.children.map((childrenItem) => (
+                    {item.children.map((childrenItem: ColumnProps & { key?: string }) => (
                       <div key={getColumnKey(childrenItem)} className="sort-item sort-item-children">
                         <Checkbox
                           checked={!childrenItem.hidden}

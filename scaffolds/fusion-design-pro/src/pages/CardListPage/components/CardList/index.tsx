@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Box, Search, Card, Tag, ResponsiveGrid, Divider, Typography, Icon, Loading } from '@alifd/next';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const { Cell } = ResponsiveGrid;
 export interface ICardItem {
@@ -31,6 +32,10 @@ const DEFAULT_DATA: DataSource = {
   }),
 };
 
+interface CardListProps {
+  dataSource: DataSource;
+  onSearch: () => void;
+}
 const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
@@ -88,17 +93,18 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
 
   const renderCards = () => {
     return dataSource.cards.map((c: ICardItem, i: number) => (
-      <Cell colSpan={3} className={styles.ListItem} key={i}>
-        <div className={styles.main}>
+
+      <Cell colSpan={3} className={styles.listItem} key={i}>
+        <div className={styles.listMain}>
           <img src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png" alt="img" />
-          <div className={styles.content}>
-            <div className={styles.title}>
+          <div className={styles.listContent}>
+            <div className={styles.listTitle}>
               {c.title}
             </div>
-            <div className={styles.info}>
+            <div className={styles.listInfo}>
               {c.content}
             </div>
-            <div className={styles.link}>
+            <div className={styles.listLink}>
               <a href="#">{c.link[0]}</a>
               <a href="#">{c.link[1]}</a>
             </div>
@@ -110,27 +116,28 @@ const CardList: React.FunctionComponent<CardListProps> = (props: CardListProps):
 
   return (
     <>
-      <Card free className={styles.CardList}>
+      <Card free className={styles.cardList}>
         <Box align="center">
           <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
         </Box>
         <Divider dashed style={{ margin: '24px 0' }} />
-        <Box className={styles.TagBox}>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
+        <Box className={styles.tagBox}>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>内容分类</Typography.Text>
             <TagGroup>{renderTagListA()}</TagGroup>
           </div>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
+          <div className={styles.tagBoxItem}>
+            <Typography.Text className={styles.tagTitleName}>时间</Typography.Text>
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
       </Card>
       <Loading visible={loading} style={{ display: 'block' }}>
         <ResponsiveGrid gap={20}>
-          <Cell colSpan={3} className={styles.ListItem}>
-            <Box className={styles.add} justify="center" align="center">
-              <Icon type="add" className={styles.icon} />
+
+          <Cell colSpan={3} className={styles.listItem}>
+            <Box className={styles.listAdd} justify="center" align="center">
+              <Icon type="add" className={styles.listIcon} />
               <div className={styles.addText}>添加内容</div>
             </Box>
           </Cell>

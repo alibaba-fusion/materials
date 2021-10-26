@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom } from 'bizcharts';
 import mock from './mock.js';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   date?: string | number;

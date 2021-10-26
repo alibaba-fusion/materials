@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip, Legend } from 'bizcharts';
 import classNames from 'classnames';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const DEFAULT_DATA = {
   title: 'JS 错误',
@@ -270,7 +270,7 @@ const JSErrorChart = (props) => {
             type="intervalStack"
             position="date*value"
             adjust={['fail', 'success']}
-            color={['name', ['#2B7FFB', '#00D6CB']]}
+            color={['name', ['#00D6CB', '#2B7FFB']]}
           />
           <Axis name="date" title={null} />
           <Axis name="value" title={null} />

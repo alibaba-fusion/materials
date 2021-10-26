@@ -1,8 +1,10 @@
-import React, { useCallback, useEffect } from 'react';
+import * as React from 'react';
 import { Dialog, Select, Form, Field, Input } from '@alifd/next';
+import { ValidateResults } from '@alifd/field';
 import { DialogProps } from '@alifd/next/types/dialog';
 import { DataItem } from './types';
 
+const { useCallback, useEffect } = React;
 const FormItem = Form.Item;
 
 interface IProps {
@@ -11,7 +13,7 @@ interface IProps {
 
 const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
   const field = Field.useField([]);
-  const { dataSource, onOk = () => {}, ...lastProps } = props;
+  const { dataSource, onOk = (event: React.MouseEvent, value: ValidateResults) => { }, ...lastProps } = props;
 
   useEffect(() => {
     field.reset();
@@ -31,7 +33,7 @@ const DialogEdit: React.FC<DialogProps & IProps> = (props) => {
       if (errors) {
         return;
       }
-      onOk(values);
+      onOk(undefined, values);
     });
   }, [field, onOk]);
 

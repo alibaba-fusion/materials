@@ -1,11 +1,12 @@
 /* eslint-disable @iceworks/best-practices/no-secret-info */
-import React, { useState } from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
 
 import { useInterval } from './utils';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const { Item } = Form;
 
 export interface RegisterProps {
@@ -66,16 +67,16 @@ export default function RegisterBlock() {
   };
 
   return (
-    <div className={styles.RegisterBlock}>
+    <div className={styles.registerBlock}>
       <div className={styles.innerBlock}>
         <a href="#">
           <img
-            className={styles.logo}
+            className={styles.innerBlockLogo}
             src="https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png"
             alt="logo"
           />
         </a>
-        <p className={styles.desc}>注册账号</p>
+        <p className={styles.innerBlockDesc}>注册账号</p>
 
         <Form value={postData} onChange={formChange} size="large">
           <Item format="email" required requiredMessage="必填">
@@ -104,7 +105,7 @@ export default function RegisterBlock() {
               innerBefore={
                 <span className={styles.innerBeforeInput}>
                   +86
-                  <span className={styles.line} />
+                  <span className={styles.innerBeforeLine} />
                 </span>
               }
               maxLength={20}
@@ -117,7 +118,7 @@ export default function RegisterBlock() {
               size="large"
               innerAfter={
                 <span className={styles.innerAfterInput}>
-                  <span className={styles.line} />
+                  <span className={styles.innerAfterLine} />
                   <Form.Submit
                     text
                     type="primary"
@@ -146,7 +147,7 @@ export default function RegisterBlock() {
             </Form.Submit>
           </Item>
           <Item style={{ textAlign: 'center' }}>
-            <a href="/" className={styles.link}>
+            <a href="/" className={styles.innerBlockLink}>
               使用已有账号登录
             </a>
           </Item>

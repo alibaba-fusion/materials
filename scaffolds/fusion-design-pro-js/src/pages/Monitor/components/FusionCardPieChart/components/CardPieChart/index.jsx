@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Coord, Axis, Legend } from 'bizcharts';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const DEFAULT_DATA = {
   title: '用户浏览器占比',

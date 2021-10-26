@@ -1,10 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Tooltip, Legend } from 'bizcharts';
 import classNames from 'classnames';
-
-
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   date?: number;
@@ -108,7 +106,7 @@ const JSErrorChart: React.FunctionComponent<JSErrorChartProps> = (props: JSError
               return `<li style="padding:10px;"><i class="${classNames(styles[`${alias}Icon`])}"></i><span >${name}</span></li>`;
             }}
           />
-          <Geom type="intervalStack" position="date*value" adjust={['fail', 'success']} color={['name', ['#2B7FFB', '#00D6CB']]} />
+          <Geom type="intervalStack" position="date*value" adjust={['fail', 'success']} color={['name', ['#00D6CB', '#2B7FFB']]} />
           <Axis name="date" title={null} />
           <Axis name="value" title={null} />
           <Axis name="count" title={null} visible={false} />

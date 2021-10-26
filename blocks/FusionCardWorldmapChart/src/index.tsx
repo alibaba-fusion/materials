@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
 import { Chart, Coord, View, Geom } from 'bizcharts';
 import { Card, Table } from '@alifd/next';
 import DataSet from '@antv/data-set';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 import mapData from './world.geo';
 import mock from './mock';
@@ -31,6 +31,7 @@ interface FusionCardWorldmapChartProps {
   dataSource: DataSource;
 }
 
+const { useEffect, useState } = React;
 const DEFAULT_DATA: DataSource = {
   chartData: mock,
   tableData: [
@@ -43,7 +44,7 @@ const DEFAULT_DATA: DataSource = {
   title: '实时监控情况',
 };
 
-const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
+const FusionCardWorldmapChart: React.FC<FusionCardWorldmapChartProps> = (props: FusionCardWorldmapChartProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
   } = props;
@@ -67,7 +68,7 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
     const userData = ds.createView().source(chartData);
     userData.transform({
       type: 'map',
-      callback: (obj) => {
+      callback: (obj: any) => {
         const newObj = { ...obj };
         const projectedCoord = dv.geoProjectPosition([newObj.lng * 1, newObj.lat * 1], 'geoMercator');
         newObj.x = projectedCoord[0];
@@ -86,21 +87,21 @@ const FusionCardWorldmapChart: SFC<FusionCardWorldmapChartProps> = (props: Fusio
       <Card.Divider />
       <Card.Content>
         <div className={styles.dataRow}>
-          <span className={styles.total}>
-            今日PV：<span className={styles.num}>490,760,415</span>
+          <span className={styles.cardTotal}>
+            今日PV：<span className={styles.cardNum}>490,760,415</span>
           </span>
-          <span className={styles.total}>
-            今日PV：<span className={styles.num}>490,760,415</span>
+          <span className={styles.cardTotal}>
+            今日PV：<span className={styles.cardNum}>490,760,415</span>
           </span>
         </div>
         <Chart
           height={chartHeight}
           width={chartWidth}
-          className={styles.map}
+          className={styles.cardMap}
           padding={[0, 20, 40, 20]}
           scale={{ x: { sync: true, nice: false }, y: { sync: true, nice: false } }}
         >
-          <Coord reflect />
+          <Coord reflect="x" />
           <View data={mapDataFormat}>
             <Geom
               type="polygon"

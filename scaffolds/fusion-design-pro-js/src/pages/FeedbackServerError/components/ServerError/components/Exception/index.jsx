@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const Exception = (props) => {
   const {
@@ -12,7 +12,7 @@ const Exception = (props) => {
     <Card free className={styles.exception}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statuscode}>{statusCode}</h1>
+        <h1 className={styles.statusCode}>{statusCode}</h1>
         <div className={styles.description}>{description}</div>
       </div>
     </Card>

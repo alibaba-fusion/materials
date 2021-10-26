@@ -1,0 +1,12 @@
+.wrap {
+  margin: var(--s-5, 20px);
+}
+
+.formWrap {
+  margin-bottom: var(--s-5, 20px);
+}
+
+.pagination {
+  text-align: right;
+  margin-top: var(--s-5, 20px);
+}

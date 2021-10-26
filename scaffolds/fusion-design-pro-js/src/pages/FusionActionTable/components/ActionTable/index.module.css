@@ -1,0 +1,61 @@
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.buttonGroup :global .next-btn {
+  margin-right: 12px;
+}
+
+.rightButtonGroup :global .next-btn {
+  margin-left: 12px;
+}
+
+.columnSortPanel :global {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--corner-1, 3px);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  max-height: 500px;
+  overflow-y: scroll;
+  width: 180px;
+}
+
+.columnSortPanel :global .sort-item-container {
+  width: 100%;
+}
+
+.columnSortPanel :global .sort-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.columnSortPanel :global .sort-item:hover .column-handle {
+  visibility: initial;
+  cursor: move;
+}
+
+.columnSortPanel :global .sort-item-children {
+  margin-left: 18px;
+}
+
+.columnSortPanel :global .sort-item .column-handle {
+  display: block;
+  visibility: hidden;
+  margin-left: 20px;
+}
+
+.columnSortPanel :global .sort-item .next-checkbox-wrapper.sort-checkbox {
+  white-space: nowrap;
+  max-width: calc(100% - 16px - 20px);
+}
+
+.columnSortPanel :global .sort-item .next-checkbox-wrapper.sort-checkbox .next-checkbox-label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

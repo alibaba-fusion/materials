@@ -4,7 +4,7 @@ import { useFusionTable, useSetState } from 'ahooks';
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
 import DialogOperation from './DialogOperation';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const getTableData = ({ current, pageSize }, formData) => {
   if (!formData.status || formData.status === 'normal') {
@@ -151,7 +151,7 @@ const DialogTable = () => {
   };
 
   return (
-    <div className={styles.DialogTable}>
+    <div className={styles.dialogTable}>
       <Card free>
         <Card.Content>
           <Table

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Input, Form, Box, Button, Card, DatePicker, Message, Radio, Upload } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const FormItem = Form.Item;
 const formItemLayout = {
   colSpan: 12,
@@ -31,7 +32,7 @@ const BasicForm = (props) => {
   return (
     <Card free>
       <Card.Content>
-        <Form className={styles.BasicForm} responsive fullWidth value={postData} labelAlign="top" onChange={formChange}>
+        <Form className={styles.basicForm} responsive fullWidth value={postData} labelAlign="top" onChange={formChange}>
           <FormItem {...formItemLayout} label="项目名称：" required requiredMessage="必填">
             <Input placeholder="请输入项目名称" name="name" />
           </FormItem>

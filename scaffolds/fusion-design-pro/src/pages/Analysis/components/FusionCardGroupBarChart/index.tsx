@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Legend } from 'bizcharts';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 interface ChartItem {
   type?: string;
@@ -50,7 +50,7 @@ const FusionCardGroupBarChart: React.FunctionComponent<FusionCardGroupBarChartPr
   const { title, chartData, chartHeight } = cardConfig;
 
   return (
-    <Card free className={styles.FusionCardGroupBarChart}>
+    <Card free className={styles.fusionCardGroupBarChart}>
       <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>

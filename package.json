@@ -6,11 +6,12 @@
   "author": "",
   "scripts": {
     "generate-scaffold": "node scripts/generate.js",
-    "clean": "rm -rf node_modules && rm -rf scripts/*/node_modules",
+    "clean": "rm -rf node_modules && rm -rf blocks/*/node_modules",
     "setup": "npm run clean && npm i",
     "generate": "iceworks generate",
     "lint": "npm run eslint && npm run stylelint",
     "eslint-blocks": "eslint --cache --ext .js,.jsx,.ts,.tsx ./blocks",
+    "tsChecker": "node scripts/tsChecker",
     "eslint": "eslint --cache --quiet --ext .js,.jsx,.ts,.tsx ./",
     "stylelint": "stylelint **/*.{css,scss,less}"
   },
@@ -23,7 +24,7 @@
   "dependencies": {
     "@alifd/next": "^1.21.0",
     "@types/react": "^16.9.16",
-    "ice-scaffold-generator": "^1.1.19",
+    "ice-scaffold-generator": "^1.1.35-1",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
@@ -45,6 +46,7 @@
     "eslint": "^6.0.1",
     "fs-extra": "^8.1.0",
     "fs-readdir-recursive": "^1.1.0",
+    "globby": "^11.0.3",
     "husky": "^3.1.0",
     "ice-scaffold-generator": "^1.1.5",
     "iceworks": "^3.1.13",

@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, Card } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 const WebInfoBlock = (props) => {
   const { cardConfig } = props;

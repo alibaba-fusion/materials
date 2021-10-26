@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import {
   Avatar,
   Box,
@@ -15,8 +15,9 @@ import {
 } from '@alifd/next';
 import mock from './mock';
 
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
 
@@ -39,7 +40,7 @@ interface TimeLineItem {
   planName?: string;
   planAddress?: string;
   planTime?: string;
-  planDuaring?: string;
+  planDuring?: string;
 }
 
 interface UpdateItem {
@@ -87,13 +88,7 @@ export interface WorkTableProps {
   dataSource?: DataSource;
 }
 
-const colorMap = {
-  high: 'red',
-  middle: 'yellow',
-  low: 'green',
-};
-
-const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
+const WorkTable: React.FC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const { dataSource = DEFAULT_DATA } = props;
 
   const { person, orderList, projectList, timeLineList, updateList, entranceList } = dataSource;
@@ -103,9 +98,17 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   const changeTab = (val: string) => setTab(val);
 
   const renderLevel = (text: string, index: number) => {
+    let color;
+    if (text === 'high') {
+      color = 'red';
+    } else if (text === 'middle') {
+      color = 'yellow';
+    } else {
+      color = 'green';
+    }
     return (
       <span key={text + index.toString()}>
-        <Tag size="small" color={colorMap[text]}>
+        <Tag size="small" color={color}>
           {text}
         </Tag>
       </span>
@@ -113,17 +116,17 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
   };
 
   return (
-    <div className={styles.WorkTable}>
-      <div className={styles.workerContainor}>
+    <div className={styles.workTable}>
+      <div className={styles.workerContainer}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
             <Avatar size={80} src={person.avatar} className={styles.avatar} />
             <Box>
-              <Typography.Text className={styles.TitleName}>
+              <Typography.Text className={styles.titleName}>
                 {person.surname}
                 {person.name}
               </Typography.Text>
-              <Typography.Text className={styles.TitleInfo}>{person.email}</Typography.Text>
+              <Typography.Text className={styles.titleInfo}>{person.email}</Typography.Text>
             </Box>
           </Box>
           <Tab activeKey={tab} className={styles.tab} onChange={changeTab}>
@@ -182,7 +185,7 @@ const WorkTable: SFC<WorkTableProps> = (props: WorkTableProps): JSX.Element => {
                             <>
                               <span className={styles.planTime}>{item.planTime}</span>
                               <br />
-                              <span className={styles.planDuaring}>{item.planDuaring}</span>
+                              <span className={styles.planDuring}>{item.planDuring}</span>
                             </>
                           }
                         />

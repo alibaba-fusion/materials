@@ -1,6 +1,6 @@
 {
   "name": "@alifd/scaffold-lite",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
   "files": [
     ".vscode/",
@@ -30,11 +30,11 @@
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
-    "build-plugin-fusion": "^0.1.18",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^7.30.0",
     "ice.js": "^2.0.0",
     "stylelint": "^13.2.0",
+    "build-plugin-ignore-style": "^0.1.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2"
   },

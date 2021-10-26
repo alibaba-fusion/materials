@@ -1,0 +1,12 @@
+.stepForm {
+  width: 568px;
+  margin: 40px auto 24px;
+}
+
+.successIcon {
+  color: var(--color-success-3, #46bc15);
+}
+
+.form {
+  margin-top: 40px;
+}

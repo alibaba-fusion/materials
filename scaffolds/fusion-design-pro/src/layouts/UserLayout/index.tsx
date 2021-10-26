@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './index.module.scss';
+import * as React from 'react';
+import styles from './index.module.css';
 
 export default function UserLayout({ children }: { children: React.ReactNode }) {
   return (

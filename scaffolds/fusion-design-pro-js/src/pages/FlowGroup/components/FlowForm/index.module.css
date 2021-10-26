@@ -1,0 +1,55 @@
+.flowForm {
+  padding-bottom: 86px;
+}
+
+.flowFormFooter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 66px;
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  background: #fff;
+  box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -22px;
+  height: auto;
+  margin: 0;
+}
+
+.titleName {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.titleInfo {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.subTitle {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  color: #333;
+  font-weight: var(--font-weight-medium, 500);
+  font-size: 16px;
+}
+
+.subTitle::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: #298dff;
+  content: '';
+}

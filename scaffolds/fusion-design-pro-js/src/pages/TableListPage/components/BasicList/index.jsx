@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import {
   Card,
   Table,
@@ -13,8 +13,9 @@ import {
   Icon,
   Loading,
 } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
+const { useState, useEffect } = React;
 const { Cell } = ResponsiveGrid;
 const { Option } = Select;
 const FormItem = Form.Item;
@@ -128,11 +129,11 @@ const TableList = (props) => {
                   <Button onClick={toggleSeachList}>
                     {expand ? (
                       <>
-                        收起 <Icon className={styles.icon} type="arrow-up" size="xs" />
+                        收起 <Icon className={styles.btnsIcon} type="arrow-up" size="xs" />
                       </>
                     ) : (
                       <>
-                        展开 <Icon className={styles.icon} type="arrow-down" size="xs" />
+                        展开 <Icon className={styles.btnsIcon} type="arrow-down" size="xs" />
                       </>
                     )}
                   </Button>
@@ -141,24 +142,24 @@ const TableList = (props) => {
             </Form>
           </Box>
           <Divider dashed />
-          <div className={styles.Main}>
+          <div className={styles.main}>
             <Loading
               visible={loading}
               style={{
                 display: 'block',
               }}
             >
-              <div className={styles.add}>
+              <div className={styles.mainAdd}>
                 <Button type="primary">新增</Button>
                 <Button type="normal">下载</Button>
                 <Button type="normal">
                   更多操作
-                  <Icon className={styles.icon} type="arrow-down" />
+                  <Icon className={styles.mainIcon} type="arrow-down" />
                 </Button>
               </div>
               <Table
                 hasBorder={false}
-                className={styles.Table}
+                className={styles.table}
                 dataSource={dataSource.tableData}
                 rowSelection={{
                   columnProps: () => ({

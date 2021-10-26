@@ -1,0 +1,29 @@
+.groupForm {
+  padding-bottom: 84px;
+}
+
+.card:not(:first-child) {
+  margin-top: 20px;
+  border: none;
+}
+
+.button {
+  min-width: 84px;
+}
+
+.fixedButtons {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 66px;
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  background: #fff;
+  box-shadow: var(--shadow-3-up, 0 -3px 5px 0 rgba(0, 0, 0, 0.12));
+}
+
+.mainTable table {
+  border: 1px solid #e6e6e6;
+}

@@ -1,7 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { Button } from '@alifd/next';
 
-const ExceptionBlock: React.FunctionComponent = ({ onRefresh = () => {} }): JSX.Element => {
+interface IExceptionBlockProps {
+  onRefresh: () => Promise<any>;
+}
+
+const ExceptionBlock: React.FunctionComponent<IExceptionBlockProps> = ({ onRefresh }): JSX.Element => {
   return (
     <div className="table-empty-block">
       <div className="result-image">

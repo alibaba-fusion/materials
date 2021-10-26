@@ -1,0 +1,90 @@
+.cardList {
+  margin-top: calc(0px - var(--shell-dark-content-paddingTop, 20px));
+  margin-right: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+  margin-bottom: var(--shell-dark-content-paddingTop, 20px);
+  margin-left: calc(0px - var(--shell-dark-content-paddingLeft, 20px));
+}
+
+
+.tagBox {
+  padding: 0 var(--shell-dark-content-paddingLeft, 20px) var(--s-8, 32px);
+}
+
+
+.tagBoxItem {
+  display: flex;
+  align-items: center;
+}
+
+
+.tagTitleName {
+  width: 56px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+
+.listItem .listMain {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+}
+
+
+.listItem img {
+  width: 100%;
+}
+
+.listItem .listContent {
+  padding: 14px;
+}
+
+.listItem .listTitle {
+  color: #333;
+  font-size: 14px;
+}
+
+
+.listItem .listInfo {
+  margin-top: 13px;
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+.listItem .listLink {
+  margin-top: 13px;
+}
+
+.listItem .listLink a {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+
+.listItem .listAdd {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px dashed #eee;
+  border-radius: 5px;
+
+}
+
+
+.listItem .listAdd .listIcon {
+  color: #999;
+}
+
+.listItem .addText {
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}

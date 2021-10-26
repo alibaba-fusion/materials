@@ -1,0 +1,56 @@
+.icon {
+  color: #999;
+}
+
+.searchIcon {
+  margin-right: 5px;
+  color: #999;
+}
+
+.operation {
+  padding: 10px 10px 5px;
+  border-bottom: 1px dashed #eee;
+}
+
+.operation .btns {
+  margin-top: 14px;
+}
+
+.operation .btns Button {
+  margin-left: 10px;
+}
+
+.operation .btns .btnsIcon {
+  color: #999;
+}
+
+.main {
+  padding: 15px 10px;
+}
+
+.main .mainAdd {
+  padding-bottom: 15px;
+}
+.main .mainAdd .mainIcon {
+  color: #999;
+}
+
+
+.main .add button {
+  margin-right: 10px;
+}
+
+.main .table .opt button {
+  margin-right: 5px;
+
+}
+
+.main .total {
+  color: #4a5b6d;
+  font-size: 12px;
+}
+
+.main .total Span {
+  padding: 0 3px;
+  color: #5584ff;
+}
