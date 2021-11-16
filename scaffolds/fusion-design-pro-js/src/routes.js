@@ -4,7 +4,6 @@ import Register from '@/pages/Register';
 import BasicLayout from '@/layouts/BasicLayout';
 import Solution from '@/pages/Solution';
 import Analysis from '@/pages/Analysis';
-import Monitor from '@/pages/Monitor';
 import Workplace from '@/pages/Workplace';
 import FormBasic from '@/pages/FormBasic';
 import FormTwo from '@/pages/FormTwo';
@@ -66,10 +65,6 @@ const routerConfig = [
       {
         path: '/dashboard/analysis',
         component: Analysis,
-      },
-      {
-        path: '/dashboard/monitor',
-        component: Monitor,
       },
       {
         path: '/dashboard/workplace',

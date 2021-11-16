@@ -1,5 +1,6 @@
 {
   "publicPath": "./",
+  "vite": true,
   "plugins": [
     [
       "build-plugin-moment-locales",

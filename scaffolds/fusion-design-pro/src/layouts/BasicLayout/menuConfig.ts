@@ -11,10 +11,6 @@ const asideMenuConfig = [
         path: '/dashboard/analysis',
       },
       {
-        name: '监控页面',
-        path: '/dashboard/monitor',
-      },
-      {
         name: '工作台',
         path: '/dashboard/workplace',
       },
