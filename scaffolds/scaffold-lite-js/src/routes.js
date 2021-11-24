@@ -1,6 +1,7 @@
+import { lazy } from 'ice';
 import BasicLayout from '@/layouts/BasicLayout';
-import Dashboard from '@/pages/Dashboard';
 
+const Dashboard = lazy(() => import('@/pages/Dashboard'));
 const routerConfig = [
   {
     path: '/',
