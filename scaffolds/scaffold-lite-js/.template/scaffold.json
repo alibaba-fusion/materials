@@ -1,7 +1,7 @@
 {
   "pkgData": {
     "name": "@alifd/scaffold-lite-js",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
     "dependencies": {
       "@alifd/theme-design-pro": "0.x"
