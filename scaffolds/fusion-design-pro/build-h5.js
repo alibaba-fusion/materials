@@ -5,7 +5,7 @@ module.exports = {
       importOptions: {
         libraryDirectory: 'lib',
         customName: (name) => {
-          if (['config-provider'].indexOf(name) !== -1) {
+          if (['config-provider', 'card', 'breadcrumb'].indexOf(name) !== -1) {
             return `@alifd/next/lib/${name}`;
           }
           return `@alifd/next/lib/${name}/mobile`;
