@@ -6,7 +6,7 @@
 	"mock": true,
 	"pkgData": {
 		"name": "@alifd/fusion-design-pro",
-		"version": "0.5.0",
+		"version": "0.5.1",
 		"description": "使用 TypeScript，包含大量 UI 区块，比如图表、表单等。",
 		"dependencies": {
 			"ahooks": "^2.0.0",
@@ -32,6 +32,9 @@
 	"build": {
 		"buildConfig": {
 			"vite": true,
+			"alias": {
+				"venn.js": "venn.js/build/venn.js"
+			},
 			"plugins": [["build-plugin-ignore-style", { "libraryName": "@alifd/next"}]]
 		}
 	},

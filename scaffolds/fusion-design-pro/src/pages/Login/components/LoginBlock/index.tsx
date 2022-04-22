@@ -16,7 +16,6 @@ export interface IDataSource {
 
 const DEFAULT_DATA: IDataSource = {
   name: '',
-  // eslint-disable-next-line @iceworks/best-practices/no-secret-info
   password: '',
   autoLogin: true,
   phone: '',

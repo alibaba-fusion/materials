@@ -6,7 +6,6 @@ import styles from './index.module.css';
 const { Item } = Form;
 const DEFAULT_DATA = {
   name: '',
-  // eslint-disable-next-line @iceworks/best-practices/no-secret-info
   password: '',
   autoLogin: true,
   phone: '',
