@@ -1,4 +1,3 @@
-/* eslint-disable @iceworks/best-practices/no-secret-info */
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Message, Form } from '@alifd/next';
