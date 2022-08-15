@@ -2,7 +2,7 @@
   min-height: 600px;
   overflow: hidden;
   text-align: center;
-  background-color: $color-white;
+  background-color: #fff;
 }
 
 .title {
