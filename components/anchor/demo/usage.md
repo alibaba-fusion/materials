@@ -6,7 +6,7 @@ importStyle: true
 
 基础用法。
 
-````jsx
+```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Anchor, {Link} from '@alifd/biz-anchor';
@@ -31,4 +31,4 @@ class App extends Component {
 ReactDOM.render((
   <App />
 ), mountNode);
-````
+```

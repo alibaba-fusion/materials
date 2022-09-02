@@ -13,6 +13,7 @@ coverage/
 .iceworks-tmp/
 
 build
+es
 blocks/**/lib/
 components/**/lib/
 screenshot.png

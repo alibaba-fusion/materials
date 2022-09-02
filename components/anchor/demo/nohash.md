@@ -6,7 +6,7 @@ importStyle: true
 
 不适用 # 锚点的方式，改用滚动事件
 
-````jsx
+```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Anchor, { Link } from '@alifd/biz-anchor';
@@ -34,4 +34,4 @@ class App extends Component {
 ReactDOM.render((
   <App />
 ), mountNode);
-````
+```

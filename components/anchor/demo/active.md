@@ -6,7 +6,7 @@ importStyle: true
 
 根据内容自动生成目录
 
-````jsx
+```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Anchor, { Link } from '@alifd/biz-anchor';
@@ -34,4 +34,4 @@ class App extends Component {
 ReactDOM.render((
   <App />
 ), mountNode);
-````
+```
