@@ -2,7 +2,7 @@
 
 `npm i @alifd/biz-anchor`
 
-`1.2.0` 后增加跟随页面滚动自动切换 active 态功能
+`2.0.0` 后增加跟随页面滚动自动切换 active 态功能
 
 ## API
 > 继承 Affix 所有能力

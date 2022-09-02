@@ -9,7 +9,7 @@ importStyle: true
 ````jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Anchor, {Link} from '@alifd/biz-anchor';
+import Anchor, { Link } from '@alifd/biz-anchor';
 
 class App extends Component {
   render() {

@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { Affix } from '@alifd/next';
 import ALink from './link';
 
+import './main.scss';
+
 const ActiveContext = React.createContext('active');
 
 class BizAnchor extends React.Component {
