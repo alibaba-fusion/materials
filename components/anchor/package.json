@@ -1,6 +1,6 @@
 {
   "name": "@alifd/biz-anchor",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "anchor",
   "files": [
     "demo/",
@@ -52,11 +52,8 @@
     "access": "public",
     "registry": "http://registry.npmjs.org"
   },
-  "materialConfig": {
-    "fusion-site": {
-      "id": 1,
-      "name": "Fusion Design",
-      "url": "https://fusion.alibaba-inc.com/api/v1/sites/1/materials"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/components/anchor"
   }
 }

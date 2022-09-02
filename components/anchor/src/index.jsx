@@ -12,12 +12,48 @@ class BizAnchor extends React.Component {
     this.state = {
       activeKey: null,
     }
+    this.nodeIdList = {};
+
+    this.onScroll = this.onScroll.bind(this);
   }
 
   componentDidMount() {
     if (this.props.content()) {
       this.setState({})
+      setTimeout( () => {
+        this.onScroll();
+      }, 200);
     }
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  onScroll = () => {
+    const keys = Object.keys(this.nodeIdList);
+    const activeKeyList = [];
+    for (let index = 0; index < keys.length; index++) {
+      const key = keys[index];
+      const node = document.getElementById(key);
+      if (node?.getBoundingClientRect) {
+        const { top } = node.getBoundingClientRect();
+        activeKeyList.push({
+          key,
+          top
+        })
+      }
+    }
+    if (!activeKeyList.length) {
+      return;
+    }
+
+    const minKey = activeKeyList.reduce((x, y) => Math.abs(x.top) < Math.abs(y.top) ? x : y);
+
+    minKey && this.setState({
+      activeKey: minKey.key,
+    });
   }
 
   onItemClick = (key, e) => {
@@ -30,10 +66,16 @@ class BizAnchor extends React.Component {
     });
   }
 
+  /**
+   * 手写菜单
+   * @returns 
+   */
   getChildren(childNode, level=1) {
+    this.nodeIdList = {};
     return React.Children.map(childNode, child => {
       if (child.type && child.type.displayName === 'Link') {
         const activeKey = child.props.href && child.props.href.replace('#','') || '';
+        activeKey && (this.nodeIdList[activeKey] = true);
         if (child.props.children && child.props.children.length) {
           return [
             React.cloneElement(child, {
@@ -55,22 +97,30 @@ class BizAnchor extends React.Component {
     })
   }
 
+  /**
+   * 根据内容自动生成菜单
+   */
   computeChildren(originContent) {
     const nodeList = [];
     let maxLevel = 4;
 
     let content = originContent.children;
 
+    // 防止外面包一个div
     if (content.length === 1 && !content[0].id && content[0].nodeName !== 'H') {
       content = content[0].children;
     }
 
+    this.nodeIdList = {};
+
     for (let index = 0; index < content.length; index++) {
       const ele = content[index];
       if (ele.id) {
-        if (ele.nodeName === 'H2' || ele.nodeName === 'H3' || ele.nodeName === 'H4') {
+        if (ele.nodeName === 'H1' || ele.nodeName === 'H2' || ele.nodeName === 'H3' || ele.nodeName === 'H4') {
           const level = Number(ele.nodeName.replace('H',''));
           maxLevel = level < maxLevel ? level : maxLevel;
+
+          ele.id && (this.nodeIdList[ele.id] = true);
 
           nodeList.push({
             id: ele.id,
@@ -121,6 +171,10 @@ BizAnchor.displayName = 'BizAnchor';
 BizAnchor.defaultProps = {
   content: () => null,
   noHash: false,
+  /**
+   * 菜单距离顶部偏离的固定高度
+   */
+  offsetTop: 0,
 };
 export default BizAnchor;
 export const Link = ALink;
