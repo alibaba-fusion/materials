@@ -53,9 +53,11 @@ class BizAnchor extends React.Component {
 
     const minKey = activeKeyList.reduce((x, y) => Math.abs(x.top) < Math.abs(y.top) ? x : y);
 
-    minKey && this.setState({
-      activeKey: minKey.key,
-    });
+    if (minKey && (minKey.key !== this.state.activeKey)) {
+      this.setState({
+        activeKey: minKey.key,
+      });
+    }
   }
 
   onItemClick = (key, e) => {
@@ -73,26 +75,25 @@ class BizAnchor extends React.Component {
    * @returns 
    */
   getChildren(childNode, level=1) {
-    this.nodeIdList = {};
     return React.Children.map(childNode, child => {
       if (child.type && child.type.displayName === 'Link') {
-        const activeKey = child.props.href && child.props.href.replace('#','') || '';
-        activeKey && (this.nodeIdList[activeKey] = true);
+        const key = child.props.href && child.props.href.replace('#','') || '';
+        key && (this.nodeIdList[key] = true);
         if (child.props.children && child.props.children.length) {
           return [
             React.cloneElement(child, {
               level, 
               children: null, 
-              active: this.state.activeKey === activeKey || child.props.active,
-              onItemClick: this.onItemClick.bind(this, activeKey),
+              active: this.state.activeKey === key || child.props.active,
+              onItemClick: this.onItemClick.bind(this, key),
             }),
             this.getChildren(child.props.children, level + 1)
           ];
         }
         return React.cloneElement(child, {
           level, 
-          active: this.state.activeKey === activeKey || child.props.active,
-          onItemClick: this.onItemClick.bind(this, activeKey),
+          active: this.state.activeKey === key || child.props.active,
+          onItemClick: this.onItemClick.bind(this, key),
         });
       }
       return child;
@@ -112,8 +113,6 @@ class BizAnchor extends React.Component {
     if (content.length === 1 && !content[0].id && content[0].nodeName !== 'H') {
       content = content[0].children;
     }
-
-    this.nodeIdList = {};
 
     for (let index = 0; index < content.length; index++) {
       const ele = content[index];
@@ -155,6 +154,7 @@ class BizAnchor extends React.Component {
 
     let childrenList = null;
 
+    this.nodeIdList = {};
     if (children) {
       childrenList = this.getChildren(children, 1);
     } else if (content()){
