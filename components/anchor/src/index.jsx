@@ -26,11 +26,22 @@ class BizAnchor extends React.Component {
         this.onScroll();
       }, 200);
     }
-    window.addEventListener('scroll', this.onScroll);
+
+    const {scrollNode} = this.props;
+
+    if (scrollNode)  {
+      const node = typeof scrollNode === 'function' ? scrollNode() : scrollNode;
+      node?.addEventListener('scroll', this.onScroll);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
+    const {scrollNode} = this.props;
+
+    if (scrollNode)  {
+      const node = typeof scrollNode === 'function' ? scrollNode() : scrollNode;
+      node?.removeEventListener('scroll', this.onScroll);
+    }
   }
 
   onScroll = () => {
@@ -177,6 +188,7 @@ BizAnchor.defaultProps = {
    * 菜单距离顶部偏离的固定高度
    */
   offsetTop: 0,
+  scrollNode: window
 };
 export default BizAnchor;
 export const Link = ALink;
