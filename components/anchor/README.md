@@ -10,9 +10,9 @@
 | 参数名 | 说明 | 必填 | 类型 | 默认值 | 备注 |
 | ------ | ---- | ---- | ---- | ------ | ---- |
 | offsetTop | 菜单距离顶部偏离的固定高度 |   false   |   Number   |      0  |      |
-| noHash | 不修改hash |   false   |   Number   |      0  |      |
-| content | 返回关注内容的node节点, 自动生成目录 |   false   |   documentNode   |      0  |      |
-| scrollNode | 指定要监听的滚动节点(默认监听 window 对象)，如需修改指定该参数 |   false   |   window   |      0  |      |
+| noHash | 不修改hash |   false   |   Number   |      false  |      |
+| content | 返回关注内容的node节点, 自动生成目录 |   false   |   () => HTMLElement   |   -  |      |
+| scrollNode | 指定监听的滚动节点 | false | HTMLElement \| () => HTMLElement   |  window |     |
 
 ### Anchor.Link
 | 参数名 | 说明 | 必填 | 类型 | 默认值 | 备注 |
