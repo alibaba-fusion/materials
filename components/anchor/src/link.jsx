@@ -1,13 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
 
+const isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*\:/i
+
 class Link extends React.Component {
   handleClick = (e) => {
     this.props.onItemClick(e);
   }
 
   render() {
-    const { className, children, href, title, active, level, ...others } = this.props;
+    const { className, children, href, title, active, level, allowJavaScriptUrls, ...others } = this.props;
+
+    if (isJavaScriptProtocol.test(href) && !allowJavaScriptUrls) {
+      console.warn(`Link has blocked a javascript: URL as a security precaution`);
+      return null;
+    }
 
     const cls = classNames({
       className: !!className,
@@ -28,7 +35,8 @@ class Link extends React.Component {
 Link.displayName = 'Link';
 
 Link.defaultProps = {
-  onItemClick: () => {}
+  onItemClick: () => {},
+  allowJavaScriptUrls: true
 };
 
 export default Link;
